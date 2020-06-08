@@ -233,4 +233,13 @@ TSWLatexianTemp*
 # unimportant visual studio(code) folders
 .vs/
 .vscode/
+
 .metadata/
+.recommenders/
+.checkstyle
+.classpath
+.project
+.settings
+.checkstyle
+bin/
+target/
