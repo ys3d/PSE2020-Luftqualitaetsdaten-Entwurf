@@ -1,5 +1,7 @@
 package de.visaq.view.elements.map;
 
-public abstract class MapOverlay {
-
+public interface MapOverlay {
+	
+	public void updateView();
+	
 }

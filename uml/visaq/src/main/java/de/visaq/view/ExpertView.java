@@ -2,10 +2,9 @@ package de.visaq.view;
 
 import de.visaq.view.theme.ColorTheme;
 
-public class InformationView extends View {
+public class ExpertView extends View {
 
-
-	public InformationView(Language language, ColorTheme colorTheme) {
+	public ExpertView(Language language, ColorTheme colorTheme) {
 		super(language, colorTheme);
 		// TODO Auto-generated constructor stub
 	}

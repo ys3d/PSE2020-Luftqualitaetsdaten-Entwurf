@@ -3,6 +3,7 @@ package de.visaq.view;
 import java.util.Properties;
 
 public class Language {
+	
 	private final Properties language;
 	public final String NAME;
 
