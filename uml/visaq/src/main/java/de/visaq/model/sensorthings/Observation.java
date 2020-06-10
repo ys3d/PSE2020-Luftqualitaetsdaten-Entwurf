@@ -3,7 +3,7 @@ package de.visaq.model.sensorthings;
 import java.time.LocalDateTime;
 
 public class Observation {
-	private final int id;
+	private final String id;
 	private final NavigationLink selfLink;
 	private final LocalDateTime phenomenonTime;
 	private final String result;
@@ -11,7 +11,7 @@ public class Observation {
 	private final NavigationLink datastreamLink;
 	private final NavigationLink featureOfInterestLink;
 	
-	public Observation(int id, NavigationLink selfLink, LocalDateTime phenomenonTime, String result,
+	public Observation(String id, NavigationLink selfLink, LocalDateTime phenomenonTime, String result,
 			LocalDateTime resultTime, NavigationLink datastreamLink, NavigationLink featureOfInterestLink) {
 		this.id = id;
 		this.selfLink = selfLink;
@@ -20,5 +20,33 @@ public class Observation {
 		this.resultTime = resultTime;
 		this.datastreamLink = datastreamLink;
 		this.featureOfInterestLink = featureOfInterestLink;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public NavigationLink getSelfLink() {
+		return selfLink;
+	}
+
+	public LocalDateTime getPhenomenonTime() {
+		return phenomenonTime;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public LocalDateTime getResultTime() {
+		return resultTime;
+	}
+
+	public NavigationLink getDatastreamLink() {
+		return datastreamLink;
+	}
+
+	public NavigationLink getFeatureOfInterestLink() {
+		return featureOfInterestLink;
 	}
 }

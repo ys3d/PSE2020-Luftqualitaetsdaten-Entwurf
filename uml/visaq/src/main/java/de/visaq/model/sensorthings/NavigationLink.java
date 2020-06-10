@@ -6,4 +6,8 @@ public class NavigationLink {
 	public NavigationLink(String url) {
 		this.url = url;
 	}
+
+	public String getUrl() {
+		return url;
+	}
 }
