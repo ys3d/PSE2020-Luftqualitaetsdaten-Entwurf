@@ -60,4 +60,10 @@ public class ObservedProperty implements SensorthingsProperties {
 	public boolean hasProperties() {
 		return false;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 }

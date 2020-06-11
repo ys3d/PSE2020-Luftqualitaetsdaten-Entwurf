@@ -34,4 +34,10 @@ public class Sensor {
 	public NavigationLink getDatastreams() {
 		return datastreams;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 }

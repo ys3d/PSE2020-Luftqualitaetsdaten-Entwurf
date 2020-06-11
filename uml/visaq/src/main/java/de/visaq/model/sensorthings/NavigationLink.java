@@ -10,4 +10,10 @@ public class NavigationLink {
 	public String getUrl() {
 		return url;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 }

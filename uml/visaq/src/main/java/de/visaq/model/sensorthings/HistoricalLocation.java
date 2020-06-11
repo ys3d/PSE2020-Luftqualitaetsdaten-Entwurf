@@ -30,4 +30,10 @@ public class HistoricalLocation implements SenorthingsTimeStamp{
 	public boolean isEqualOld(HistoricalLocation other) {
 		return false;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 }
