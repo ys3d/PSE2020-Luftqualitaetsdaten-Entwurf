@@ -1,350 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="de.visaq.view.elements.Navbar" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/elements/Navbar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="165" x="1849" y="510"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="2" language="java" name="de.visaq.view.InformationView" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/InformationView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="307" x="1502" y="510"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="de.visaq.view.Language" project="visaq" 
+  <class id="1" language="java" name="de.visaq.view.Language" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/Language.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="758" y="391"/>    
+    <position height="-1" width="-1" x="1094" y="906"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="de.visaq.view.ExpertView" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/ExpertView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="276" x="600" y="510"/>    
+  <class id="2" language="java" name="de.visaq.controller.math.DefaultInterpolation" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/controller/math/DefaultInterpolation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="688" y="543"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="de.visaq.view.MapView" project="visaq" 
+  <class id="3" language="java" name="de.visaq.view.MapView" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/MapView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="262" x="916" y="510"/>    
+    <position height="-1" width="-1" x="1693" y="896"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="de.visaq.view.elements.diagram.BarDiagram" project="visaq" 
+  <class id="4" language="java" name="de.visaq.view.elements.diagram.BarDiagram" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/diagram/BarDiagram.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="225" x="48" y="766"/>    
+    <position height="-1" width="-1" x="1143" y="1152"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="de.visaq.view.theme.ColorBlindTheme" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/theme/ColorBlindTheme.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1622" y="828"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="de.visaq.view.View" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/View.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="231" x="999" y="353"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="9" language="java" name="de.visaq.view.elements.map.MapOverlay" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/elements/map/MapOverlay.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="185" x="1070" y="942"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="10" language="java" name="de.visaq.view.elements.SensorOverview" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/elements/SensorOverview.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="227" x="578" y="766"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="de.visaq.view.VisAQ" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/VisAQ.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="152" x="1424" y="197"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="12" language="java" name="de.visaq.view.elements.diagram.Diagram" project="visaq" 
+  <interface id="5" language="java" name="de.visaq.view.elements.diagram.Diagram" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/diagram/Diagram.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="225" x="313" y="942"/>    
+    <position height="-1" width="-1" x="1408" y="1328"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="13" language="java" name="de.visaq.view.elements.map.Map" project="visaq" 
+  <class id="6" language="java" name="de.visaq.view.elements.map.Map" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/map/Map.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="185" x="845" y="766"/>    
+    <position height="-1" width="-1" x="1920" y="1152"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="de.visaq.view.elements.Timeline" project="visaq" 
+  <interface id="7" language="java" name="de.visaq.controller.math.Interpolation" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/controller/math/Interpolation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="670" y="689"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="de.visaq.view.elements.Timeline" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/Timeline.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="805" y="149"/>    
+    <position height="-1" width="-1" x="903" y="543"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="de.visaq.view.elements.map.InterpolationOverlay" project="visaq" 
+  <class id="9" language="java" name="de.visaq.view.elements.map.InterpolationOverlay" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/map/InterpolationOverlay.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="116" width="203" x="1070" y="766"/>    
+    <position height="-1" width="-1" x="2154" y="1142"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="de.visaq.view.elements.map.SensorOverlay" project="visaq" 
+  <class id="10" language="java" name="de.visaq.model.SensorData" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/SensorData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2671" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="de.visaq.view.elements.map.SensorOverlay" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/map/SensorOverlay.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="185" x="1313" y="766"/>    
+    <position height="-1" width="-1" x="2388" y="1142"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="de.visaq.view.theme.ColorTheme" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/theme/ColorTheme.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="156" width="244" x="1218" y="510"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <enumeration id="18" language="java" name="de.visaq.view.elements.AirQualityData" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/elements/AirQualityData.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="284" x="2054" y="510"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </enumeration>  
-  <class id="19" language="java" name="de.visaq.view.theme.LightTheme" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/theme/LightTheme.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1873" y="827"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="20" language="java" name="de.visaq.view.elements.Toolbar" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/elements/Toolbar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="156" x="1849" y="353"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="21" language="java" name="de.visaq.view.elements.diagram.LineDiagram" project="visaq" 
+  <class id="12" language="java" name="de.visaq.view.elements.diagram.LineDiagram" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/diagram/LineDiagram.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="225" x="313" y="766"/>    
+    <position height="-1" width="-1" x="1675" y="1152"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="de.visaq.view.elements.SearchBar" project="visaq" 
+  <class id="13" language="java" name="de.visaq.view.elements.Navbar" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/elements/Navbar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2617" y="936"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="de.visaq.model.sensorthings.HistoricalLocation" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/sensorthings/HistoricalLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1115" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="de.visaq.view.InformationView" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/InformationView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2017" y="886"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="16" language="java" name="de.visaq.model.Data" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/Data.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2762" y="689"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="17" language="java" name="de.visaq.model.sensorthings.Sensor" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/sensorthings/Sensor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1345" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="de.visaq.view.ExpertView" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/ExpertView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1384" y="886"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="de.visaq.view.View" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/View.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1677" y="719"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="20" language="java" name="de.visaq.view.elements.map.MapOverlay" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/elements/map/MapOverlay.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2145" y="1308"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="21" language="java" name="de.visaq.view.elements.SensorOverview" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/elements/SensorOverview.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1409" y="1152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="de.visaq.view.VisAQ" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/VisAQ.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2493" y="553"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="de.visaq.controller.SensorDataController" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/controller/SensorDataController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1586" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="de.visaq.view.elements.map.Legend" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/elements/map/Legend.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1824" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="de.visaq.view.elements.Toolbar" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/view/elements/Toolbar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2495" y="709"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="de.visaq.model.sensorthings.ObservedProperty" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/sensorthings/ObservedProperty.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2052" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="de.visaq.model.PointData" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/PointData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2835" y="543"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="de.visaq.view.elements.SearchBar" project="visaq" 
     file="/visaq/src/main/java/de/visaq/view/elements/SearchBar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="157" x="2378" y="510"/>    
+    <position height="-1" width="-1" x="2818" y="896"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="de.visaq.view.theme.DarkTheme" project="visaq" 
-    file="/visaq/src/main/java/de/visaq/view/theme/DarkTheme.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="244" x="2039" y="766"/>    
+  <class id="29" language="java" name="de.visaq.model.sensorthings.Location" project="visaq" 
+    file="/visaq/src/main/java/de/visaq/model/sensorthings/Location.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2284" y="542"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="24">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="25" name="informationview"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="28" name="language"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="30">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="31" name="map"/>      
-      <multiplicity id="32" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="31">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <realization id="32">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="20"/>  
+  </realization>  
   <realization id="33">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="9"/>  
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
   </realization>  
   <association id="34">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="35" name="sensoroverview"/>      
-      <multiplicity id="36" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="37">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="38" name="view"/>      
-      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="40">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="41">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="42" name="toolbar"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="35" name="mapOverlay"/>      
+      <multiplicity id="36" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="20" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="44">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <generalization id="45">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <realization id="46">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <realization id="48">    
+  <association id="37">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="38" name="map"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="40">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="41" name="diagram"/>      
+      <multiplicity id="42" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="43">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="44" name="informationview"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="46">    
     <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="9"/>  
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="47">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="48" name="toolbar"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="50">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="5"/>  
   </realization>  
-  <association id="49">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="50" name="searchbar"/>      
-      <multiplicity id="51" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="52">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <generalization id="53">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <association id="54">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="55" name="airQualityData"/>      
-      <multiplicity id="56" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="57">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="58" name="mapOverlay"/>      
-      <multiplicity id="59" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="60">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="61" name="navbar"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
+  <association id="51">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="52" name="language"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="55" name="searchbar"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="57">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="58">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="59" name="navbar"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="62">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
   <association id="63">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="64" name="colorTheme"/>      
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="64" name="sensoroverview"/>      
       <multiplicity id="65" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
+    <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="66">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="67" name="diagram"/>      
-      <multiplicity id="68" minimum="0" maximum="1"/>    
+  <realization id="66">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="20"/>  
+  </realization>  
+  <association id="67">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="68" name="view"/>      
+      <multiplicity id="69" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="19" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="69">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
