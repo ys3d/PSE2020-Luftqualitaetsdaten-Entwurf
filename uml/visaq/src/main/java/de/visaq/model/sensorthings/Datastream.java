@@ -1,22 +1,28 @@
 package de.visaq.model.sensorthings;
 
-public class Datastream {
+import de.visaq.controller.link.NavigationLink;
+
+public class Datastream implements Sensorthings {
 	private final String id;
 	private final String name;
 	private final String description;
 	private final UnitOfMeasurement unitOfMeasurement;
 	//REST request that this datastream was retrieved from
-	private final NavigationLink selfLink;
+	private final NavigationLink<Datastream> selfLink;
 	//URL of some definition regarding this observation
 	private final String observationTypeLink;
-	private final NavigationLink observationsLink;
-	private final NavigationLink sensorLink;
-	private final NavigationLink thingLink;
+	private final NavigationLink<Observation> observationsLink;
+	private final NavigationLink<Sensor> sensorLink;
+	private final NavigationLink<Thing> thingLink;
 	private final ObservedProperty observedProperty;
 
-	public Datastream(String id, String name, String description, UnitOfMeasurement unitOfMeasurement, NavigationLink selfLink,
-			String observationTypeLink, NavigationLink observationsLink, NavigationLink sensorLink,
-			NavigationLink thingLink, ObservedProperty observedProperty) {
+	
+
+	public Datastream(String id, String name, String description, UnitOfMeasurement unitOfMeasurement,
+			NavigationLink<Datastream> selfLink, String observationTypeLink,
+			NavigationLink<Observation> observationsLink, NavigationLink<Sensor> sensorLink,
+			NavigationLink<Thing> thingLink, ObservedProperty observedProperty) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
@@ -45,7 +51,7 @@ public class Datastream {
 		return unitOfMeasurement;
 	}
 
-	public NavigationLink getSelfLink() {
+	public NavigationLink<Datastream> getSelfLink() {
 		return selfLink;
 	}
 
@@ -53,15 +59,15 @@ public class Datastream {
 		return observationTypeLink;
 	}
 
-	public NavigationLink getObservationsLink() {
+	public NavigationLink<Observation> getObservationsLink() {
 		return observationsLink;
 	}
 
-	public NavigationLink getSensorLink() {
+	public NavigationLink<Sensor> getSensorLink() {
 		return sensorLink;
 	}
 
-	public NavigationLink getThingLink() {
+	public NavigationLink<Thing> getThingLink() {
 		return thingLink;
 	}
 

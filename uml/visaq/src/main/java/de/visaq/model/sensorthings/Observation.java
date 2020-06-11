@@ -2,31 +2,32 @@ package de.visaq.model.sensorthings;
 
 import java.time.LocalDateTime;
 
-public class Observation implements SenorthingsTimeStamp{
+import de.visaq.controller.link.NavigationLink;
+
+public class Observation implements SenorthingsTimeStamp, Sensorthings {
 	private final String id;
-	private final NavigationLink selfLink;
+	private final NavigationLink<Observation> selfLink;
 	private final LocalDateTime phenomenonTime;
 	private final String result;
 	private final LocalDateTime resultTime;
-	private final NavigationLink datastreamLink;
-	private final NavigationLink featureOfInterestLink;
-	
-	public Observation(String id, NavigationLink selfLink, LocalDateTime phenomenonTime, String result,
-			LocalDateTime resultTime, NavigationLink datastreamLink, NavigationLink featureOfInterestLink) {
+	private final NavigationLink<Datastream> datastreamLink;
+
+	public Observation(String id, NavigationLink<Observation> selfLink, LocalDateTime phenomenonTime, String result,
+			LocalDateTime resultTime, NavigationLink<Datastream> datastreamLink) {
+		super();
 		this.id = id;
 		this.selfLink = selfLink;
 		this.phenomenonTime = phenomenonTime;
 		this.result = result;
 		this.resultTime = resultTime;
 		this.datastreamLink = datastreamLink;
-		this.featureOfInterestLink = featureOfInterestLink;
 	}
 
 	public String getId() {
 		return id;
 	}
 
-	public NavigationLink getSelfLink() {
+	public NavigationLink<Observation> getSelfLink() {
 		return selfLink;
 	}
 
@@ -42,12 +43,8 @@ public class Observation implements SenorthingsTimeStamp{
 		return resultTime;
 	}
 
-	public NavigationLink getDatastreamLink() {
+	public NavigationLink<Datastream> getDatastreamLink() {
 		return datastreamLink;
-	}
-
-	public NavigationLink getFeatureOfInterestLink() {
-		return featureOfInterestLink;
 	}
 
 	public boolean isOlder(HistoricalLocation other) {

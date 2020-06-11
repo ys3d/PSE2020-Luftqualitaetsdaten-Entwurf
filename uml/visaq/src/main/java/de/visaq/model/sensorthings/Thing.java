@@ -2,18 +2,22 @@ package de.visaq.model.sensorthings;
 
 import java.util.HashMap;
 
-public class Thing implements SensorthingsProperties {
+import de.visaq.controller.link.NavigationLink;
+
+public class Thing implements SensorthingsProperties, Sensorthings {
 	private final String id;
-	private final NavigationLink selfLink;
+	private final NavigationLink<Thing> selfLink;
 	private final String description;
 	private final String name;
 	private final HashMap<String, Object> properties;
-	private final NavigationLink datastreamsLink;
-	private final NavigationLink historicalLocationsLink;
-	private final NavigationLink locationsLink;
+	private final NavigationLink<Datastream> datastreamsLink;
+	private final NavigationLink<HistoricalLocation> historicalLocationsLink;
+	private final NavigationLink<Location> locationsLink;
 	
-	public Thing(String id, NavigationLink selfLink, String description, String name, HashMap<String, Object> properties,
-			NavigationLink datastreamsLink, NavigationLink historicalLocationsLink, NavigationLink locationsLink) {
+	public Thing(String id, NavigationLink<Thing> selfLink, String description, String name,
+			HashMap<String, Object> properties, NavigationLink<Datastream> datastreamsLink,
+			NavigationLink<HistoricalLocation> historicalLocationsLink, NavigationLink<Location> locationsLink) {
+		super();
 		this.id = id;
 		this.selfLink = selfLink;
 		this.description = description;
@@ -28,7 +32,7 @@ public class Thing implements SensorthingsProperties {
 		return id;
 	}
 
-	public NavigationLink getSelfLink() {
+	public NavigationLink<Thing> getSelfLink() {
 		return selfLink;
 	}
 
@@ -40,15 +44,15 @@ public class Thing implements SensorthingsProperties {
 		return name;
 	}
 
-	public NavigationLink getDatastreamsLink() {
+	public NavigationLink<Datastream> getDatastreamsLink() {
 		return datastreamsLink;
 	}
 
-	public NavigationLink getHistoricalLocationsLink() {
+	public NavigationLink<HistoricalLocation> getHistoricalLocationsLink() {
 		return historicalLocationsLink;
 	}
 
-	public NavigationLink getLocationsLink() {
+	public NavigationLink<Location> getLocationsLink() {
 		return locationsLink;
 	}
 
