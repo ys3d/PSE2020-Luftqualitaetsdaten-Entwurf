@@ -1,11 +1,14 @@
 package de.visaq.view.elements.map;
 
-import java.awt.Color;
+import de.visaq.view.elements.AirQualityData;
 
 public class Legend {
+	
+	AirQualityData airQualityData;
 
-	Color PRIMARYCOLOR;
-	Color SECONDARYCOLOR;
+	/*
+	 * Gradient shown on website
+	 */
 	
 	public void show() {
 		
@@ -13,11 +16,14 @@ public class Legend {
 		
 	}
 	
-	@SuppressWarnings("unused")
-	private void gradient() {
+	/* 
+	 * Idea: depending on the chosen data a different legend will be chosen out of a package, example: [airqualityData]_legend.png
+	 */
+	
+	private void gradient(AirQualityData airqualityData) {
 		
 		// TODO implement
 		
 	}
-	
+		
 }
