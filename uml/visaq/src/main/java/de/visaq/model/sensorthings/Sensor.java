@@ -14,4 +14,24 @@ public class Sensor {
 		this.name = name;
 		this.datastreams = datastreams;
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public NavigationLink getSelfLink() {
+		return selfLink;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public NavigationLink getDatastreams() {
+		return datastreams;
+	}
 }

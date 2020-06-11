@@ -10,4 +10,16 @@ public class UnitOfMeasurement {
 		this.name = name;
 		this.definition = definition;
 	}
+
+	public String getSymbol() {
+		return symbol;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getDefinition() {
+		return definition;
+	}
 }

@@ -2,7 +2,7 @@ package de.visaq.model.sensorthings;
 
 import java.time.LocalDateTime;
 
-public class Observation {
+public class Observation implements SenorthingsTimeStamp{
 	private final String id;
 	private final NavigationLink selfLink;
 	private final LocalDateTime phenomenonTime;
@@ -48,5 +48,20 @@ public class Observation {
 
 	public NavigationLink getFeatureOfInterestLink() {
 		return featureOfInterestLink;
+	}
+
+	public boolean isOlder(HistoricalLocation other) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isNewer(HistoricalLocation other) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isEqualOld(HistoricalLocation other) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
