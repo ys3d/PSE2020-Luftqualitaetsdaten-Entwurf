@@ -12,5 +12,21 @@ public class Toolbar {
 	public void showToolbar() {
 	
 	}
+	
+	public void showAQD() {
+		
+	}
+	
+	public void showHelpIcon() {
+		
+	}
+	
+	public void showSearchBar() {
+		
+	}
+	
+	public void showNavbar() {
+		
+	}
 		
 }

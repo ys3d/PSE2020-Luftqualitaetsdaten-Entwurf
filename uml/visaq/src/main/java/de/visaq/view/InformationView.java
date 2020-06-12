@@ -24,4 +24,8 @@ public class InformationView extends View {
 		return icon;
 	}
 	
+	public String getText(String key) {
+		return null;
+	}
+	
 }

@@ -18,4 +18,10 @@ public enum AirQualityData {
 	public String choosenData() { 
 		return qualityData;
 	}
+	
+	/**
+	 * Idea for Constructor when using objects not Enums
+	 * 
+	 * Public AirQualityData(String name, Color primaryColor, Color secondaryColor, ObservedProperty observedProperty)
+	 */
 }

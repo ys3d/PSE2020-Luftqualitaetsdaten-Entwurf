@@ -11,4 +11,12 @@ public class SensorOverview {
 	public void setDiagram(Diagram specificDiagram) {
 		this.diagram = specificDiagram;
 	}
+	
+	public String getText(String key) {
+		return null;
+	}
+	
+	public void show() {
+		
+	}
 }
