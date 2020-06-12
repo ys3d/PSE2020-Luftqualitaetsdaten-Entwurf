@@ -4,65 +4,62 @@ import java.util.HashMap;
 
 import de.visaq.controller.link.NavigationLink;
 
-public class ObservedProperty implements SensorthingsProperties, Sensorthings {
+public class Thing implements SensorthingsProperties, Sensorthings {
 	private final String id;
-	private final String name;
-	private final String definition;
+	private final NavigationLink<Thing> selfLink;
 	private final String description;
+	private final String name;
 	private final HashMap<String, Object> properties;
 	private final NavigationLink<Datastream> datastreamsLink;
-	private final NavigationLink<ObservedProperty> selfLink;
-
+	private final NavigationLink<HistoricalLocation> historicalLocationsLink;
+	private final NavigationLink<Location> locationsLink;
 	
-	public ObservedProperty(String id, String name, String definition, String description,
+	public Thing(String id, NavigationLink<Thing> selfLink, String description, String name,
 			HashMap<String, Object> properties, NavigationLink<Datastream> datastreamsLink,
-			NavigationLink<ObservedProperty> selfLink) {
+			NavigationLink<HistoricalLocation> historicalLocationsLink, NavigationLink<Location> locationsLink) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.definition = definition;
+		this.selfLink = selfLink;
 		this.description = description;
+		this.name = name;
 		this.properties = properties;
 		this.datastreamsLink = datastreamsLink;
-		this.selfLink = selfLink;
+		this.historicalLocationsLink = historicalLocationsLink;
+		this.locationsLink = locationsLink;
 	}
-
 
 	public String getId() {
 		return id;
 	}
 
-
-	public String getName() {
-		return name;
+	public NavigationLink<Thing> getSelfLink() {
+		return selfLink;
 	}
-
-
-	public String getDefinition() {
-		return definition;
-	}
-
 
 	public String getDescription() {
 		return description;
 	}
 
+	public String getName() {
+		return name;
+	}
 
 	public NavigationLink<Datastream> getDatastreamsLink() {
 		return datastreamsLink;
 	}
 
-
-	public NavigationLink<ObservedProperty> getSelfLink() {
-		return selfLink;
+	public NavigationLink<HistoricalLocation> getHistoricalLocationsLink() {
+		return historicalLocationsLink;
 	}
-	
-	
+
+	public NavigationLink<Location> getLocationsLink() {
+		return locationsLink;
+	}
+
 	public Object getPropertyByKey() {
 		return null;
 	}
 
-	
 	public boolean hasProperties() {
 		return false;
 	}
