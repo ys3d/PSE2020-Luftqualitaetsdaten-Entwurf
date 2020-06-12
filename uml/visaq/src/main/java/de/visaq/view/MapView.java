@@ -6,6 +6,16 @@ import de.visaq.view.elements.map.Legend;
 import de.visaq.view.elements.map.Map;
 import de.visaq.view.theme.ColorTheme;
 
+/*
+ * Mapview creates the view for the Map using the map-overlay allowing the user to 
+ * see the map as well as the Legend, Timeline and Sensoroverview 
+ * The Constructor sets the used language and color theme
+ * show(): shows the Mapview
+ * showLegend(): shows the Legend for the interpolation
+ * showSensoroverview(): shows the Sidebar containing the different information to either the chosen point or the sensor
+ * The getter and setters are used to set and get the specific information
+ */
+
 public class MapView extends View {
 	
 	private Map map;
