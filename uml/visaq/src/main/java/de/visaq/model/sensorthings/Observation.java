@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 import de.visaq.controller.link.SingleNavigationLink;
 
-public class Observation implements SenorthingsTimeStamp, Sensorthings {
+public class Observation implements SensorthingsTimeStamp, Sensorthings {
 	private final String id;
 	private final SingleNavigationLink<Observation> selfLink;
 	private final LocalDateTime phenomenonTime;

@@ -2,7 +2,7 @@ package de.visaq.model.sensorthings;
 
 import java.time.LocalDateTime;
 
-public class HistoricalLocation implements SenorthingsTimeStamp, Sensorthings{
+public class HistoricalLocation implements SensorthingsTimeStamp, Sensorthings{
 	private final String id;
 	private final LocalDateTime time;
 
