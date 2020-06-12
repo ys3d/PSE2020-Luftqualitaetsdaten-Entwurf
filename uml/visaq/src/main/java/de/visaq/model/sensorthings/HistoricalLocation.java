@@ -1,5 +1,39 @@
 package de.visaq.model.sensorthings;
 
-public class HistoricalLocation {
+import java.time.LocalDateTime;
 
+public class HistoricalLocation implements SenorthingsTimeStamp, Sensorthings{
+	private final String id;
+	private final LocalDateTime time;
+
+	public HistoricalLocation(String id, LocalDateTime time) {
+		this.id = id;
+		this.time = time;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public LocalDateTime getTime() {
+		return time;
+	}
+	
+	public boolean isOlder(HistoricalLocation other) {
+		return false;
+	}
+	
+	public boolean isNewer(HistoricalLocation other) {
+		return false;
+	}
+	
+	public boolean isEqualOld(HistoricalLocation other) {
+		return false;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 }
