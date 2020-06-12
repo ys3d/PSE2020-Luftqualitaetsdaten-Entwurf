@@ -1,17 +1,20 @@
 package de.visaq.view;
 
 import de.visaq.view.elements.SensorOverview;
+import de.visaq.view.elements.Timeline;
 import de.visaq.view.elements.map.Legend;
 import de.visaq.view.elements.map.Map;
 import de.visaq.view.theme.ColorTheme;
 
 public class MapView extends View {
 	
-	Map map;
+	private Map map;
 	
-	SensorOverview sensoroverview;
+	private SensorOverview sensoroverview;
 	
-	Legend legend;
+	private Legend legend;
+	
+	private Timeline timeline;
 
 	public MapView(Language language, ColorTheme colorTheme) {
 		super(language, colorTheme);
@@ -27,6 +30,10 @@ public class MapView extends View {
 	}
 	
 	public void showLegend() {
+		
+	}
+	
+	public void showTimeline() {
 		
 	}
 
