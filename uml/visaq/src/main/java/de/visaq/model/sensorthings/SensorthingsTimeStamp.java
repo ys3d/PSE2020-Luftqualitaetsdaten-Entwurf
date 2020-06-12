@@ -1,6 +1,6 @@
 package de.visaq.model.sensorthings;
 
-public interface SenorthingsTimeStamp {
+public interface SensorthingsTimeStamp {
 	public boolean isOlder(HistoricalLocation other);
 	
 	public boolean isNewer(HistoricalLocation other);

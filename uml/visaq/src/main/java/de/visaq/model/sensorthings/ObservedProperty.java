@@ -2,7 +2,7 @@ package de.visaq.model.sensorthings;
 
 import java.util.HashMap;
 
-import de.visaq.controller.link.NavigationLink;
+import de.visaq.controller.link.SingleNavigationLink;
 
 public class ObservedProperty implements SensorthingsProperties, Sensorthings {
 	private final String id;
@@ -10,13 +10,13 @@ public class ObservedProperty implements SensorthingsProperties, Sensorthings {
 	private final String definition;
 	private final String description;
 	private final HashMap<String, Object> properties;
-	private final NavigationLink<Datastream> datastreamsLink;
-	private final NavigationLink<ObservedProperty> selfLink;
+	private final SingleNavigationLink<Datastream> datastreamsLink;
+	private final SingleNavigationLink<ObservedProperty> selfLink;
 
 	
 	public ObservedProperty(String id, String name, String definition, String description,
-			HashMap<String, Object> properties, NavigationLink<Datastream> datastreamsLink,
-			NavigationLink<ObservedProperty> selfLink) {
+			HashMap<String, Object> properties, SingleNavigationLink<Datastream> datastreamsLink,
+			SingleNavigationLink<ObservedProperty> selfLink) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -48,12 +48,12 @@ public class ObservedProperty implements SensorthingsProperties, Sensorthings {
 	}
 
 
-	public NavigationLink<Datastream> getDatastreamsLink() {
+	public SingleNavigationLink<Datastream> getDatastreamsLink() {
 		return datastreamsLink;
 	}
 
 
-	public NavigationLink<ObservedProperty> getSelfLink() {
+	public SingleNavigationLink<ObservedProperty> getSelfLink() {
 		return selfLink;
 	}
 	

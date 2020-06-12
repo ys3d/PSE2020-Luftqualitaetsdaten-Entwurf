@@ -2,10 +2,10 @@ package de.visaq.controller.link;
 
 import de.visaq.model.sensorthings.Sensorthings;
 
-class SensorthingsOnlineLink<sensorthing extends Sensorthings> implements NavigationLink<sensorthing> {
+class MultiOnlineLink<sensorthing extends Sensorthings> implements MultiNavigationLink<sensorthing> {
 	private final String url;
 	
-	public SensorthingsOnlineLink(String url) {
+	public MultiOnlineLink(String url) {
 		this.url = url;
 	}
 
@@ -19,7 +19,7 @@ class SensorthingsOnlineLink<sensorthing extends Sensorthings> implements Naviga
 		return super.equals(obj);
 	}
 
-	public sensorthing get() {
+	public sensorthing[] get() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,17 +1,17 @@
 package de.visaq.model.sensorthings;
 
-import de.visaq.controller.link.NavigationLink;
+import de.visaq.controller.link.SingleNavigationLink;
 
 public class Sensor implements Sensorthings {
 	private final String id;
-	private final NavigationLink<Sensor> selfLink;
+	private final SingleNavigationLink<Sensor> selfLink;
 	private final String description;
 	private final String name;
-	private final NavigationLink<Datastream> datastreams;
+	private final SingleNavigationLink<Datastream> datastreams;
 
 	
-	public Sensor(String id, NavigationLink<Sensor> selfLink, String description, String name,
-			NavigationLink<Datastream> datastreams) {
+	public Sensor(String id, SingleNavigationLink<Sensor> selfLink, String description, String name,
+			SingleNavigationLink<Datastream> datastreams) {
 		super();
 		this.id = id;
 		this.selfLink = selfLink;
@@ -26,7 +26,7 @@ public class Sensor implements Sensorthings {
 	}
 
 
-	public NavigationLink<Sensor> getSelfLink() {
+	public SingleNavigationLink<Sensor> getSelfLink() {
 		return selfLink;
 	}
 
@@ -41,7 +41,7 @@ public class Sensor implements Sensorthings {
 	}
 
 
-	public NavigationLink<Datastream> getDatastreams() {
+	public SingleNavigationLink<Datastream> getDatastreams() {
 		return datastreams;
 	}
 
