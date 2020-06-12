@@ -1,8 +1,6 @@
 package de.visaq;
 
 /**
- *	@author {@link "mailto:fabian.reinbold@outlook.com" "Fabian Reinbold"}
- *
  *	Contains constants that are used in REST communication.
  */
 public abstract class RestConstants {
