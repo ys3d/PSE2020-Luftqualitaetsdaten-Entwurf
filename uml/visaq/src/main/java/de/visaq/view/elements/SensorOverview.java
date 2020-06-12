@@ -1,5 +1,22 @@
 package de.visaq.view.elements;
+import de.visaq.view.elements.diagram.Diagram;
 
-public class SensorOverview {
-
+public class SensorOverview implements Element{
+	
+	Diagram diagram;
+	
+	public void showDiagram(Diagram diagram) {
+	}
+	
+	public void setDiagram(Diagram specificDiagram) {
+		this.diagram = specificDiagram;
+	}
+	
+	public String getText(String key) {
+		return null;
+	}
+	
+	public void show() {
+		
+	}
 }
