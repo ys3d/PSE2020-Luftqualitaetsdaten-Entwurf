@@ -2,7 +2,7 @@ package de.visaq.controller.link;
 
 import de.visaq.model.sensorthings.Sensorthings;
 
-class SensorthingsOnlineLink<T extends Sensorthings> implements NavigationLink<T> {
+class SensorthingsOnlineLink<sensorthing extends Sensorthings> implements NavigationLink<sensorthing> {
 	private final String url;
 	
 	public SensorthingsOnlineLink(String url) {
@@ -19,7 +19,7 @@ class SensorthingsOnlineLink<T extends Sensorthings> implements NavigationLink<T
 		return super.equals(obj);
 	}
 
-	public T get() {
+	public sensorthing get() {
 		// TODO Auto-generated method stub
 		return null;
 	}

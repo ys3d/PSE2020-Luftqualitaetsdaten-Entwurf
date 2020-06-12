@@ -2,9 +2,9 @@ package de.visaq.controller.link;
 
 import de.visaq.model.sensorthings.Sensorthings;
 
-class LocalLink<T extends Sensorthings> implements NavigationLink<T> {
+class LocalLink<sensorthing extends Sensorthings> implements NavigationLink<sensorthing> {
 
-	public T get() {
+	public sensorthing get() {
 		// TODO Auto-generated method stub
 		return null;
 	}
