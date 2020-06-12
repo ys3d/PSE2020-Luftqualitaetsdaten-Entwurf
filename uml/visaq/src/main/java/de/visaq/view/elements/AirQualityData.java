@@ -1,27 +1,9 @@
 package de.visaq.view.elements;
 
-public enum AirQualityData {
-	
-	FEINSTAUB ("Feinstaub"),
-	TEMPERATUR("Temperatur"),
-	LUFTFEUCHTIGKEIT("Luftfeuchtigkeit"),
-	LUFTDRUCK("Luftdruck");
-	 
-	private String qualityData = ""; 
-	
-	
+import java.awt.Color;
 
-	AirQualityData(String qualityData) {
-		this.qualityData = qualityData;
-	}
+public abstract class AirQualityData {
 	
-	public String choosenData() { 
-		return qualityData;
+	public AirQualityData(String name, Color primaryColor, Color secondaryColor) {
 	}
-	
-	/**
-	 * Idea for Constructor when using objects not Enums
-	 * 
-	 * Public AirQualityData(String name, Color primaryColor, Color secondaryColor, ObservedProperty observedProperty)
-	 */
 }
