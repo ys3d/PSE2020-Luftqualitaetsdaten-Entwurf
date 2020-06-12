@@ -2,18 +2,18 @@ package de.visaq.model.sensorthings;
 
 import java.time.LocalDateTime;
 
-import de.visaq.controller.link.NavigationLink;
+import de.visaq.controller.link.SingleNavigationLink;
 
-public class Observation implements SenorthingsTimeStamp, Sensorthings {
+public class Observation implements SensorthingsTimeStamp, Sensorthings {
 	private final String id;
-	private final NavigationLink<Observation> selfLink;
+	private final SingleNavigationLink<Observation> selfLink;
 	private final LocalDateTime phenomenonTime;
 	private final String result;
 	private final LocalDateTime resultTime;
-	private final NavigationLink<Datastream> datastreamLink;
+	private final SingleNavigationLink<Datastream> datastreamLink;
 
-	public Observation(String id, NavigationLink<Observation> selfLink, LocalDateTime phenomenonTime, String result,
-			LocalDateTime resultTime, NavigationLink<Datastream> datastreamLink) {
+	public Observation(String id, SingleNavigationLink<Observation> selfLink, LocalDateTime phenomenonTime, String result,
+			LocalDateTime resultTime, SingleNavigationLink<Datastream> datastreamLink) {
 		super();
 		this.id = id;
 		this.selfLink = selfLink;
@@ -27,7 +27,7 @@ public class Observation implements SenorthingsTimeStamp, Sensorthings {
 		return id;
 	}
 
-	public NavigationLink<Observation> getSelfLink() {
+	public SingleNavigationLink<Observation> getSelfLink() {
 		return selfLink;
 	}
 
@@ -43,7 +43,7 @@ public class Observation implements SenorthingsTimeStamp, Sensorthings {
 		return resultTime;
 	}
 
-	public NavigationLink<Datastream> getDatastreamLink() {
+	public SingleNavigationLink<Datastream> getDatastreamLink() {
 		return datastreamLink;
 	}
 

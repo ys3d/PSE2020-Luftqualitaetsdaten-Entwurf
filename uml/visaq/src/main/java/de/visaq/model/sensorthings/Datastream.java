@@ -1,6 +1,6 @@
 package de.visaq.model.sensorthings;
 
-import de.visaq.controller.link.NavigationLink;
+import de.visaq.controller.link.SingleNavigationLink;
 
 public class Datastream implements Sensorthings {
 	private final String id;
@@ -8,20 +8,19 @@ public class Datastream implements Sensorthings {
 	private final String description;
 	private final UnitOfMeasurement unitOfMeasurement;
 	//REST request that this datastream was retrieved from
-	private final NavigationLink<Datastream> selfLink;
+	private final SingleNavigationLink<Datastream> selfLink;
 	//URL of some definition regarding this observation
 	private final String observationTypeLink;
-	private final NavigationLink<Observation> observationsLink;
-	private final NavigationLink<Sensor> sensorLink;
-	private final NavigationLink<Thing> thingLink;
-	private final ObservedProperty observedProperty;
+	private final SingleNavigationLink<Observation> observationsLink;
+	private final SingleNavigationLink<Sensor> sensorLink;
+	private final SingleNavigationLink<Thing> thingLink;
 
 	
 
 	public Datastream(String id, String name, String description, UnitOfMeasurement unitOfMeasurement,
-			NavigationLink<Datastream> selfLink, String observationTypeLink,
-			NavigationLink<Observation> observationsLink, NavigationLink<Sensor> sensorLink,
-			NavigationLink<Thing> thingLink, ObservedProperty observedProperty) {
+			SingleNavigationLink<Datastream> selfLink, String observationTypeLink,
+			SingleNavigationLink<Observation> observationsLink, SingleNavigationLink<Sensor> sensorLink,
+			SingleNavigationLink<Thing> thingLink) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,7 +31,6 @@ public class Datastream implements Sensorthings {
 		this.observationsLink = observationsLink;
 		this.sensorLink = sensorLink;
 		this.thingLink = thingLink;
-		this.observedProperty = observedProperty;
 	}
 
 	public String getId() {
@@ -51,7 +49,7 @@ public class Datastream implements Sensorthings {
 		return unitOfMeasurement;
 	}
 
-	public NavigationLink<Datastream> getSelfLink() {
+	public SingleNavigationLink<Datastream> getSelfLink() {
 		return selfLink;
 	}
 
@@ -59,20 +57,16 @@ public class Datastream implements Sensorthings {
 		return observationTypeLink;
 	}
 
-	public NavigationLink<Observation> getObservationsLink() {
+	public SingleNavigationLink<Observation> getObservationsLink() {
 		return observationsLink;
 	}
 
-	public NavigationLink<Sensor> getSensorLink() {
+	public SingleNavigationLink<Sensor> getSensorLink() {
 		return sensorLink;
 	}
 
-	public NavigationLink<Thing> getThingLink() {
+	public SingleNavigationLink<Thing> getThingLink() {
 		return thingLink;
-	}
-
-	public ObservedProperty getObservedProperty() {
-		return observedProperty;
 	}
 	
 	@Override

@@ -2,7 +2,7 @@ package de.visaq.model.sensorthings;
 
 import java.awt.Point;
 
-import de.visaq.controller.link.NavigationLink;
+import de.visaq.controller.link.SingleNavigationLink;
 
 public class Location implements Sensorthings {
 	private final String id;
@@ -10,10 +10,10 @@ public class Location implements Sensorthings {
 	private final String description;
 	//TODO: Check if point is the only possible value
 	private final Point location;
-	private final NavigationLink<HistoricalLocation> historicalLocationLink;
+	private final SingleNavigationLink<HistoricalLocation> historicalLocationLink;
 
 
-	public Location(String id, String name, String description, Point location, NavigationLink<HistoricalLocation> historicalLocationLink) {
+	public Location(String id, String name, String description, Point location, SingleNavigationLink<HistoricalLocation> historicalLocationLink) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -42,7 +42,7 @@ public class Location implements Sensorthings {
 		return location;
 	}
 
-	public NavigationLink<HistoricalLocation> getHistoricalLocationLink() {
+	public SingleNavigationLink<HistoricalLocation> getHistoricalLocationLink() {
 		return historicalLocationLink;
 	}
 	
