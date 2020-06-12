@@ -4,46 +4,20 @@ import java.awt.Point;
 
 import de.visaq.controller.link.SingleNavigationLink;
 
-public class Location implements Sensorthings {
-	private final String id;
-	private final String name;
-	private final String description;
+public class Location extends Sensorthings {
+	public final String name;
+	public final String description;
 	//TODO: Check if point is the only possible value
-	private final Point location;
-	private final SingleNavigationLink<HistoricalLocation> historicalLocationLink;
+	public final Point location;
+	public final SingleNavigationLink<HistoricalLocation> historicalLocationLink;
 
 
-	public Location(String id, String name, String description, Point location, SingleNavigationLink<HistoricalLocation> historicalLocationLink) {
-		super();
-		this.id = id;
+	public Location(String id, SingleNavigationLink<HistoricalLocation> selfLink, String name, String description, Point location, SingleNavigationLink<HistoricalLocation> historicalLocationLink) {
+		super(id, selfLink);
 		this.name = name;
 		this.description = description;
 		this.location = location;
 		this.historicalLocationLink = historicalLocationLink;
-	}
-
-
-	public String getId() {
-		return id;
-	}
-
-
-	public String getName() {
-		return name;
-	}
-
-
-	public String getDescription() {
-		return description;
-	}
-
-
-	public Point getLocation() {
-		return location;
-	}
-
-	public SingleNavigationLink<HistoricalLocation> getHistoricalLocationLink() {
-		return historicalLocationLink;
 	}
 	
 	@Override
