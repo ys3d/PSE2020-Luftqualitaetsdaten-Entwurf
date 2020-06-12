@@ -2,7 +2,7 @@ package de.visaq.view.elements;
 	/*
 	 * Links and Definitions to the different functions and a public method for the navbar
 	 */
-public class Navbar implements Element {
+public class Navbar implements ToolbarElement {
 	
 	public Navbar() {
 		// TODO Auto-generated method stub

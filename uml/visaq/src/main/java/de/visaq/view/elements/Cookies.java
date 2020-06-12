@@ -1,6 +1,6 @@
 package de.visaq.view.elements;
 
-public class Cookies implements Element{
+public class Cookies implements ToolbarElement{
 
 	public boolean accept() {
 		return false;

@@ -2,7 +2,7 @@ package de.visaq.view.elements;
 
 import de.visaq.view.InformationView;
 
-public class Toolbar implements Element{
+public class Toolbar implements ToolbarElement{
 	
 	private AirQualityData airQualityData;
 	private InformationView informationview;
