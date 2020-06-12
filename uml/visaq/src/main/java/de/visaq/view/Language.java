@@ -5,7 +5,7 @@ import java.util.Properties;
 
 public class Language {
 	
-	private BufferedImage icon;
+	private BufferedImage icon = null;
 	
 	private final Properties language;
 	public final String NAME;
@@ -19,6 +19,10 @@ public class Language {
 	public BufferedImage getIcon() {
 		
 		return icon;
+	}
+	
+	private void setIcon(BufferedImage icon) {
+		this.icon = icon;
 	}
 	
 	

@@ -11,4 +11,20 @@ public abstract class ColorTheme {
 		
 	}
 
+	public Color getSECONDARYCOLOR() {
+		return SECONDARYCOLOR;
+	}
+
+	public void setSECONDARYCOLOR(Color secondaryColor) {
+		SECONDARYCOLOR = secondaryColor;
+	}
+
+	public Color getPRIMARYCOLOR() {
+		return PRIMARYCOLOR;
+	}
+
+	public void setPRIMARYCOLOR(Color primaryColor) {
+		PRIMARYCOLOR = primaryColor;
+	}
+
 }

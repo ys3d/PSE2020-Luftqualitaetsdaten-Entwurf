@@ -13,8 +13,6 @@ public class MapView extends View {
 	private SensorOverview sensoroverview;
 	
 	private Legend legend;
-	
-	private Timeline timeline;
 
 	public MapView(Language language, ColorTheme colorTheme) {
 		super(language, colorTheme);
@@ -36,5 +34,30 @@ public class MapView extends View {
 	public void showTimeline() {
 		
 	}
+	
+	public Map getMap() {
+		return this.map;
+		
+	}
+	
+	private void setMap(Map map) {
+		this.map = map;
+	}
+	
+	public SensorOverview getSensorOverview() {
+		return this.sensoroverview;
+		
+	}
+	
+	private void setSensorOverview(SensorOverview sensoroverview) {
+		this.sensoroverview = sensoroverview;
+	}
 
+	public Legend getLegend() {
+		return legend;
+	}
+
+	public void setLegend(Legend legend) {
+		this.legend = legend;
+	}
 }

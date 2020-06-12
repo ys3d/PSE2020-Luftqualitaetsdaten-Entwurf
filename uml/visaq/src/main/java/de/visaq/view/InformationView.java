@@ -24,6 +24,10 @@ public class InformationView extends View {
 		return icon;
 	}
 	
+	private void setIcon(BufferedImage icon) {
+		this.icon = icon;
+	}
+	
 	public String getText(String key) {
 		return null;
 	}

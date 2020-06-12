@@ -1,6 +1,6 @@
 package de.visaq.view.elements;
 
-public class SearchBar {
+public class SearchBar implements Element {
 	
 	private String input;
 	
@@ -8,12 +8,16 @@ public class SearchBar {
 		
 	}
 	
-	public void search(String input) {
-		
-	}
-	
 	public void show() {
 		
+	}
+
+	public String getInput() {
+		return input;
+	}
+
+	public void setInput(String input) {
+		this.input = input;
 	}
 	
 }

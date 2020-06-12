@@ -2,13 +2,9 @@ package de.visaq.view.elements;
 	/*
 	 * Links and Definitions to the different functions and a public method for the navbar
 	 */
-public class Navbar {
+public class Navbar implements Element {
 	
 	public Navbar() {
-		// TODO Auto-generated method stub
-	}
-	
-	public void openNavbar() {
 		// TODO Auto-generated method stub
 	}
 	
@@ -30,5 +26,10 @@ public class Navbar {
 	
 	private void historicalData() {
 		// TODO Auto-generated method stub
+	}
+
+	public void show() {
+		// TODO Auto-generated method stub
+		
 	}
 }

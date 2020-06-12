@@ -10,6 +10,7 @@ public abstract class VisAQ {
 	Toolbar toolbar;
 	
 	public static void main(String[] args) {
+		
 	}
 
 }
