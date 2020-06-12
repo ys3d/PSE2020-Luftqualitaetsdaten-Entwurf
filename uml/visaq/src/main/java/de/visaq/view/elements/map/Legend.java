@@ -5,6 +5,10 @@ import de.visaq.view.elements.AirQualityData;
 public class Legend {
 	
 	AirQualityData airQualityData;
+	
+	public Legend(AirQualityData airQualityData) {
+		this.airQualityData = airQualityData;
+	}
 
 	/*
 	 * Gradient shown on website

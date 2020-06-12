@@ -12,4 +12,8 @@ public class SearchBar {
 		
 	}
 	
+	public void show() {
+		
+	}
+	
 }
