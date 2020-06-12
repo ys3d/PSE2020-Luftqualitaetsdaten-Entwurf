@@ -1,6 +1,6 @@
 package de.visaq.view.elements;
 
-public interface Element {
+public interface ToolbarElement {
 	
 	public void show();
 
