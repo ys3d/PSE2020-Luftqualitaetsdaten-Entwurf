@@ -14,14 +14,13 @@ public class Datastream implements Sensorthings {
 	private final NavigationLink<Observation> observationsLink;
 	private final NavigationLink<Sensor> sensorLink;
 	private final NavigationLink<Thing> thingLink;
-	private final ObservedProperty observedProperty;
 
 	
 
 	public Datastream(String id, String name, String description, UnitOfMeasurement unitOfMeasurement,
 			NavigationLink<Datastream> selfLink, String observationTypeLink,
 			NavigationLink<Observation> observationsLink, NavigationLink<Sensor> sensorLink,
-			NavigationLink<Thing> thingLink, ObservedProperty observedProperty) {
+			NavigationLink<Thing> thingLink) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,7 +31,6 @@ public class Datastream implements Sensorthings {
 		this.observationsLink = observationsLink;
 		this.sensorLink = sensorLink;
 		this.thingLink = thingLink;
-		this.observedProperty = observedProperty;
 	}
 
 	public String getId() {
@@ -69,10 +67,6 @@ public class Datastream implements Sensorthings {
 
 	public NavigationLink<Thing> getThingLink() {
 		return thingLink;
-	}
-
-	public ObservedProperty getObservedProperty() {
-		return observedProperty;
 	}
 	
 	@Override
