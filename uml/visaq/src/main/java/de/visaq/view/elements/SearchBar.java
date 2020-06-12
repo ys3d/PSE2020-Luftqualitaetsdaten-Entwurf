@@ -1,6 +1,6 @@
 package de.visaq.view.elements;
 
-public class SearchBar implements Element {
+public class SearchBar implements ToolbarElement {
 	
 	private String input;
 	

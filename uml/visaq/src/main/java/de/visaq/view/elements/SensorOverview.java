@@ -1,7 +1,7 @@
 package de.visaq.view.elements;
 import de.visaq.view.elements.diagram.Diagram;
 
-public class SensorOverview implements Element{
+public class SensorOverview implements ToolbarElement{
 	
 	Diagram diagram;
 	
