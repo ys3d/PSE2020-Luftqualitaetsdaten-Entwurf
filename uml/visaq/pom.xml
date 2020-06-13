@@ -4,4 +4,25 @@
   <artifactId>visaq</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>VisAQ</name>
+  <properties>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.json</groupId>
+  		<artifactId>json</artifactId>
+  		<version>20200518</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.glassfish.jersey.core</groupId>
+  		<artifactId>jersey-client</artifactId>
+  		<version>3.0.0-M1</version>
+  	</dependency>
+	<dependency>
+	    <groupId>org.glassfish.jersey.inject</groupId>
+	    <artifactId>jersey-hk2</artifactId>
+	    <version>3.0.0-M1</version>
+	</dependency>
+  </dependencies>
 </project>
