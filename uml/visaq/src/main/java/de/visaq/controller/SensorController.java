@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 
-import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.MultiOnlineLink;
-import de.visaq.controller.link.SingleNavigationLink;
 import de.visaq.model.sensorthings.Datastream;
 import de.visaq.model.sensorthings.Sensor;
 import de.visaq.model.sensorthings.Thing;
@@ -30,11 +28,6 @@ public class SensorController extends SensorthingsController<Sensor> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	public ArrayList<Sensor> get(MultiNavigationLink<Sensor> navigationLink) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	/**
 	 * Retrieves the Sensor object assoviated with the specified Datastream.
@@ -47,11 +40,6 @@ public class SensorController extends SensorthingsController<Sensor> {
 		return null;
 	}
 
-	public Sensor get(SingleNavigationLink<Sensor> navigationLink) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public Sensor get(String id) {
 		// TODO Auto-generated method stub
 		return null;
@@ -59,6 +47,8 @@ public class SensorController extends SensorthingsController<Sensor> {
 
 	@Override
 	public Sensor singleBuild(JSONObject json) {
+		json = UtilityController.removeArrayWrapper(json);
+		
 		Sensor sensor = new Sensor(
 				json.getString("@iot.id"), 
 				json.getString("@iot.selfLink"),

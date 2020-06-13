@@ -1,6 +1,6 @@
 package de.visaq.model.sensorthings;
 
-import java.time.LocalDateTime;
+//import java.time.Instant;
 import java.util.Map;
 
 import de.visaq.controller.DatastreamController;
@@ -16,6 +16,8 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
 	public final MultiNavigationLink<Observation> observationsLink;
 	public final SingleNavigationLink<Sensor> sensorLink;
 	public final SingleNavigationLink<Thing> thingLink;
+//	public final Instant phenomenonTime;
+//	public final Instant resultTime;
 
 	public Datastream(
 			String id, 
@@ -24,8 +26,8 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
 			String description, 
 			Map<String, Object> properties, 
 			String observationTypeLink,
-			LocalDateTime phenomenonTime,
-			LocalDateTime resultTimeDateTime,
+//			Instant phenomenonTime,
+//			Instant resultTime,
 			SingleNavigationLink<Sensor> sensorLink,
 			SingleNavigationLink<Thing> thingLink,
 			MultiNavigationLink<Observation> observationsLink,
@@ -37,6 +39,8 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
 		this.unitOfMeasurement = unitOfMeasurement;
 		this.observationTypeLink = observationTypeLink;
 		this.observationsLink = observationsLink;
+//		this.resultTime = resultTime;
+//		this.phenomenonTime = phenomenonTime;
 		this.sensorLink = sensorLink;
 		this.thingLink = thingLink;
 	}

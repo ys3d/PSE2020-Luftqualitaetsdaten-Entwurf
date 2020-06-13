@@ -5,9 +5,7 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 
-import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.MultiOnlineLink;
-import de.visaq.controller.link.SingleNavigationLink;
 import de.visaq.model.sensorthings.Datastream;
 import de.visaq.model.sensorthings.HistoricalLocation;
 import de.visaq.model.sensorthings.Location;
@@ -33,16 +31,6 @@ public class ThingController extends SensorthingsController<Thing> {
 		return multiLink.get(this);
 	}
 
-	public ArrayList<Thing> get(MultiNavigationLink<Thing> navigationLink) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Thing get(SingleNavigationLink<Thing> navigationLink) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public Thing get(String id) {
 		// TODO Auto-generated method stub
 		return null;
@@ -50,6 +38,8 @@ public class ThingController extends SensorthingsController<Thing> {
 
 	@Override
 	public Thing singleBuild(JSONObject json) {
+		json = UtilityController.removeArrayWrapper(json);
+		
 		Thing thing = new Thing(
 				json.getString("@iot.id"), 
 				json.getString("@iot.selfLink"),

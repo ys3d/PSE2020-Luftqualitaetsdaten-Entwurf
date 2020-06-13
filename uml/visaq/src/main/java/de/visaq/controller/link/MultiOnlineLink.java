@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 
+import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 import jakarta.ws.rs.client.Client;
@@ -17,7 +18,7 @@ public class MultiOnlineLink<sensorthing extends Sensorthings<sensorthing>> impl
 	public final String url;
 	
 	public MultiOnlineLink(String url) {
-		this.url = url;
+		this.url = RestConstants.ENTRY_POINT + url;
 	}
 	
 	@Override

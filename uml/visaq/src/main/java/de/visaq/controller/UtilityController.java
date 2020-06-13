@@ -1,8 +1,7 @@
 package de.visaq.controller;
 
 import java.awt.Point;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.time.Instant;
 import java.util.Map;
 
 import org.json.JSONArray;
@@ -19,8 +18,8 @@ public class UtilityController {
 				);
 	}
 	
-	public static LocalDateTime buildTime(JSONObject json, String key) {
-		return LocalDateTime.parse(json.getString(key), DateTimeFormatter.ISO_INSTANT);
+	public static Instant buildTime(JSONObject json, String key) {
+		return Instant.parse(json.getString(key));
 	}
 	
 	public static Point buildLocationPoint(JSONObject json) {
@@ -32,5 +31,19 @@ public class UtilityController {
 	
 	public static Map<String, Object> buildProperties(JSONObject json) {
 		return json.getJSONObject("properties").toMap();
+	}
+	
+	public static JSONObject removeArrayWrapper(JSONObject json) {
+		if (!json.has("value")) {
+			return json;
+		}
+		
+		json = json.getJSONObject("value");
+		
+		if (!json.has("0")) {
+			return json;
+		}
+		
+		return json.getJSONObject("0");
 	}
 }

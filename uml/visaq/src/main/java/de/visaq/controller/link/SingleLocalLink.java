@@ -1,5 +1,6 @@
 package de.visaq.controller.link;
 
+import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
@@ -8,7 +9,7 @@ public class SingleLocalLink<sensorthing extends Sensorthings<sensorthing>> impl
 	public final Sensorthings<sensorthing> cachedSensorthing;
 
 	public SingleLocalLink(String url, Sensorthings<sensorthing> cachedSensorthing) {
-		this.url = url;
+		this.url = RestConstants.ENTRY_POINT + url;
 		this.cachedSensorthing = cachedSensorthing;
 	}
 

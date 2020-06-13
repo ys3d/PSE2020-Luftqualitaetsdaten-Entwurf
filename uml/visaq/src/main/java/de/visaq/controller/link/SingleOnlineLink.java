@@ -2,6 +2,7 @@ package de.visaq.controller.link;
 
 import org.json.JSONObject;
 
+import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 import jakarta.ws.rs.client.Client;
@@ -15,7 +16,7 @@ public class SingleOnlineLink<sensorthing extends Sensorthings<sensorthing>> imp
 	public final String url;
 	
 	public SingleOnlineLink(String url) {
-		this.url = url;
+		this.url = RestConstants.ENTRY_POINT + url;
 	}
 	
 	@Override

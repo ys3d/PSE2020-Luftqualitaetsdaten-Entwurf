@@ -27,14 +27,18 @@ public abstract class SensorthingsController<sensorthing extends Sensorthings<se
 	 * @param navigationLink 	Link to the Sensorthings objects inside the database.
 	 * @return					An array containing the Sensorthings objects that were retrieved.
 	 */
-	public abstract ArrayList<sensorthing> get(MultiNavigationLink<sensorthing> navigationLink);
+	public ArrayList<sensorthing> get(MultiNavigationLink<sensorthing> navigationLink) {
+		return navigationLink.get(this);
+	}
 	/**
 	 * Retrieves the Sensorthings object that is bound to the specified SingleNavigationLink.
 	 * 
 	 * @param navigationLink	Link to the Sensorthings object inside the database.
 	 * @return 					The Sensorthings object that was retrieved.
 	 */
-	public abstract sensorthing get(SingleNavigationLink<sensorthing> navigationLink);
+	public Sensorthings<sensorthing> get(SingleNavigationLink<sensorthing> navigationLink) {
+		return navigationLink.get(this);
+	}
 	/**
 	 * Retrieves the Sensorthings object with the specified identifier.
 	 * 

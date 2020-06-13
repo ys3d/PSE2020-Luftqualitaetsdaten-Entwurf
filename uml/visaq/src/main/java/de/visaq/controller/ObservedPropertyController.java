@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 
-import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.MultiOnlineLink;
-import de.visaq.controller.link.SingleNavigationLink;
 import de.visaq.model.sensorthings.Datastream;
 import de.visaq.model.sensorthings.ObservedProperty;
 
@@ -16,17 +14,7 @@ public class ObservedPropertyController extends SensorthingsController<ObservedP
 		return null;
 	}
 
-	public ArrayList<ObservedProperty> get(MultiNavigationLink<ObservedProperty> navigationLink) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public ObservedProperty get(Datastream datastream) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public ObservedProperty get(SingleNavigationLink<ObservedProperty> navigationLink) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -38,6 +26,8 @@ public class ObservedPropertyController extends SensorthingsController<ObservedP
 
 	@Override
 	public ObservedProperty singleBuild(JSONObject json) {
+		json = UtilityController.removeArrayWrapper(json);
+		
 		ObservedProperty observedProperty = new ObservedProperty(
 				json.getString("@iot.id"),
 				json.getString("@iot.selfLink"), 
