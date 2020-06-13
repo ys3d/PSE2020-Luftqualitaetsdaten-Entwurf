@@ -2,6 +2,17 @@ package de.visaq.view.elements;
 
 import de.visaq.view.InformationView;
 
+/*
+ * The toolbar. It shows the Navigationbar through which you can access further functionalities.
+ * Also located here is the the Help/Information View, the language setting and the searchbar.
+ * The setter and getter are used to guarante an safe use of the different attributes used in this class.
+ * Used attributes are the 4 airquality types listed on the website as well as the Informationview, the navigationbar
+ * and the searchbar.
+ * 
+ * This class imports the InformationView from the view package to use it in the Toolbar.
+ *   
+ */
+
 public class Toolbar implements ToolbarElement{
 	
 	private AirQualityData airQualityData;

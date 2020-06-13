@@ -2,6 +2,10 @@ package de.visaq.view.elements;
 
 import java.awt.Color;
 
+/*
+ * Class that extends AirQualitiyData and is used for the Temperature Overlay 
+ */
+
 public class Temperature extends AirQualityData {
 
 	public Temperature(String name, Color primaryColor, Color secondaryColor) {

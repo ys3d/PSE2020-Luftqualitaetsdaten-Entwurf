@@ -1,6 +1,7 @@
 package de.visaq.view.elements;
 	/*
-	 * Links and Definitions to the different functions and a public method for the navbar
+	 * Links and Definitions to the different functions and a public method for the navigation bar to be shown implemented from
+	 * the ToolbarElement
 	 */
 public class Navbar implements ToolbarElement {
 	
