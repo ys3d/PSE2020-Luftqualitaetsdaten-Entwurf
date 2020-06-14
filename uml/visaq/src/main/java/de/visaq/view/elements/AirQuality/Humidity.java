@@ -1,4 +1,4 @@
-package de.visaq.view.elements;
+package de.visaq.view.elements.AirQuality;
 
 import java.awt.Color;
 

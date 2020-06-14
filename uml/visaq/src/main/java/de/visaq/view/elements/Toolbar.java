@@ -1,6 +1,7 @@
 package de.visaq.view.elements;
 
 import de.visaq.view.InformationView;
+import de.visaq.view.elements.AirQuality.AirQualityData;
 
 /*
  * The toolbar. It shows the Navigationbar through which you can access further functionalities.
