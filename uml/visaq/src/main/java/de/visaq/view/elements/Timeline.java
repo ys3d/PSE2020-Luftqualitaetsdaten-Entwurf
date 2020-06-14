@@ -12,4 +12,8 @@ public class Timeline implements ToolbarElement{
 		
 	}
 	
+	public void update() {
+		
+	}
+	
 }

@@ -1,8 +1,8 @@
 package de.visaq.view.elements;
 
 /*
- * Cookies are shown at the initiation of the website and are used to safe the 
- * prefered configurations of the individual users.
+ * Cookies are shown at the initiation of website and are used to safe the 
+ * Preferred configurations of the individual users.
  * It implements ToolbarElement because of the show() method used in this class.
  * The boolean accept(): is used in order to safe if the user accepted the cookies or not
  * getText(): gets the text that is shown in the Cookie window

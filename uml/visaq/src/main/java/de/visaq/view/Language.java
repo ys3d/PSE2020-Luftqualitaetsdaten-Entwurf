@@ -33,4 +33,8 @@ public class Language {
 	public String getText(String key) {
 		return null;
 	}
+
+	public Properties getLanguage() {
+		return language;
+	}
 }
