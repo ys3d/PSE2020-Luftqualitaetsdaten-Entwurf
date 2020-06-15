@@ -9,33 +9,43 @@ import de.visaq.view.elements.diagram.Diagram;
  */
 
 public class SensorOverview implements ToolbarElement{
-	/*
-	 * The shown Diagram that is set by the setter
-	 */
+	
 	Diagram diagram;
+	
 	/*
-	 * What will be shown in the SensorOverview
+	 * shows the given diagram
+	 * @param diagram: given diagram with historical data
 	 */
 	public void showDiagram(Diagram diagram) {
 	}
+
 	/*
-	 * Getter and setter for the Diagram type
+	 * sets the diagram
+	 * @param specificDiagram sets the diagram
 	 */
 	private void setDiagram(Diagram specificDiagram) {
 		this.diagram = specificDiagram;
 	}
 	
+	/*
+	 * getter for the diagram
+	 * @return diagram with the historical data
+	 */
 	public Diagram getDiagram() {
 		return diagram;
 	}
+	
 	/*
-	 * getText(): gets the text shown in the SensorOverview in the by the user chosen language.
+	 * gets the text from the property
+	 * @param key to the file
+	 * @return the text
 	 */
 	public String getText(String key) {
 		return null;
 	}
+
 	/*
-	 * The show() method is from the ToolbarElement and shows the SensorOverview.
+	 * shows the Sidebar
 	 */
 	public void show() {
 		

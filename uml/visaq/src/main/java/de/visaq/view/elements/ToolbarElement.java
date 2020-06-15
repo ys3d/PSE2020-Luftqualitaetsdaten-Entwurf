@@ -1,5 +1,6 @@
 package de.visaq.view.elements;
 
+
 /*
  * Interface that has the show method used in different other classes to show the 
  * different parts of the website.
@@ -8,7 +9,7 @@ package de.visaq.view.elements;
 
 public interface ToolbarElement {
 	/*
-	 * show method used in other classes
+	 * used to show the elements on the site
 	 */
 	public void show();
 

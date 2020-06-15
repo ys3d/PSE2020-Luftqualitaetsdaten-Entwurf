@@ -7,13 +7,8 @@ import de.visaq.view.theme.ColorTheme;
  */
 
 public abstract class View {
-	/*
-	 * The used language
-	 */
+
 	final Language language;
-	/*
-	 * The used color theme
-	 */
 	final ColorTheme colorTheme;
 	
 	

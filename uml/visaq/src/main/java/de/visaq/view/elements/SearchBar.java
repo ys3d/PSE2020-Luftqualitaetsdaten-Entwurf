@@ -1,33 +1,39 @@
 package de.visaq.view.elements;
 /*
  * Searchbar that the user can use in order to look up a particular city using the city name or
- * the postal code of the city. 
+ * the postal code of the city.
  */
 
 public class SearchBar implements ToolbarElement {
-	 /*
-	  *  The class has the attribute input that is used to store the input of the user.
-	  */
+	
+	  
 	private String input;
 	/*
-	 *  It also exists a constructor for further uses.
+	 * Constructor for the Searchbar
 	 */
 	public SearchBar() {
 		
 	}
-	 /*
-	  * show() is from the ToolbarElement and shows the searchbar later on in the toolbar.
-	  */
+	/*
+	 * shows the sidebar
+	 */
+	 @Override 
 	public void show() {
 		
 	}
+	
 	/*
-	 * The setter and getter are used to guarante an safe use of the input
+	 * gets the input of the user allowing a further use of it
+	 * @return input
 	 */
 	public String getInput() {
 		return input;
 	}
-
+	
+	/*
+	 * sets the input of the user
+	 * @param input, input of the user
+	 */
 	public void setInput(String input) {
 		this.input = input;
 	}

@@ -7,6 +7,7 @@ public class Navbar implements ToolbarElement {
 	/*
 	 * Constructor constructing the Navbar with all listed features
 	 */
+
 	public Navbar() {
 		// TODO Auto-generated method stub
 	}

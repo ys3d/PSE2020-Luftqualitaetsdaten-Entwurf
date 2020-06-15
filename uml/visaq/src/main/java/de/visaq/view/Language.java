@@ -4,23 +4,15 @@ import java.awt.image.BufferedImage;
 import java.util.Properties;
 
 /*
- * Language class is used to change the language the user prefers and sets the Icon used in the toolbar
+ * Language class is used to change the language the user prefers and sets the Icon used in the toolbar.
  */
 
 public class Language {
-	/*
-	 * icon of the language setting
-	 */
+	 
 	private BufferedImage icon = null;
-	/*
-	 * Language Property
-	 */
 	private final Properties language;
-	/*
-	 * The name of the language
-	 */
 	public final String NAME;
-
+	
 	/*
 	 * Constructor used to create the language
 	 */
@@ -30,7 +22,8 @@ public class Language {
 		this.NAME = name;
 	}
 	/*
-	 * setter and getter used for the icon
+	 * gets the icon
+	 * @return the icon
 	 */
 	public BufferedImage getIcon() {
 		
@@ -40,15 +33,17 @@ public class Language {
 	private void setIcon(BufferedImage icon) {
 		this.icon = icon;
 	}
-	
 	/*
-	 * getText(): gets the shown information from the Property depending on the language
+	 * Getter for the texts in the Property
+	 * @param key, String to get the proper property with the language settings
+	 * @return the text
 	 */
 	public String getText(String key) {
 		return null;
 	}
 	/*
-	 * gets the language used
+	 * Used to access the language properties
+	 * @return the used language file
 	 */
 	public Properties getLanguage() {
 		return language;

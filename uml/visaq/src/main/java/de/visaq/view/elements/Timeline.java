@@ -5,14 +5,18 @@ package de.visaq.view.elements;
  * It also implements the ToolbarElement to use the show method.
  */
 
+
 public class Timeline implements ToolbarElement{
+	
 	/*
-	 * shows the Timeline
+	 * shows the timeline
 	 */
+	@Override
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	/*
 	 * updates the Overlay to the new historical data
 	 */

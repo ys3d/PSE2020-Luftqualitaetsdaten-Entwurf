@@ -12,18 +12,11 @@ import de.visaq.view.theme.ColorTheme;
  */
 
 public class MapView extends View {
-	/*
-	 * Used to store the used map
-	 */
+	
 	private Map map;
-	/*
-	 * Used to create a sidebar
-	 */
 	private SensorOverview sensoroverview;
-	/*
-	 * used to show the specific legend
-	 */
 	private Legend legend;
+
 	/*
 	 * The Constructor sets the used language and color theme
 	 */
@@ -32,59 +25,79 @@ public class MapView extends View {
 		// TODO Auto-generated constructor stub
 	}
 	/*
-	 * show(): shows the Mapview
+	 * shows the Mapview
 	 */
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
-	/*
-	 * showSensoroverview(): shows the Sidebar containing the different information to either the chosen point or the sensor
-	 */
+	 /*
+	  * showSensoroverview(): shows the Sidebar containing the different information to either the chosen point or the sensor
+	  */
 	public void showSensoroverview() {
 		
 	}
+	
 	/*
 	 * showLegend(): shows the Legend for the interpolation
 	 */
 	public void showLegend() {
 		
 	}
+	
 	/*
-	 *  showTimeline(): shows the timeline for the historical data
+	 * showTimeline(): shows the timeline for the historical data
 	 */
 	public void showTimeline() {
 		
 	}
+	
 	/*
-	 * The getter and setters are used to set and get the specific information for the map
+	 * getter for the map
+	 * @return the used map
 	 */
 	public Map getMap() {
 		return this.map;
 		
 	}
 
+	/*
+	 * setter for the map
+	 * @param map sets the used map
+	 */
 	private void setMap(Map map) {
 		this.map = map;
 	}
+	
 	/*
-	 * The getter and setters are used to set and get the specific information for the SensoeOverview
+	 * getter for the sidebar
+	 * @return the set sidebar
 	 */
 	public SensorOverview getSensorOverview() {
 		return this.sensoroverview;
 		
 	}
 	
+	/*
+	 * sets the used sidebar
+	 * @param sensoroverview
+	 */
 	private void setSensorOverview(SensorOverview sensoroverview) {
 		this.sensoroverview = sensoroverview;
 	}
+
 	/*
-	 * The getter and setters are used to set and get the specific information for the legend
+	 * getter for the set legend
+	 * @return the later shown legend
 	 */
 	public Legend getLegend() {
 		return legend;
 	}
 
+	/*
+	 * sets the later used legend
+	 * @param legend the initiated legend
+	 */
 	public void setLegend(Legend legend) {
 		this.legend = legend;
 	}
