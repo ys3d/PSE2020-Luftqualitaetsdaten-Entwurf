@@ -7,7 +7,9 @@ package de.visaq.view.elements;
 
 
 public interface ToolbarElement {
-	
+	/*
+	 * show method used in other classes
+	 */
 	public void show();
 
 }

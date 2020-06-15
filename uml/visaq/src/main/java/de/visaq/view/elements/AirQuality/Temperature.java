@@ -7,7 +7,9 @@ import java.awt.Color;
  */
 
 public class Temperature extends AirQualityData {
-
+	/*
+	 * Temperature constructor
+	 */
 	public Temperature(String name, Color primaryColor, Color secondaryColor) {
 		super(name, primaryColor, secondaryColor);
 		// TODO Auto-generated constructor stub

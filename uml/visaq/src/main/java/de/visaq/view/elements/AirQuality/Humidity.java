@@ -7,7 +7,9 @@ import java.awt.Color;
  */
 
 public class Humidity extends AirQualityData {
-
+	/*
+	 * Humidity constructor
+	 */
 	public Humidity(String name, Color primaryColor, Color secondaryColor) {
 		super(name, primaryColor, secondaryColor);
 		// TODO Auto-generated constructor stub

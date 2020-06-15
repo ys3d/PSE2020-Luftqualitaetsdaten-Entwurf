@@ -8,17 +8,30 @@ import java.awt.Color;
  */
 
 public abstract class AirQualityData {
-	
+	/*
+	 * Name of the data type
+	 */
 	private String name;
+	/*
+	 * Primary color used to portray the overlay
+	 */
 	private Color primaryColor;
+	/*
+	 * secondary color used to portray the overlay
+	 */
 	private Color secondaryColor;
 	
+	/*
+	 * Constructor constructing the data
+	 */
 	public AirQualityData(String name, Color primaryColor, Color secondaryColor) {
 		this.name = name;
 		this.primaryColor = primaryColor;
 		this.secondaryColor = secondaryColor;
 	}
-
+	/*
+	 * Getter and setters used for the attitudes
+	 */
 	public String getName() {
 		return name;
 	}

@@ -6,12 +6,16 @@ package de.visaq.view.elements;
  */
 
 public class Timeline implements ToolbarElement{
-
+	/*
+	 * shows the Timeline
+	 */
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
-	
+	/*
+	 * updates the Overlay to the new historical data
+	 */
 	public void update() {
 		
 	}
