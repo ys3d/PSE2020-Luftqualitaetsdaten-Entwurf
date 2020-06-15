@@ -1,18 +1,18 @@
 package de.visaq.model.sensorthings;
 
-import java.time.LocalDateTime;
-
+import java.time.Instant;
+import de.visaq.controller.ObservationController;
 import de.visaq.controller.link.SingleNavigationLink;
 
-public class Observation extends Sensorthings implements SensorthingsTimeStamp {
-	public final LocalDateTime phenomenonTime;
-	public final String result;
-	public final LocalDateTime resultTime;
+public class Observation extends Sensorthings<Observation> implements SensorthingsTimeStamp {
+	public final Instant phenomenonTime;
+	public final Double result;
+	public final Instant resultTime;
 	public final SingleNavigationLink<Datastream> datastreamLink;
 
-	public Observation(String id, SingleNavigationLink<Observation> selfLink, LocalDateTime phenomenonTime, String result,
-			LocalDateTime resultTime, SingleNavigationLink<Datastream> datastreamLink) {
-		super(id, selfLink);
+	public Observation(String id, String selfUrl, Instant phenomenonTime, Double result,
+			Instant resultTime, SingleNavigationLink<Datastream> datastreamLink) {
+		super(id, selfUrl);
 		this.phenomenonTime = phenomenonTime;
 		this.result = result;
 		this.resultTime = resultTime;
@@ -38,5 +38,10 @@ public class Observation extends Sensorthings implements SensorthingsTimeStamp {
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
 		return super.equals(obj);
+	}
+
+	@Override
+	public ObservationController getController() {
+		return new ObservationController();
 	}
 }
