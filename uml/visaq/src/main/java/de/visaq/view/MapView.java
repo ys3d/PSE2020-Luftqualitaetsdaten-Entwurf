@@ -40,7 +40,7 @@ public class MapView extends View {
 		
 	}
 	
-	private void setMap(Map map) {
+	public void setMap(Map map) {
 		this.map = map;
 	}
 	
@@ -49,7 +49,7 @@ public class MapView extends View {
 		
 	}
 	
-	private void setSensorOverview(SensorOverview sensoroverview) {
+	public void setSensorOverview(SensorOverview sensoroverview) {
 		this.sensoroverview = sensoroverview;
 	}
 
