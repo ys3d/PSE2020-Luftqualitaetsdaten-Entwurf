@@ -1,12 +1,22 @@
 package de.visaq.controller.link;
 
+import java.util.ArrayList;
+
+import de.visaq.RestConstants;
+import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
-class MultiLocalLink<sensorthing extends Sensorthings> implements MultiNavigationLink<sensorthing> {
+public class MultiLocalLink<sensorthing extends Sensorthings<sensorthing>> implements MultiNavigationLink<sensorthing> {
+	public final String url;
+	public final ArrayList<sensorthing> cachedSensorthing;
 
-	public sensorthing[] get() {
-		// TODO Auto-generated method stub
-		return null;
+	public MultiLocalLink(String url, ArrayList<sensorthing> cachedSensorthing) {
+		this.url = RestConstants.ENTRY_POINT + url;
+		this.cachedSensorthing = cachedSensorthing;
+	}
+
+	public ArrayList<sensorthing> get(SensorthingsController<sensorthing> controller) {
+		return cachedSensorthing;
 	}
 
 }

@@ -5,9 +5,9 @@ public class UnitOfMeasurement {
 	public final String name;
 	public final String definition;
 	
-	public UnitOfMeasurement(String symbol, String name, String definition) {
-		this.symbol = symbol;
+	public UnitOfMeasurement(String name, String symbol, String definition) {
 		this.name = name;
+		this.symbol = symbol;
 		this.definition = definition;
 	}
 	
