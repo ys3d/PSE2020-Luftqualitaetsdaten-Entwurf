@@ -2,8 +2,7 @@ package de.visaq.model.sensorthings;
 
 import java.time.Instant;
 import de.visaq.controller.HistoricalLocationController;
-import de.visaq.controller.link.MultiOnlineLink;
-import de.visaq.controller.link.SingleNavigationLink;
+import de.visaq.controller.link.*;
 
 /**
  * <p>Representation of the {@link HistoricalLocation} entity in the OGC SensorThings API</p>
@@ -13,7 +12,7 @@ import de.visaq.controller.link.SingleNavigationLink;
 public class HistoricalLocation extends Sensorthings<HistoricalLocation> implements SensorthingsTimeStamp {
 	public final Instant time;
 	public final SingleNavigationLink<Thing> thingLink;
-	public final MultiOnlineLink<Location> locationsLink;
+	public final MultiNavigationLink<Location> locationsLink;
 	
 	/**
 	 * Constructs a new {@link HistoricalLocation}
@@ -23,7 +22,7 @@ public class HistoricalLocation extends Sensorthings<HistoricalLocation> impleme
 	 * @param thingLink Link to the {@link Thing}
 	 * @param locationsLink Links to the {@link Location}s
 	 */
-	public HistoricalLocation(String id, String selfUrl, Instant time, SingleNavigationLink<Thing> thingLink, MultiOnlineLink<Location> locationsLink) {
+	public HistoricalLocation(String id, String selfUrl, Instant time, SingleNavigationLink<Thing> thingLink, MultiNavigationLink<Location> locationsLink) {
 		super(id, selfUrl);
 		this.time = time;
 		this.thingLink = thingLink;
