@@ -23,7 +23,7 @@ public class ObservedProperty extends Sensorthings<ObservedProperty> implements 
 	 * @param selfUrl The URL which links to this object on the given SensorThings database
 	 * @param description The description of the {@link ObservedProperty}
 	 * @param name The name of the {@link ObservedProperty}
-	 * @param properties The properties of the observed Property
+	 * @param properties The properties of the Observed Property
 	 * @param definition A URL which links to a definition of the {@link ObservedProperty}
 	 * @param datastreamsLink Links to {@link Datastream}s
 	 */

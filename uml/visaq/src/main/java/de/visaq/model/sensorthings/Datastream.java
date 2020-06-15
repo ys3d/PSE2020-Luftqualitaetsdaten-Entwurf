@@ -31,11 +31,11 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
 	 * @param name The name of the {@link Datastream}
 	 * @param description The description of the {@link Datastream}
 	 * @param properties Several properties given by the database
-	 * @param observationTypeLink URL leading to a documentation about the observation Type
+	 * @param observationTypeLink URL leading to a documentation about the Observation Type
 	 * @param sensorLink Link to the {@link Sensor}
 	 * @param thingLink Link to the {@link Thing}
 	 * @param observationsLink Links to the {@link Observation}
-	 * @param unitOfMeasurement The unit of Measurement
+	 * @param unitOfMeasurement The Unit of Measurement
 	 * @param observedPropertyLink Link to the {@link ObservedProperty}
 	 */
 	public Datastream(
