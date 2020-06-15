@@ -1,3 +1,4 @@
+
 package de.visaq.view.elements.AirQuality;
 
 import java.awt.Color;
@@ -24,14 +25,17 @@ public abstract class AirQualityData {
 	/*
 	 * Constructor constructing the data
 	 */
+
 	public AirQualityData(String name, Color primaryColor, Color secondaryColor) {
 		this.name = name;
 		this.primaryColor = primaryColor;
 		this.secondaryColor = secondaryColor;
 	}
+
 	/*
 	 * Getter and setters used for the attitudes
 	 */
+
 	public String getName() {
 		return name;
 	}

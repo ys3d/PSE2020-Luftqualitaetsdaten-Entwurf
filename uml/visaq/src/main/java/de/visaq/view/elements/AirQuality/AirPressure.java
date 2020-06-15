@@ -1,3 +1,4 @@
+
 package de.visaq.view.elements.AirQuality;
 
 import java.awt.Color;
@@ -8,6 +9,7 @@ public class AirPressure extends AirQualityData {
 	/*
 	 * Air pressure constructor
 	 */
+
 	public AirPressure(String name, Color primaryColor, Color secondaryColor) {
 		super(name, primaryColor, secondaryColor);
 		// TODO Auto-generated constructor stub
