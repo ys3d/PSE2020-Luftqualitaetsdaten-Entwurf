@@ -35,7 +35,7 @@ public class DatastreamController extends SensorthingsController<Datastream> {
 	 * @return An array of Datastream objects that were retrieved.
 	 */
 	public ArrayList<Datastream> get(Sensor sensor) {
-		return sensor.datastreams.get(this);
+		return sensor.datastreamsLink.get(this);
 	}
 
 	public ArrayList<Datastream> getAll() {
