@@ -38,7 +38,7 @@ public abstract class Sensorthings<sensorthing extends Sensorthings<sensorthing>
 	 * We use f-bounded quantification to specify precisely that we want SensorthingsControllers of the same class as the class that overrides this function.
 	 * Assume we have a class Datastream then this will return a function that returns an extension of SensorthingsController<Datastream>.
 	 * 
-	 * @return
+	 * @return The matching {@link SensorthingsController}
 	 */
 	public abstract SensorthingsController<sensorthing> getController();
 }

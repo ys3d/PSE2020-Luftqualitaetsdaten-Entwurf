@@ -5,6 +5,12 @@ import java.awt.Point;
 import de.visaq.controller.LocationController;
 import de.visaq.controller.link.MultiNavigationLink;
 
+/**
+ * <p>Representation of the Locations entity in the OGC SensorThings API</p>
+ * <p>The Location entity locates the Thing(s) it associated with.
+ *  A Thing's Location entity is defined as the last known location of the Thing.</p>
+ * @see <a href="https://developers.sensorup.com/docs/#locations_post">https://developers.sensorup.com/docs/#locations_post</a>
+ */
 public class Location extends Sensorthings<Location> {
 	public final String name;
 	public final String description;
@@ -13,6 +19,16 @@ public class Location extends Sensorthings<Location> {
 	public final MultiNavigationLink<HistoricalLocation> historicalLocationsLink;
 	public final MultiNavigationLink<Thing> thingsLink;
 
+	/**
+	 * Constructs a new {@link Location}
+	 * @param id The identifier of the {@link Location} in the SensorThings standard
+	 * @param selfUrl The URL which links to this object on the given SensorThings database
+	 * @param name The name of the {@link Location}
+	 * @param description The description of the {@link Location}
+	 * @param location A point describing the actual location
+	 * @param historicalLocationsLink Links to the {@link HistoricalLocation}
+	 * @param thingsLink Links to the {@link Thing}
+	 */
 	public Location(String id, String selfUrl, String name, String description, Point location, MultiNavigationLink<HistoricalLocation> historicalLocationsLink, MultiNavigationLink<Thing> thingsLink) {
 		super(id, selfUrl);
 		this.name = name;
