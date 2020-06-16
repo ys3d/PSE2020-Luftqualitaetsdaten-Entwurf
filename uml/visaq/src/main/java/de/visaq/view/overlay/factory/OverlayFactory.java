@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import de.visaq.model.PointData;
 import de.visaq.view.elements.AirQualityData;
-import de.visaq.view.elements.map.MapOverlay;
+import def.leaflet.l.Layer;
 
 /*
  * 	Encapsulates the control over all Overlay Factories.
@@ -24,5 +24,5 @@ public abstract class OverlayFactory {
 	 * @param pointdata		List of the Sensordata to construct an Map Overlay
 	 * @return				A overlay for the map.
 	 */
-	public abstract MapOverlay build(ArrayList<PointData> pointdata);
+	public abstract Layer build(ArrayList<PointData> pointdata);
 }

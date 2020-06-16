@@ -2,6 +2,9 @@ package de.visaq.view.theme;
 
 import java.awt.Color;
 
+/*
+ * Contains information about Color Themes. 
+ */
 public abstract class ColorTheme {
 	
 	private Color PRIMARYCOLOR = null;

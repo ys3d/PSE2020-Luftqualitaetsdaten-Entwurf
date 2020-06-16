@@ -105,5 +105,16 @@
 	    <artifactId>junit-vintage-engine</artifactId>
 	    <scope>test</scope>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.webjars/leaflet -->
+	<dependency>
+   		<groupId>org.webjars</groupId>
+   		<artifactId>leaflet</artifactId>
+    	<version>1.6.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.jsweet.candies</groupId>
+		<artifactId>leaflet</artifactId>
+		<version>1.3.4-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 </project>

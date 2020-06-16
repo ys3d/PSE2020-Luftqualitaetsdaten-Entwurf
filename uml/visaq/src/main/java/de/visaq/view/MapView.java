@@ -2,9 +2,8 @@ package de.visaq.view;
 
 import de.visaq.view.elements.SensorOverview;
 import de.visaq.view.elements.Timeline;
-import de.visaq.view.elements.map.Legend;
-import de.visaq.view.elements.map.Map;
 import de.visaq.view.theme.ColorTheme;
+import def.leaflet.l.Map;
 
 public class MapView extends View {
 	

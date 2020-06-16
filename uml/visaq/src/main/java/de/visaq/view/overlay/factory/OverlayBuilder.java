@@ -3,7 +3,7 @@ package de.visaq.view.overlay.factory;
 import java.util.ArrayList;
 
 import de.visaq.model.PointData;
-import de.visaq.view.elements.map.MapOverlay;
+import def.leaflet.l.control.Layers;
 
 /*
  * Access point to the overlay factory. It builds overlays for maps using the special factories.
@@ -31,7 +31,7 @@ public class OverlayBuilder {
 	 * @param pointdata 	Is the data of the Sensors that is used to create the Map Overlay
 	 * @return				A list of Overlays that where build by using the given factories.
 	 */
-	public ArrayList<MapOverlay> buildOverlays(ArrayList<PointData> pointdata)	{
+	public ArrayList<Layers> buildOverlays(ArrayList<PointData> pointdata)	{
 		return null;
 	}
 }

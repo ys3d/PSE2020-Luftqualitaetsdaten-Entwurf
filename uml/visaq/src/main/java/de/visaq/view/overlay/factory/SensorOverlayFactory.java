@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import de.visaq.model.PointData;
 import de.visaq.view.elements.AirQualityData;
-import de.visaq.view.elements.map.MapOverlay;
+import def.leaflet.l.Layer;
 
 /*
  * Creates a Map Overlay that shows the the Sensor Data measured by multiple Sensors . 
@@ -18,7 +18,7 @@ public class SensorOverlayFactory extends OverlayFactory {
 	}
 
 	@Override
-	public MapOverlay build(ArrayList<PointData> pointdata) {
+	public Layer build(ArrayList<PointData> pointdata) {
 		// TODO Auto-generated method stub
 		return null;
 	}
