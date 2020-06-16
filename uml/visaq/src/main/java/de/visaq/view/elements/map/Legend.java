@@ -1,6 +1,6 @@
 package de.visaq.view.elements.map;
 
-import de.visaq.view.elements.AirQualityData;
+import de.visaq.view.elements.AirQuality.AirQualityData;
 
 public class Legend {
 	
