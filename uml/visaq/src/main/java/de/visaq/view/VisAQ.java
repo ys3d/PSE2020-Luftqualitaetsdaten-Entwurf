@@ -2,10 +2,6 @@ package de.visaq.view;
 
 import java.util.ArrayList;
 
-/*
- * main class that starts everything
- */
-
 import de.visaq.view.elements.Toolbar;
 
 public abstract class VisAQ {

@@ -8,33 +8,26 @@ package de.visaq.view.elements;
 public class Cookies implements ToolbarElement{
 	
 	/*
-	 * The boolean accept(): is used in order to safe if the user accepted the cookies or not
-	 * @return if the user accepted the cookies or not
+	 * Used in order to safe whether the user accepted the Cookies or not
+	 * @return Whether user accepted Cookies or not
 	 */
 	public boolean accept() {
 		return false;
 	}
 	
 	/*
-	 * gets the shown text using the key
-	 * @param key, used to access the Property
-	 * @return the text
+	 * Gets the localized version of the Properties key
+	 * @param key The Properties key
+	 * @return Localized text
 	 */
 	public String getText(String key) {
 		return null;
 	}
- 
-	/*
-	 * will show the element
-	 */
+
 	@Override 
 	public void show() {
 		// TODO Auto-generated method stub
 		
-	}
-	
-	public void safeData() {
-	
 	}
 	
 }

@@ -9,7 +9,10 @@ import java.awt.Color;
 
 public class Temperature extends AirQualityData {
 	/*
-	 * Temperature constructor
+	 * Temperature constructor for a AirQualityData instance
+	 * @param The name of the pollution Type
+	 * @param The primaryColor used for the Legend and Interpolation
+	 * @param The secondaryColor used for the Legend and Interpolation
 	 */
 	public Temperature(String name, Color primaryColor, Color secondaryColor) {
 		super(name, primaryColor, secondaryColor);

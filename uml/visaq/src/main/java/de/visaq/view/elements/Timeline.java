@@ -1,15 +1,13 @@
 package de.visaq.view.elements;
 
 /*
- * The timeline is a regulator used to show the historical data directly on the map. 
+ * The Timeline is a regulator used to show the historical data directly on the map. 
  * It also implements the ToolbarElement to use the show method.
  */
-
-
 public class Timeline implements ToolbarElement{
 	
 	/*
-	 * shows the timeline
+	 * Shows the Timeline 
 	 */
 	@Override
 	public void show() {
@@ -18,7 +16,7 @@ public class Timeline implements ToolbarElement{
 	}
 	
 	/*
-	 * updates the Overlay to the new historical data
+	 * Updates the Overlay to the new historical data
 	 */
 	public void update() {
 		

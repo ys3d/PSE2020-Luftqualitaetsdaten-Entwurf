@@ -7,10 +7,9 @@ import de.visaq.view.elements.map.Map;
 import de.visaq.view.theme.ColorTheme;
 
 /*
- * Mapview creates the view for the Map using the map-overlay allowing the user to 
- * see the map as well as the Legend, Timeline and Sensoroverview 
+ * Map View creates the view for the Map using the Map Overlay allowing the user to 
+ * see the Map as well as the Legend, Timeline and SensorOverview 
  */
-
 public class MapView extends View {
 	
 	private Map map;
@@ -18,43 +17,43 @@ public class MapView extends View {
 	private Legend legend;
 
 	/*
-	 * The Constructor sets the used language and color theme
+	 * The Constructor sets the used Language and Color Theme
 	 */
 	public MapView(Language language, ColorTheme colorTheme) {
 		super(language, colorTheme);
 		// TODO Auto-generated constructor stub
 	}
-	/*
-	 * shows the Mapview
-	 */
+	
+	@Override
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	 /*
-	  * showSensoroverview(): shows the Sidebar containing the different information to either the chosen point or the sensor
+	  * Shows the Sidebar containing the different information to either the chosen Point or the Sensor
 	  */
 	public void showSensoroverview() {
 		
 	}
 	
 	/*
-	 * showLegend(): shows the Legend for the interpolation
+	 * Shows the Legend for the interpolation
 	 */
 	public void showLegend() {
 		
 	}
 	
 	/*
-	 * showTimeline(): shows the timeline for the historical data
+	 * Shows the Timeline for the historical data
 	 */
 	public void showTimeline() {
 		
 	}
 	
 	/*
-	 * getter for the map
-	 * @return the used map
+	 * Getter for the Map
+	 * @return The used Map
 	 */
 	public Map getMap() {
 		return this.map;
@@ -62,16 +61,16 @@ public class MapView extends View {
 	}
 
 	/*
-	 * setter for the map
-	 * @param map sets the used map
+	 * Setter for the Map
+	 * @param The Map
 	 */
-	private void setMap(Map map) {
+	public void setMap(Map map) {
 		this.map = map;
 	}
 	
 	/*
-	 * getter for the sidebar
-	 * @return the set sidebar
+	 * Getter for the Sidebar
+	 * @return The Sidebar
 	 */
 	public SensorOverview getSensorOverview() {
 		return this.sensoroverview;
@@ -79,24 +78,24 @@ public class MapView extends View {
 	}
 	
 	/*
-	 * sets the used sidebar
-	 * @param sensoroverview
+	 * Setter the used Sidebar instance
+	 * @param The SensorOverview instance
 	 */
 	private void setSensorOverview(SensorOverview sensoroverview) {
 		this.sensoroverview = sensoroverview;
 	}
 
 	/*
-	 * getter for the set legend
-	 * @return the later shown legend
+	 * Getter for the Legend instance
+	 * @return The Legend instance
 	 */
 	public Legend getLegend() {
 		return legend;
 	}
 
 	/*
-	 * sets the later used legend
-	 * @param legend the initiated legend
+	 * Sets the later used Legend instance
+	 * @param The Legend instance
 	 */
 	public void setLegend(Legend legend) {
 		this.legend = legend;

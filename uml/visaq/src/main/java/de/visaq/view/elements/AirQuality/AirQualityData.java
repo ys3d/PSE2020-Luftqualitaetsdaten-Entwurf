@@ -4,10 +4,9 @@ package de.visaq.view.elements.AirQuality;
 import java.awt.Color;
 
 /*
- *AirQualityData allows the classes that extend it to create Objects of that type and to set their name as well as their
- *Colors used in the interpolation and legend 
+ * Object used for creating the shown colors for the different Legends and Interpolation Overlays
+ * 
  */
-
 public abstract class AirQualityData {
 
 	private String name;
@@ -15,7 +14,10 @@ public abstract class AirQualityData {
 	private Color secondaryColor;
 
 	/*
-	 * Constructor for the AirQualitydata used for the coloration of the legend and the interpolation
+	 * Constructor for the AirQualityData used for the coloration of the Legend and the Interpolation
+	 * @param The name of the pollution Type
+	 * @param The primaryColor used for the Legend and Interpolation
+	 * @param The secondaryColor used for the Legend and Interpolation
 	 */
 	public AirQualityData(String name, Color primaryColor, Color secondaryColor) {
 		this.name = name;
@@ -24,50 +26,50 @@ public abstract class AirQualityData {
 	}
 
 	/*
-	 * getter for the name of the data type
-	 * @return name of the type
+	 * Getter for the name of the data type
+	 * @return The name of the type
 	 */
 	public String getName() {
 		return name;
 	}
 	
 	/*
-	 * setter for the name of the data type
-	 * @param name, name of the type
+	 * Setter for the name of the data type
+	 * @param The name of the type
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/*
-	 * getter for the primary color of the data type
-	 * @return primary color
+	 * Getter for the primary color of the data type
+	 * @return The primaryColor
 	 */
 	public Color getPrimaryColor() {
 		return primaryColor;
 	}
 
 	/*
-	 * setter for the primary color of the type
-	 * @param primarycolor of the type when shown as legend or 
-	 * interpolation
+	 * Setter for the primary color of the type
+	 * @param The primarycolor of the type when shown as a Legend or 
+	 * Interpolation
 	 */
 	private void setPrimaryColor(Color primaryColor) {
 		this.primaryColor = primaryColor;
 	}
 
 	/*
-	 * getter for the name of the data type
-	 * @return secondaryColor
+	 * Getter for the name of the data type
+	 * @return The secondaryColor
 	 */
 	public Color getSecondaryColor() {
 		return secondaryColor;
 	}
 
 	/*
-	 * setter for the secondary color
-	 * @param secondaryColor, secondary color of the type when shown as legend or 
-	 * interpolation
+	 * Setter for the secondary color
+	 * @param The secondaryColor of the type when shown as a Legend or 
+	 * Interpolation
 	 */
 	public void setSecondaryColor(Color secondaryColor) {
 		this.secondaryColor = secondaryColor;

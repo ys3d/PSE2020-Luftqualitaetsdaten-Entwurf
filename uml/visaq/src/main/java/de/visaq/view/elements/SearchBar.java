@@ -9,13 +9,13 @@ public class SearchBar implements ToolbarElement {
 	  
 	private String input;
 	/*
-	 * Constructor for the Searchbar
+	 * Constructor for the Searchbar instance
 	 */
 	public SearchBar() {
 		
 	}
 	/*
-	 * shows the sidebar
+	 * Shows the Sidebar instance
 	 */
 	 @Override 
 	public void show() {
@@ -23,16 +23,16 @@ public class SearchBar implements ToolbarElement {
 	}
 	
 	/*
-	 * gets the input of the user allowing a further use of it
-	 * @return input
+	 * Gets the input of the user allowing a further use of it
+	 * @return the input instance
 	 */
 	public String getInput() {
 		return input;
 	}
 	
 	/*
-	 * sets the input of the user
-	 * @param input, input of the user
+	 * Sets the input instance of the user
+	 * @param input of the user
 	 */
 	public void setInput(String input) {
 		this.input = input;

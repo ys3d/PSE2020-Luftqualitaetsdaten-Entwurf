@@ -3,24 +3,21 @@ package de.visaq.view;
 import de.visaq.view.theme.ColorTheme;
 
 /*
- * Expertview creates the view using the expert-overlay allowing the user to 
+ * Expert View creates the view using the Expert Overlay allowing the user to 
  * select special Sensors and to deselect them.
  */
-
-
 public class ExpertView extends View {
+	
 	/*
-	 * The Constructor sets the used language and color theme
-	 * @param language used language
-	 * @param colorTheme used color theme
+	 * The Constructor sets the used Language and Color Theme
+	 * @param The Language instance
+	 * @param The ColorTheme instance
 	 */
 	public ExpertView(Language language, ColorTheme colorTheme) {
 		super(language, colorTheme);
 		// TODO Auto-generated constructor stub
 	}
-	/*
-	 * show(): shows the Expertview on the website
-	 */
+	
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub

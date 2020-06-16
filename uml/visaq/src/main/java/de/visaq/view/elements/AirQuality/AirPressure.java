@@ -9,7 +9,6 @@ public class AirPressure extends AirQualityData {
 	/*
 	 * Air pressure constructor
 	 */
-
 	public AirPressure(String name, Color primaryColor, Color secondaryColor) {
 		super(name, primaryColor, secondaryColor);
 		// TODO Auto-generated constructor stub

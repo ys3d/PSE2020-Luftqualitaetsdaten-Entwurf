@@ -1,48 +1,47 @@
 package de.visaq.view.elements;
 	/*
-	 * Links and Definitions to the different functions and a public method for the navigation bar to be shown implemented from
-	 * the ToolbarElement
+	 * Shows the User Links and Definitions to the different functions and informations in the Navbar
 	 */
 public class Navbar implements ToolbarElement {
+	
 	/*
 	 * Constructor constructing the Navbar with all listed features
 	 */
-
 	public Navbar() {
 		// TODO Auto-generated method stub
 	}
 	/*
-	 * Will later contain the link to the DIY site
+	 * Contains the link to the DIY site
 	 */
 	private void diy() {
 		// TODO Auto-generated method stub
 	}
 	/*
-	 * Will later contain the definition for PM
+	 * Contains the definition for PM
 	 */
 	private void pMDefiniton() {
 		// TODO Auto-generated method stub
 	}
 	/*
-	 * Will later contain the causes for PM
+	 * Contains the causes for PM
 	 */
 	private void causesPM() {
 		// TODO Auto-generated method stub
 	}
 	/*
-	 * Will later contain a link to the site of smartAQNet
+	 * Contains a link to the site of smartAQNet
 	 */
 	private void smartAQNet() {
 		// TODO Auto-generated method stub
 	}
 	/*
-	 * Will later open the Timeline with historival Data on the Map
+	 * Will later open the Timeline with historical Data on the Map
 	 */
 	private void historicalData() {
 		// TODO Auto-generated method stub
 	}
 	/*
-	 * Will later show the Navbar
+	 * Shows the Navbar
 	 */
 	public void show() {
 		// TODO Auto-generated method stub

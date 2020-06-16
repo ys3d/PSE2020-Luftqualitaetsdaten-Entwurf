@@ -2,7 +2,7 @@ package de.visaq.view;
 
 import java.awt.image.BufferedImage;
 /*
- * Informationview creates the view using a helping overlay allowing the user to 
+ * Information View creates the view using a helping overlay allowing the user to 
  * easier navigate through the website 
  */
 import de.visaq.view.theme.ColorTheme;
@@ -10,43 +10,41 @@ import de.visaq.view.theme.ColorTheme;
 public class InformationView extends View {
 	
 	private BufferedImage icon = null;
+	
 	/*
-	 * The Constructor sets the used language and color theme. 
+	 * The Constructor sets the used Language and Color Theme. 
 	 */
 	public InformationView(Language language, ColorTheme colorTheme) {
 		super(language, colorTheme);
 		// TODO Auto-generated constructor stub
 	}
-	/*
-	 * shows the view
-	 */
+	
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	/* Returns the icon
-	 * @return the set icon
+	 * @return The icon
 	 */
 	public BufferedImage getIcon() {
 		return icon;
 	}
 	
 	/*
-	 * setter for the icon
-	 * @param icon 
+	 * Setter for the icon
+	 * @param The icon 
 	 */
-
 	private void setIcon(BufferedImage icon) {
 		this.icon = icon;
 	}
 	
 	/* 
-	 * gets the shown information from the Property depending on the language
-	 * @param key for the to shown text 
-	 * @return the Property to this ke
+	 * Gets the shown information from the Property depending on the Language
+	 * @param The key for the to shown text 
+	 * @return The Property to this key
 	 */
-	
 	public String getText(String key) {
 		return null;
 	}
