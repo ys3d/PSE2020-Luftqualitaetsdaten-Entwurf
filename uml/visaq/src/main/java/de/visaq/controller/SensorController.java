@@ -30,7 +30,7 @@ public class SensorController extends SensorthingsController<Sensor> {
 	}
 	
 	/**
-	 * Retrieves the Sensor object assoviated with the specified Datastream.
+	 * Retrieves the Sensor object associated with the specified Datastream.
 	 * 
 	 * @param datastream	Datastream the Sensor object is associated with.
 	 * @return				The Sensor object that was retrieved.
