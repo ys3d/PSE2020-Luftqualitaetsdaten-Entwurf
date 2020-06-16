@@ -1,22 +1,23 @@
 
-package de.visaq.view.elements.AirQuality;
+package de.visaq.view.elements.airquality;
 
 import java.awt.Color;
 
-/*
- * Class that extends AirQualitiyData and is used for the Temperature Overlay 
+import de.visaq.view.theme.ColorTheme;
+
+/**
+ * Temperature provides the settings for the temperature measurement observed by Sensors.
  */
-
 public class Temperature extends AirQualityData {
-	/*
-	 * Temperature constructor for a AirQualityData instance
-	 * @param The name of the pollution Type
-	 * @param The primaryColor used for the Legend and Interpolation
-	 * @param The secondaryColor used for the Legend and Interpolation
-	 */
-	public Temperature(String name, Color primaryColor, Color secondaryColor) {
-		super(name, primaryColor, secondaryColor);
-		// TODO Auto-generated constructor stub
-	}
+    @Override
+    public Color getPrimaryColor(ColorTheme colorTheme) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
+    @Override
+    public Color getSecondaryColor(ColorTheme colorTheme) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
