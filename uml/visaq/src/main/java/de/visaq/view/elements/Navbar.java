@@ -40,9 +40,8 @@ public class Navbar implements ToolbarElement {
 	private void historicalData() {
 		// TODO Auto-generated method stub
 	}
-	/*
-	 * Shows the Navbar
-	 */
+	
+	@Override
 	public void show() {
 		// TODO Auto-generated method stub
 		

@@ -6,9 +6,6 @@ package de.visaq.view.elements;
  */
 public class Timeline implements ToolbarElement{
 	
-	/*
-	 * Shows the Timeline 
-	 */
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub

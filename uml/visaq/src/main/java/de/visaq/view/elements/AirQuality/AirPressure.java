@@ -8,6 +8,9 @@ import java.awt.Color;
 public class AirPressure extends AirQualityData {
 	/*
 	 * Air pressure constructor
+	 * @param The name of the pollution Type
+	 * @param The primaryColor used for the Legend and Interpolation
+	 * @param The secondaryColor used for the Legend and Interpolation
 	 */
 	public AirPressure(String name, Color primaryColor, Color secondaryColor) {
 		super(name, primaryColor, secondaryColor);
