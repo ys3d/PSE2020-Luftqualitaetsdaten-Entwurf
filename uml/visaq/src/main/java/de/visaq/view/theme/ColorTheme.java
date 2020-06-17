@@ -5,9 +5,6 @@ import java.awt.Color;
 public abstract class ColorTheme {
     private static ColorTheme instance = new LightTheme();
 
-    public static final Color primaryColor = null;
-    public static final Color secondaryColor = null;
-
     /**
      * Creates a ColorTheme instance and updates the global instance accordingly.
      */
@@ -33,4 +30,12 @@ public abstract class ColorTheme {
     public static synchronized void setInstance(ColorTheme colorTheme) {
         ColorTheme.instance = colorTheme;
     }
+
+    public abstract Color getPrimaryColor();
+
+    public abstract Color getSecondaryColor();
+
+    public abstract ColorRange getPrimarySkala();
+
+    public abstract ColorRange getSecondarySkala();
 }
