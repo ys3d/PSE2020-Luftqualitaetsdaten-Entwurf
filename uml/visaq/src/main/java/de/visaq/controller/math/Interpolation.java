@@ -7,5 +7,6 @@ import de.visaq.model.sensorthings.ObservedProperty;
 import de.visaq.model.sensorthings.Thing;
 
 public interface Interpolation {
-	public PointData interpolate(Point location, ObservedProperty observedProperty , Thing... things);
+    public PointData interpolate(Point location, ObservedProperty observedProperty,
+            Thing... things);
 }

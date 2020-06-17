@@ -8,9 +8,11 @@ import de.visaq.model.sensorthings.Thing;
 
 public class DefaultInterpolation implements Interpolation {
 
-	public PointData interpolate(Point location, ObservedProperty observedProperty , Thing... things) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public PointData interpolate(Point location, ObservedProperty observedProperty,
+            Thing... things) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
 }
