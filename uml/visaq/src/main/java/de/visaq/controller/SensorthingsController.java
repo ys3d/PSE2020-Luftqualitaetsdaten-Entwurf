@@ -16,16 +16,15 @@ import de.visaq.model.sensorthings.Sensorthings;
  */
 public abstract class SensorthingsController<SensorthingT extends Sensorthings<SensorthingT>> {
     /**
-     * Retrieves all Sensorthings objects of this type. Can be slow and should be
-     * avoided. Use more specific requests instead.
+     * Retrieves all Sensorthings objects of this type. Can be slow and should be avoided. Use more
+     * specific requests instead.
      * 
      * @return An array containing the Sensorthings objects that were retrieved.
      */
     public abstract ArrayList<SensorthingT> getAll();
 
     /**
-     * Retrieves all Sensorthings objects that are bound to the specified
-     * MultiNavigationLink.
+     * Retrieves all Sensorthings objects that are bound to the specified MultiNavigationLink.
      * 
      * @param navigationLink Link to the Sensorthings objects inside the database.
      * @return An array containing the Sensorthings objects that were retrieved.
@@ -35,8 +34,7 @@ public abstract class SensorthingsController<SensorthingT extends Sensorthings<S
     }
 
     /**
-     * Retrieves the Sensorthings object that is bound to the specified
-     * SingleNavigationLink.
+     * Retrieves the Sensorthings object that is bound to the specified SingleNavigationLink.
      * 
      * @param navigationLink Link to the Sensorthings object inside the database.
      * @return The Sensorthings object that was retrieved.

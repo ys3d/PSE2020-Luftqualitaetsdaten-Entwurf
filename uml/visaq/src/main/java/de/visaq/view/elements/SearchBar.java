@@ -1,8 +1,8 @@
 package de.visaq.view.elements;
 
 /**
- * Searchbar that the user can use in order to look up a particular city using
- * the city name or the postal code of the city.
+ * Searchbar that the user can use in order to look up a particular city using the city name or the
+ * postal code of the city.
  */
 public class SearchBar implements ToolbarElement {
 

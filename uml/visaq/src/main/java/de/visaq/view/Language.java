@@ -8,13 +8,35 @@ import java.util.Properties;
  * Toolbar.
  */
 public class Language {
+    private static Language instance = new Language(null, null);
+
+    /**
+     * Gets the current Language instance.
+     * 
+     * @return The Language instance.
+     */
+    public static synchronized Language getInstance() {
+        Language.instance = Language.instance == null ? new Language(null, null)
+                : Language.instance;
+        return Language.instance;
+    }
+
+    /**
+     * Sets the current Language instance.
+     * 
+     * @param language The Language instance.
+     */
+    public static synchronized void setInstance(Language language) {
+        Language.instance = language;
+    }
 
     private BufferedImage icon = null;
     private final Properties language;
     public final String name;
 
     /**
-     * Constructor used to create the Language.
+     * Constructor used to create the language with the given name and updates the global instance
+     * accordingly.
      */
     public Language(Properties language, String name) {
         super();
