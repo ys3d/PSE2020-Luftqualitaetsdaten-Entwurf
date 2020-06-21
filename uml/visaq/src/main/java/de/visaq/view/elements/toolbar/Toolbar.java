@@ -49,7 +49,6 @@ public class Toolbar implements ToolbarElement {
 
     @Override
     public void show() {
-        // TODO Auto-generated method stub
-
+    	
     }
 }

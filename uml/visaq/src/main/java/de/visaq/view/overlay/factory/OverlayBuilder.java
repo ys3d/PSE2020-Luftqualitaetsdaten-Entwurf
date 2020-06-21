@@ -3,7 +3,9 @@ package de.visaq.view.overlay.factory;
 import java.util.ArrayList;
 
 import de.visaq.controller.SensorController;
+import de.visaq.model.sensorthings.Datastream;
 import de.visaq.view.elements.airquality.AirQualityData;
+import de.visaq.view.elements.navbar.ExpertViewFilter;
 import def.leaflet.l.Bounds;
 import def.leaflet.l.Layer;
 import def.leaflet.l.control.Layers;
@@ -13,8 +15,8 @@ import def.leaflet.l.control.Layers;
  */
 public class OverlayBuilder {
 	
-	
-	
+	private SensorController sensorController = new SensorController();
+	private ExpertViewFilter expertViewFilter;
 	private OverlayFactory[] factories = null;
 	
 	/**
@@ -37,9 +39,11 @@ public class OverlayBuilder {
 	 * @return				A list of Overlays that where build by using the given factories.
 	 */
 	public ArrayList<Layer> buildOverlays(AirQualityData airquality, Bounds bounds )	{
+		Datastream datastream = null;
+		//Extract Datastream from bounds and expertviewfilter and sensorcontroller;
 		ArrayList<Layer> layers = new ArrayList<Layer>();
 		for(OverlayFactory factory : factories)	{
-			layers.add(factory.build(airquality, bounds));
+			layers.add(factory.build(airquality, datastream));
 		}
 		return layers;
 	}
@@ -51,4 +55,5 @@ public class OverlayBuilder {
 	public void setFactories(OverlayFactory[] factories) {
 		this.factories = factories;
 	}
+
 }

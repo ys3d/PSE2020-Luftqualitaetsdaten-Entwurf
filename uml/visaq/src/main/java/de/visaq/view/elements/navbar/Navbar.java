@@ -6,7 +6,7 @@ import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.toolbar.Toolbar;
 
 /**
- * The Toolbar shows the Navigationbar and gives access to the Help-View, Information-View (I am
+ * The Navbar shows the Navigationbar and gives access to the Help-View, Information-View (I am
  * using Hyphen here because you used it before but as I said it doesn't matter to me whether or not
  * we settle on hyphen), Searchbar and Language settings.
  */
@@ -49,28 +49,30 @@ public class Navbar {
      * Shows the available Air Quality Data overlays.
      */
     public void showAirQualityDatas() {
-
+    	for(AirQualityData airQualityData : airQualityDatas) {
+    		airQualityData.getName();
+    	}
     }
 
     /**
      * Shows the help icon.
      */
     public void showHelpIcon() {
-
+    	informationView.getIcon();
     }
 
     /**
      * Shows the Searchbar.
      */
     public void showSearchBar() {
-
+    	searchbar.show();
     }
 
     /**
-     * Shows the Navigationbar.
+     * Shows the Toolbar.
      */
-    public void showNavbar() {
-
+    public void openToolbar() {
+    	toolbar.show();
     }
 
 	public boolean isExpertview() {

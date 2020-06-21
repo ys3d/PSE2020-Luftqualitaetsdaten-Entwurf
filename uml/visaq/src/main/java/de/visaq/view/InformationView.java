@@ -1,6 +1,6 @@
 package de.visaq.view;
 
-import java.awt.image.BufferedImage;
+import def.leaflet.l.Icon;
 
 /**
  * InformationView creates the view using a helping overlay allowing the user to easier navigate
@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
  */
 public class InformationView extends View {
 
-    private BufferedImage icon = null;
+    private Icon icon = null;
 
     @Override
     public void show() {
@@ -21,7 +21,7 @@ public class InformationView extends View {
      * 
      * @return The icon
      */
-    public BufferedImage getIcon() {
+    public Icon getIcon() {
         return icon;
     }
 
@@ -30,7 +30,7 @@ public class InformationView extends View {
      * 
      * @param The icon
      */
-    private void setIcon(BufferedImage icon) {
+    private void setIcon(Icon icon) {
         this.icon = icon;
     }
 }

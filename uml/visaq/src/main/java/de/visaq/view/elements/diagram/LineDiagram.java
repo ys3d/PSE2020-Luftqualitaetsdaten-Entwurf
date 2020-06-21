@@ -4,10 +4,12 @@ import de.visaq.controller.SensorController;
 import de.visaq.view.elements.airquality.AirQualityData;
 
 public class LineDiagram extends Diagram {
+	
+	private FeatureOfInterest featuresOfInterest;
 
-    public LineDiagram(SensorController sensorController, AirQualityData airQualityData, String title, String start,
+    public LineDiagram(FeatureOfInterest featuresOfInterest, AirQualityData airQualityData, String start,
 			String end) {
-		super(sensorController, airQualityData, title, start, end);
+		super(featuresOfInterest, airQualityData, title, start, end);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -5,16 +5,15 @@ import de.visaq.view.elements.airquality.AirQualityData;
 
 public abstract class Diagram {
 	
-	public final String title;
-	public final SensorController sensorController;
+	public final SensorController sensorController = new SensorController();
+	public final FeatureOfInterest featuresOfInterest;
 	public final AirQualityData airQualityData;
 	private String start;
 	private String end;
 	
 	
-	public Diagram(SensorController sensorController, AirQualityData airQualityData, String title, String start, String end) {
-	this.title = title;
-	this.sensorController = sensorController;
+	public Diagram(FeatureOfInterest featuresOfInterest, AirQualityData airQualityData, String start, String end) {
+	this.featuresOfInterest = featuresOfInterest;
 	this.airQualityData = airQualityData;
 	this.setStart(start);
 	this.setEnd(end);
