@@ -1,6 +1,8 @@
 package de.visaq.view.elements;
 
+import de.visaq.controller.SensorController;
 import de.visaq.view.elements.diagram.Diagram;
+import de.visaq.view.elements.toolbar.ToolbarElement;
 
 /**
  * Sensor Overview (also referred to as Sidebar) is used to show interpolated Point Data on the Map
@@ -9,10 +11,10 @@ import de.visaq.view.elements.diagram.Diagram;
  */
 
 public class SensorOverview implements ToolbarElement {
-    public final Diagram[] diagrams;
+    private Diagram diagram;
 
-    public SensorOverview(Diagram[] diagrams) {
-        this.diagrams = diagrams;
+    public SensorOverview(SensorController sensorController, Diagram diagram) {
+        this.diagram = diagram;
     }
 
     /**

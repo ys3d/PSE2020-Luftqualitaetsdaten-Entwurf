@@ -1,14 +1,14 @@
-package de.visaq.view.elements;
+package de.visaq.view.elements.toolbar;
 
 /**
  * Shows the User links and definitions to the different functions and informations.
  */
-public class Navbar implements ToolbarElement {
+public class Toolbar implements ToolbarElement {
 
     /**
      * Constructor for the Navbar.
      */
-    public Navbar() {
+    public Toolbar() {
         // TODO Auto-generated method stub
     }
 

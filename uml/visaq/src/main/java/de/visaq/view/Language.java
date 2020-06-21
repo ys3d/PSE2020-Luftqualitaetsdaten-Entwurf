@@ -1,7 +1,9 @@
 package de.visaq.view;
 
-import java.awt.image.BufferedImage;
 import java.util.Properties;
+
+import def.leaflet.l.BaseIconOptions;
+import def.leaflet.l.Icon;
 
 /**
  * Language class is used to change the Language the user prefers and sets the Icon used in the
@@ -30,7 +32,7 @@ public class Language {
         Language.instance = language;
     }
 
-    private BufferedImage icon = null;
+	private Icon<BaseIconOptions> icon = null;
     private final Properties language;
     public final String name;
 
@@ -49,7 +51,7 @@ public class Language {
      * 
      * @return The icon
      */
-    public BufferedImage getIcon() {
+    public Icon<BaseIconOptions> getIcon() {
 
         return icon;
     }
@@ -59,7 +61,7 @@ public class Language {
      * 
      * @return The icon
      */
-    private void setIcon(BufferedImage icon) {
+    public void setIcon(Icon<BaseIconOptions> icon) {
         this.icon = icon;
     }
 
