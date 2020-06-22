@@ -13,8 +13,8 @@ public abstract class AirQualityData {
 
     public abstract Color getSecondaryColor();
 
-	public String getName() {
-		return NAME;
-	}
+    public String getName() {
+        return NAME;
+    }
 
 }

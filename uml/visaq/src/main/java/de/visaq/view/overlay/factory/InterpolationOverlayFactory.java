@@ -7,14 +7,13 @@ import def.leaflet.l.Bounds;
 import def.leaflet.l.Layer;
 
 /**
- * Creates an interpolated Map Overlay from given Sensor Data, 
- *
+ * Creates an interpolated Map Overlay from given Sensor Data,
  */
 public class InterpolationOverlayFactory implements OverlayFactory {
 
-	@Override
-	public Layer build(AirQualityData airquality,  Datastream datastream) {
-		return null;
+    @Override
+    public Layer build(AirQualityData airquality, Datastream datastream) {
+        return null;
 
-	}
+    }
 }

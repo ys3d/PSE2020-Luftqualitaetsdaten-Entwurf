@@ -15,36 +15,28 @@ import de.visaq.view.elements.toolbar.ToolbarElement;
  */
 
 public class SensorOverview implements ToolbarElement {
-	
-	public final AirQualityData[] airQualityDatas;
-	private AirQualityData currentAirQualityData;
-	private SensorController sensorController = new SensorController();
+
+    public final AirQualityData[] airQualityDatas = null;
+    private AirQualityData currentAirQualityData;
     private Diagram diagram;
     private String start = "default";
     private String end = "default";
+    private JSONObject data;
 
     public SensorOverview(JSONObject coordinates, AirQualityData currentAirQualityData) {
-    	this.currentAirQualityData = currentAirQualityData;
-        this.diagram = new LineDiagram(featuresOfInterest, currentAirQualityData, start, end);
+        this.currentAirQualityData = currentAirQualityData;
+        this.diagram = new LineDiagram(data, start, end);
     }
 
     @Override
     public void show() {
-    	diagram.drawDiagram();
-    	diagram.showDiagram();
-    	//Query for sensordata concerning the four datatypes
+        diagram.drawDiagram();
+        diagram.showDiagram();
+        // Query for sensordata concerning the four datatypes
     }
-    
+
     public void selectTimeframe(String start, String end) {
-    	this.diagram = new LineDiagram(featuresOfInterest, currentAirQualityData, start, end);
-    }
+        this.diagram = new LineDiagram(data, start, end);
+    } 
 
-	public Diagram getDiagram() {
-		return diagram;
-	}
-
-	public void setDiagram(Diagram diagram) {
-		this.diagram = diagram;
-	}
-	
 }

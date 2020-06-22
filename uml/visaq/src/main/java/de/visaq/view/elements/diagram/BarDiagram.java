@@ -1,31 +1,27 @@
 package de.visaq.view.elements.diagram;
 
-import de.visaq.controller.SensorController;
-import de.visaq.model.sensorthings.Datastream;
-import de.visaq.view.elements.airquality.AirQualityData;
+import org.json.JSONObject;
 
 public class BarDiagram implements Diagram {
 
-	public final Datastream datastream;
-	public final String start;
-	public final String end;
-	
-	
-	public BarDiagram(Datastream datastream, String start, String end) {
-		this.datastream = datastream;
-		this.start = start;
-		this.end = end;
-	}
+    public final JSONObject data;
+    public final String start;
+    public final String end;
 
-	@Override
-	public void drawDiagram() {
+    public BarDiagram(JSONObject data, String start, String end) {
+        this.data = data;
+        this.start = start;
+        this.end = end;
+    }
 
-		
-	}
+    @Override
+    public void drawDiagram() {
 
-	@Override
-	public void showDiagram() {
-		// TODO Auto-generated method stub
-		
-	}
+    }
+
+    @Override
+    public void showDiagram() {
+        // TODO Auto-generated method stub
+
+    }
 }

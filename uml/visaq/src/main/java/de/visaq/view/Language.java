@@ -32,7 +32,7 @@ public class Language {
         Language.instance = language;
     }
 
-	private Icon<BaseIconOptions> icon = null;
+    private Icon<BaseIconOptions> icon = null;
     private final Properties language;
     public final String name;
 
