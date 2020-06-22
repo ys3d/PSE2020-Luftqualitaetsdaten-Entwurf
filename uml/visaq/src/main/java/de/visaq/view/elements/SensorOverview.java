@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import de.visaq.controller.SensorController;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.diagram.Diagram;
+import de.visaq.view.elements.diagram.LineDiagram;
 import de.visaq.view.elements.toolbar.ToolbarElement;
 
 /**
@@ -37,7 +38,7 @@ public class SensorOverview implements ToolbarElement {
     }
     
     public void selectTimeframe(String start, String end) {
-    	this.diagram = new LineDiagram(featuresOfInterest, currentAirqualityData, start, end);
+    	this.diagram = new LineDiagram(featuresOfInterest, currentAirQualityData, start, end);
     }
 
 	public Diagram getDiagram() {
