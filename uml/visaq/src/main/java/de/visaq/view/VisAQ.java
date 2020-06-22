@@ -2,12 +2,12 @@ package de.visaq.view;
 
 import java.util.ArrayList;
 
-import de.visaq.view.elements.Toolbar;
+import de.visaq.view.elements.navbar.Navbar;
 
-public abstract class VisAQ {
+public class VisAQ {
 
     ArrayList<View> view = null;
-    Toolbar toolbar;
+    Navbar navbar;
 
     public static void main(String[] args) {
 

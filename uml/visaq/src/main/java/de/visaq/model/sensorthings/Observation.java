@@ -22,24 +22,30 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     public final Double result;
     public final Instant resultTime;
     public final SingleNavigationLink<Datastream> datastreamLink;
+    public final SingleNavigationLink<FeatureOfInterest> featureOfInterestLink;
 
     /**
      * Constructs a new {@link Observation}.
      * 
-     * @param id             The identifier of the {@link Observation} in the SensorThings standard
-     * @param selfUrl        The URL which links to this object on the given SensorThings database
-     * @param phenomenonTime The time when the Observation occurred
-     * @param result         The result of the {@link Observation}
-     * @param resultTime     The Time of the measuring result
-     * @param datastreamLink Link to the {@link Datastream}
+     * @param id                    The identifier of the {@link Observation} in the SensorThings
+     *                              standard
+     * @param selfUrl               The URL which links to this object on the given SensorThings
+     *                              database
+     * @param phenomenonTime        The time when the Observation occurred
+     * @param result                The result of the {@link Observation}
+     * @param resultTime            The Time of the measuring result
+     * @param datastreamLink        Link to the {@link Datastream}
+     * @param featureOfInterestLink Link to the {@link FeatureOfInterest}
      */
     public Observation(String id, String selfUrl, Instant phenomenonTime, Double result,
-            Instant resultTime, SingleNavigationLink<Datastream> datastreamLink) {
+            Instant resultTime, SingleNavigationLink<Datastream> datastreamLink,
+            SingleNavigationLink<FeatureOfInterest> featureOfInterestLink) {
         super(id, selfUrl);
         this.phenomenonTime = phenomenonTime;
         this.result = result;
         this.resultTime = resultTime;
         this.datastreamLink = datastreamLink;
+        this.featureOfInterestLink = featureOfInterestLink;
     }
 
     @Override

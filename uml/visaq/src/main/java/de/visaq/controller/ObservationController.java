@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import de.visaq.controller.link.SingleOnlineLink;
 import de.visaq.model.sensorthings.Datastream;
+import de.visaq.model.sensorthings.FeatureOfInterest;
 import de.visaq.model.sensorthings.Observation;
 
 /**
@@ -40,7 +41,9 @@ public class ObservationController extends SensorthingsController<Observation> {
                     UtilityController.buildTime(json, "phenomenonTime"), json.getDouble("result"),
                     UtilityController.buildTime(json, "resultTime"),
                     new SingleOnlineLink<Datastream>(
-                            json.getString("Datastream@iot.navigationLink")));
+                            json.getString("Datastream@iot.navigationLink")),
+                    new SingleOnlineLink<FeatureOfInterest>(
+                            json.getString("FeatureOfInterest@iot.navigationLink")));
             return observation;
         } catch (JSONException e) {
             return null;

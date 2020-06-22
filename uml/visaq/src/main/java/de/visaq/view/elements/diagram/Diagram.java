@@ -4,5 +4,5 @@ public interface Diagram {
 
     public void showDiagram();
 
-    public void setDiagramType(String diagram);
+    public void drawDiagram();
 }

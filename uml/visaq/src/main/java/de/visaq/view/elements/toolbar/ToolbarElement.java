@@ -1,4 +1,4 @@
-package de.visaq.view.elements;
+package de.visaq.view.elements.toolbar;
 
 /**
  * Interface for all Elements that can be shown in the Toolbar.
