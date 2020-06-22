@@ -22,6 +22,7 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     public final Double result;
     public final Instant resultTime;
     public final SingleNavigationLink<Datastream> datastreamLink;
+    public final SingleNavigationLink<FeatureOfInterest> featureOfIntrestLink;
 
     /**
      * Constructs a new {@link Observation}.
@@ -32,14 +33,17 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
      * @param result         The result of the {@link Observation}
      * @param resultTime     The Time of the measuring result
      * @param datastreamLink Link to the {@link Datastream}
+     * @param featureOfIntrestLink Link to the {@link FeatureOfInterest}
      */
     public Observation(String id, String selfUrl, Instant phenomenonTime, Double result,
-            Instant resultTime, SingleNavigationLink<Datastream> datastreamLink) {
+            Instant resultTime, SingleNavigationLink<Datastream> datastreamLink,
+            SingleNavigationLink<FeatureOfInterest> featureOfIntrestLink) {
         super(id, selfUrl);
         this.phenomenonTime = phenomenonTime;
         this.result = result;
         this.resultTime = resultTime;
         this.datastreamLink = datastreamLink;
+        this.featureOfIntrestLink = featureOfIntrestLink;
     }
 
     @Override
