@@ -5,6 +5,19 @@ import java.util.Map;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.controller.link.MultiNavigationLink;
 
+/**
+ * <p>
+ * Representation of the FeatureOfIntrest entity in the OGC SensorThings API.
+ * </p>
+ * <p>
+ * An Observation results is a value being assigned to a phenomenon.
+ * The phenomenon is a property of a feature,
+ * the latter being the FeatureOfInterest of the Observation
+ * </p>
+ * 
+ * @see <a href=
+ *      "https://developers.sensorup.com/docs/#featureOfInterest_post">https://developers.sensorup.com/docs/#featureOfInterest_postt</a>
+ */
 public class FeatureOfInterest extends Sensorthings<FeatureOfInterest> {
     public final String description;
     public final String name;

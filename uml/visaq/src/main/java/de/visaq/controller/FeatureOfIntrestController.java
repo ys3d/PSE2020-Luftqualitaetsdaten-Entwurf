@@ -9,6 +9,9 @@ import de.visaq.controller.link.MultiOnlineLink;
 import de.visaq.model.sensorthings.FeatureOfInterest;
 import de.visaq.model.sensorthings.Observation;
 
+/**
+ * Encapsulates the control over FeatureOfIntrest objects.
+ */
 public class FeatureOfIntrestController extends SensorthingsController<FeatureOfInterest> {
 
     @Override
