@@ -75,7 +75,7 @@ public class DatastreamController extends SensorthingsController<Datastream> {
 
         Datastream datastream = new Datastream(json.getString("@iot.id"),
                 json.getString("@iot.selfLink"), json.getString("name"),
-                json.getString("description"), json.getJSONObject("properties").toMap(),
+                json.getString("description"), UtilityController.buildProperties(json),
                 json.getString("observationType"),
                 new SingleOnlineLink<Sensor>(json.getString("Sensor@iot.navigationLink")),
                 new SingleOnlineLink<Thing>(json.getString("Thing@iot.navigationLink")),
