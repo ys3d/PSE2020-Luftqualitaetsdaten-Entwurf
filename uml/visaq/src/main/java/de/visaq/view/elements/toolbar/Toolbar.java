@@ -1,14 +1,25 @@
-package de.visaq.view.elements;
+package de.visaq.view.elements.toolbar;
+
+import java.util.ArrayList;
+
+import de.visaq.view.ObservedToolbarSubject;
+import de.visaq.view.ToolbarObserver;
 
 /**
  * Shows the User links and definitions to the different functions and informations.
  */
-public class Navbar implements ToolbarElement {
+public class Toolbar implements ToolbarElement, ObservedToolbarSubject {
+
+    private boolean historicalView;
+    private Timeline timeline;
+    private ArrayList<ToolbarObserver> observer;
 
     /**
      * Constructor for the Navbar.
      */
-    public Navbar() {
+    public Toolbar() {
+        Timeline timeline = new Timeline();
+        observer = new ArrayList<ToolbarObserver>();
         // TODO Auto-generated method stub
     }
 
@@ -43,12 +54,30 @@ public class Navbar implements ToolbarElement {
     /**
      * Will later open the Timeline with historical Data on the Map.
      */
-    private void historicalData() {
+    private void historicalData(boolean historicalView) {
+        this.historicalView = historicalView;
+        timeline.show();
         // TODO Auto-generated method stub
     }
 
     @Override
     public void show() {
+
+    }
+
+    @Override
+    public void attach(ToolbarObserver toolbarObserver) {
+        observer.add(toolbarObserver);
+
+    }
+
+    @Override
+    public void detach(ToolbarObserver toolbarObserver) {
+        observer.remove(toolbarObserver);
+    }
+
+    @Override
+    public void notifyObserver() {
         // TODO Auto-generated method stub
 
     }

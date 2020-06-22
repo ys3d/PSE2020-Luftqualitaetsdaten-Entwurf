@@ -5,7 +5,7 @@ import java.awt.Color;
 /**
  * Describes a ColorRange between two points.
  */
-public class ColorRange {
+public class Gradient {
     public final Color first;
     public final Color second;
 
@@ -15,7 +15,7 @@ public class ColorRange {
      * @param first  The first Color
      * @param second The second Color
      */
-    public ColorRange(Color first, Color second) {
+    public Gradient(Color first, Color second) {
         super();
         this.first = first;
         this.second = second;
