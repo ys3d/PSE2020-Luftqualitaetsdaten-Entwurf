@@ -7,6 +7,7 @@ import de.visaq.model.sensorthings.Datastream;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.navbar.ExpertViewFilter;
 import def.leaflet.l.Bounds;
+import def.leaflet.l.LatLngBounds;
 import def.leaflet.l.Layer;
 import def.leaflet.l.control.Layers;
 
@@ -30,7 +31,7 @@ public class OverlayBuilder {
 	  * 
 	  * @param factories	Are the Overlay Factories used to fabricate Map Overlays	 
 	  */
-	public OverlayBuilder(OverlayFactory[] factories)	{	
+	public OverlayBuilder(ArrayList<OverlayFactory> factories)	{	
 	}
 	
 	/**
@@ -38,7 +39,7 @@ public class OverlayBuilder {
 	 * @param pointdata 	Is the data of the Sensors that is used to create the Map Overlay
 	 * @return				A list of Overlays that where build by using the given factories.
 	 */
-	public ArrayList<Layer> buildOverlays(AirQualityData airquality, Bounds bounds )	{
+	public ArrayList<Layer> buildOverlays(AirQualityData airquality, LatLngBounds latLngBounds )	{
 		Datastream datastream = null;
 		//Extract Datastream from bounds and expertviewfilter and sensorcontroller;
 		ArrayList<Layer> layers = new ArrayList<Layer>();

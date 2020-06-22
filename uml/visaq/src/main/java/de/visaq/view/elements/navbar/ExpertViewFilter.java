@@ -6,17 +6,18 @@ import java.util.ArrayList;
 public class ExpertViewFilter {
 	
 	private ArrayList<?> sensorTypes;
+	private ArrayList<?> selectedSensorTypes;
 	
 	public void show() {
 	}
 	
-	public void setSelectedSensors(ArrayList<?> sensorTypes)	{
+	public void setSelectedSensors(ArrayList<?> selectedSensorTypes)	{
 		
 		//TODO change the sensor types to the correct version
-		this.sensorTypes = sensorTypes;
+		this.selectedSensorTypes = selectedSensorTypes;
 	}
 	
 	public ArrayList<?> getSelectedSensors()	{
-		return sensorTypes;
+		return selectedSensorTypes;
 	}
 }

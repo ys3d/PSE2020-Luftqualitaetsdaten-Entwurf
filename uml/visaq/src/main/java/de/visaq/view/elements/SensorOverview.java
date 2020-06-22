@@ -1,5 +1,7 @@
 package de.visaq.view.elements;
 
+import org.json.JSONObject;
+
 import de.visaq.controller.SensorController;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.diagram.Diagram;
@@ -21,7 +23,7 @@ public class SensorOverview implements ToolbarElement {
     private String start = "default";
     private String end = "default";
 
-    public SensorOverview(FeaturesOfInterest featuresOfInterest, AirQualityData airQualityData) {
+    public SensorOverview(JSONObject coordinates, AirQualityData currentAirQualityData) {
     	this.currentAirQualityData = airQualityData;
     	this.featuresOfInterest = featuresOfInterest;
         this.diagram = new LineDiagram(featuresOfInterest, currentAirQualityData, start, end);
