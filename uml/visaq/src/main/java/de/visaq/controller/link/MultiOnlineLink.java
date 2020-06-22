@@ -2,15 +2,16 @@ package de.visaq.controller.link;
 
 import java.util.ArrayList;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+
 import org.json.JSONObject;
 
 import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
-import jakarta.ws.rs.client.Client;
-import jakarta.ws.rs.client.ClientBuilder;
-import jakarta.ws.rs.client.WebTarget;
-import jakarta.ws.rs.core.MediaType;
 
 public class MultiOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
         implements MultiNavigationLink<SensorthingT> {
