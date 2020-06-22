@@ -1,7 +1,8 @@
 package de.visaq.view.overlay.factory;
 
-import de.visaq.model.sensorthings.Datastream;
+import de.visaq.model.Datastream;
 import de.visaq.view.elements.airquality.AirQualityData;
+
 import def.leaflet.l.Layer;
 
 /**
