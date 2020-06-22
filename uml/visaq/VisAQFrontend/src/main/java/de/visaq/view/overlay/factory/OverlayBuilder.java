@@ -2,9 +2,9 @@ package de.visaq.view.overlay.factory;
 
 import java.util.ArrayList;
 
-import de.visaq.controller.SensorController;
-import de.visaq.model.sensorthings.Datastream;
+import de.visaq.model.Datastream;
 import de.visaq.view.elements.airquality.AirQualityData;
+
 import def.leaflet.l.LatLngBounds;
 import def.leaflet.l.Layer;
 
@@ -13,7 +13,6 @@ import def.leaflet.l.Layer;
  */
 public class OverlayBuilder {
 
-    private SensorController sensorController = new SensorController();
     private ArrayList<OverlayFactory> factories = null;
 
     /**
