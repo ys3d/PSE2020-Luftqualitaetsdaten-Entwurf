@@ -15,6 +15,7 @@ import de.visaq.view.overlay.factory.OverlayBuilder;
 import de.visaq.view.overlay.factory.OverlayFactory;
 import de.visaq.view.overlay.factory.SensorOverlayFactory;
 import def.leaflet.l.Bounds;
+import def.leaflet.l.Layer;
 import def.leaflet.l.Map;
 
 /**
@@ -27,8 +28,10 @@ public class MapView extends View {
     private AirQualityData currentAirQualityData;
     private OverlayBuilder overlayBuilder;
     ArrayList<OverlayFactory> overlayFactories;
+    private ArrayList<Layer> layers;
     private Legend legend;
     private SensorOverview sensorOverview;
+
     
     
     /**
@@ -40,15 +43,15 @@ public class MapView extends View {
     public MapView(Map map, Navbar navbar) {
         this.map = map;
         this.navbar = navbar;
-        currentAirQualityData = new ParticulateMatter();
-        legend = new Legend(currentAirQualityData);
-        overlayFactories = new ArrayList<OverlayFactory>();
+        this.currentAirQualityData = new ParticulateMatter();
+        this.legend = new Legend(currentAirQualityData);
+        this.overlayFactories = new ArrayList<OverlayFactory>();
         OverlayFactory sensorOverlayFactory = new SensorOverlayFactory();
         OverlayFactory interpolationOverlayFactory = new InterpolationOverlayFactory();
         overlayFactories.add(sensorOverlayFactory);
         overlayFactories.add(interpolationOverlayFactory);
         overlayBuilder = new OverlayBuilder(overlayFactories);
-		overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds());
+        addOverlays();
     }
 
     @Override
@@ -58,8 +61,6 @@ public class MapView extends View {
 
     }
     
-
-
     /**
      * Shows the Timeline for the historical data.
      */
@@ -75,7 +76,7 @@ public class MapView extends View {
     public void airqualityDataQuery(AirQualityData airQualityData) {
     	currentAirQualityData = airQualityData;
     	legend = new Legend(currentAirQualityData);
-    	overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds());
+    	addOverlays();
     }
     
 
@@ -91,5 +92,13 @@ public class MapView extends View {
     public void mapDataQuery(JSONObject coordinates)	{
     	sensorOverview = new SensorOverview(coordinates, currentAirQualityData);
     	sensorOverview.show();
+    }
+    
+    private void addOverlays()	{
+    	if(navbar.isExpertview())	{
+    		layers = overlayBuilder.buildExpertOverlays(currentAirQualityData, map.getBounds(), navbar.expertViewFilter.getSelectedSensors());
+    	} else {
+    		layers = overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds());
+    	}
     }
 }

@@ -19,7 +19,7 @@ public class Navbar {
     private boolean expertView = false;
 
     /**
-     * Constructor for a new Toolbar instance.
+     * Constructor for a new Navbar instance.
      * 
      * @param airQualityDatas The selectable Air Quality Data overlays.
      * @param informationView TODO
@@ -28,7 +28,6 @@ public class Navbar {
      */
     public Navbar(AirQualityData[] airQualityDatas, InformationView informationView, Toolbar toolbar,
             SearchBar searchbar, ExpertViewFilter expertViewFilter) {
-        super();
         this.airQualityDatas = airQualityDatas;
         this.informationView = informationView;
         this.toolbar = toolbar;
@@ -36,11 +35,14 @@ public class Navbar {
         this.expertViewFilter = expertViewFilter;
     }
 
-
+    /**
+     * Shows the Searchbar.
+     */
     public void show() {
     	if(expertView)	{
     		expertViewFilter.show(); 
     	}
+    	searchbar.show();
         // TODO Auto-generated method stub
 
     }
@@ -61,12 +63,6 @@ public class Navbar {
     	informationView.getIcon();
     }
 
-    /**
-     * Shows the Searchbar.
-     */
-    public void showSearchBar() {
-    	searchbar.show();
-    }
 
     /**
      * Shows the Toolbar.
@@ -75,10 +71,18 @@ public class Navbar {
     	toolbar.show();
     }
 
+    /**
+     * Informs whether the Expert Mode is set.
+     * @return		The instance Expert View
+     */
 	public boolean isExpertview() {
 		return expertView;
 	}
 
+	/**
+	 * Activates or Deactivates the Expert Mode.
+	 * @param expertview	The instance Expert View
+	 */
 	public void setExpertview(boolean expertview) {
 		this.expertView = expertview;
 	}

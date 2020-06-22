@@ -17,8 +17,7 @@ import def.leaflet.l.control.Layers;
 public class OverlayBuilder {
 	
 	private SensorController sensorController = new SensorController();
-	private ExpertViewFilter expertViewFilter;
-	private OverlayFactory[] factories = null;
+	private ArrayList<OverlayFactory> factories = null;
 	
 	/**
 	 * Default Builder uses Sensor Overlay Factory and Interpolation Overlay Factory.
@@ -48,13 +47,11 @@ public class OverlayBuilder {
 		}
 		return layers;
 	}
-
-	public OverlayFactory[] getFactories() {
-		return factories;
-	}
-
-	public void setFactories(OverlayFactory[] factories) {
-		this.factories = factories;
+	
+	public ArrayList<Layer> buildExpertOverlays(AirQualityData airquality, LatLngBounds latLngBounds, ArrayList<?> selectedSensortypes )	{
+		ArrayList<Layer> layers = new ArrayList<Layer>();
+		return layers;
+	
 	}
 
 }
