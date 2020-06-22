@@ -12,7 +12,7 @@ import de.visaq.model.sensorthings.Observation;
 /**
  * Encapsulates the control over FeatureOfIntrest objects.
  */
-public class FeatureOfIntrestController extends SensorthingsController<FeatureOfInterest> {
+public class FeatureOfInterestController extends SensorthingsController<FeatureOfInterest> {
 
     @Override
     public ArrayList<FeatureOfInterest> getAll() {
