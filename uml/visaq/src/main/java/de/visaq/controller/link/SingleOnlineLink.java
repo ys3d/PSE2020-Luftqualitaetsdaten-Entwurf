@@ -5,7 +5,6 @@ import org.json.JSONObject;
 import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
-
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.WebTarget;

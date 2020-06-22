@@ -1,7 +1,5 @@
 package de.visaq.view.elements.navbar;
 
-import de.visaq.view.elements.toolbar.ToolbarElement;
-
 /**
  * Searchbar that the user can use in order to look up a particular city using the city name or the
  * postal code of the city.

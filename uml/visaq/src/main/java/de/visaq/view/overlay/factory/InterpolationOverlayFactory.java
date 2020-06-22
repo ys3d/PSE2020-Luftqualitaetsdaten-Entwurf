@@ -1,9 +1,7 @@
 package de.visaq.view.overlay.factory;
 
-import de.visaq.controller.SensorController;
 import de.visaq.model.sensorthings.Datastream;
 import de.visaq.view.elements.airquality.AirQualityData;
-import def.leaflet.l.Bounds;
 import def.leaflet.l.Layer;
 
 /**

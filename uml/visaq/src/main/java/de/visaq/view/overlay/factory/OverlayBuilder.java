@@ -5,11 +5,8 @@ import java.util.ArrayList;
 import de.visaq.controller.SensorController;
 import de.visaq.model.sensorthings.Datastream;
 import de.visaq.view.elements.airquality.AirQualityData;
-import de.visaq.view.elements.navbar.ExpertViewFilter;
-import def.leaflet.l.Bounds;
 import def.leaflet.l.LatLngBounds;
 import def.leaflet.l.Layer;
-import def.leaflet.l.control.Layers;
 
 /*
  * Access point to the overlay factory. It builds overlays for maps using the special factories.

@@ -2,7 +2,6 @@ package de.visaq.view.elements.toolbar;
 
 import java.util.ArrayList;
 
-import de.visaq.view.NavbarObserver;
 import de.visaq.view.ObservedToolbarSubject;
 import de.visaq.view.ToolbarObserver;
 
