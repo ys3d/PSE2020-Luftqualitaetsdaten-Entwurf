@@ -1,8 +1,12 @@
 package de.visaq.view.elements.navbar;
 
-import de.visaq.view.InformationView;
+import java.util.ArrayList;
 
+import de.visaq.view.InformationView;
+import de.visaq.view.NavbarObserver;
+import de.visaq.view.ObservedNavbarSubject;
 import de.visaq.view.elements.airquality.AirQualityData;
+import de.visaq.view.elements.airquality.ParticulateMatter;
 import de.visaq.view.elements.toolbar.Toolbar;
 
 /**
@@ -10,13 +14,15 @@ import de.visaq.view.elements.toolbar.Toolbar;
  * using Hyphen here because you used it before but as I said it doesn't matter to me whether or not
  * we settle on hyphen), Searchbar and Language settings.
  */
-public class Navbar {
+public class Navbar implements  ObservedNavbarSubject{
     public final AirQualityData[] airQualityDatas;
     public final InformationView informationView;
     public final Toolbar toolbar;
     public final SearchBar searchbar;
     public final ExpertViewFilter expertViewFilter;
     private boolean expertView = false;
+    private AirQualityData currentAirQualityData;
+    private ArrayList<NavbarObserver> observer;
 
     /**
      * Constructor for a new Navbar instance.
@@ -33,6 +39,8 @@ public class Navbar {
         this.toolbar = toolbar;
         this.searchbar = searchbar;
         this.expertViewFilter = expertViewFilter;
+        currentAirQualityData = new ParticulateMatter();
+        observer = new ArrayList<NavbarObserver>();
     }
 
     /**
@@ -85,5 +93,32 @@ public class Navbar {
 	 */
 	public void setExpertview(boolean expertview) {
 		this.expertView = expertview;
+	}
+
+	public AirQualityData getCurrentAirQualityData() {
+		return currentAirQualityData;
+	}
+
+	public void setCurrentAirQualityData(AirQualityData currentAirQualityData) {
+		this.currentAirQualityData = currentAirQualityData;
+	}
+
+	@Override
+	public void attach(NavbarObserver navbarObserver) {
+		observer.add(navbarObserver);
+	}
+
+	@Override
+	public void detach(NavbarObserver navbarObserver) {
+		observer.remove(navbarObserver);
+		
+	}
+
+	@Override
+	public void notifyObserver() {
+		for(NavbarObserver nb: observer)	{
+			nb.updateNavbar(searchbar, currentAirQualityData, expertView, expertViewFilter);
+		}
+		
 	}
 }

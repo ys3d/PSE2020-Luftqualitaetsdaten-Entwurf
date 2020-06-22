@@ -17,13 +17,13 @@ public class LightTheme extends ColorTheme {
     }
 
     @Override
-    public ColorRange getPrimarySkala() {
+    public Gradient getPrimarySkala() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public ColorRange getSecondarySkala() {
+    public Gradient getSecondarySkala() {
         // TODO Auto-generated method stub
         return null;
     }

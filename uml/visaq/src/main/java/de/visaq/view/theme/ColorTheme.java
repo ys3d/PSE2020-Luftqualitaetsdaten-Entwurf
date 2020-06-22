@@ -35,7 +35,7 @@ public abstract class ColorTheme {
 
     public abstract Color getSecondaryColor();
 
-    public abstract ColorRange getPrimarySkala();
+    public abstract Gradient getPrimarySkala();
 
-    public abstract ColorRange getSecondarySkala();
+    public abstract Gradient getSecondarySkala();
 }

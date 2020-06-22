@@ -5,11 +5,13 @@ import java.util.ArrayList;
 import org.json.JSONObject;
 
 import de.visaq.controller.SensorController;
-import de.visaq.view.elements.SensorOverview;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.airquality.ParticulateMatter;
 import de.visaq.view.elements.map.Legend;
+import de.visaq.view.elements.map.SensorOverview;
+import de.visaq.view.elements.navbar.ExpertViewFilter;
 import de.visaq.view.elements.navbar.Navbar;
+import de.visaq.view.elements.navbar.SearchBar;
 import de.visaq.view.overlay.factory.InterpolationOverlayFactory;
 import de.visaq.view.overlay.factory.OverlayBuilder;
 import de.visaq.view.overlay.factory.OverlayFactory;
@@ -22,16 +24,18 @@ import def.leaflet.l.Map;
  * Map View creates the view for the Map using the Map Overlay allowing the user to see the Map as
  * well as the Legend, Timeline and SensorOverview.
  */
-public class MapView extends View {
+public class MapView extends View implements NavbarObserver, ToolbarObserver {
     public final Map map;
-    public final Navbar navbar;
-    private AirQualityData currentAirQualityData;
     private OverlayBuilder overlayBuilder;
     ArrayList<OverlayFactory> overlayFactories;
     private ArrayList<Layer> layers;
     private Legend legend;
     private SensorOverview sensorOverview;
-
+    private boolean historicalView;
+    private SearchBar searchBar;
+    private AirQualityData currentAirQualityData;
+    boolean expertView;
+	private ExpertViewFilter expertViewFilter;
     
     
     /**
@@ -40,10 +44,8 @@ public class MapView extends View {
      * @param map    The Map instance
      * @param legend The Legend instance
      */
-    public MapView(Map map, Navbar navbar) {
+    public MapView(Map map) {
         this.map = map;
-        this.navbar = navbar;
-        this.currentAirQualityData = new ParticulateMatter();
         this.legend = new Legend(currentAirQualityData);
         this.overlayFactories = new ArrayList<OverlayFactory>();
         OverlayFactory sensorOverlayFactory = new SensorOverlayFactory();
@@ -95,10 +97,25 @@ public class MapView extends View {
     }
     
     private void addOverlays()	{
-    	if(navbar.isExpertview())	{
-    		layers = overlayBuilder.buildExpertOverlays(currentAirQualityData, map.getBounds(), navbar.expertViewFilter.getSelectedSensors());
+    	if(expertView)	{
+    		layers = overlayBuilder.buildExpertOverlays(currentAirQualityData, map.getBounds(), expertViewFilter.getSelectedSensors());
     	} else {
     		layers = overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds());
     	}
     }
+
+	@Override
+	public void updateToolbar(boolean historicalView) {
+		this.historicalView = historicalView;
+		
+	}
+
+	@Override
+	public void updateNavbar(SearchBar searchBar, AirQualityData currentAirQualityData, boolean expertView,
+			ExpertViewFilter expertViewFilter) {
+		this.searchBar = searchBar;
+		this.currentAirQualityData = currentAirQualityData;
+		this.expertView = expertView;
+		this.expertViewFilter = expertViewFilter;
+	}
 }
