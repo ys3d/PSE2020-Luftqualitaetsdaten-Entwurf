@@ -5,7 +5,7 @@ import org.json.JSONObject;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.diagram.Diagram;
 import de.visaq.view.elements.diagram.LineDiagram;
-import de.visaq.view.elements.toolbar.ToolbarElement;
+import de.visaq.view.elements.navbar.ToolbarElement;
 
 /**
  * Sensor Overview (also referred to as Sidebar) is used to show interpolated Point Data on the Map

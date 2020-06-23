@@ -2,12 +2,11 @@ package de.visaq.view.elements.navbar;
 
 import java.util.ArrayList;
 
-import de.visaq.view.InformationView;
 import de.visaq.view.NavbarObserver;
 import de.visaq.view.ObservedNavbarSubject;
+import de.visaq.view.View;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.airquality.ParticulateMatter;
-import de.visaq.view.elements.toolbar.Toolbar;
 
 /**
  * The Navbar shows the Navigationbar and gives access to the Help-View, Information-View (I am
@@ -16,7 +15,6 @@ import de.visaq.view.elements.toolbar.Toolbar;
  */
 public class Navbar implements ObservedNavbarSubject {
     public final AirQualityData[] airQualityDatas;
-    public final InformationView informationView;
     public final Toolbar toolbar;
     public final SearchBar searchbar;
     public final ExpertViewFilter expertViewFilter;
@@ -32,15 +30,17 @@ public class Navbar implements ObservedNavbarSubject {
      * @param toolbar         The Toolbar instance.
      * @param searchbar       The Searchbar instance.
      */
-    public Navbar(AirQualityData[] airQualityDatas, InformationView informationView,
-            Toolbar toolbar, SearchBar searchbar, ExpertViewFilter expertViewFilter) {
+    public Navbar(AirQualityData[] airQualityDatas, ArrayList<View> Views) {
         this.airQualityDatas = airQualityDatas;
-        this.informationView = informationView;
-        this.toolbar = toolbar;
-        this.searchbar = searchbar;
-        this.expertViewFilter = expertViewFilter;
-        currentAirQualityData = new ParticulateMatter();
-        observer = new ArrayList<NavbarObserver>();
+        this.currentAirQualityData = new ParticulateMatter();
+        this.observer = new ArrayList<NavbarObserver>();
+        for (NavbarObserver view : Views) {
+            this.observer.add(view);
+        }
+        this.toolbar = new Toolbar();
+        this.searchbar = new SearchBar();
+        this.expertViewFilter = new ExpertViewFilter();
+
     }
 
     /**
@@ -62,13 +62,6 @@ public class Navbar implements ObservedNavbarSubject {
         for (AirQualityData airQualityData : airQualityDatas) {
             airQualityData.getName();
         }
-    }
-
-    /**
-     * Shows the help icon.
-     */
-    public void showHelpIcon() {
-        informationView.getIcon();
     }
 
     /**
@@ -96,10 +89,16 @@ public class Navbar implements ObservedNavbarSubject {
         this.expertView = expertview;
     }
 
+    /**
+     * @return
+     */
     public AirQualityData getCurrentAirQualityData() {
         return currentAirQualityData;
     }
 
+    /**
+     * @param currentAirQualityData
+     */
     public void setCurrentAirQualityData(AirQualityData currentAirQualityData) {
         this.currentAirQualityData = currentAirQualityData;
     }

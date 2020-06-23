@@ -20,10 +20,10 @@ import def.leaflet.l.Map;
  * Map View creates the view for the Map using the Map Overlay allowing the user to see the Map as
  * well as the Legend, Timeline and SensorOverview.
  */
-public class MapView extends View implements NavbarObserver, ToolbarObserver {
+public class MapView extends View {
     public final Map map;
     private OverlayBuilder overlayBuilder;
-    ArrayList<OverlayFactory> overlayFactories;
+    private ArrayList<OverlayFactory> overlayFactories;
     private ArrayList<Layer> layers;
     private Legend legend;
     private SensorOverview sensorOverview;
@@ -94,12 +94,6 @@ public class MapView extends View implements NavbarObserver, ToolbarObserver {
         } else {
             layers = overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds());
         }
-    }
-
-    @Override
-    public void updateToolbar(boolean historicalView) {
-        this.historicalView = historicalView;
-
     }
 
     @Override
