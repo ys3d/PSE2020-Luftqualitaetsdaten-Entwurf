@@ -26,16 +26,17 @@ public class Sensor extends Sensorthings<Sensor> implements SensorthingsProperti
     /**
      * Constructs a new {@link Sensor}.
      * 
-     * @param id              The identifier of the {@link Sensor} in the SensorThings standard
-     * @param selfUrl         The URL which links to this object on the given SensorThings database
+     * @param id              {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl         {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative        {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param description     The description of the {@link Sensor}
      * @param name            The name of the {@link Sensor}
      * @param properties      Several properties of the {@link Sensor}
      * @param datastreamsLink Links to the {@link Datastream}
      */
-    public Sensor(String id, String selfUrl, String description, String name,
+    public Sensor(String id, String selfUrl, boolean relative, String description, String name,
             Map<String, Object> properties, MultiNavigationLink<Datastream> datastreamsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.description = description;
         this.name = name;
         this.properties = properties;

@@ -28,20 +28,19 @@ public class Location extends Sensorthings<Location> {
     /**
      * Constructs a new {@link Location}.
      * 
-     * @param id                      The identifier of the {@link Location} in the SensorThings
-     *                                standard
-     * @param selfUrl                 The URL which links to this object on the given SensorThings
-     *                                database
+     * @param id                      {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl                 {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative                {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param name                    The name of the {@link Location}
      * @param description             The description of the {@link Location}
      * @param location                A point describing the actual location
      * @param historicalLocationsLink Links to the {@link HistoricalLocation}
      * @param thingsLink              Links to the {@link Thing}
      */
-    public Location(String id, String selfUrl, String name, String description, Point location,
-            MultiNavigationLink<HistoricalLocation> historicalLocationsLink,
+    public Location(String id, String selfUrl, boolean relative, String name, String description,
+            Point location, MultiNavigationLink<HistoricalLocation> historicalLocationsLink,
             MultiNavigationLink<Thing> thingsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.name = name;
         this.description = description;
         this.location = location;

@@ -2,6 +2,8 @@ package de.visaq.model.sensorthings;
 
 import java.time.Instant;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Interface for all {@link Sensorthings} with timestamps.
  */
@@ -12,6 +14,7 @@ public interface SensorthingsTimeStamp {
      * @param other The second Object
      * @return True if this one is older, false otherwise
      */
+    @JsonIgnore
     public boolean isOlder(SensorthingsTimeStamp other);
 
     /**
@@ -20,6 +23,7 @@ public interface SensorthingsTimeStamp {
      * @param other The second Object
      * @return True if this one is newer, false otherwise
      */
+    @JsonIgnore
     public boolean isNewer(SensorthingsTimeStamp other);
 
     /**
@@ -28,6 +32,7 @@ public interface SensorthingsTimeStamp {
      * @param other The second Object
      * @return True if this one is equal old, false otherwise
      */
+    @JsonIgnore
     public boolean isEqualOld(SensorthingsTimeStamp other);
 
     /**
@@ -35,5 +40,6 @@ public interface SensorthingsTimeStamp {
      * 
      * @return The timestamp
      */
+    @JsonIgnore
     public Instant getTimeStamp();
 }

@@ -29,10 +29,9 @@ public class Thing extends Sensorthings<Thing> implements SensorthingsProperties
     /**
      * Constructs a new {@link Thing}.
      * 
-     * @param id                      The identifier of the {@link Thing} in the SensorThings
-     *                                standard
-     * @param selfUrl                 The URL which links to this object on the given SensorThings
-     *                                database
+     * @param id                      {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl                 {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative                {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param description             The description of the {@link Thing}
      * @param name                    The name of the {@link Thing}
      * @param properties              Several properties of the {@link Sensor}
@@ -40,11 +39,11 @@ public class Thing extends Sensorthings<Thing> implements SensorthingsProperties
      * @param historicalLocationsLink Links to the {@link HistoricalLocation}
      * @param locationsLink           Links to the {@link Location}
      */
-    public Thing(String id, String selfUrl, String description, String name,
+    public Thing(String id, String selfUrl, boolean relative, String description, String name,
             Map<String, Object> properties, MultiNavigationLink<Datastream> datastreamsLink,
             MultiNavigationLink<HistoricalLocation> historicalLocationsLink,
             MultiNavigationLink<Location> locationsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.description = description;
         this.name = name;
         this.properties = properties;

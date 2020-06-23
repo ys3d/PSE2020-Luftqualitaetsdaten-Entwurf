@@ -9,6 +9,9 @@ import org.json.JSONObject;
 
 import de.visaq.model.sensorthings.UnitOfMeasurement;
 
+/**
+ * Implements some utility functions that allow for easier model construction.
+ */
 public class UtilityController {
     /**
      * Constructs a UnitOfMeasurement instance from a JSON Object.
@@ -52,6 +55,10 @@ public class UtilityController {
      * @return The constructed Map.
      */
     public static Map<String, Object> buildProperties(JSONObject json) {
+        if (!json.has("properties")) {
+            return null;
+        }
+
         return json.getJSONObject("properties").toMap();
     }
 
@@ -66,12 +73,12 @@ public class UtilityController {
             return json;
         }
 
-        json = json.getJSONObject("value");
+        JSONArray jsonArray = json.getJSONArray("value");
 
-        if (!json.has("0")) {
-            return json;
+        if (jsonArray.isEmpty()) {
+            return null;
         }
 
-        return json.getJSONObject("0");
+        return jsonArray.getJSONObject(0);
     }
 }

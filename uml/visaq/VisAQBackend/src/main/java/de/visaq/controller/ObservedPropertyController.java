@@ -18,6 +18,12 @@ public class ObservedPropertyController extends SensorthingsController<ObservedP
         return null;
     }
 
+    /**
+     * Retrieves the ObservedProperty entity associated with the given Datastream entity.
+     * 
+     * @param datastream The Datastream entity
+     * @return The ObservedProperty
+     */
     public ObservedProperty get(Datastream datastream) {
         // TODO Auto-generated method stub
         return null;
@@ -33,11 +39,15 @@ public class ObservedPropertyController extends SensorthingsController<ObservedP
     public ObservedProperty singleBuild(JSONObject json) {
         json = UtilityController.removeArrayWrapper(json);
 
+        if (json == null) {
+            return null;
+        }
+
         ObservedProperty observedProperty = new ObservedProperty(json.getString("@iot.id"),
-                json.getString("@iot.selfLink"), json.getString("description"),
+                json.getString("@iot.selfLink"), false, json.getString("description"),
                 json.getString("name"), UtilityController.buildProperties(json),
-                json.getString("definition"),
-                new MultiOnlineLink<Datastream>(json.getString("Datastreams@iot.navigationLink")));
+                json.getString("definition"), new MultiOnlineLink<Datastream>(
+                        json.getString("Datastreams@iot.navigationLink"), false));
         return observedProperty;
     }
 }
