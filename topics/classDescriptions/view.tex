@@ -14,6 +14,7 @@
     \begin{minipage}{0.6\textwidth}
     Language wird benutzt um die Sprache nach den präferenzen des Benutzers zu setzen. Die Klasse ist nach dem Singelton Entwurfsschema designt.
     \end{minipage}
+    \vspace{\baselineskip}
     Attribute: \begin{itemize} [noitemsep]
     \item \emph{public final String name} Name der Sprache
     \end{itemize}
@@ -26,6 +27,7 @@
     \item \emph{public String getText(String key)} Gibt die lokalisierte Version des Property key zurück
     \item \emph{public Properties getLanguage()} Wird benutzt um die Sprach Properties zu erreichen
 \end{itemize}
+
 \rule{\textwidth}{0.4pt}
 \subsubsection{InformationView}
 \begin{minipage}{0.3\textwidth}
@@ -38,6 +40,7 @@
 InformationView erstellt die View mit welcher die Benutzer ein hilfestellendes Overlay aktivieren können um so leichter 
 die Website zu navigieren.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void show()} Zeigt das Hilfeoverlay an
     \item \emph{public Icon getIcon()} Gibt das Icon für die InformationView wieder
@@ -55,6 +58,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.4\textwidth}
 MapView erstellt die View für die Karte indem das MapOverlay angezeigt wird. Die Klasse erbt von View und implementiert NavbarObserver und ToolbarObserver.
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
      \item \emph{public final Map map} Die auf der Website angezeigte Karte
 \end{itemize}
@@ -81,6 +85,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.5\textwidth}
 Ein Observer für die Navigationsbar welcher die Instanzen in dieser aktualisiert
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void update(SearchBar searchbar, AirQualityData currentAirQualityData,
     boolean expertView, ExpertViewFilter expertViewFilter),boolean historicalView} Updaten falls der Benutzer etwas an den Einstellungen ändert.
@@ -97,6 +102,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Ein Interface für das von dem NavbarObserver beobachtete Subjekt, welches den Observer über Änderungen informiert.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void attach(NavbarObserver navbarObserver)} Erstellt eine Verbindung zwischen dem Observer und Subjekt her
     \item \emph{public void detach(NavbarObserver navbarObserver)} Entfernt die Verbindung zwischen dem Observer und Subjekt
@@ -114,6 +120,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Eine abstrakte Klasse welche regelt wie die Website für den Benutzer dargestellt wird. Das beinhaltet die unterschiedlichen Sprachen und die ColorTheme. Außerdem implementiert die Klasse NavbarObserver.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void show()} Zeigt die Website an
 \end{itemize}
@@ -129,6 +136,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Die Main Klasse der Anwendung. Hier ist der Einstieg in die Anwendung, welcher die Eingaben des Benutzers weitergibt und die View öffnet. Dies erfolgt über das Springframework.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public static void main(String[] args)} Die main Methode der Anwendung.
 \end{itemize} 
@@ -147,6 +155,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Popup, welches den Benutzer darüber informiert, dass VisAQ Cookies nach dem EU Recht verwendet
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
      \item \emph{CookieController cookieController} Ein neuer CookieController
     \item \emph{public final boolean acceptance} Ein boolean Attribut, welches verwendet wird um zu entscheiden ob der Benutzer die Cookies akzeptiert oder nicht
@@ -172,6 +181,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Objekt welches dafür verwendet wird die unterschiedlichen Farbschemata für die Legenden darzustellen.
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
      \item \emph{public static final String NAME} The name of the AirQualityData
 \end{itemize}
@@ -191,6 +201,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 ParticulateMatter erstellt die Einstellungen für die Messungen gemessen von den Sensoren. Die Klasse erbt von AirQualityData.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
 	\item \emph{public abstract Color getPrimaryColor()} Die Primärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
@@ -207,6 +218,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Temperature erstellt die Einstellungen für die Messungen gemessen von den Sensoren. Die Klasse erbt von AirQualityData.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
 	\item \emph{public abstract Color getPrimaryColor()} Die Primärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
@@ -223,6 +235,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Humidity erstellt die Einstellungen für die Messungen gemessen von den Sensoren. Die Klasse erbt von AirQualityData.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
 	\item \emph{public abstract Color getPrimaryColor()} Die Primärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
@@ -239,6 +252,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 AirPressure erstellt die Einstellungen für die Messungen gemessen von den Sensoren. Die Klasse erbt von AirQualityData.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public abstract Color getPrimaryColor()} Die Primärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
     \item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
@@ -252,13 +266,14 @@ Methoden: \begin{itemize} [noitemsep]
 \subsubsection{Diagram}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
-        {\centering\includegraphics[scale = 0.5
+        {\centering\includegraphics[scale = 0.7
         ]{media/view/diagram/Diagram_Class.png}}
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
 Das Diagram Interface erstellt das Diagramm für die SensorOverview. Es handelt sich hierbei um ein Interface
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void showDiagram()} Zeigt Diagram an
     \item \emph{public void drawDiagram()} Zeichnet das Diagramm
@@ -275,6 +290,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 BarDiagram erstellt ein Balkendiagramm für Diagram und implementiert dieses.
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
     \item \emph{public final JSONObject data} Ein JSON Objekt, welches die Daten an das Diagram weitergibt.
     \item \emph{public final String start} Der Start der angezeigten historischen Werte im Diagram
@@ -297,6 +313,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 BarDiagram erstellt ein Liniendiagramm für Diagram und implementiert dieses.
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
     \item \emph{public final JSONObject data} Ein JSON Objekt, welches die Daten an das Diagram weitergibt.
     \item \emph{public final String start} Der Start der angezeigten historischen Werte im Diagram
@@ -322,6 +339,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Die Legende zeigt die Farbskala für die auf der Karte angezeigten Interpolationswerte. Die Legende ändert ihre Farbwerte je nach ausgewählter Luftqualitätsdata
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
      \item \emph{public final AirQualityData airQualityData} Die von dem Benutzer ausgewählte Luftqualitätsdata
 \end{itemize}
@@ -341,11 +359,11 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 SensorOverview (auch Sidebar genannt) wird benutzt um die Interpolierten Point Data auf der Karte sowie die Daten eines speziellen Sensors anzuzeigen. Es zeigt ein Diagramm mit historischen Werten an, welche von dem Benutzer individuell gewählt werden können. Außerdem werden die Gefahren von den spezifischen Arten von Luftverschmutzung angezeigt, sowie die von dem Sensor gemessenen Werte.
 \end{minipage}
+\vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
     \item \emph{public final AirQualityData[] airQualityDatas} Ein Array mit den vier AirQualityDaten
 \end{itemize}
 Methoden: \begin{itemize} [noitemsep]
-    
     \item \emph{public SensorOverview(JSONObject coordinates, AirQualityData currentAirQualityData)} Konstruktor für die Sidebar mit den Koordinaten und der zurzeit ausgewählten Luftqualitätsdata
     \item \emph{public void show()} Zeigt die Sidebar
     \item \emph{public void selectTimeframe(String start, String end)} Die von dem Benutzer ausgewählte Zeit
@@ -367,6 +385,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 ExpertViewFilter ist eine Erweiterung für erfahrene Benutzer, welche bei Aktivierung in der Navigationsbar auswählen können welche Sensortypen sie angezeigt haben wollen.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void show()} Zeigt die Möglichkeit an, an welcher man den Experten Modus an beziehungsweise ausmachen kann.
     \item \emph{public void setSelectedSensors(ArrayList<?> selectedSensorTypes)} Setzt die von dem Benutzer ausgewählten Sensortypen
@@ -384,6 +403,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.5\textwidth}
 Die Navbar zeigt die Navigationsbar und erlaubt es dem Benutzer auf die Hilfe, Suchleiste, Sprache, Toolbar und die Luftqualitätsfilter zuzugreifen
 \end{minipage}
+\vspace{\baselineskip}
 Attribute:\begin{itemize} [noitemsep]
     \item \emph{public final AirQualityData[] airQualityDatas} Array welches die 4 Luftqualitätsdata beinhaltet
     \item \emph{public final InformationView informationView} Die InformationView die angezeigt wird
@@ -416,6 +436,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Suchleiste die der Benutzer benutzen kann um nach bestimmten Städten oder Postleitzahlen zu suchen
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public Seachbar()} Konstruktor für die Suchleiste.
     \item \emph{public void show()}  Zeigt die Suchleiste in der Navbar an
@@ -437,6 +458,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Die Timeline ist ein Regulator welcher aufgerufen werden kann und die historischen Daten direkt auf der Karte darstellt. Es implementiert außerdem ToolbarElement um die dazugehörige show Methode zu verwenden.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void show()} Zeigt die Timeline an, wenn diese von dem Benutzer ausgewählt wurde.
     \item \emph{public void update()} Aktualisiert das Overlay je nach ausgewählten historischen Daten.
@@ -453,6 +475,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Zeigt dem Benutzer die einzelnen Links und Beschreibungen zu den einzelnen Funktionen
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public Toolbar()} Konstruktor für die Toolbar
     \item \emph{public void show()} Zeigt die Toolbar
@@ -472,6 +495,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Interface für alle Elemente welche in der Toolbar gezeigt werden können.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public void show()} Zeigt die einzelnen Elemente auf der Schnittstelle
 \end{itemize}
@@ -490,6 +514,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Kapselt die Kontrolle über die Overlay factories
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public Layer build(AirQualityData airquality,  Datastream datastream)}  Baut einen Overlay mithilfe von der aktuellen Luftqualitätsdata
 \end{itemize}
@@ -505,6 +530,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
 Erstellt ein Map Overlay welches die unterschiedlichen Interpolationswerte anzeigt die von unterschiedlichen Sensoren gemessen werden.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public Layer build(AirQualityData airquality,  Datastream datastream)} Baut einen Overlay mithilfe von der aktuellen Luftqualitätsdata
 \end{itemize}
@@ -519,7 +545,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
         Erstellt ein Map Overlay welches die unterschiedlichen Sensordata anzeigt die von unterschiedlichen Sensoren gemessen werden.
 \end{minipage}
-
+\vspace{\baselineskip}
  Methoden: \begin{itemize} [noitemsep]
     \item \emph{public Layer build(AirQualityData airquality,  Datastream datastream)} Baut einen Overlay mithilfe von der aktuellen Luftqualitätsdata
 \end{itemize}
@@ -535,6 +561,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.4\textwidth}
 Schnittstelle füt die Overlay factory. Hier werden die Overlays mithilfe von speziellen factories für die Karten gebaut
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public OverlayBuilder()} Standard Builder, welcher Overlay Factory und Interpolation Overlay Factory verwendet.
     \item \emph{public OverlayBuilder(ArrayList<OverlayFactory> factories)} Builder für das bauen von Overlays mithilfe von factories.
@@ -554,9 +581,9 @@ Methoden: \begin{itemize} [noitemsep]
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-
 ColorTheme ist eine Funktion mit welcher der Benutzer die Farben wechseln kann in welchen die Schnittstelle dargestellt wird. Die Klasse wurde nach einem Singelton Entwurfsmuster designt
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
     \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
@@ -578,6 +605,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
        Ein dunkleres Farbschema für die Visualisierung der Website.
     \end{minipage}
+    \vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
     \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
@@ -599,6 +627,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
         Ein helleres Farbschema für die Visualisierung der Website. Dieses wird bei einem Erstbesuch als Standardschema geladen.
     \end{minipage}
+    \vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
     \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
@@ -620,6 +649,7 @@ Methoden: \begin{itemize} [noitemsep]
 \begin{minipage}{0.6\textwidth}
     Ein Farbblindenschema für die Visualisierung der Website. In diesem Fall speziell für eine Rot-Grün Sehschwäche.
 \end{minipage}
+\vspace{\baselineskip}
 Methoden: \begin{itemize} [noitemsep]
     \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
     \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
@@ -641,6 +671,7 @@ Methoden: \begin{itemize} [noitemsep]
     \begin{minipage}{0.6\textwidth}
     Beschreibt einen Farbverlauf zwischen zwei Punkten. Und kann auf die spezifischen Farbwerte im Farbverlauf zugreifen.
     \end{minipage}
+    \vspace{\baselineskip}
 Attribute: \begin{itemize} [noitemsep]
      \item \emph{public final Color first} Die Primärfarbe für das erstellen des Farbverlaufs.
     \item \emph{public final Color second} Die Sekundärfarbe für das erstellen des Farbverlaufs.

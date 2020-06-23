@@ -1,4 +1,4 @@
-package de.visaq.view.elements.toolbar;
+package de.visaq.view.elements.navbar;
 
 /**
  * The Timeline is a regulator used to show the historical data directly on the map. It also
