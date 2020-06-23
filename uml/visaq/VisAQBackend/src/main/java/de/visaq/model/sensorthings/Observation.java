@@ -37,10 +37,10 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
      * @param datastreamLink        Link to the {@link Datastream}
      * @param featureOfInterestLink Link to the {@link FeatureOfInterest}
      */
-    public Observation(String id, String selfUrl, Instant phenomenonTime, Double result,
-            Instant resultTime, SingleNavigationLink<Datastream> datastreamLink,
+    public Observation(String id, String selfUrl, boolean relative, Instant phenomenonTime,
+            Double result, Instant resultTime, SingleNavigationLink<Datastream> datastreamLink,
             SingleNavigationLink<FeatureOfInterest> featureOfInterestLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.phenomenonTime = phenomenonTime;
         this.result = result;
         this.resultTime = resultTime;

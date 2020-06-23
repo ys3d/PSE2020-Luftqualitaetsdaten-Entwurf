@@ -20,7 +20,7 @@ public class ObservationController extends SensorthingsController<Observation> {
         return null;
     }
 
-    public Observation get(Datastream datastream) {
+    public ArrayList<Observation> get(Datastream datastream) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -36,14 +36,18 @@ public class ObservationController extends SensorthingsController<Observation> {
         try {
             json = UtilityController.removeArrayWrapper(json);
 
+            if (json == null) {
+                return null;
+            }
+
             Observation observation = new Observation(json.getString("@iot.id"),
-                    json.getString("@iot.selfLink"),
+                    json.getString("@iot.selfLink"), false,
                     UtilityController.buildTime(json, "phenomenonTime"), json.getDouble("result"),
                     UtilityController.buildTime(json, "resultTime"),
                     new SingleOnlineLink<Datastream>(
-                            json.getString("Datastream@iot.navigationLink")),
+                            json.getString("Datastream@iot.navigationLink"), false),
                     new SingleOnlineLink<FeatureOfInterest>(
-                            json.getString("FeatureOfInterest@iot.navigationLink")));
+                            json.getString("FeatureOfInterest@iot.navigationLink"), false));
             return observation;
         } catch (JSONException e) {
             return null;

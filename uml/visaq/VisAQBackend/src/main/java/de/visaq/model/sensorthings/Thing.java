@@ -40,11 +40,11 @@ public class Thing extends Sensorthings<Thing> implements SensorthingsProperties
      * @param historicalLocationsLink Links to the {@link HistoricalLocation}
      * @param locationsLink           Links to the {@link Location}
      */
-    public Thing(String id, String selfUrl, String description, String name,
+    public Thing(String id, String selfUrl, boolean relative, String description, String name,
             Map<String, Object> properties, MultiNavigationLink<Datastream> datastreamsLink,
             MultiNavigationLink<HistoricalLocation> historicalLocationsLink,
             MultiNavigationLink<Location> locationsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.description = description;
         this.name = name;
         this.properties = properties;

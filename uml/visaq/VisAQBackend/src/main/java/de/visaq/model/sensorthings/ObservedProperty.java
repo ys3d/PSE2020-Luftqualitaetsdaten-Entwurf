@@ -36,10 +36,10 @@ public class ObservedProperty extends Sensorthings<ObservedProperty>
      * @param definition      A URL which links to a definition of the {@link ObservedProperty}
      * @param datastreamsLink Links to {@link Datastream}s
      */
-    public ObservedProperty(String id, String selfUrl, String description, String name,
-            Map<String, Object> properties, String definition,
+    public ObservedProperty(String id, String selfUrl, boolean relative, String description,
+            String name, Map<String, Object> properties, String definition,
             MultiNavigationLink<Datastream> datastreamsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.name = name;
         this.definition = definition;
         this.description = description;

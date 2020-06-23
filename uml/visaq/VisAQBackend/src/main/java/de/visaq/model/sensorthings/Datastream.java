@@ -44,12 +44,12 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
      * @param unitOfMeasurement    The Unit of Measurement
      * @param observedPropertyLink Link to the {@link ObservedProperty}
      */
-    public Datastream(String id, String selfUrl, String name, String description,
+    public Datastream(String id, String selfUrl, boolean relative, String name, String description,
             Map<String, Object> properties, String observationTypeLink,
             SingleNavigationLink<Sensor> sensorLink, SingleNavigationLink<Thing> thingLink,
             MultiNavigationLink<Observation> observationsLink, UnitOfMeasurement unitOfMeasurement,
             SingleNavigationLink<ObservedProperty> observedPropertyLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.name = name;
         this.description = description;
         this.unitOfMeasurement = unitOfMeasurement;

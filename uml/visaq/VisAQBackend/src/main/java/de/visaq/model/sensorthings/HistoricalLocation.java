@@ -33,9 +33,9 @@ public class HistoricalLocation extends Sensorthings<HistoricalLocation>
      * @param thingLink     Link to the {@link Thing}
      * @param locationsLink Links to the {@link Location}s
      */
-    public HistoricalLocation(String id, String selfUrl, Instant time,
+    public HistoricalLocation(String id, String selfUrl, boolean relative, Instant time,
             SingleNavigationLink<Thing> thingLink, MultiNavigationLink<Location> locationsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.time = time;
         this.thingLink = thingLink;
         this.locationsLink = locationsLink;

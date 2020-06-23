@@ -38,10 +38,10 @@ public class Location extends Sensorthings<Location> {
      * @param historicalLocationsLink Links to the {@link HistoricalLocation}
      * @param thingsLink              Links to the {@link Thing}
      */
-    public Location(String id, String selfUrl, String name, String description, Point location,
-            MultiNavigationLink<HistoricalLocation> historicalLocationsLink,
+    public Location(String id, String selfUrl, boolean relative, String name, String description,
+            Point location, MultiNavigationLink<HistoricalLocation> historicalLocationsLink,
             MultiNavigationLink<Thing> thingsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.name = name;
         this.description = description;
         this.location = location;

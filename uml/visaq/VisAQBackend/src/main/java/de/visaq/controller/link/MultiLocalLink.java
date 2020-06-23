@@ -2,17 +2,15 @@ package de.visaq.controller.link;
 
 import java.util.ArrayList;
 
-import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
 public class MultiLocalLink<SensorthingT extends Sensorthings<SensorthingT>>
-        implements MultiNavigationLink<SensorthingT> {
-    public final String url;
+        extends MultiNavigationLink<SensorthingT> {
     public final ArrayList<SensorthingT> cachedSensorthing;
 
-    public MultiLocalLink(String url, ArrayList<SensorthingT> cachedSensorthing) {
-        this.url = RestConstants.ENTRY_POINT + url;
+    public MultiLocalLink(String url, boolean relative, ArrayList<SensorthingT> cachedSensorthing) {
+        super(url, relative);
         this.cachedSensorthing = cachedSensorthing;
     }
 

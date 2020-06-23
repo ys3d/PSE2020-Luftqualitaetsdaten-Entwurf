@@ -66,12 +66,12 @@ public class UtilityController {
             return json;
         }
 
-        json = json.getJSONObject("value");
+        JSONArray jsonArray = json.getJSONArray("value");
 
-        if (!json.has("0")) {
-            return json;
+        if (jsonArray.isEmpty()) {
+            return null;
         }
 
-        return json.getJSONObject("0");
+        return jsonArray.getJSONObject(0);
     }
 }

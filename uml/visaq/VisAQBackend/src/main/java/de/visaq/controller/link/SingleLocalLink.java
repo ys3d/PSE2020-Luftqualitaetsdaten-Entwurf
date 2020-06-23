@@ -1,16 +1,15 @@
 package de.visaq.controller.link;
 
-import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
 public class SingleLocalLink<SensorthingT extends Sensorthings<SensorthingT>>
-        implements SingleNavigationLink<SensorthingT> {
-    public final String url;
+        extends SingleNavigationLink<SensorthingT> {
     public final Sensorthings<SensorthingT> cachedSensorthing;
 
-    public SingleLocalLink(String url, Sensorthings<SensorthingT> cachedSensorthing) {
-        this.url = RestConstants.ENTRY_POINT + url;
+    public SingleLocalLink(String url, boolean relative,
+            Sensorthings<SensorthingT> cachedSensorthing) {
+        super(url, relative);
         this.cachedSensorthing = cachedSensorthing;
     }
 
