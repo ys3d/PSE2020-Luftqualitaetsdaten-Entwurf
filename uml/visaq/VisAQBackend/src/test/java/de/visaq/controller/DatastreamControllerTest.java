@@ -11,13 +11,16 @@ import de.visaq.controller.link.MultiOnlineLink;
 import de.visaq.controller.link.SingleOnlineLink;
 import de.visaq.model.sensorthings.Datastream;
 
+/**
+ * Tests {@link DatastreamController}.
+ */
 public class DatastreamControllerTest {
     private static final DatastreamController CONTROLLER = new DatastreamController();
 
     @Test
     public void testSingleDatastreamGet() {
-        SingleOnlineLink<Datastream> sol = new SingleOnlineLink<Datastream>("/Datastreams?$top=1",
-                true);
+        SingleOnlineLink<Datastream> sol =
+                new SingleOnlineLink<Datastream>("/Datastreams?$top=1", true);
         assertEquals(sol.get(CONTROLLER), sol.get(CONTROLLER));
     }
 
@@ -51,8 +54,8 @@ public class DatastreamControllerTest {
 
     @Test
     public void testMultiDatastreamGet() {
-        MultiOnlineLink<Datastream> mol = new MultiOnlineLink<Datastream>("/Datastreams?$top=2",
-                true);
+        MultiOnlineLink<Datastream> mol =
+                new MultiOnlineLink<Datastream>("/Datastreams?$top=2", true);
         assertEquals(mol.get(CONTROLLER), mol.get(CONTROLLER));
     }
 }

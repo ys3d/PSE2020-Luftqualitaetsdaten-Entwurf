@@ -14,10 +14,22 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import de.visaq.RestConstants;
 import de.visaq.model.sensorthings.Sensorthings;
 
+/**
+ * Encapsulates the Sensorthings link structure.
+ *
+ * @param <SensorthingT> A class that extends Sensorthings
+ */
 @JsonIdentityInfo(property = "url", generator = ObjectIdGenerators.PropertyGenerator.class)
 public abstract class NavigationLink<SensorthingT extends Sensorthings<SensorthingT>> {
     public final String url;
 
+    /**
+     * Constructs a new NavigationLink to a Sensorthings query with the given url.
+     * 
+     * @param url      The url The query
+     * @param relative Whether or not the link is relative to the Sensorthings entry point or
+     *                 absolute
+     */
     public NavigationLink(String url, boolean relative) {
         this.url = relative ? RestConstants.ENTRY_POINT + url.replace(" ", "%20") : url;
     }

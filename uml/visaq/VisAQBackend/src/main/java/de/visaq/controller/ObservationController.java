@@ -20,6 +20,12 @@ public class ObservationController extends SensorthingsController<Observation> {
         return null;
     }
 
+    /**
+     * Retrieves the Observation entities associated with the given Datastream entity.
+     * 
+     * @param datastream The Datastream entity
+     * @return An ArrayList containing the associated Observation entities
+     */
     public ArrayList<Observation> get(Datastream datastream) {
         // TODO Auto-generated method stub
         return null;

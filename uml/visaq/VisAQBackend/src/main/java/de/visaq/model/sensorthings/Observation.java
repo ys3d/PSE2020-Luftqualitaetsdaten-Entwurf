@@ -27,10 +27,9 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     /**
      * Constructs a new {@link Observation}.
      * 
-     * @param id                    The identifier of the {@link Observation} in the SensorThings
-     *                              standard
-     * @param selfUrl               The URL which links to this object on the given SensorThings
-     *                              database
+     * @param id                    {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl               {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative              {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param phenomenonTime        The time when the Observation occurred
      * @param result                The result of the {@link Observation}
      * @param resultTime            The Time of the measuring result

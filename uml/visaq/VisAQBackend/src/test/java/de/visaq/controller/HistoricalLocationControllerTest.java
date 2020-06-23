@@ -9,13 +9,17 @@ import de.visaq.controller.link.MultiOnlineLink;
 import de.visaq.controller.link.SingleOnlineLink;
 import de.visaq.model.sensorthings.HistoricalLocation;
 
+/**
+ * Tests {@link HistoricalLocationController}.
+ */
 public class HistoricalLocationControllerTest {
-    private static final HistoricalLocationController CONTROLLER = new HistoricalLocationController();
+    private static final HistoricalLocationController CONTROLLER =
+            new HistoricalLocationController();
 
     @Test
     public void testSingleHistoricalLocationGet() {
-        SingleOnlineLink<HistoricalLocation> sol = new SingleOnlineLink<HistoricalLocation>(
-                "/HistoricalLocations?$top=1", true);
+        SingleOnlineLink<HistoricalLocation> sol =
+                new SingleOnlineLink<HistoricalLocation>("/HistoricalLocations?$top=1", true);
         sol.get(CONTROLLER);
         sol.get(CONTROLLER);
     }
@@ -28,8 +32,8 @@ public class HistoricalLocationControllerTest {
 
     @Test
     public void testMultiHistoricalLocationGet() {
-        MultiOnlineLink<HistoricalLocation> mol = new MultiOnlineLink<HistoricalLocation>(
-                "/HistoricalLocations?$top=2", true);
+        MultiOnlineLink<HistoricalLocation> mol =
+                new MultiOnlineLink<HistoricalLocation>("/HistoricalLocations?$top=2", true);
         mol.get(CONTROLLER);
         mol.get(CONTROLLER);
     }

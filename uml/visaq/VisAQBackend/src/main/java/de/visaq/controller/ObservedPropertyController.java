@@ -18,6 +18,12 @@ public class ObservedPropertyController extends SensorthingsController<ObservedP
         return null;
     }
 
+    /**
+     * Retrieves the ObservedProperty entity associated with the given Datastream entity.
+     * 
+     * @param datastream The Datastream entity
+     * @return The ObservedProperty
+     */
     public ObservedProperty get(Datastream datastream) {
         // TODO Auto-generated method stub
         return null;

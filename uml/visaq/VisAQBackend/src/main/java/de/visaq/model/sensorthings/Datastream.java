@@ -30,10 +30,9 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
     /**
      * Constructs a new {@link Datastream}.
      * 
-     * @param id                   The identifier of the {@link Datastream} in the SensorThings
-     *                             standard
-     * @param selfUrl              The URL which links to this object on the given SensorThings
-     *                             database
+     * @param id                   {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl              {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative             {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param name                 The name of the {@link Datastream}
      * @param description          The description of the {@link Datastream}
      * @param properties           Several properties given by the database

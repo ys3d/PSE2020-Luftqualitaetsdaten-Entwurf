@@ -9,6 +9,9 @@ import de.visaq.controller.link.SingleLocalLink;
 
 /**
  * Encapsulates all Sensorthings objects.
+ * 
+ * @param <SensorthingT> A class that implements the abstract class Sensorthings, used for f-bounded
+ *                       quantification.
  */
 @JsonIdentityInfo(property = "id", generator = ObjectIdGenerators.PropertyGenerator.class)
 public abstract class Sensorthings<SensorthingT extends Sensorthings<SensorthingT>> {
@@ -22,16 +25,13 @@ public abstract class Sensorthings<SensorthingT extends Sensorthings<Sensorthing
      */
     public final SingleLocalLink<SensorthingT> selfLink;
 
-    public Sensorthings() {
-        this.id = null;
-        this.selfLink = null;
-    }
-
     /**
      * Creates a new Sensorthings object with the given id and the specified database link.
      * 
-     * @param id      Unique identifier of the object that will be created.
-     * @param selfUrl Links to the Sensorthings database object.
+     * @param id       Unique identifier of the object that will be created.
+     * @param selfUrl  Links to the Sensorthings database object.
+     * @param relative Whether or not the selfUrl is relative to the Sensorthings entry point or
+     *                 absolute
      */
     public Sensorthings(String id, String selfUrl, boolean relative) {
         this.id = id;

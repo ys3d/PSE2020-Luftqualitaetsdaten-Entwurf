@@ -10,6 +10,9 @@ import de.visaq.controller.link.MultiOnlineLink;
 import de.visaq.controller.link.SingleOnlineLink;
 import de.visaq.model.sensorthings.Sensor;
 
+/**
+ * Tests {@link SensorController}.
+ */
 public class SensorControllerTest {
     private static final SensorController CONTROLLER = new SensorController();
 

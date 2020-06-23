@@ -26,9 +26,9 @@ public class FeatureOfInterest extends Sensorthings<FeatureOfInterest> {
     /**
      * Constructs a new {@link FeatureOfInterest}.
      * 
-     * @param id               The identifier of the {@link FeatureOfInterest} in the SensorThings
-     *                         standard
-     * @param selfUrl          The URL which links to this object on the given SensorThings database
+     * @param id               {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl          {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative         {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param description      The description of the {@link FeatureOfInterest}
      * @param name             The name of the {@link FeatureOfInterest}
      * @param observationsLink Links to the {@link Observation}

@@ -26,9 +26,9 @@ public class HistoricalLocation extends Sensorthings<HistoricalLocation>
     /**
      * Constructs a new {@link HistoricalLocation}.
      * 
-     * @param id            The identifier of the {@link HistoricalLocation} in the SensorThings
-     *                      standard
-     * @param selfUrl       The URL which links to this object on the given SensorThings database
+     * @param id            {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl       {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative      {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param time          The time
      * @param thingLink     Link to the {@link Thing}
      * @param locationsLink Links to the {@link Location}s

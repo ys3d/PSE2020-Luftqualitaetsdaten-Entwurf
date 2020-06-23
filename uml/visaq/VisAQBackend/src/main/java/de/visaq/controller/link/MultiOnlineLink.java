@@ -7,10 +7,22 @@ import org.json.JSONObject;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
+/**
+ * Encapsulates a Sensorthings query that can return multiple Sensorthings entities.
+ *
+ * @param <SensorthingT> A class that extends Sensorthings
+ */
 public class MultiOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
         extends MultiNavigationLink<SensorthingT> {
     private MultiLocalLink<SensorthingT> cache;
 
+    /**
+     * Constructs a new MultiLocalLink with a query that possibly returns multiple Sensorthings
+     * entities.
+     * 
+     * @param url      {@link NavigationLink#NavigationLink(String, boolean)}
+     * @param relative {@link NavigationLink#NavigationLink(String, boolean)}
+     */
     public MultiOnlineLink(String url, boolean relative) {
         super(url, relative);
     }

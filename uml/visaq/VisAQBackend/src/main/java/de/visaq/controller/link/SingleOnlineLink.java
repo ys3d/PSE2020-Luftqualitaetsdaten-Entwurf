@@ -5,10 +5,21 @@ import org.json.JSONObject;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
+/**
+ * Encapsulates a Sensorthings query that can return a single Sensorthings entity.
+ *
+ * @param <SensorthingT> A class that extends Sensorthings
+ */
 public class SingleOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
         extends SingleNavigationLink<SensorthingT> {
     private SingleLocalLink<SensorthingT> cache;
 
+    /**
+     * Constructs a new SingleLocalLink with a query that returns a Sensorthings entity.
+     * 
+     * @param url      {@link NavigationLink#NavigationLink(String, boolean)}
+     * @param relative {@link NavigationLink#NavigationLink(String, boolean)}
+     */
     public SingleOnlineLink(String url, boolean relative) {
         super(url, relative);
     }
