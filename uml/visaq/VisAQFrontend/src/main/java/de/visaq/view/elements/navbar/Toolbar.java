@@ -5,14 +5,12 @@ package de.visaq.view.elements.navbar;
  */
 public class Toolbar implements ToolbarElement {
 
-    private boolean historicalView;
-    private Timeline timeline;
+    private boolean historicalView = false;
 
     /**
      * Constructor for the Navbar.
      */
     public Toolbar() {
-        Timeline timeline = new Timeline();
         // TODO Auto-generated method stub
     }
 
@@ -48,12 +46,21 @@ public class Toolbar implements ToolbarElement {
      * Will later open the Timeline with historical Data on the Map.
      */
     private void historicalData() {
-        timeline.show();
+
+        this.setHistoricalView(true);
         // TODO Auto-generated method stub
     }
 
     @Override
     public void show() {
 
+    }
+
+    public boolean isHistoricalView() {
+        return historicalView;
+    }
+
+    private void setHistoricalView(boolean historicalView) {
+        this.historicalView = historicalView;
     }
 }

@@ -38,8 +38,8 @@ public class InformationView extends View {
     }
 
     @Override
-    public void updateNavbar(SearchBar searchbar, AirQualityData currentAirQualityData,
-            boolean expertView, ExpertViewFilter expertViewFilter) {
+    public void update(SearchBar searchbar, AirQualityData currentAirQualityData,
+            boolean expertView, ExpertViewFilter expertViewFilter, boolean historicalView) {
         // TODO Auto-generated method stub
 
     }

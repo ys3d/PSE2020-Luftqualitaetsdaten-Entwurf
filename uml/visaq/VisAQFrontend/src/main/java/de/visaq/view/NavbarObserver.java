@@ -13,6 +13,6 @@ public interface NavbarObserver {
      * @param expertView            Boolean, the instance of the Expert View
      * @param expertViewFilter      The instance of the Expert View Filter
      */
-    public void updateNavbar(SearchBar searchbar, AirQualityData currentAirQualityData,
-            boolean expertView, ExpertViewFilter expertViewFilter);
+    public void update(SearchBar searchbar, AirQualityData currentAirQualityData,
+            boolean expertView, ExpertViewFilter expertViewFilter, boolean historicalView);
 }

@@ -101,6 +101,7 @@ public class Navbar implements ObservedNavbarSubject {
      */
     public void setCurrentAirQualityData(AirQualityData currentAirQualityData) {
         this.currentAirQualityData = currentAirQualityData;
+        notifyObserver();
     }
 
     @Override
@@ -117,7 +118,8 @@ public class Navbar implements ObservedNavbarSubject {
     @Override
     public void notifyObserver() {
         for (NavbarObserver nb : observer) {
-            nb.updateNavbar(searchbar, currentAirQualityData, expertView, expertViewFilter);
+            nb.update(searchbar, currentAirQualityData, expertView, expertViewFilter,
+                    toolbar.isHistoricalView());
         }
 
     }
