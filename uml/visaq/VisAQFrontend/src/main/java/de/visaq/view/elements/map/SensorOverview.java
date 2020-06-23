@@ -2,8 +2,11 @@ package de.visaq.view.elements.map;
 
 import java.time.Instant;
 
+import org.javatuples.Pair;
 import org.json.JSONObject;
 
+import de.visaq.model.FeatureOfInterest;
+import de.visaq.model.Observation;
 import de.visaq.model.Sensor;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.diagram.Diagram;
@@ -23,7 +26,7 @@ public class SensorOverview implements ToolbarElement {
     private Diagram diagram;
     private String start = "default";
     private String end = "default";
-    private JSONObject data;
+    private Pair<FeatureOfInterest, Observation> data;
 
     public SensorOverview(JSONObject coordinates, AirQualityData currentAirQualityData,
             Instant time) {

@@ -3,7 +3,6 @@ package de.visaq.view.elements.navbar;
 import java.util.ArrayList;
 
 import de.visaq.view.NavbarObserver;
-import de.visaq.view.ObservedNavbarSubject;
 import de.visaq.view.View;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.airquality.ParticulateMatter;

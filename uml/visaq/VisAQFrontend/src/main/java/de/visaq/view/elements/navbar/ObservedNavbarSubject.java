@@ -1,4 +1,6 @@
-package de.visaq.view;
+package de.visaq.view.elements.navbar;
+
+import de.visaq.view.NavbarObserver;
 
 public interface ObservedNavbarSubject {
 
