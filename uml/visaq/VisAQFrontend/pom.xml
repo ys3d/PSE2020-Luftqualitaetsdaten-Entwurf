@@ -24,10 +24,10 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		</dependencies>
+	    </dependencies>
 	</dependencyManagement>
 	<dependencies>
-		<dependency>
+	  	<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20200518</version>
