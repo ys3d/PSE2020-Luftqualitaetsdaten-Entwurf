@@ -20,7 +20,7 @@ import de.visaq.model.sensorthings.Thing;
  * Encapsulates the control over Datastream objects.
  */
 @RestController
-public class DatastreamController extends SensorthingsController<Datastream> {
+public class DatastreamController extends SensorthingController<Datastream> {
     public static final String MAPPING = "/api/datastream";
 
     @Override

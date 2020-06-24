@@ -17,7 +17,7 @@ import de.visaq.controller.link.MultiNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#things">https://developers.sensorup.com/docs/#things</a>
  */
-public class Thing extends Sensorthings<Thing> implements SensorthingsProperties {
+public class Thing extends Sensorthing<Thing> implements SensorthingsProperties {
     public final String description;
     public final String name;
     public final Map<String, Object> properties;
@@ -28,9 +28,9 @@ public class Thing extends Sensorthings<Thing> implements SensorthingsProperties
     /**
      * Constructs a new {@link Thing}.
      * 
-     * @param id                      {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param selfUrl                 {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param relative                {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param id                      {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl                 {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative                {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param description             The description of the {@link Thing}
      * @param name                    The name of the {@link Thing}
      * @param properties              Several properties of the {@link Sensor}

@@ -2,15 +2,15 @@ package de.visaq.controller.link;
 
 import org.json.JSONObject;
 
-import de.visaq.controller.SensorthingsController;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.controller.SensorthingController;
+import de.visaq.model.sensorthings.Sensorthing;
 
 /**
  * Encapsulates a Sensorthings query that can return a single Sensorthings entity.
  *
  * @param <SensorthingT> A class that extends Sensorthings
  */
-public class SingleOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
+public class SingleOnlineLink<SensorthingT extends Sensorthing<SensorthingT>>
         extends SingleNavigationLink<SensorthingT> {
     private SingleLocalLink<SensorthingT> cache;
 
@@ -31,7 +31,7 @@ public class SingleOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
     }
 
     @Override
-    public Sensorthings<SensorthingT> get(SensorthingsController<SensorthingT> controller) {
+    public Sensorthing<SensorthingT> get(SensorthingController<SensorthingT> controller) {
         if (cache != null) {
             return cache.get(controller);
         }

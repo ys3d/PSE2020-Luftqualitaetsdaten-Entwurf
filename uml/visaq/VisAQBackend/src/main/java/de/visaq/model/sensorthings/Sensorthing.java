@@ -12,7 +12,7 @@ import de.visaq.controller.link.SingleLocalLink;
  *                       quantification.
  */
 @JsonIdentityInfo(property = "id", generator = ObjectIdGenerators.PropertyGenerator.class)
-public abstract class Sensorthings<SensorthingT extends Sensorthings<SensorthingT>> {
+public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>> {
 
     /**
      * Unique identifier of the entity.
@@ -34,7 +34,7 @@ public abstract class Sensorthings<SensorthingT extends Sensorthings<Sensorthing
      * @param relative Whether or not the selfUrl is relative to the Sensorthings entry point or
      *                 absolute
      */
-    public Sensorthings(String id, String selfUrl, boolean relative) {
+    public Sensorthing(String id, String selfUrl, boolean relative) {
         this.id = id;
         this.selfLink = new SingleLocalLink<SensorthingT>(selfUrl, relative, this);
     }

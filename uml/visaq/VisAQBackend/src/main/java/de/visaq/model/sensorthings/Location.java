@@ -16,7 +16,7 @@ import de.visaq.controller.link.MultiNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#locations_post">https://developers.sensorup.com/docs/#locations_post</a>
  */
-public class Location extends Sensorthings<Location> {
+public class Location extends Sensorthing<Location> {
     public final String name;
     public final String description;
     // TODO: Check if point is the only possible value
@@ -27,9 +27,9 @@ public class Location extends Sensorthings<Location> {
     /**
      * Constructs a new {@link Location}.
      * 
-     * @param id                      {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param selfUrl                 {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param relative                {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param id                      {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl                 {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative                {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param name                    The name of the {@link Location}
      * @param description             The description of the {@link Location}
      * @param location                A point describing the actual location

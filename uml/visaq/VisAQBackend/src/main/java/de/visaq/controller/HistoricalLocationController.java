@@ -13,7 +13,7 @@ import de.visaq.model.sensorthings.Thing;
 /**
  * Encapsulates the control over HistoricalLocation objects.
  */
-public class HistoricalLocationController extends SensorthingsController<HistoricalLocation> {
+public class HistoricalLocationController extends SensorthingController<HistoricalLocation> {
 
     @Override
     public ArrayList<HistoricalLocation> getAll() {

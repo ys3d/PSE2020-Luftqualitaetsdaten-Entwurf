@@ -12,7 +12,7 @@ import de.visaq.model.sensorthings.Thing;
 /**
  * Encapsulates the control over Location objects.
  */
-public class LocationController extends SensorthingsController<Location> {
+public class LocationController extends SensorthingController<Location> {
 
     @Override
     public ArrayList<Location> getAll() {

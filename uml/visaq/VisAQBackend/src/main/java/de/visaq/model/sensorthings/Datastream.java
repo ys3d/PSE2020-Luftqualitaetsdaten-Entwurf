@@ -16,7 +16,7 @@ import de.visaq.controller.link.SingleNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#datastreams_post">https://developers.sensorup.com/docs/#datastreams_post</a>
  */
-public class Datastream extends Sensorthings<Datastream> implements SensorthingsProperties {
+public class Datastream extends Sensorthing<Datastream> implements SensorthingsProperties {
     public final String name;
     public final String description;
     public final UnitOfMeasurement unitOfMeasurement;
@@ -29,9 +29,9 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
     /**
      * Constructs a new {@link Datastream}.
      * 
-     * @param id                   {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param selfUrl              {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param relative             {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param id                   {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl              {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative             {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param name                 The name of the {@link Datastream}
      * @param description          The description of the {@link Datastream}
      * @param properties           Several properties given by the database

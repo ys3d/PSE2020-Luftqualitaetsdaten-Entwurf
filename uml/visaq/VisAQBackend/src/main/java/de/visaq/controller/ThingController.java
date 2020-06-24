@@ -20,7 +20,7 @@ import de.visaq.model.sensorthings.Thing;
  * Encapsulates the control over Thing objects.
  */
 @RestController
-public class ThingController extends SensorthingsController<Thing> {
+public class ThingController extends SensorthingController<Thing> {
     public static final String MAPPING = "/api/thing";
 
     @Override

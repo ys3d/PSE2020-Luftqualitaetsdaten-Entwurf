@@ -16,7 +16,7 @@ import de.visaq.controller.link.MultiNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#featureOfInterest_post">https://developers.sensorup.com/docs/#featureOfInterest_postt</a>
  */
-public class FeatureOfInterest extends Sensorthings<FeatureOfInterest> {
+public class FeatureOfInterest extends Sensorthing<FeatureOfInterest> {
     public final String description;
     public final String name;
     public final MultiNavigationLink<Observation> observationsLink;
@@ -25,9 +25,9 @@ public class FeatureOfInterest extends Sensorthings<FeatureOfInterest> {
     /**
      * Constructs a new {@link FeatureOfInterest}.
      * 
-     * @param id               {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param selfUrl          {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param relative         {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param id               {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl          {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative         {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param description      The description of the {@link FeatureOfInterest}
      * @param name             The name of the {@link FeatureOfInterest}
      * @param observationsLink Links to the {@link Observation}

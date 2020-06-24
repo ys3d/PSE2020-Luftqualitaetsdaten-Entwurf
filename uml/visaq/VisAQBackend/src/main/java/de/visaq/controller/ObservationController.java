@@ -13,7 +13,7 @@ import de.visaq.model.sensorthings.Observation;
 /**
  * Encapsulates the control over Observation objects.
  */
-public class ObservationController extends SensorthingsController<Observation> {
+public class ObservationController extends SensorthingController<Observation> {
     @Override
     public ArrayList<Observation> getAll() {
         // TODO Auto-generated method stub
