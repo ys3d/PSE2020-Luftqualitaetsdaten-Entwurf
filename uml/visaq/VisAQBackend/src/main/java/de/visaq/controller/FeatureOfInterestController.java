@@ -1,5 +1,6 @@
 package de.visaq.controller;
 
+import java.awt.Point;
 import java.util.ArrayList;
 
 import org.json.JSONException;
@@ -24,6 +25,22 @@ public class FeatureOfInterestController extends SensorthingController<FeatureOf
     public FeatureOfInterest get(String id) {
         // TODO Auto-generated method stub
         return null;
+    }
+
+    /**
+     * Tries to get the location as a point from a FeatureOfInterest entity's features.
+     * 
+     * @param foi The FeatureOfInterest entity
+     * @return The Point that was retrieved from the features or null if the features do not contain
+     *         a point.
+     */
+    public Point getLocationPoint(FeatureOfInterest foi) {
+        try {
+            JSONObject json = new JSONObject(foi.features);
+            return UtilityController.buildLocationPoint(json);
+        } catch (JSONException | NullPointerException e) {
+            return null;
+        }
     }
 
     @Override

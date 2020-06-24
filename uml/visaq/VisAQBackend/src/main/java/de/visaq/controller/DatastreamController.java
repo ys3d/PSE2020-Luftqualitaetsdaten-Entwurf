@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,7 +35,7 @@ public class DatastreamController extends SensorthingController<Datastream> {
      * @param thing Thing the Datastream objects are associated with.
      * @return An array of Datastream objects that were retrieved.
      */
-    @GetMapping(MAPPING)
+    @PostMapping(MAPPING)
     public ArrayList<Datastream> get(@RequestParam Thing thing) {
         return thing.datastreamsLink.get(this);
     }
@@ -45,7 +46,7 @@ public class DatastreamController extends SensorthingController<Datastream> {
      * @param sensor Sensor the Datastream objects are associated with.
      * @return An array of Datastream objects that were retrieved.
      */
-    @GetMapping(MAPPING)
+    @PostMapping(MAPPING)
     public ArrayList<Datastream> get(@RequestParam Sensor sensor) {
         return sensor.datastreamsLink.get(this);
     }
@@ -57,7 +58,7 @@ public class DatastreamController extends SensorthingController<Datastream> {
      * @param observedProperty Observed Property the Datastream is associated with.
      * @return The Datastream object that was retrieved.
      */
-    @GetMapping(MAPPING)
+    @PostMapping(MAPPING)
     public Datastream get(@RequestParam Thing thing,
             @RequestParam ObservedProperty observedProperty) {
         return (Datastream) new SingleOnlineLink<Datastream>(MessageFormat.format(
@@ -80,7 +81,7 @@ public class DatastreamController extends SensorthingController<Datastream> {
                 sensor.id, observedProperty.id), true).get(this);
     }
 
-    @GetMapping(MAPPING)
+    @PostMapping(MAPPING)
     @Override
     public Datastream get(@RequestParam String id) {
         return (Datastream) new SingleOnlineLink<Datastream>(
