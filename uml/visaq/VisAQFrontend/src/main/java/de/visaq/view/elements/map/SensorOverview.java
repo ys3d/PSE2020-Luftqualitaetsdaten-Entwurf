@@ -2,10 +2,8 @@ package de.visaq.view.elements.map;
 
 import java.time.Instant;
 
-import org.javatuples.Pair;
 import org.json.JSONObject;
 
-import de.visaq.model.FeatureOfInterest;
 import de.visaq.model.Observation;
 import de.visaq.model.Sensor;
 import de.visaq.view.elements.airquality.AirQualityData;
@@ -26,7 +24,7 @@ public class SensorOverview implements ToolbarElement {
     private Diagram diagram;
     private Instant start = null;
     private Instant end = null;
-    private Pair<FeatureOfInterest, Observation> data;
+    private Observation[] observations;
 
     /**
      * Constructor for Sensor Overview. It is used when a point on the map is marked. The Sensor
@@ -39,7 +37,7 @@ public class SensorOverview implements ToolbarElement {
     public SensorOverview(JSONObject coordinates, AirQualityData currentAirQualityData,
             Instant time) {
         this.currentAirQualityData = currentAirQualityData;
-        this.diagram = new LineDiagram(data, start, end);
+        this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
 
     /**
@@ -52,7 +50,7 @@ public class SensorOverview implements ToolbarElement {
      */
     public SensorOverview(Sensor sensor, AirQualityData currentAirQualityData, Instant time) {
         this.currentAirQualityData = currentAirQualityData;
-        this.diagram = new LineDiagram(data, start, end);
+        this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
 
     @Override
@@ -69,7 +67,7 @@ public class SensorOverview implements ToolbarElement {
      * @param end   Is the instance of the end point
      */
     public void selectTimeframe(Instant start, Instant end) {
-        this.diagram = new LineDiagram(data, start, end);
+        this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
 
 }

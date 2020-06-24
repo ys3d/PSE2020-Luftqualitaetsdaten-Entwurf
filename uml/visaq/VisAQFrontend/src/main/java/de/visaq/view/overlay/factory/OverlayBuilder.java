@@ -39,8 +39,6 @@ public class OverlayBuilder {
      */
     public ArrayList<Layer> buildOverlays(AirQualityData airquality, LatLngBounds latLngBounds,
             Instant time) {
-        FeatureOfInterest featureOfInterest = null;
-        Observation observation = null;
         Pair<FeatureOfInterest, Observation> data = null;
         ArrayList<Layer> layers = new ArrayList<Layer>();
         for (OverlayFactory factory : factories) {

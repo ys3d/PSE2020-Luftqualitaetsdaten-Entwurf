@@ -2,10 +2,8 @@ package de.visaq.view.elements.diagram;
 
 import java.time.Instant;
 
-import org.javatuples.Pair;
-
-import de.visaq.model.FeatureOfInterest;
 import de.visaq.model.Observation;
+import de.visaq.view.elements.airquality.AirQualityData;
 
 /**
  * Produces a Line Diagram with the given data. The Line Diagram show the historical development of
@@ -13,19 +11,23 @@ import de.visaq.model.Observation;
  */
 public class LineDiagram implements Diagram {
 
-    public final Pair<FeatureOfInterest, Observation> data;
+    public final Observation[] observations;
+    AirQualityData airQualityData;
     public final Instant start;
     public final Instant end;
 
     /**
      * Sole Constructor of the class Line Diagram.
      * 
-     * @param data  The Instance of the Air Quality data
-     * @param start The start point of the historical development
-     * @param end   The end point of the historical development
+     * @param observations   The instance of the Observations
+     * @param airQualityData The current Air Quality Data
+     * @param start          The start point of the historical development
+     * @param end            The end point of the historical development
      */
-    public LineDiagram(Pair<FeatureOfInterest, Observation> data, Instant start, Instant end) {
-        this.data = data;
+    public LineDiagram(Observation[] observations, AirQualityData airQualityData, Instant start,
+            Instant end) {
+        this.observations = observations;
+        this.airQualityData = airQualityData;
         this.start = start;
         this.end = end;
     }
