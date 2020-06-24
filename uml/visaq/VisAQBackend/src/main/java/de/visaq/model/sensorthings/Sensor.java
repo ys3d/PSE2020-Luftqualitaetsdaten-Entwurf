@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.util.Map;
 
-import de.visaq.controller.SensorController;
 import de.visaq.controller.link.MultiNavigationLink;
 
 /**
@@ -47,11 +46,6 @@ public class Sensor extends Sensorthings<Sensor> implements SensorthingsProperti
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public SensorController getController() {
-        return new SensorController();
     }
 
     /**

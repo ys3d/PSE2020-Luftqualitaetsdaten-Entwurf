@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.util.Map;
 
-import de.visaq.controller.DatastreamController;
 import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.SingleNavigationLink;
 
@@ -62,11 +61,6 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public DatastreamController getController() {
-        return new DatastreamController();
     }
 
     /**

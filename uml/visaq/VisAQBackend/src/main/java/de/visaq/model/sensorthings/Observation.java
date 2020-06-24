@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.time.Instant;
 
-import de.visaq.controller.ObservationController;
 import de.visaq.controller.link.SingleNavigationLink;
 
 /**
@@ -51,11 +50,6 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public ObservationController getController() {
-        return new ObservationController();
     }
 
     /**

@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.awt.Point;
 
-import de.visaq.controller.LocationController;
 import de.visaq.controller.link.MultiNavigationLink;
 
 /**
@@ -54,8 +53,4 @@ public class Location extends Sensorthings<Location> {
         return super.equals(obj);
     }
 
-    @Override
-    public LocationController getController() {
-        return new LocationController();
-    }
 }

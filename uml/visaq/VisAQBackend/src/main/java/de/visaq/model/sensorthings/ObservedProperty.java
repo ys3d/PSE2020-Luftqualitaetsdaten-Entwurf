@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.util.Map;
 
-import de.visaq.controller.ObservedPropertyController;
 import de.visaq.controller.link.MultiNavigationLink;
 
 /**
@@ -69,8 +68,4 @@ public class ObservedProperty extends Sensorthings<ObservedProperty>
         return super.equals(obj);
     }
 
-    @Override
-    public ObservedPropertyController getController() {
-        return new ObservedPropertyController();
-    }
 }

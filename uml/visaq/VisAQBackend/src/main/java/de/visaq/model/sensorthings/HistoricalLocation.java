@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.time.Instant;
 
-import de.visaq.controller.HistoricalLocationController;
 import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.SingleNavigationLink;
 
@@ -45,11 +44,6 @@ public class HistoricalLocation extends Sensorthings<HistoricalLocation>
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public HistoricalLocationController getController() {
-        return new HistoricalLocationController();
     }
 
     /**

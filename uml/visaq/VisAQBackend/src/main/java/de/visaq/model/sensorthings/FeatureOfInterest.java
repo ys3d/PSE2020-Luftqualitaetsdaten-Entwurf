@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.util.Map;
 
-import de.visaq.controller.SensorthingsController;
 import de.visaq.controller.link.MultiNavigationLink;
 
 /**
@@ -42,12 +41,6 @@ public class FeatureOfInterest extends Sensorthings<FeatureOfInterest> {
         this.name = name;
         this.observationsLink = observationsLink;
         this.features = features;
-    }
-
-    @Override
-    public SensorthingsController<FeatureOfInterest> getController() {
-        // TODO Auto-generated method stub
-        return null;
     }
 
 }
