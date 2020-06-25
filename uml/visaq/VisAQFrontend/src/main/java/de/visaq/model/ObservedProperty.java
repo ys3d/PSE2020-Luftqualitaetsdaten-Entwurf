@@ -13,7 +13,7 @@ import java.util.Map;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#observedProperties_post">https://developers.sensorup.com/docs/#observedProperties_post</a>
  */
-public class ObservedProperty extends Sensorthings<ObservedProperty> {
+public class ObservedProperty extends Sensorthing<ObservedProperty> {
     public final String name;
     public final String definition;
     public final String description;

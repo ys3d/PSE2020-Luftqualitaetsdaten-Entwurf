@@ -3,14 +3,14 @@ package de.visaq.model;
 /**
  * Encapsulates all Sensorthings objects.
  */
-public abstract class Sensorthings<SensorthingT extends Sensorthings<SensorthingT>> {
+public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>> {
 
     /**
      * Unique identifier of the object.
      */
     public final String id;
 
-    public Sensorthings() {
+    public Sensorthing() {
         this.id = null;
     }
 
@@ -20,7 +20,7 @@ public abstract class Sensorthings<SensorthingT extends Sensorthings<Sensorthing
      * @param id      Unique identifier of the object that will be created.
      * @param selfUrl Links to the Sensorthings database object.
      */
-    public Sensorthings(String id) {
+    public Sensorthing(String id) {
         this.id = id;
     }
 }

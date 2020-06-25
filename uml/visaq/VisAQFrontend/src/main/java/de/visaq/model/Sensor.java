@@ -14,7 +14,7 @@ import java.util.Map;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#sensors_post">https://developers.sensorup.com/docs/#sensors_post</a>
  */
-public class Sensor extends Sensorthings<Sensor> {
+public class Sensor extends Sensorthing<Sensor> {
     public final String description;
     public final String name;
     public final Map<String, Object> properties;

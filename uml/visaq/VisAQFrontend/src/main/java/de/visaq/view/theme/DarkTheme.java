@@ -2,6 +2,9 @@ package de.visaq.view.theme;
 
 import java.awt.Color;
 
+/**
+ * Class that contains the Color and its Gradient that are used in the Dark Mode.
+ */
 public class DarkTheme extends ColorTheme {
 
     @Override

@@ -14,7 +14,7 @@ import java.awt.Point;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#locations_post">https://developers.sensorup.com/docs/#locations_post</a>
  */
-public class Location extends Sensorthings<Location> {
+public class Location extends Sensorthing<Location> {
     public final String name;
     public final String description;
     // TODO: Check if point is the only possible value

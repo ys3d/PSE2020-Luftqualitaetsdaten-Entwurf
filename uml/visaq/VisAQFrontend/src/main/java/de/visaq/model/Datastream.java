@@ -13,7 +13,7 @@ import java.util.Map;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#datastreams_post">https://developers.sensorup.com/docs/#datastreams_post</a>
  */
-public class Datastream extends Sensorthings<Datastream> {
+public class Datastream extends Sensorthing<Datastream> {
     public final String name;
     public final String description;
     public final UnitOfMeasurement unitOfMeasurement;

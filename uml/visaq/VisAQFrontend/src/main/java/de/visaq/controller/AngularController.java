@@ -1,5 +1,6 @@
 package de.visaq.controller;
 
+import de.visaq.model.Sensorthing;
 import de.visaq.view.VisAQ;
 import def.angular.core.NgModule;
 import def.angular.http.Request;
@@ -21,7 +22,7 @@ public class AngularController {
      * 
      * @return the Sensorthing used in the view
      */
-    public synchronized SensorThing sendRequest() {
+    public synchronized Sensorthing sendRequest() {
         request.json();
         return null;
     }

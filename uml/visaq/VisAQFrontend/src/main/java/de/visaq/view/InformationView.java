@@ -24,6 +24,7 @@ public class InformationView extends View {
      * 
      * @return The icon
      */
+    @SuppressWarnings("rawtypes")
     public Icon getIcon() {
         return icon;
     }

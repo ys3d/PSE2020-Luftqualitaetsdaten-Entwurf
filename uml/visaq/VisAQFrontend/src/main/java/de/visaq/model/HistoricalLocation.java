@@ -13,7 +13,7 @@ import java.time.Instant;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#historicalLocations_get">https://developers.sensorup.com/docs/#historicalLocations_get</a>
  */
-public class HistoricalLocation extends Sensorthings<Datastream> implements SensorthingsTimeStamp {
+public class HistoricalLocation extends Sensorthing<Datastream> implements SensorthingsTimeStamp {
     public final Instant time;
 
     /**

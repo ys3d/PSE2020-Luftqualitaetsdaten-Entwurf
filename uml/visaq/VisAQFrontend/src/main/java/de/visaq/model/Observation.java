@@ -14,7 +14,7 @@ import java.time.Instant;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#observations_post">https://developers.sensorup.com/docs/#observations_post</a>
  */
-public class Observation extends Sensorthings<FeatureOfInterest> implements SensorthingsTimeStamp {
+public class Observation extends Sensorthing<FeatureOfInterest> implements SensorthingsTimeStamp {
     public final Instant phenomenonTime;
     public final Double result;
     public final Instant resultTime;
