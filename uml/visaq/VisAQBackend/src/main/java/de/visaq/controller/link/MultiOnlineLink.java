@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 
-import de.visaq.controller.SensorthingsController;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.controller.SensorthingController;
+import de.visaq.model.sensorthings.Sensorthing;
 
 /**
  * Encapsulates a Sensorthings query that can return multiple Sensorthings entities.
  *
  * @param <SensorthingT> A class that extends Sensorthings
  */
-public class MultiOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
+public class MultiOnlineLink<SensorthingT extends Sensorthing<SensorthingT>>
         extends MultiNavigationLink<SensorthingT> {
     private MultiLocalLink<SensorthingT> cache;
 
@@ -34,7 +34,7 @@ public class MultiOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
     }
 
     @Override
-    public ArrayList<SensorthingT> get(SensorthingsController<SensorthingT> controller) {
+    public ArrayList<SensorthingT> get(SensorthingController<SensorthingT> controller) {
         if (cache != null) {
             return cache.get(controller);
         }

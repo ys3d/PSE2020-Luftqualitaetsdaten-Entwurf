@@ -11,7 +11,7 @@ import de.visaq.model.sensorthings.ObservedProperty;
 /**
  * Encapsulates the control over ObservedProperty objects.
  */
-public class ObservedPropertyController extends SensorthingsController<ObservedProperty> {
+public class ObservedPropertyController extends SensorthingController<ObservedProperty> {
     @Override
     public ArrayList<ObservedProperty> getAll() {
         // TODO Auto-generated method stub

@@ -12,7 +12,7 @@ import de.visaq.model.sensorthings.Thing;
 /**
  * Encapsulates the control over Sensor objects.
  */
-public class SensorController extends SensorthingsController<Sensor> {
+public class SensorController extends SensorthingController<Sensor> {
     @Override
     public ArrayList<Sensor> getAll() {
         // TODO Auto-generated method stub

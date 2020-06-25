@@ -36,13 +36,22 @@ public class UtilityController {
     }
 
     /**
-     * Constructs a Point instance from a JSON Object.
+     * Constructs a Point instance from a JSON Object by parsing the location and feature key.
      * 
      * @param json The JSON Object.
      * @return The constructed Point.
      */
     public static Point buildLocationPoint(JSONObject json) {
-        JSONArray pointArray = json.getJSONObject("location").getJSONArray("coordinates");
+        JSONArray pointArray;
+
+        if (json.has("location")) {
+            pointArray = json.getJSONObject("location").getJSONArray("coordinates");
+        } else if (json.has("feature")) {
+            pointArray = json.getJSONObject("feature").getJSONArray("coordinates");
+        } else {
+            return null;
+        }
+
         Point point = new Point();
         point.setLocation(pointArray.getDouble(0), pointArray.getDouble(1));
         return point;

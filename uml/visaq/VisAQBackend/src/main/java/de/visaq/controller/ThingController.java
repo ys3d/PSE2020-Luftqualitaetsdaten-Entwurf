@@ -5,7 +5,7 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 
 import org.json.JSONObject;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +20,7 @@ import de.visaq.model.sensorthings.Thing;
  * Encapsulates the control over Thing objects.
  */
 @RestController
-public class ThingController extends SensorthingsController<Thing> {
+public class ThingController extends SensorthingController<Thing> {
     public static final String MAPPING = "/api/thing";
 
     @Override
@@ -40,7 +40,7 @@ public class ThingController extends SensorthingsController<Thing> {
         return null;
     }
 
-    @GetMapping(MAPPING)
+    @PostMapping(MAPPING)
     @Override
     public Thing get(@RequestParam String id) {
         return (Thing) new SingleOnlineLink<Thing>(MessageFormat.format("/Things(''{0}'')", id),

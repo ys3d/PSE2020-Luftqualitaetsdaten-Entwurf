@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import de.visaq.RestConstants;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.model.sensorthings.Sensorthing;
 
 /**
  * Encapsulates the Sensorthings link structure.
@@ -20,7 +20,7 @@ import de.visaq.model.sensorthings.Sensorthings;
  * @param <SensorthingT> A class that extends Sensorthings
  */
 @JsonIdentityInfo(property = "url", generator = ObjectIdGenerators.PropertyGenerator.class)
-public abstract class NavigationLink<SensorthingT extends Sensorthings<SensorthingT>> {
+public abstract class NavigationLink<SensorthingT extends Sensorthing<SensorthingT>> {
     public final String url;
 
     /**

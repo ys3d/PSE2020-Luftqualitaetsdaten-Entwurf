@@ -1,18 +1,38 @@
 package de.visaq.controller.math;
 
-import java.awt.Point;
+import java.time.Instant;
+import java.time.temporal.TemporalAmount;
+import java.util.ArrayList;
 
-import de.visaq.model.PointData;
+import org.geotools.process.vector.BarnesSurfaceInterpolator;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Envelope;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import de.visaq.model.PointDatum;
 import de.visaq.model.sensorthings.ObservedProperty;
-import de.visaq.model.sensorthings.Thing;
 
-public class DefaultInterpolation implements Interpolation {
+/**
+ * Handles the Interpolation of Observations using Barnes Interpolation.
+ */
+public class DefaultInterpolation extends Interpolation {
+    public static final String MAPPING = "/api/interpolation/default";
 
     @Override
-    public PointData interpolate(Point location, ObservedProperty observedProperty,
-            Thing... things) {
-        // TODO Auto-generated method stub
+    protected PointDatum[] interpolateCoordinates(Envelope envelope,
+            ArrayList<Coordinate> coordinates) {
+        // TODO
+        float[][] interpolated = new BarnesSurfaceInterpolator((Coordinate[]) coordinates.toArray())
+                .computeSurface(envelope, -1, -1);
+
         return null;
     }
 
+    @PostMapping(MAPPING)
+    @Override
+    public PointDatum[] interpolate(@RequestParam Envelope envelope, @RequestParam Instant time,
+            @RequestParam TemporalAmount range, @RequestParam ObservedProperty observedProperty) {
+        return super.interpolate(envelope, time, range, observedProperty);
+    }
 }
