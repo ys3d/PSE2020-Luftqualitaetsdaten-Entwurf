@@ -4,12 +4,12 @@ import java.time.Instant;
 
 import org.json.JSONObject;
 
+import de.visaq.controller.AngularController;
 import de.visaq.model.Observation;
 import de.visaq.model.Sensor;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.diagram.Diagram;
 import de.visaq.view.elements.diagram.LineDiagram;
-import de.visaq.view.elements.navbar.ToolbarElement;
 
 /**
  * Sensor Overview (also referred to as Sidebar) is used to show interpolated Point Data on the Map
@@ -17,13 +17,14 @@ import de.visaq.view.elements.navbar.ToolbarElement;
  * Data. It also provides an assessment of the danger due to specific types of pollution.
  */
 
-public class SensorOverview implements ToolbarElement {
+public class SensorOverview {
 
     public final AirQualityData[] airQualityDatas = null;
     private AirQualityData currentAirQualityData;
     private Diagram diagram;
     private Instant start = null;
     private Instant end = null;
+    private AngularController angularController;
     private Observation[] observations;
 
     /**
@@ -53,7 +54,6 @@ public class SensorOverview implements ToolbarElement {
         this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
 
-    @Override
     public void show() {
         diagram.drawDiagram();
         diagram.showDiagram();

@@ -4,6 +4,9 @@ import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.navbar.ExpertViewFilter;
 import de.visaq.view.elements.navbar.SearchBar;
 
+/**
+ * Interface for all Navbar Observers.
+ */
 public interface NavbarObserver {
     /**
      * Method to update with the instances of the Navbar class.

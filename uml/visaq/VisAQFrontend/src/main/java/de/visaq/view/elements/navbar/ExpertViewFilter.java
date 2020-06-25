@@ -2,14 +2,23 @@ package de.visaq.view.elements.navbar;
 
 import java.util.ArrayList;
 
-public class ExpertViewFilter {
+import de.visaq.controller.AngularController;
+import de.visaq.model.Sensor;
 
-    private ArrayList<?> sensorTypes;
-    private ArrayList<?> selectedSensorTypes;
+/**
+ * Expert View Filter is an extension for experienced users. It is only active in Expert Mode and
+ * allows the user to select specific Sensors that are then shown on the Map.
+ */
+public class ExpertViewFilter implements NavbarElement {
+
+    private AngularController angularController;
+    private ArrayList<Sensor> sensorTypes;
+    private ArrayList<Sensor> selectedSensorTypes;
 
     /**
      * Shows the different Sensortypes that can be chosen.
      */
+    @Override
     public void show() {
     }
 
@@ -18,7 +27,7 @@ public class ExpertViewFilter {
      * 
      * @param selectedSensorTypes The Sensortypes that the User selects
      */
-    public void setSelectedSensors(ArrayList<?> selectedSensorTypes) {
+    public void setSelectedSensors(ArrayList<Sensor> selectedSensorTypes) {
 
         // TODO change the sensor types to the correct version
         this.selectedSensorTypes = selectedSensorTypes;
@@ -29,7 +38,7 @@ public class ExpertViewFilter {
      * 
      * @return The Instance of the selected Sensortypes
      */
-    public ArrayList<?> getSelectedSensors() {
+    public ArrayList<Sensor> getSelectedSensors() {
         return selectedSensorTypes;
     }
 }

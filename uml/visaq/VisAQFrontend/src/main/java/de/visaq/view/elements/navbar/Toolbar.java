@@ -3,7 +3,7 @@ package de.visaq.view.elements.navbar;
 /**
  * Shows the User links and definitions to the different functions and informations.
  */
-public class Toolbar implements ToolbarElement {
+public class Toolbar implements NavbarElement {
 
     private boolean historicalView = false;
 
@@ -56,10 +56,20 @@ public class Toolbar implements ToolbarElement {
 
     }
 
+    /**
+     * Return the if the Historical View is set.
+     * 
+     * @return The instance of Historical View
+     */
     public boolean isHistoricalView() {
         return historicalView;
     }
 
+    /**
+     * Sets the Historical View.
+     * 
+     * @param historicalView The instance of Historical View
+     */
     private void setHistoricalView(boolean historicalView) {
         this.historicalView = historicalView;
     }

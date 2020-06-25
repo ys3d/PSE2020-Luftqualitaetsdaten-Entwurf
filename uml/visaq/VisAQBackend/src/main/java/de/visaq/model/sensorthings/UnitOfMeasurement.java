@@ -10,7 +10,7 @@ public class UnitOfMeasurement {
 
     /**
      * Constructs a new {@link UnitOfMeasurement}.
-     * 
+     *
      * @param name       The name of the {@link UnitOfMeasurement}
      * @param symbol     The symbol of the {@link UnitOfMeasurement}
      * @param definition The definition of the {@link UnitOfMeasurement}

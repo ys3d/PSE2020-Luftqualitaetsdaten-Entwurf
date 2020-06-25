@@ -12,7 +12,7 @@ import de.visaq.view.elements.airquality.AirQualityData;
 public class LineDiagram implements Diagram {
 
     public final Observation[] observations;
-    AirQualityData airQualityData;
+    public final AirQualityData airQualityData;
     public final Instant start;
     public final Instant end;
 

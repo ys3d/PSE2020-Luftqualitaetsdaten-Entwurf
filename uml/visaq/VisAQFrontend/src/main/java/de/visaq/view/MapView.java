@@ -39,7 +39,7 @@ public class MapView extends View {
     private Instant time;
 
     /**
-     * Construct a MapView using the provided Map and Legend.
+     * Construct a MapView using the provided Map.
      * 
      * @param map    The Map instance
      * @param legend The Legend instance
@@ -108,7 +108,7 @@ public class MapView extends View {
         this.expertView = expertView;
         this.expertViewFilter = expertViewFilter;
         this.historicalView = historicalView;
-        airqualityDataQuery(currentAirQualityData);
+        airQualityDataQuery(currentAirQualityData);
     }
 
     /**
@@ -124,12 +124,16 @@ public class MapView extends View {
      * 
      * @param airQualityData
      */
-    private void airqualityDataQuery(AirQualityData airQualityData) {
+    private void airQualityDataQuery(AirQualityData airQualityData) {
         currentAirQualityData = airQualityData;
         legend = new Legend(currentAirQualityData);
+        removeOverlays();
         addOverlays();
     }
 
+    /**
+     * Adds Overlays to the instance Map of Map View.
+     */
     private void addOverlays() {
         if (!historicalView) {
             time = Instant.now();
@@ -140,5 +144,12 @@ public class MapView extends View {
         } else {
             layers = overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds(), time);
         }
+    }
+
+    /**
+     * Removes Overlays from the Map instance.
+     */
+    private void removeOverlays() {
+
     }
 }

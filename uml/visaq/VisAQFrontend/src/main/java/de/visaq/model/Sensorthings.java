@@ -10,10 +10,6 @@ public abstract class Sensorthings<SensorthingT extends Sensorthings<Sensorthing
      */
     public final String id;
 
-    /**
-     * Links to this object in the Sensorthings database.
-     */
-
     public Sensorthings() {
         this.id = null;
     }
@@ -24,7 +20,7 @@ public abstract class Sensorthings<SensorthingT extends Sensorthings<Sensorthing
      * @param id      Unique identifier of the object that will be created.
      * @param selfUrl Links to the Sensorthings database object.
      */
-    public Sensorthings(String id, String selfUrl) {
+    public Sensorthings(String id) {
         this.id = id;
     }
 }

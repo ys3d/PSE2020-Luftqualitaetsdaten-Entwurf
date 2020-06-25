@@ -4,7 +4,7 @@ import java.time.Instant;
 
 /**
  * <p>
- * Representation of the {@link HistoricalLocation} entity in the OGC SensorThings API.
+ * Representation of the {@link HistoricalLocation} entity in the Frontend.
  * </p>
  * <p>
  * {@link HistoricalLocation} provides time for the stored Location
@@ -13,22 +13,17 @@ import java.time.Instant;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#historicalLocations_get">https://developers.sensorup.com/docs/#historicalLocations_get</a>
  */
-public class HistoricalLocation extends Sensorthings<HistoricalLocation>
-        implements SensorthingsTimeStamp {
+public class HistoricalLocation extends Sensorthings<Datastream> implements SensorthingsTimeStamp {
     public final Instant time;
 
     /**
      * Constructs a new {@link HistoricalLocation}.
      * 
-     * @param id            The identifier of the {@link HistoricalLocation} in the SensorThings
-     *                      standard
-     * @param selfUrl       The URL which links to this object on the given SensorThings database
-     * @param time          The time
-     * @param thingLink     Link to the {@link Thing}
-     * @param locationsLink Links to the {@link Location}s
+     * @param id   The identifier of the {@link FeatureOfInterest} in the SensorThings standard
+     * @param time The time
      */
-    public HistoricalLocation(String id, String selfUrl, Instant time) {
-        super(id, selfUrl);
+    public HistoricalLocation(String id, Instant time) {
+        super(id);
         this.time = time;
     }
 

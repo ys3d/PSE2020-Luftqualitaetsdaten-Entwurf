@@ -8,11 +8,10 @@ import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.airquality.ParticulateMatter;
 
 /**
- * The Navbar shows the Navigationbar and gives access to the Help-View, Information-View (I am
- * using Hyphen here because you used it before but as I said it doesn't matter to me whether or not
- * we settle on hyphen), Searchbar and Language settings.
+ * The Navbar shows the Navigation Bar and gives access to the Air Quality Data, Toolbar, Expert
+ * View Filter, Help-View, Information-View, Searchbar and Language settings.
  */
-public class Navbar implements ObservedNavbarSubject {
+public class Navbar implements ObservedNavbarSubject, NavbarElement {
     public final AirQualityData[] airQualityDatas;
     public final Toolbar toolbar;
     public final SearchBar searchbar;
@@ -42,9 +41,7 @@ public class Navbar implements ObservedNavbarSubject {
 
     }
 
-    /**
-     * Shows the Searchbar.
-     */
+    @Override
     public void show() {
         if (expertView) {
             expertViewFilter.show();
@@ -55,7 +52,7 @@ public class Navbar implements ObservedNavbarSubject {
     }
 
     /**
-     * Shows the available Air Quality Data overlays.
+     * Shows the available Air Quality Data Overlays.
      */
     public void showAirQualityDatas() {
         for (AirQualityData airQualityData : airQualityDatas) {
@@ -89,14 +86,18 @@ public class Navbar implements ObservedNavbarSubject {
     }
 
     /**
-     * @return
+     * Returns the current Air Quality Data.
+     * 
+     * @return The instance of the current Air Quality Data.
      */
     public AirQualityData getCurrentAirQualityData() {
         return currentAirQualityData;
     }
 
     /**
-     * @param currentAirQualityData
+     * Sets the instance of the current Air Quality Data.
+     * 
+     * @param currentAirQualityData A instance of Air Quality Data.
      */
     public void setCurrentAirQualityData(AirQualityData currentAirQualityData) {
         this.currentAirQualityData = currentAirQualityData;

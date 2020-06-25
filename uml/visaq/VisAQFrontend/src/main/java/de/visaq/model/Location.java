@@ -4,7 +4,7 @@ import java.awt.Point;
 
 /**
  * <p>
- * Representation of the Locations entity in the OGC SensorThings API.
+ * Representation of the Locations entity in the Frontend.
  * </p>
  * <p>
  * The Location entity locates the Thing(s) it associated with. A Thing's Location entity is defined
@@ -22,19 +22,15 @@ public class Location extends Sensorthings<Location> {
 
     /**
      * Constructs a new {@link Location}.
-     * 
-     * @param id                      The identifier of the {@link Location} in the SensorThings
-     *                                standard
-     * @param selfUrl                 The URL which links to this object on the given SensorThings
-     *                                database
-     * @param name                    The name of the {@link Location}
-     * @param description             The description of the {@link Location}
-     * @param location                A point describing the actual location
-     * @param historicalLocationsLink Links to the {@link HistoricalLocation}
-     * @param thingsLink              Links to the {@link Thing}
+     *
+     * @param id          The identifier of the {@link FeatureOfInterest} in the SensorThings
+     *                    standard
+     * @param name        The name of the {@link Location}
+     * @param description The description of the {@link Location}
+     * @param location    A point describing the actual location
      */
-    public Location(String id, String selfUrl, String name, String description, Point location) {
-        super(id, selfUrl);
+    public Location(String id, String name, String description, Point location) {
+        super(id);
         this.name = name;
         this.description = description;
         this.location = location;
