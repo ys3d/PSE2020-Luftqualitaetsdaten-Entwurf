@@ -7,14 +7,14 @@ import org.json.JSONObject;
 
 import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.SingleNavigationLink;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.model.sensorthings.Sensorthing;
 
 /**
  * Encapsulates the control over all Sensorthings objects.
  * 
  * @param <SensorthingT> Sensorthings object this controller will work on.
  */
-public abstract class SensorthingsController<SensorthingT extends Sensorthings<SensorthingT>> {
+public abstract class SensorthingController<SensorthingT extends Sensorthing<SensorthingT>> {
     /**
      * Retrieves all Sensorthings objects of this type. Can be slow and should be avoided. Use more
      * specific requests instead.
@@ -39,7 +39,7 @@ public abstract class SensorthingsController<SensorthingT extends Sensorthings<S
      * @param navigationLink Link to the Sensorthings object inside the database.
      * @return The Sensorthings object that was retrieved.
      */
-    public Sensorthings<SensorthingT> get(SingleNavigationLink<SensorthingT> navigationLink) {
+    public Sensorthing<SensorthingT> get(SingleNavigationLink<SensorthingT> navigationLink) {
         return navigationLink.get(this);
     }
 

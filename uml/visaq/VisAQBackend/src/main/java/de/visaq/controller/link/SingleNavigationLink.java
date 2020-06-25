@@ -1,14 +1,14 @@
 package de.visaq.controller.link;
 
-import de.visaq.controller.SensorthingsController;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.controller.SensorthingController;
+import de.visaq.model.sensorthings.Sensorthing;
 
 /**
  * Encapsulates a Sensorthings query that can return a single Sensorthings entity.
  *
  * @param <SensorthingT> A class that extends Sensorthings
  */
-public abstract class SingleNavigationLink<SensorthingT extends Sensorthings<SensorthingT>>
+public abstract class SingleNavigationLink<SensorthingT extends Sensorthing<SensorthingT>>
         extends NavigationLink<SensorthingT> {
     /**
      * Constructs a new NavigationLink to a Sensorthings query with the given url.
@@ -26,5 +26,5 @@ public abstract class SingleNavigationLink<SensorthingT extends Sensorthings<Sen
      * @param controller The controller used to build the Sensorthings entity
      * @return The Sensorthings entity
      */
-    public abstract Sensorthings<SensorthingT> get(SensorthingsController<SensorthingT> controller);
+    public abstract Sensorthing<SensorthingT> get(SensorthingController<SensorthingT> controller);
 }

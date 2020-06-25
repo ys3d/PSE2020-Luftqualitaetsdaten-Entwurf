@@ -5,7 +5,7 @@ import java.time.Instant;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * Interface for all {@link Sensorthings} with timestamps.
+ * Interface for all {@link Sensorthing} with timestamps.
  */
 public interface SensorthingsTimeStamp {
     /**

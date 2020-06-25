@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.time.Instant;
 
-import de.visaq.controller.HistoricalLocationController;
 import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.SingleNavigationLink;
 
@@ -17,7 +16,7 @@ import de.visaq.controller.link.SingleNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#historicalLocations_get">https://developers.sensorup.com/docs/#historicalLocations_get</a>
  */
-public class HistoricalLocation extends Sensorthings<HistoricalLocation>
+public class HistoricalLocation extends Sensorthing<HistoricalLocation>
         implements SensorthingsTimeStamp {
     public final Instant time;
     public final SingleNavigationLink<Thing> thingLink;
@@ -26,9 +25,9 @@ public class HistoricalLocation extends Sensorthings<HistoricalLocation>
     /**
      * Constructs a new {@link HistoricalLocation}.
      * 
-     * @param id            {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param selfUrl       {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param relative      {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param id            {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl       {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative      {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param time          The time
      * @param thingLink     Link to the {@link Thing}
      * @param locationsLink Links to the {@link Location}s
@@ -45,11 +44,6 @@ public class HistoricalLocation extends Sensorthings<HistoricalLocation>
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public HistoricalLocationController getController() {
-        return new HistoricalLocationController();
     }
 
     /**

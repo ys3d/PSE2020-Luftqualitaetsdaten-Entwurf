@@ -3,7 +3,7 @@ package de.visaq.model.sensorthings;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * Interface for all {@link Sensorthings} with properties.
+ * Interface for all {@link Sensorthing} with properties.
  */
 public interface SensorthingsProperties {
     /**
@@ -16,7 +16,7 @@ public interface SensorthingsProperties {
     public Object getPropertyByKey(String key);
 
     /**
-     * Checks if the property with the given key exists for this {@link Sensorthings}.
+     * Checks if the property with the given key exists for this {@link Sensorthing}.
      * 
      * @param key The key of the searched property
      * @return True if the property exists, false otherwise

@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.time.Instant;
 
-import de.visaq.controller.ObservationController;
 import de.visaq.controller.link.SingleNavigationLink;
 
 /**
@@ -17,7 +16,7 @@ import de.visaq.controller.link.SingleNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#observations_post">https://developers.sensorup.com/docs/#observations_post</a>
  */
-public class Observation extends Sensorthings<Observation> implements SensorthingsTimeStamp {
+public class Observation extends Sensorthing<Observation> implements SensorthingsTimeStamp {
     public final Instant phenomenonTime;
     public final Double result;
     public final Instant resultTime;
@@ -27,9 +26,9 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     /**
      * Constructs a new {@link Observation}.
      * 
-     * @param id                    {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param selfUrl               {@link Sensorthings#Sensorthings(String, String, boolean)}
-     * @param relative              {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param id                    {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl               {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative              {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param phenomenonTime        The time when the Observation occurred
      * @param result                The result of the {@link Observation}
      * @param resultTime            The Time of the measuring result
@@ -51,11 +50,6 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public ObservationController getController() {
-        return new ObservationController();
     }
 
     /**

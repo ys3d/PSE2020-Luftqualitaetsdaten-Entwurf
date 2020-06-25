@@ -2,8 +2,8 @@ package de.visaq.controller.link;
 
 import java.util.ArrayList;
 
-import de.visaq.controller.SensorthingsController;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.controller.SensorthingController;
+import de.visaq.model.sensorthings.Sensorthing;
 
 /**
  * Encapsulates a Sensorthings query that can return multiple Sensorthings entities and provides
@@ -11,7 +11,7 @@ import de.visaq.model.sensorthings.Sensorthings;
  *
  * @param <SensorthingT> A class that extends Sensorthings
  */
-public class MultiLocalLink<SensorthingT extends Sensorthings<SensorthingT>>
+public class MultiLocalLink<SensorthingT extends Sensorthing<SensorthingT>>
         extends MultiNavigationLink<SensorthingT> {
     public final ArrayList<SensorthingT> cachedSensorthing;
 
@@ -29,7 +29,7 @@ public class MultiLocalLink<SensorthingT extends Sensorthings<SensorthingT>>
     }
 
     @Override
-    public ArrayList<SensorthingT> get(SensorthingsController<SensorthingT> controller) {
+    public ArrayList<SensorthingT> get(SensorthingController<SensorthingT> controller) {
         return cachedSensorthing;
     }
 
