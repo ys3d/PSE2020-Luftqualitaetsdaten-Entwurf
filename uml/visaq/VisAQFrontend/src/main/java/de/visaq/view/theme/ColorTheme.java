@@ -3,8 +3,7 @@ package de.visaq.view.theme;
 import java.awt.Color;
 
 /**
- * Abstranct class the encapsulates the methods for Color Themes. There are different Color Themes
- * that can be desplayed theire shared functionality is in this class.
+ * Abstranct class that encapsulates the methods for Color Themes.
  */
 public abstract class ColorTheme {
     private static ColorTheme instance = new LightTheme();

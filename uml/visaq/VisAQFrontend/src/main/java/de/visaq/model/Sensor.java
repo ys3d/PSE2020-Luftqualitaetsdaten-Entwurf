@@ -22,7 +22,7 @@ public class Sensor extends Sensorthing<Sensor> {
     /**
      * Constructs a new {@link Sensor}.
      *
-     * @param id          The identifier of the {@link FeatureOfInterest} in the SensorThings
+     * @param id          The identifier of the {@link Sensor} in the SensorThings
      *                    standard
      * @param description The description of the {@link Sensor}
      * @param name        The name of the {@link Sensor}

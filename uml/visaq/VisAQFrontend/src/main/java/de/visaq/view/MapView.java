@@ -42,11 +42,11 @@ public class MapView extends View {
      * Construct a MapView using the provided Map.
      * 
      * @param map    The Map instance
-     * @param legend The Legend instance
      */
     public MapView(Map map) {
         this.map = map;
         this.legend = new Legend(currentAirQualityData);
+        this.layers = new ArrayList<Layer>();
         this.overlayFactories = new ArrayList<OverlayFactory>();
         OverlayFactory sensorOverlayFactory = new SensorOverlayFactory();
         OverlayFactory interpolationOverlayFactory = new InterpolationOverlayFactory();
@@ -71,7 +71,7 @@ public class MapView extends View {
      * A Time Data Query occurs when the controller on the timeline is moved. The method set the
      * time of the data query.
      * 
-     * @param time
+     * @param time      The time
      */
     public void timeDataQuery(Instant time) {
         assert (historicalView);
@@ -82,7 +82,7 @@ public class MapView extends View {
      * Is activated when to user marks a point on the map. Shows the Sidebar containing the
      * different information to either the chosen Point or the Sensor.
      *
-     * @param coordinates
+     * @param coordinates       The coordinates
      */
     public void mapDataQueryCoordinates(JSONObject coordinates) {
         sensorOverview = new SensorOverview(coordinates, currentAirQualityData, this.time);
@@ -93,7 +93,7 @@ public class MapView extends View {
      * Is activated when to user marks a sensor on the map. Shows the Sidebar containing the
      * different information to either the chosen Point or the Sensor.
      *
-     * @param coordinates
+     * @param sensor            The sensor
      */
     public void mapDataQuerySensor(Sensor sensor) {
         sensorOverview = new SensorOverview(sensor, currentAirQualityData, this.time);
@@ -122,7 +122,7 @@ public class MapView extends View {
      * Change the current Air Quality Data Overlay and the matching Legend if the Air Quality Data
      * is changed in the Navbar instance.
      * 
-     * @param airQualityData
+     * @param airQualityData        The new Air Quality Data
      */
     private void airQualityDataQuery(AirQualityData airQualityData) {
         currentAirQualityData = airQualityData;
@@ -139,10 +139,11 @@ public class MapView extends View {
             time = Instant.now();
         }
         if (expertView) {
-            layers = overlayBuilder.buildExpertOverlays(currentAirQualityData, map.getBounds(),
-                    expertViewFilter.getSelectedSensors(), time);
+            layers.addAll(overlayBuilder.buildExpertOverlays(currentAirQualityData, map.getBounds(),
+                    expertViewFilter.getSelectedSensors(), time));
         } else {
-            layers = overlayBuilder.buildOverlays(currentAirQualityData, map.getBounds(), time);
+            layers.addAll(overlayBuilder.buildOverlays(currentAirQualityData, 
+                    map.getBounds(), time));
         }
     }
 
@@ -150,6 +151,5 @@ public class MapView extends View {
      * Removes Overlays from the Map instance.
      */
     private void removeOverlays() {
-
     }
 }

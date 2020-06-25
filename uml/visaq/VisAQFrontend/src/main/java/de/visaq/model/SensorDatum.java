@@ -3,7 +3,7 @@ package de.visaq.model;
 /**
  * Class to encapsulate the data of one sensor, its location and one Observation.
  */
-public class PointData {
+public class SensorDatum {
 
     public final Sensor sensor;
     public final Location location;
@@ -16,7 +16,7 @@ public class PointData {
      * @param location    The Location
      * @param observation The Observation
      */
-    public PointData(Sensor sensor, Location location, Observation observation) {
+    public SensorDatum(Sensor sensor, Location location, Observation observation) {
         this.sensor = sensor;
         this.location = location;
         this.observation = observation;

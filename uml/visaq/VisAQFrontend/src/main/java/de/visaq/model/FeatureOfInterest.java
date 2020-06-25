@@ -26,7 +26,6 @@ public class FeatureOfInterest extends Sensorthing<FeatureOfInterest> {
      *                         standard
      * @param description      The description of the {@link FeatureOfInterest}
      * @param name             The name of the {@link FeatureOfInterest}
-     * @param observationsLink Links to the {@link Observation}
      * @param features         Features
      */
     public FeatureOfInterest(String id, String description, String name,

@@ -19,7 +19,7 @@ public class HistoricalLocation extends Sensorthing<Datastream> implements Senso
     /**
      * Constructs a new {@link HistoricalLocation}.
      * 
-     * @param id   The identifier of the {@link FeatureOfInterest} in the SensorThings standard
+     * @param id   The identifier of the {@link  HistoricalLocation} in the SensorThings standard
      * @param time The time
      */
     public HistoricalLocation(String id, Instant time) {

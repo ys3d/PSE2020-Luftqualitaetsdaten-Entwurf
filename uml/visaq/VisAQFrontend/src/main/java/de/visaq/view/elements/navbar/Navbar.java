@@ -23,16 +23,14 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
     /**
      * Constructor for a new Navbar instance.
      * 
-     * @param airQualityDatas The selectable Air Quality Data overlays.
-     * @param informationView TODO
-     * @param toolbar         The Toolbar instance.
-     * @param searchbar       The Searchbar instance.
+     * @param airQualityDatas  The selectable Air Quality Data overlays.
+     * @param views            The Views
      */
-    public Navbar(AirQualityData[] airQualityDatas, ArrayList<View> Views) {
+    public Navbar(AirQualityData[] airQualityDatas, ArrayList<View> views) {
         this.airQualityDatas = airQualityDatas;
         this.currentAirQualityData = new ParticulateMatter();
         this.observer = new ArrayList<NavbarObserver>();
-        for (NavbarObserver view : Views) {
+        for (NavbarObserver view : views) {
             this.observer.add(view);
         }
         this.toolbar = new Toolbar();

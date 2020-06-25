@@ -3,7 +3,7 @@ package de.visaq.view.theme;
 import java.awt.Color;
 
 /**
- * Class that contains the Color its Gradient that are used in the Color Blind Mode.
+ * Contains the Color and its Gradient that are used in the Color Blind Mode.
  */
 public class ColorBlindTheme extends ColorTheme {
 

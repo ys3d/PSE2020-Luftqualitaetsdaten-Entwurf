@@ -3,6 +3,7 @@ package de.visaq.view;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.navbar.ExpertViewFilter;
 import de.visaq.view.elements.navbar.SearchBar;
+import def.leaflet.l.BaseIconOptions;
 import def.leaflet.l.Icon;
 
 /**
@@ -11,7 +12,7 @@ import def.leaflet.l.Icon;
  */
 public class InformationView extends View {
 
-    private Icon icon = null;
+    private Icon<BaseIconOptions> icon = null;
 
     @Override
     public void show() {
@@ -24,17 +25,16 @@ public class InformationView extends View {
      * 
      * @return The icon
      */
-    @SuppressWarnings("rawtypes")
-    public Icon getIcon() {
+    public Icon<BaseIconOptions> getIcon() {
         return icon;
     }
 
     /**
      * Setter for the icon.
      * 
-     * @param The icon
+     * @param icon  The icon
      */
-    private void setIcon(Icon icon) {
+    public void setIcon(Icon<BaseIconOptions> icon) {
         this.icon = icon;
     }
 

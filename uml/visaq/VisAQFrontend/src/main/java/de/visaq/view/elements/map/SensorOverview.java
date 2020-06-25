@@ -45,7 +45,7 @@ public class SensorOverview {
      * Constructor for Sensor Overview. It is used when a sensor on the map is marked. The Sensor
      * Overview is than initialized with the sensor and its data.
      * 
-     * @param coordinates           The coordinates of the point
+     * @param sensor                The sensor
      * @param currentAirQualityData The currentAirQualityData
      * @param time                  The instance of the time
      */
@@ -53,7 +53,10 @@ public class SensorOverview {
         this.currentAirQualityData = currentAirQualityData;
         this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
-
+    
+    /**
+     * Shows the Sensor Overview.
+     */
     public void show() {
         diagram.drawDiagram();
         diagram.showDiagram();

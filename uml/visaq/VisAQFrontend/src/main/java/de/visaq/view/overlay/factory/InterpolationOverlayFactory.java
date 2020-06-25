@@ -1,6 +1,6 @@
 package de.visaq.view.overlay.factory;
 
-import de.visaq.model.PointData;
+import de.visaq.model.SensorDatum;
 import de.visaq.view.elements.airquality.AirQualityData;
 import def.leaflet.l.Layer;
 
@@ -10,7 +10,7 @@ import def.leaflet.l.Layer;
 public class InterpolationOverlayFactory implements OverlayFactory {
 
     @Override
-    public Layer build(AirQualityData airquality, PointData[] data) {
+    public Layer build(AirQualityData airquality, SensorDatum[] data) {
         return null;
 
     }

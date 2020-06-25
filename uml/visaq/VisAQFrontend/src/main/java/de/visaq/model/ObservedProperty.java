@@ -22,7 +22,7 @@ public class ObservedProperty extends Sensorthing<ObservedProperty> {
     /**
      * Constructs a new {@link ObservedProperty}.
      * 
-     * @param id          The identifier of the {@link FeatureOfInterest} in the SensorThings
+     * @param id          The identifier of the {@link ObservedProperty} in the SensorThings
      *                    standard
      * @param description The description of the {@link ObservedProperty}
      * @param name        The name of the {@link ObservedProperty}

@@ -15,6 +15,7 @@ public interface NavbarObserver {
      * @param currentAirQualityData The instance of the current Air Quality Data
      * @param expertView            Boolean, the instance of the Expert View
      * @param expertViewFilter      The instance of the Expert View Filter
+     * @param historicalView        The instance of the Historical View
      */
     public void update(SearchBar searchbar, AirQualityData currentAirQualityData,
             boolean expertView, ExpertViewFilter expertViewFilter, boolean historicalView);
