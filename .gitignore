@@ -243,6 +243,7 @@ TSWLatexianTemp*
 .checkstyle
 bin/
 target/
+.idea/
 
 # ObjectAID
 *.ucls

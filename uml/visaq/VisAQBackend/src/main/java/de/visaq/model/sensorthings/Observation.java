@@ -27,20 +27,19 @@ public class Observation extends Sensorthings<Observation> implements Sensorthin
     /**
      * Constructs a new {@link Observation}.
      * 
-     * @param id                    The identifier of the {@link Observation} in the SensorThings
-     *                              standard
-     * @param selfUrl               The URL which links to this object on the given SensorThings
-     *                              database
+     * @param id                    {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl               {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative              {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param phenomenonTime        The time when the Observation occurred
      * @param result                The result of the {@link Observation}
      * @param resultTime            The Time of the measuring result
      * @param datastreamLink        Link to the {@link Datastream}
      * @param featureOfInterestLink Link to the {@link FeatureOfInterest}
      */
-    public Observation(String id, String selfUrl, Instant phenomenonTime, Double result,
-            Instant resultTime, SingleNavigationLink<Datastream> datastreamLink,
+    public Observation(String id, String selfUrl, boolean relative, Instant phenomenonTime,
+            Double result, Instant resultTime, SingleNavigationLink<Datastream> datastreamLink,
             SingleNavigationLink<FeatureOfInterest> featureOfInterestLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.phenomenonTime = phenomenonTime;
         this.result = result;
         this.resultTime = resultTime;

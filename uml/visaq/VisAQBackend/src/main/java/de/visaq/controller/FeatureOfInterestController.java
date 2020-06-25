@@ -31,13 +31,16 @@ public class FeatureOfInterestController extends SensorthingsController<FeatureO
         try {
             json = UtilityController.removeArrayWrapper(json);
 
+            if (json == null) {
+                return null;
+            }
+
             FeatureOfInterest featureOfIntrest = new FeatureOfInterest(json.getString("@iot.id"),
-                    json.getString("@iot.selfLink"), json.getString("description"),
+                    json.getString("@iot.selfLink"), false, json.getString("description"),
                     json.getString("name"),
                     new MultiOnlineLink<Observation>(
-                            json.getString("Observations@iot.navigationLink")),
-                    json.getJSONObject("feature").toMap()
-                    );
+                            json.getString("Observations@iot.navigationLink"), false),
+                    json.getJSONObject("feature").toMap());
             return featureOfIntrest;
         } catch (JSONException e) {
             return null;

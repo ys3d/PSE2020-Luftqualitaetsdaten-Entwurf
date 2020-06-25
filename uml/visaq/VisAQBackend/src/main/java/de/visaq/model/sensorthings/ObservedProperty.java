@@ -27,19 +27,19 @@ public class ObservedProperty extends Sensorthings<ObservedProperty>
     /**
      * Constructs a new {@link ObservedProperty}.
      * 
-     * @param id              The identifier of the {@link ObservedProperty} in the SensorThings
-     *                        standard
-     * @param selfUrl         The URL which links to this object on the given SensorThings database
+     * @param id              {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param selfUrl         {@link Sensorthings#Sensorthings(String, String, boolean)}
+     * @param relative        {@link Sensorthings#Sensorthings(String, String, boolean)}
      * @param description     The description of the {@link ObservedProperty}
      * @param name            The name of the {@link ObservedProperty}
      * @param properties      The properties of the Observed Property
      * @param definition      A URL which links to a definition of the {@link ObservedProperty}
      * @param datastreamsLink Links to {@link Datastream}s
      */
-    public ObservedProperty(String id, String selfUrl, String description, String name,
-            Map<String, Object> properties, String definition,
+    public ObservedProperty(String id, String selfUrl, boolean relative, String description,
+            String name, Map<String, Object> properties, String definition,
             MultiNavigationLink<Datastream> datastreamsLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.name = name;
         this.definition = definition;
         this.description = description;

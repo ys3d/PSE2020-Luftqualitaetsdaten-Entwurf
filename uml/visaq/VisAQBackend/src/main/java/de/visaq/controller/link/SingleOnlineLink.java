@@ -1,24 +1,27 @@
 package de.visaq.controller.link;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-
 import org.json.JSONObject;
 
-import de.visaq.RestConstants;
 import de.visaq.controller.SensorthingsController;
 import de.visaq.model.sensorthings.Sensorthings;
 
+/**
+ * Encapsulates a Sensorthings query that can return a single Sensorthings entity.
+ *
+ * @param <SensorthingT> A class that extends Sensorthings
+ */
 public class SingleOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
-        implements SingleNavigationLink<SensorthingT> {
+        extends SingleNavigationLink<SensorthingT> {
     private SingleLocalLink<SensorthingT> cache;
 
-    public final String url;
-
-    public SingleOnlineLink(String url) {
-        this.url = RestConstants.ENTRY_POINT + url;
+    /**
+     * Constructs a new SingleLocalLink with a query that returns a Sensorthings entity.
+     * 
+     * @param url      {@link NavigationLink#NavigationLink(String, boolean)}
+     * @param relative {@link NavigationLink#NavigationLink(String, boolean)}
+     */
+    public SingleOnlineLink(String url, boolean relative) {
+        super(url, relative);
     }
 
     @Override
@@ -33,20 +36,15 @@ public class SingleOnlineLink<SensorthingT extends Sensorthings<SensorthingT>>
             return cache.get(controller);
         }
 
-        Client c = ClientBuilder.newClient();
-        WebTarget target = c.target(url);
+        JSONObject response = getJson();
 
-        System.out.println("\nAngefragte URL: " + target.getUri());
+        if (response == null) {
+            return null;
+        }
 
-        String responseString = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        JSONObject response = new JSONObject(responseString);
+        SensorthingT built = controller.singleBuild(response);
 
-        System.out.println("\nTextausgabe:");
-        System.out.println(responseString);
-
-        SensorthingT built = controller.multiBuild(response).get(0);
-
-        cache = new SingleLocalLink<SensorthingT>(url, built);
+        cache = new SingleLocalLink<SensorthingT>(url, false, built);
 
         return built;
     }

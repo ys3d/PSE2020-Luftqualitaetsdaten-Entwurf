@@ -58,6 +58,12 @@ public abstract class SensorthingsController<SensorthingT extends Sensorthings<S
      * @return The Sensorthings objects that were constructed.
      */
     public ArrayList<SensorthingT> multiBuild(JSONObject json) {
+        if (!json.has("value")) {
+            ArrayList<SensorthingT> objects = new ArrayList<SensorthingT>();
+            objects.add(singleBuild(json));
+            return objects;
+        }
+
         JSONArray array = json.getJSONArray("value");
         int length = array.length();
         ArrayList<SensorthingT> objects = new ArrayList<SensorthingT>();
