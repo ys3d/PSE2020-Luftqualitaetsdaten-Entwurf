@@ -15,9 +15,9 @@ Um die Datentypen der Parameter möglichst exakt zu bestimmen werden \glspl{boun
 
 Attribute:
 \begin{itemize}
-    \item \emph{public String id} Jedes Objekt der Datenbank-\gls{API} ist mit einer eindeutigen ID versehen, die das Objekt identifiziert.
+    \item \emph{public final String id} Jedes Objekt der Datenbank-\gls{API} ist mit einer eindeutigen ID versehen, die das Objekt identifiziert.
     Da sich die ID aus Buchstaben, Zeichen und Ziffern zusammensetzt wird sie hier durch einen String repräsentiert.
-    \item \emph{public SingleLocalLink<SensorthingT> selfLink} Jedes Objekt der \gls{SensorThings API} hält einen Verweis auf die Online-Instanz von sich selbst.
+    \item \emph{public final SingleLocalLink<SensorthingT> selfLink} Jedes Objekt der \gls{SensorThings API} hält einen Verweis auf die Online-Instanz von sich selbst.
     So kann die Herkunft und die übereinstimmung des Datensatzes mit der Online-Version jederzeit überprüft werden.
 \end{itemize}
 Methoden: \begin{itemize}
@@ -25,7 +25,7 @@ Methoden: \begin{itemize}
     Als Parameter erhält der Konstruktor neben dem Klassen-Attribut id auch eine URL und eine boolean relative. Beide Parameter werden zum initialisieren des SingleLocalLink benötigt.
 \end{itemize}
 
-%%interfaces%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Interfaces%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SensorthingsProperties
 \rule{\textwidth}{0.4pt}
 \class{SensorthingsProperties}
@@ -71,3 +71,147 @@ Methoden: \begin{itemize}
 \end{itemize}
 
 %Classes%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Datastream
+%TODO: Fix class-table size
+\rule{\textwidth}{0.4pt}
+\class{Datastream extends Sensorthing<Datastream> implements SensorthingsProperties}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Datastream.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    \sensorthingsClassDescription{Datastream}{Datastream}
+    \url{http://developers.sensorup.com/docs/#datastreams_post}
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des Datastreams in der Datenbank.
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des Datstreams in der Datenbank.
+    \item \emph{public final UniteOfMeasurement unitOfMeasurement} Jedem Datastream ist in der Datenbank eine Maßeinheit zugeordnet. Diese maßeinheit wird hier als UniteOfMeasurement gekapselt gespeichert.
+    \item \emph{public final String observationTypeLink} Der observationTypeLink gibt an um welchen Typ von Datastream es sich handelt.
+    In der Regel wird hier ein Link auf eine Online-Erklärung des Datastream-Typs abgebildet.
+    \item \emph{public final MultiNavigationLink<Observation> observationsLink} \multiLinkDescription{Observation}
+    \item \emph{public final SingleNavigationLink<Sensor> sensorLink} \singleLinkDescription{Sensor}
+    \item \emph{public final SingleNavigationLink<Thing> thingLink} \singleLinkDescription{Thing}
+\end{itemize}
+Methoden: \begin{itemize}
+    \item \emph{public Datastream(String id, String selfUrl, boolean relative, String name, String description, Map<String, Object> properties, String observationTypeLink, SingleNavigationLink<Sensor> sensorLink, SingleNavigationLink<Thing> thingLink, MultiNavigationLink<Observation> observationsLink, UnitOfMeasurement unitOfMeasurement, SingleNavigationLink<ObservedProperty> observedPropertyLink)}
+    \constructorDescription{Datastream}
+    \item \emph{public boolean equals(Object obj)} \equalsDescription{FeatureOfInterest}
+\end{itemize}
+
+%FeatureOfInterest
+%TODO: Fix class-table size
+\rule{\textwidth}{0.4pt}
+\class{FeatureOfInterest extends Sensorthing<FeatureOfInterest>}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/FeatureOfInterest.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    \sensorthingsClassDescription{FeatureOfInterest}{FeaturesOfInterest}
+    \url{http://developers.sensorup.com/docs/#featureOfInterest_post}
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des FeatureOfInterest in der Datenbank.
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des FeatureOfInterest in der Datenbank.
+    \item \emph{public final MultiNavigationLink<Observation> observationsLink} \multiLinkDescription{Observation}
+    \item \emph{public final Map<String, Object> features} Die in einem FeatureOfInterest gekapselten Informationen werden als Map von String und Object abgelegt.
+    Jeder String identifiziert hierbei eindeutig ein Objekt.
+\end{itemize}
+Methoden:
+\begin{itemize}
+    \item \emph{public FeatureOfInterest(String id, String selfUrl, boolean relative, String description, String name, MultiNavigationLink<Observation> observationsLink, Map<String, Object> features)}
+    \constructorDescription{FeatureOfInterest}
+    \item \emph{public boolean equals(Object obj)} \equalsDescription{FeatureOfInterest}
+\end{itemize}
+
+%HistoricalLocation
+%TODO: Fix class-table size
+\rule{\textwidth}{0.4pt}
+\class{HistoricalLocation extends Sensorthing<HistoricalLocation>}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/HistoricalLocation.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    \sensorthingsClassDescription{HistoricalLocation}{HistoricalLocations}
+    \url{http://developers.sensorup.com/docs/#historicalLocations_get}
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public final Instant time} Der zeitpunkt zudem die Ortsangabe gehört.
+    \item \emph{public final SingleNavigationLink<Thing> thingLink} \singleLinkDescription{Thing}
+    \item \emph{public final MultiNavigationLink<Location> locationsLink} \multiLinkDescription{Location}
+\end{itemize}
+Methoden:
+\begin{itemize}
+    \item \emph{public HistoricalLocation(String id, String selfUrl, boolean relative, Instant time, SingleNavigationLink<Thing> thingLink, MultiNavigationLink<Location> locationsLink)}
+    \constructorDescription{HistoricalLocation}
+    \item \emph{public boolean equals(Object obj)} \equalsDescription{HistoricalLocation}
+\end{itemize}
+
+%Location
+%TODO: Fix class-table size
+\rule{\textwidth}{0.4pt}
+\class{Location extends Sensorthing<Location>}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Location.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    \sensorthingsClassDescription{Location}{Locations}
+    \url{http://developers.sensorup.com/docs/#locations_get}
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public final String name} Dieser String repräsentiert den Namen der Location in der Datenbank.
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung der Location in der Datenbank.
+    \item \emph{public final Point location} Eine Ortsangabe in Form von Geo-Koordinaten.
+    \item \emph{public final MultiNavigationLink<HistoricalLocation> historicalLocationsLink} \multiLinkDescription{HistoricalLocation}
+    \item \emph{public final MultiNavigationLink<Thing> thingsLink} \multiLinkDescription{Thing}
+\end{itemize}
+Methoden:
+\begin{itemize}
+    \item \emph{public Location(String id, String selfUrl, boolean relative, String name, String description, Point location, MultiNavigationLink<HistoricalLocation> historicalLocationsLink, MultiNavigationLink<Thing> thingsLink)}
+    \constructorDescription{Location}
+    \item \emph{public boolean equals(Object obj)} \equalsDescription{Location}
+\end{itemize}
+
+%Observation
+%TODO: Fix class-table size
+\rule{\textwidth}{0.4pt}
+\class{Observation extends Sensorthing<Observation> implements SensorthingsTimeStamp}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Observation.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    \sensorthingsClassDescription{Observation}{Observations}
+    \url{http://developers.sensorup.com/docs/#observations_post}
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public final Instant phenomenonTime} Test %TODO
+    \item \emph{public final Double result} Der Wert den die Beobachtung annimmt
+    \item \emph{public final Instant resultTime} Test %TODO
+    \item \emph{public final SingleNavigationLink<Datastream> datastreamLink} \singleLinkDescription{Datastream}
+    \item \emph{public final SingleNavigationLink<FeatureOfInterest> featureOfInterestLink} \singleLinkDescription{FeatureOfInterest}
+\end{itemize}
+Methoden:
+\begin{itemize}
+    \item \emph{public Location(String id, String selfUrl, boolean relative, String name, String description, Point location, MultiNavigationLink<HistoricalLocation> historicalLocationsLink, MultiNavigationLink<Thing> thingsLink)}
+    \constructorDescription{Location}
+    \item \emph{public boolean equals(Object obj)} \equalsDescription{Location}
+\end{itemize}
