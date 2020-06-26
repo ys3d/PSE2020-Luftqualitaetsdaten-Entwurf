@@ -17,10 +17,10 @@ public class Legend {
         this.gradient = new Gradient(this.airQualityData.getPrimaryColor(),
                 this.airQualityData.getSecondaryColor());
     }
-    /*
-     * Gradient shown on website
+    
+    /**
+     * Gradient of the selected airQualityData that is shown on the Map
      */
-
     public void show() {
 
         // TODO implement

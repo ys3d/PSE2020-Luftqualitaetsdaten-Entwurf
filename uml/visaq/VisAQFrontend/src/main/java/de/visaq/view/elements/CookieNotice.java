@@ -19,6 +19,13 @@ public class CookieNotice {
 
     public void accept(boolean acceptance) {
         // cookieController.set(acceptance)
+    	if (acceptance) {
+    		cookieController.store(null);
+    	}
+    }
+    
+    public void getUserData() {
+    	
     }
 
 }
