@@ -1,3 +1,45 @@
 \subsubsection{Model}
 \newpage
 \input{topics/classDescriptions/backend/subpackages/sensorthings.tex}
+
+
+%PointDatum
+\rule{\textwidth}{0.4pt}
+\class{PointDatum}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/PointDatum.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    Die Klasse PointDatum beschreibt einen spezifischen Datenpunkt an einem spezifischen Ort.
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public final Point location} Ein Ort gegeben durch seine Geo-Koordinaten.
+    \item \emph{public final double datum} Der Datenpunkt als nummerischer Wert.
+\end{itemize}
+Methoden:
+\begin{itemize}
+    \item \emph{public PointDatum(Point location, double datum)}
+    \constructorDescription{PointDatum}
+\end{itemize}
+
+%RestConstants
+\rule{\textwidth}{0.4pt}
+\class{RestConstants}
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/RestConstants.png}}
+    \end{figure}
+    \end{minipage} \hfill
+\begin{minipage}{0.6\textwidth}
+    Die abstrakte Klasse RestConstants kapselt Konstanten die bei der Kommunikation mit der Rest-API benötigt werden.
+\end{minipage}
+
+Attribute:
+\begin{itemize}
+    \item \emph{public static final String ENTRY\_POINT} Eine URL, die einen Einstigespunkt in die \gls{SensorThings API} beschreibt.
+\end{itemize}
+
