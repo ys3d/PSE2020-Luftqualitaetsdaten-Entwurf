@@ -2,6 +2,10 @@ package de.visaq.view.theme;
 
 import java.awt.Color;
 
+/**
+ * Contains the Color and its Gradient that are used in the Light Mode. It is used as
+ * standard configuration.
+ */
 public class LightTheme extends ColorTheme {
 
     @Override

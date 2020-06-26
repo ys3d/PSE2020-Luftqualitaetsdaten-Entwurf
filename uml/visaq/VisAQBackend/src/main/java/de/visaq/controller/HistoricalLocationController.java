@@ -13,7 +13,7 @@ import de.visaq.model.sensorthings.Thing;
 /**
  * Encapsulates the control over HistoricalLocation objects.
  */
-public class HistoricalLocationController extends SensorthingsController<HistoricalLocation> {
+public class HistoricalLocationController extends SensorthingController<HistoricalLocation> {
 
     @Override
     public ArrayList<HistoricalLocation> getAll() {
@@ -31,10 +31,15 @@ public class HistoricalLocationController extends SensorthingsController<Histori
     public HistoricalLocation singleBuild(JSONObject json) {
         json = UtilityController.removeArrayWrapper(json);
 
+        if (json == null) {
+            return null;
+        }
+
         HistoricalLocation historicalLocation = new HistoricalLocation(json.getString("@iot.id"),
-                json.getString("@iot.selfLink"), UtilityController.buildTime(json, "time"),
-                new SingleOnlineLink<Thing>(json.getString("Thing@iot.navigationLink")),
-                new MultiOnlineLink<Location>(json.getString("Locations@iot.navigationLink")));
+                json.getString("@iot.selfLink"), false, UtilityController.buildTime(json, "time"),
+                new SingleOnlineLink<Thing>(json.getString("Thing@iot.navigationLink"), false),
+                new MultiOnlineLink<Location>(json.getString("Locations@iot.navigationLink"),
+                        false));
         return historicalLocation;
     }
 

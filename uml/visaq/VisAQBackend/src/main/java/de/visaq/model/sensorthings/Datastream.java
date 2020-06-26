@@ -2,7 +2,6 @@ package de.visaq.model.sensorthings;
 
 import java.util.Map;
 
-import de.visaq.controller.DatastreamController;
 import de.visaq.controller.link.MultiNavigationLink;
 import de.visaq.controller.link.SingleNavigationLink;
 
@@ -17,7 +16,7 @@ import de.visaq.controller.link.SingleNavigationLink;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#datastreams_post">https://developers.sensorup.com/docs/#datastreams_post</a>
  */
-public class Datastream extends Sensorthings<Datastream> implements SensorthingsProperties {
+public class Datastream extends Sensorthing<Datastream> implements SensorthingsProperties {
     public final String name;
     public final String description;
     public final UnitOfMeasurement unitOfMeasurement;
@@ -30,10 +29,9 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
     /**
      * Constructs a new {@link Datastream}.
      * 
-     * @param id                   The identifier of the {@link Datastream} in the SensorThings
-     *                             standard
-     * @param selfUrl              The URL which links to this object on the given SensorThings
-     *                             database
+     * @param id                   {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param selfUrl              {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param relative             {@link Sensorthing#Sensorthings(String, String, boolean)}
      * @param name                 The name of the {@link Datastream}
      * @param description          The description of the {@link Datastream}
      * @param properties           Several properties given by the database
@@ -44,12 +42,12 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
      * @param unitOfMeasurement    The Unit of Measurement
      * @param observedPropertyLink Link to the {@link ObservedProperty}
      */
-    public Datastream(String id, String selfUrl, String name, String description,
+    public Datastream(String id, String selfUrl, boolean relative, String name, String description,
             Map<String, Object> properties, String observationTypeLink,
             SingleNavigationLink<Sensor> sensorLink, SingleNavigationLink<Thing> thingLink,
             MultiNavigationLink<Observation> observationsLink, UnitOfMeasurement unitOfMeasurement,
             SingleNavigationLink<ObservedProperty> observedPropertyLink) {
-        super(id, selfUrl);
+        super(id, selfUrl, relative);
         this.name = name;
         this.description = description;
         this.unitOfMeasurement = unitOfMeasurement;
@@ -63,11 +61,6 @@ public class Datastream extends Sensorthings<Datastream> implements Sensorthings
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
-    }
-
-    @Override
-    public DatastreamController getController() {
-        return new DatastreamController();
     }
 
     /**

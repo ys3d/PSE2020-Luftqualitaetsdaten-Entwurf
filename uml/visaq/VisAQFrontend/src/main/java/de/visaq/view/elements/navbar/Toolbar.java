@@ -1,25 +1,16 @@
-package de.visaq.view.elements.toolbar;
-
-import java.util.ArrayList;
-
-import de.visaq.view.ObservedToolbarSubject;
-import de.visaq.view.ToolbarObserver;
+package de.visaq.view.elements.navbar;
 
 /**
  * Shows the User links and definitions to the different functions and informations.
  */
-public class Toolbar implements ToolbarElement, ObservedToolbarSubject {
+public class Toolbar implements NavbarElement {
 
-    private boolean historicalView;
-    private Timeline timeline;
-    private ArrayList<ToolbarObserver> observer;
+    private boolean historicalView = false;
 
     /**
      * Constructor for the Navbar.
      */
     public Toolbar() {
-        Timeline timeline = new Timeline();
-        observer = new ArrayList<ToolbarObserver>();
         // TODO Auto-generated method stub
     }
 
@@ -54,9 +45,9 @@ public class Toolbar implements ToolbarElement, ObservedToolbarSubject {
     /**
      * Will later open the Timeline with historical Data on the Map.
      */
-    private void historicalData(boolean historicalView) {
-        this.historicalView = historicalView;
-        timeline.show();
+    private void historicalData() {
+
+        this.setHistoricalView(true);
         // TODO Auto-generated method stub
     }
 
@@ -65,20 +56,21 @@ public class Toolbar implements ToolbarElement, ObservedToolbarSubject {
 
     }
 
-    @Override
-    public void attach(ToolbarObserver toolbarObserver) {
-        observer.add(toolbarObserver);
-
+    /**
+     * Return the if the Historical View is set.
+     * 
+     * @return The instance of Historical View
+     */
+    public boolean isHistoricalView() {
+        return historicalView;
     }
 
-    @Override
-    public void detach(ToolbarObserver toolbarObserver) {
-        observer.remove(toolbarObserver);
-    }
-
-    @Override
-    public void notifyObserver() {
-        // TODO Auto-generated method stub
-
+    /**
+     * Sets the Historical View.
+     * 
+     * @param historicalView The instance of Historical View
+     */
+    private void setHistoricalView(boolean historicalView) {
+        this.historicalView = historicalView;
     }
 }

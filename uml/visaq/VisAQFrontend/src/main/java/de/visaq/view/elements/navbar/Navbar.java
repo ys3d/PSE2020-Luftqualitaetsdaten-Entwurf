@@ -2,21 +2,18 @@ package de.visaq.view.elements.navbar;
 
 import java.util.ArrayList;
 
-import de.visaq.view.InformationView;
+import de.visaq.view.Language;
 import de.visaq.view.NavbarObserver;
-import de.visaq.view.ObservedNavbarSubject;
+import de.visaq.view.View;
 import de.visaq.view.elements.airquality.AirQualityData;
 import de.visaq.view.elements.airquality.ParticulateMatter;
-import de.visaq.view.elements.toolbar.Toolbar;
 
 /**
- * The Navbar shows the Navigationbar and gives access to the Help-View, Information-View (I am
- * using Hyphen here because you used it before but as I said it doesn't matter to me whether or not
- * we settle on hyphen), Searchbar and Language settings.
+ * The Navbar shows the Navigation Bar and gives access to the Air Quality Data, Toolbar, Expert
+ * View Filter, Help-View, Information-View, Searchbar and Language settings.
  */
-public class Navbar implements ObservedNavbarSubject {
+public class Navbar implements ObservedNavbarSubject, NavbarElement {
     public final AirQualityData[] airQualityDatas;
-    public final InformationView informationView;
     public final Toolbar toolbar;
     public final SearchBar searchbar;
     public final ExpertViewFilter expertViewFilter;
@@ -27,25 +24,23 @@ public class Navbar implements ObservedNavbarSubject {
     /**
      * Constructor for a new Navbar instance.
      * 
-     * @param airQualityDatas The selectable Air Quality Data overlays.
-     * @param informationView TODO
-     * @param toolbar         The Toolbar instance.
-     * @param searchbar       The Searchbar instance.
+     * @param airQualityDatas  The selectable Air Quality Data overlays.
+     * @param views            The Views
      */
-    public Navbar(AirQualityData[] airQualityDatas, InformationView informationView,
-            Toolbar toolbar, SearchBar searchbar, ExpertViewFilter expertViewFilter) {
+    public Navbar(AirQualityData[] airQualityDatas, ArrayList<View> views) {
         this.airQualityDatas = airQualityDatas;
-        this.informationView = informationView;
-        this.toolbar = toolbar;
-        this.searchbar = searchbar;
-        this.expertViewFilter = expertViewFilter;
-        currentAirQualityData = new ParticulateMatter();
-        observer = new ArrayList<NavbarObserver>();
+        this.currentAirQualityData = new ParticulateMatter("TODO");
+        this.observer = new ArrayList<NavbarObserver>();
+        for (NavbarObserver view : views) {
+            this.observer.add(view);
+        }
+        this.toolbar = new Toolbar();
+        this.searchbar = new SearchBar();
+        this.expertViewFilter = new ExpertViewFilter();
+
     }
 
-    /**
-     * Shows the Searchbar.
-     */
+    @Override
     public void show() {
         if (expertView) {
             expertViewFilter.show();
@@ -56,19 +51,12 @@ public class Navbar implements ObservedNavbarSubject {
     }
 
     /**
-     * Shows the available Air Quality Data overlays.
+     * Shows the available Air Quality Data Overlays.
      */
     public void showAirQualityDatas() {
         for (AirQualityData airQualityData : airQualityDatas) {
-            airQualityData.getName();
+            String name = airQualityData.name;
         }
-    }
-
-    /**
-     * Shows the help icon.
-     */
-    public void showHelpIcon() {
-        informationView.getIcon();
     }
 
     /**
@@ -96,12 +84,23 @@ public class Navbar implements ObservedNavbarSubject {
         this.expertView = expertview;
     }
 
+    /**
+     * Returns the current Air Quality Data.
+     * 
+     * @return The instance of the current Air Quality Data.
+     */
     public AirQualityData getCurrentAirQualityData() {
         return currentAirQualityData;
     }
 
+    /**
+     * Sets the instance of the current Air Quality Data.
+     * 
+     * @param currentAirQualityData A instance of Air Quality Data.
+     */
     public void setCurrentAirQualityData(AirQualityData currentAirQualityData) {
         this.currentAirQualityData = currentAirQualityData;
+        notifyObserver();
     }
 
     @Override
@@ -118,7 +117,8 @@ public class Navbar implements ObservedNavbarSubject {
     @Override
     public void notifyObserver() {
         for (NavbarObserver nb : observer) {
-            nb.updateNavbar(searchbar, currentAirQualityData, expertView, expertViewFilter);
+            nb.update(searchbar, currentAirQualityData, expertView, expertViewFilter,
+                    toolbar.isHistoricalView());
         }
 
     }

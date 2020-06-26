@@ -12,7 +12,7 @@ import de.visaq.model.sensorthings.Thing;
 /**
  * Encapsulates the control over Location objects.
  */
-public class LocationController extends SensorthingsController<Location> {
+public class LocationController extends SensorthingController<Location> {
 
     @Override
     public ArrayList<Location> getAll() {
@@ -30,12 +30,16 @@ public class LocationController extends SensorthingsController<Location> {
     public Location singleBuild(JSONObject json) {
         json = UtilityController.removeArrayWrapper(json);
 
+        if (json == null) {
+            return null;
+        }
+
         Location location = new Location(json.getString("@iot.id"), json.getString("@iot.selfLink"),
-                json.getString("name"), json.getString("description"),
+                false, json.getString("name"), json.getString("description"),
                 UtilityController.buildLocationPoint(json),
                 new MultiOnlineLink<HistoricalLocation>(
-                        json.getString("HistoricalLocations@iot.navigationLink")),
-                new MultiOnlineLink<Thing>(json.getString("Things@iot.navigationLink")));
+                        json.getString("HistoricalLocations@iot.navigationLink"), false),
+                new MultiOnlineLink<Thing>(json.getString("Things@iot.navigationLink"), false));
         return location;
     }
 

@@ -1,21 +1,34 @@
 package de.visaq.controller.link;
 
-import de.visaq.RestConstants;
-import de.visaq.controller.SensorthingsController;
-import de.visaq.model.sensorthings.Sensorthings;
+import de.visaq.controller.SensorthingController;
+import de.visaq.model.sensorthings.Sensorthing;
 
-public class SingleLocalLink<SensorthingT extends Sensorthings<SensorthingT>>
-        implements SingleNavigationLink<SensorthingT> {
-    public final String url;
-    public final Sensorthings<SensorthingT> cachedSensorthing;
+/**
+ * Encapsulates a Sensorthings query that can return a single Sensorthings entity and provides
+ * caching functionality.
+ *
+ * @param <SensorthingT> A class that extends Sensorthings
+ */
+public class SingleLocalLink<SensorthingT extends Sensorthing<SensorthingT>>
+        extends SingleNavigationLink<SensorthingT> {
+    public final Sensorthing<SensorthingT> cachedSensorthing;
 
-    public SingleLocalLink(String url, Sensorthings<SensorthingT> cachedSensorthing) {
-        this.url = RestConstants.ENTRY_POINT + url;
+    /**
+     * Constructs a new SingleLocalLink with a query that returns a Sensorthings entity and caches
+     * the result.
+     * 
+     * @param url               {@link NavigationLink#NavigationLink(String, boolean)}
+     * @param relative          {@link NavigationLink#NavigationLink(String, boolean)}
+     * @param cachedSensorthing The retrieved entity of this query
+     */
+    public SingleLocalLink(String url, boolean relative,
+            Sensorthing<SensorthingT> cachedSensorthing) {
+        super(url, relative);
         this.cachedSensorthing = cachedSensorthing;
     }
 
     @Override
-    public Sensorthings<SensorthingT> get(SensorthingsController<SensorthingT> controller) {
+    public Sensorthing<SensorthingT> get(SensorthingController<SensorthingT> controller) {
         return cachedSensorthing;
     }
 

@@ -12,7 +12,7 @@ import de.visaq.model.sensorthings.Thing;
 /**
  * Encapsulates the control over Sensor objects.
  */
-public class SensorController extends SensorthingsController<Sensor> {
+public class SensorController extends SensorthingController<Sensor> {
     @Override
     public ArrayList<Sensor> getAll() {
         // TODO Auto-generated method stub
@@ -51,10 +51,14 @@ public class SensorController extends SensorthingsController<Sensor> {
     public Sensor singleBuild(JSONObject json) {
         json = UtilityController.removeArrayWrapper(json);
 
+        if (json == null) {
+            return null;
+        }
+
         Sensor sensor = new Sensor(json.getString("@iot.id"), json.getString("@iot.selfLink"),
-                json.getString("description"), json.getString("name"),
-                UtilityController.buildProperties(json),
-                new MultiOnlineLink<Datastream>(json.getString("Datastreams@iot.navigationLink")));
+                false, json.getString("description"), json.getString("name"),
+                UtilityController.buildProperties(json), new MultiOnlineLink<Datastream>(
+                        json.getString("Datastreams@iot.navigationLink"), false));
         return sensor;
     }
 }
