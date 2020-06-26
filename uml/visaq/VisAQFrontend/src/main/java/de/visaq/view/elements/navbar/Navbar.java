@@ -2,6 +2,7 @@ package de.visaq.view.elements.navbar;
 
 import java.util.ArrayList;
 
+import de.visaq.view.Language;
 import de.visaq.view.NavbarObserver;
 import de.visaq.view.View;
 import de.visaq.view.elements.airquality.AirQualityData;
@@ -28,7 +29,7 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
      */
     public Navbar(AirQualityData[] airQualityDatas, ArrayList<View> views) {
         this.airQualityDatas = airQualityDatas;
-        this.currentAirQualityData = new ParticulateMatter();
+        this.currentAirQualityData = new ParticulateMatter("TODO");
         this.observer = new ArrayList<NavbarObserver>();
         for (NavbarObserver view : views) {
             this.observer.add(view);
@@ -54,7 +55,7 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
      */
     public void showAirQualityDatas() {
         for (AirQualityData airQualityData : airQualityDatas) {
-            airQualityData.getName();
+            String name = airQualityData.name;
         }
     }
 

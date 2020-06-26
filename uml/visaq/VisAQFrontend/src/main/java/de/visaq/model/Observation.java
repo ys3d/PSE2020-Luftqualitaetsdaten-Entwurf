@@ -14,7 +14,7 @@ import java.time.Instant;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#observations_post">https://developers.sensorup.com/docs/#observations_post</a>
  */
-public class Observation extends Sensorthing<FeatureOfInterest> implements SensorthingsTimeStamp {
+public class Observation extends Sensorthing<FeatureOfInterest> implements SensorthingTimeStamp {
     public final Instant phenomenonTime;
     public final Double result;
     public final Instant resultTime;
@@ -45,7 +45,7 @@ public class Observation extends Sensorthing<FeatureOfInterest> implements Senso
      * {@inheritDoc}
      */
     @Override
-    public boolean isOlder(SensorthingsTimeStamp other) {
+    public boolean isOlder(SensorthingTimeStamp other) {
         // TODO Auto-generated method stub
         return false;
     }
@@ -54,7 +54,7 @@ public class Observation extends Sensorthing<FeatureOfInterest> implements Senso
      * {@inheritDoc}
      */
     @Override
-    public boolean isNewer(SensorthingsTimeStamp other) {
+    public boolean isNewer(SensorthingTimeStamp other) {
         // TODO Auto-generated method stub
         return false;
     }
@@ -63,7 +63,7 @@ public class Observation extends Sensorthing<FeatureOfInterest> implements Senso
      * {@inheritDoc}
      */
     @Override
-    public boolean isEqualOld(SensorthingsTimeStamp other) {
+    public boolean isEqualOld(SensorthingTimeStamp other) {
         // TODO Auto-generated method stub
         return false;
     }

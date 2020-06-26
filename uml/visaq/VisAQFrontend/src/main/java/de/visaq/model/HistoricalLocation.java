@@ -13,7 +13,7 @@ import java.time.Instant;
  * @see <a href=
  *      "https://developers.sensorup.com/docs/#historicalLocations_get">https://developers.sensorup.com/docs/#historicalLocations_get</a>
  */
-public class HistoricalLocation extends Sensorthing<Datastream> implements SensorthingsTimeStamp {
+public class HistoricalLocation extends Sensorthing<Datastream> implements SensorthingTimeStamp {
     public final Instant time;
 
     /**
@@ -37,7 +37,7 @@ public class HistoricalLocation extends Sensorthing<Datastream> implements Senso
      * {@inheritDoc}
      */
     @Override
-    public boolean isOlder(SensorthingsTimeStamp other) {
+    public boolean isOlder(SensorthingTimeStamp other) {
         // TODO Auto-generated method stub
         return false;
     }
@@ -46,7 +46,7 @@ public class HistoricalLocation extends Sensorthing<Datastream> implements Senso
      * {@inheritDoc}
      */
     @Override
-    public boolean isNewer(SensorthingsTimeStamp other) {
+    public boolean isNewer(SensorthingTimeStamp other) {
         // TODO Auto-generated method stub
         return false;
     }
@@ -55,7 +55,7 @@ public class HistoricalLocation extends Sensorthing<Datastream> implements Senso
      * {@inheritDoc}
      */
     @Override
-    public boolean isEqualOld(SensorthingsTimeStamp other) {
+    public boolean isEqualOld(SensorthingTimeStamp other) {
         // TODO Auto-generated method stub
         return false;
     }

@@ -13,7 +13,7 @@ public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>
     public final String id;
 
     /**
-     * Sole constructor of class Sensorthing.
+     * Constructor of class Sensorthing.
      */
     public Sensorthing() {
         this.id = null;

@@ -8,6 +8,17 @@ import java.awt.Color;
  * Sensors.
  */
 public class ParticulateMatter extends AirQualityData {
+    
+    /**
+     * Constructor of the class.
+     * 
+     * @param name  The name
+     */
+    public ParticulateMatter(String name) {
+        super(name);
+        // TODO Auto-generated constructor stub
+    }
+
     @Override
     public Color getPrimaryColor() {
         // TODO Auto-generated method stub
