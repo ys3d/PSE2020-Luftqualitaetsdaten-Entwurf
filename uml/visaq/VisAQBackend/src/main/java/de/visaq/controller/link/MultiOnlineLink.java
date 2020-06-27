@@ -28,12 +28,6 @@ public class MultiOnlineLink<SensorthingT extends Sensorthing<SensorthingT>>
     }
 
     @Override
-    public boolean equals(Object obj) {
-        // TODO Auto-generated method stub
-        return super.equals(obj);
-    }
-
-    @Override
     public ArrayList<SensorthingT> get(SensorthingController<SensorthingT> controller) {
         if (cache != null) {
             return cache.get(controller);

@@ -39,6 +39,9 @@ public class Language {
     /**
      * Constructor used to create the language with the given name and updates the global instance
      * accordingly.
+     * 
+     * @param language      The language
+     * @param name          The name
      */
     public Language(Properties language, String name) {
         super();
@@ -59,7 +62,7 @@ public class Language {
     /**
      * Sets the icon.
      * 
-     * @return The icon
+     * @param icon The icon
      */
     public void setIcon(Icon<BaseIconOptions> icon) {
         this.icon = icon;

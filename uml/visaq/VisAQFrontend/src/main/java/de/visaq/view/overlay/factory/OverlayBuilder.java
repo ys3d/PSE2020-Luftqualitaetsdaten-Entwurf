@@ -1,20 +1,23 @@
 package de.visaq.view.overlay.factory;
 
+import java.time.Instant;
 import java.util.ArrayList;
 
-import de.visaq.model.Datastream;
+import de.visaq.controller.AngularController;
+import de.visaq.model.Sensor;
+import de.visaq.model.SensorDatum;
 import de.visaq.view.elements.airquality.AirQualityData;
-
 import def.leaflet.l.LatLngBounds;
 import def.leaflet.l.Layer;
 
-/*
+/**
  * Access point to the overlay factory. It builds overlays for maps using the special factories.
  */
 public class OverlayBuilder {
 
     private ArrayList<OverlayFactory> factories = null;
-
+    private AngularController angularController;
+    
     /**
      * Default Builder uses Sensor Overlay Factory and Interpolation Overlay Factory.
      */
@@ -30,25 +33,36 @@ public class OverlayBuilder {
     }
 
     /**
-     * @param airquality Is the Observed Property of the Sensors.
-     * @param pointdata  Is the data of the Sensors that is used to create the Map Overlay
-     * @return A list of Overlays that where build by using the given factories.
+     * Method that runs Overlay Factories with the matching data.
+     * 
+     * @param airQuality   Is the Observed Property of the Sensors
+     * @param latLngBounds The bounds of the Map
+     * @param time         The time
+     * @return The resulting Map Overlays
      */
-    public ArrayList<Layer> buildOverlays(AirQualityData airquality, LatLngBounds latLngBounds) {
-        Datastream datastream = null;
-        // Extract Datastream from bounds and expertviewfilter and sensorcontroller;
+    public ArrayList<Layer> buildOverlays(AirQualityData airQuality, LatLngBounds latLngBounds,
+            Instant time) {
         ArrayList<Layer> layers = new ArrayList<Layer>();
+        SensorDatum[] data = null;
         for (OverlayFactory factory : factories) {
-            layers.add(factory.build(airquality, datastream));
+            layers.add(factory.build(airQuality, data));
         }
         return layers;
     }
 
-    public ArrayList<Layer> buildExpertOverlays(AirQualityData airquality,
-            LatLngBounds latLngBounds, ArrayList<?> selectedSensortypes) {
+    /**
+     * Method that runs Overlay Factories with the matching data restricted by a collection of
+     * Sensor Types.
+     * 
+     * @param airQuality          Is the Observed Property of the Sensors
+     * @param latLngBounds        The bounds of the map
+     * @param selectedSensortypes The selected Sensor Types
+     * @param time                The time
+     * @return The resulting Map Overlays
+     */
+    public ArrayList<Layer> buildExpertOverlays(AirQualityData airQuality,
+            LatLngBounds latLngBounds, ArrayList<Sensor> selectedSensortypes, Instant time) {
         ArrayList<Layer> layers = new ArrayList<Layer>();
         return layers;
-
     }
-
 }

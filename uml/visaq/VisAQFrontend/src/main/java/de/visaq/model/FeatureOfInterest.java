@@ -1,12 +1,10 @@
-package de.visaq.model.sensorthings;
+package de.visaq.model;
 
 import java.util.Map;
 
-import de.visaq.controller.link.MultiNavigationLink;
-
 /**
  * <p>
- * Representation of the FeatureOfIntrest entity in the OGC SensorThings API.
+ * Representation of the FeatureOfIntrest entity in the Frontend.
  * </p>
  * <p>
  * An Observation results is a value being assigned to a phenomenon. The phenomenon is a property of
@@ -19,34 +17,28 @@ import de.visaq.controller.link.MultiNavigationLink;
 public class FeatureOfInterest extends Sensorthing<FeatureOfInterest> {
     public final String description;
     public final String name;
-    public final MultiNavigationLink<Observation> observationsLink;
     public final Map<String, Object> features;
 
     /**
      * Constructs a new {@link FeatureOfInterest}.
      * 
-     * @param id               {@link Sensorthing#Sensorthings(String, String, boolean)}
-     * @param selfUrl          {@link Sensorthing#Sensorthings(String, String, boolean)}
-     * @param relative         {@link Sensorthing#Sensorthings(String, String, boolean)}
+     * @param id               The identifier of the {@link FeatureOfInterest} in the SensorThings
+     *                         standard
      * @param description      The description of the {@link FeatureOfInterest}
      * @param name             The name of the {@link FeatureOfInterest}
-     * @param observationsLink Links to the {@link Observation}
      * @param features         Features
      */
-    public FeatureOfInterest(String id, String selfUrl, boolean relative, String description,
-            String name, MultiNavigationLink<Observation> observationsLink,
+    public FeatureOfInterest(String id, String description, String name,
             Map<String, Object> features) {
-        super(id, selfUrl, relative);
+        super(id);
         this.description = description;
         this.name = name;
-        this.observationsLink = observationsLink;
         this.features = features;
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
     }
-
 }
