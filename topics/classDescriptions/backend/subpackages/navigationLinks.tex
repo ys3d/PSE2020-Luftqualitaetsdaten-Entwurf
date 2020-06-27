@@ -1,6 +1,8 @@
 %NavigationLink
 \rule{\textwidth}{0.4pt}
-\class{NavigationLink<SensorthingT extends Sensorthing<SensorthingT>>}
+\class{NavigationLink}
+public abstract class NavigationLink<SensorthingT extends Sensorthing<SensorthingT>>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/NavigationLink.png}}
@@ -26,7 +28,9 @@ Methoden:
 
 %SingleNavigationLink
 \rule{\textwidth}{0.4pt}
-\class{SingleNavigationLink<SensorthingT extends Sensorthing<SensorthingT>>}
+\class{SingleNavigationLink}
+public abstract class SingleNavigationLink<SensorthingT extends Sensorthing<SensorthingT>> extends NavigationLink<SensorthingT>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/SingleNavigationLink.png}}
@@ -48,7 +52,9 @@ Methoden:
 
 %SingleLocalLink
 \rule{\textwidth}{0.4pt}
-\class{SingleLocalLink<SensorthingT extends Sensorthing<SensorthingT>> extends SingleNavigationLink<SensorthingT>}
+\class{SingleLocalLink}
+public class SingleLocalLink<SensorthingT extends Sensorthing<SensorthingT>> extends SingleNavigationLink<SensorthingT>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/SingleLocalLink.png}}
@@ -74,7 +80,9 @@ Methoden:
 
 %SingleOnlineLink
 \rule{\textwidth}{0.4pt}
-\class{SingleOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> extends SingleNavigationLink<SensorthingT>}
+\class{SingleOnlineLink}
+public class SingleOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> extends SingleNavigationLink<SensorthingT>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/SingleOnlineLink.png}}
@@ -103,7 +111,9 @@ Methoden:
 
 %MultiNavigationLink
 \rule{\textwidth}{0.4pt}
-\class{MultiNavigationLink<SensorthingT extends Sensorthing<SensorthingT>> extends NavigationLink<SensorthingT>}
+\class{MultiNavigationLink}
+public abstract class MultiNavigationLink<SensorthingT extends Sensorthing<SensorthingT>> extends NavigationLink<SensorthingT>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/MultiNavigationLink.png}}
@@ -124,7 +134,9 @@ Methoden:
 
 %MultiLocalLink
 \rule{\textwidth}{0.4pt}
-\class{MultiLocalLink<SensorthingT extends Sensorthing<SensorthingT>> extends MultiNavigationLink<SensorthingT>}
+\class{MultiLocalLink}
+public class MultiLocalLink<SensorthingT extends Sensorthing<SensorthingT>> extends MultiNavigationLink<SensorthingT>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/MultiLocalLink.png}}
@@ -147,7 +159,9 @@ Methoden:
 
 %MultiOnlineLink
 \rule{\textwidth}{0.4pt}
-\class{public class MultiOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> extends MultiNavigationLink<SensorthingT>}
+\class{MultiOnlineLink}
+public class MultiOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> extends MultiNavigationLink<SensorthingT>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/MultiOnlineLink.png}}

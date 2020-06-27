@@ -1,7 +1,9 @@
 %abstract classes%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sensorthing<SensorthingT> 
 \rule{\textwidth}{0.4pt}
-\class{Sensorthing<SensorthingT>}
+\class{Sensorthing}
+public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Sensorthing.png}}
@@ -29,6 +31,8 @@ Methoden: \begin{itemize}
 % SensorthingsProperties
 \rule{\textwidth}{0.4pt}
 \class{SensorthingsProperties}
+public interface SensorthingsProperties
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/SensorthingsProperties.png}}
@@ -50,6 +54,8 @@ Methoden: \begin{itemize}
 % SensorthingsTimeStamp
 \rule{\textwidth}{0.4pt}
 \class{SensorthingsTimeStamp}
+public interface SensorthingsTimeStamp
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/SensorthingsTimeStamp.png}}
@@ -74,7 +80,9 @@ Methoden: \begin{itemize}
 %Datastream
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{Datastream extends Sensorthing<Datastream> implements SensorthingsProperties}
+\class{Datastream}
+public class Datastream extends Sensorthing<Datastream> implements SensorthingsProperties
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Datastream.png}}
@@ -105,7 +113,9 @@ Methoden: \begin{itemize}
 %FeatureOfInterest
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{FeatureOfInterest extends Sensorthing<FeatureOfInterest>}
+\class{FeatureOfInterest}
+public class FeatureOfInterest extends Sensorthing<FeatureOfInterest>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/FeatureOfInterest.png}}
@@ -134,7 +144,9 @@ Methoden:
 %HistoricalLocation
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{HistoricalLocation extends Sensorthing<HistoricalLocation>}
+\class{HistoricalLocation}
+public class HistoricalLocation extends Sensorthing<HistoricalLocation> implements SensorthingsTimeStamp
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/HistoricalLocation.png}}
@@ -161,7 +173,9 @@ Methoden:
 %Location
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{Location extends Sensorthing<Location>}
+\class{Location}
+public class Location extends Sensorthing<Location>
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Location.png}}
@@ -190,7 +204,9 @@ Methoden:
 %Observation
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{Observation extends Sensorthing<Observation> implements SensorthingsTimeStamp}
+\class{Observation}
+public class Observation extends Sensorthing<Observation> implements SensorthingsTimeStamp
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Observation.png}}
@@ -219,7 +235,9 @@ Methoden:
 %ObservedProperty
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{ObservedProperty extends Sensorthing<ObservedProperty>}
+\class{ObservedProperty}
+public class ObservedProperty extends Sensorthing<ObservedProperty> implements SensorthingsProperties
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/ObservedProperty.png}}
@@ -248,7 +266,9 @@ Methoden:
 %Sensor
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{Sensor extends Sensorthing<Sensor> implements SensorthingsProperties}
+\class{Sensor}
+public class Sensor extends Sensorthing<Sensor> implements SensorthingsProperties
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Sensor.png}}
@@ -276,7 +296,9 @@ Methoden:
 %Thing
 %TODO: Fix class-table size
 \rule{\textwidth}{0.4pt}
-\class{Thing extends Sensorthing<Thing> implements SensorthingsProperties}
+\class{Thing}
+public class Thing extends Sensorthing<Thing> implements SensorthingsProperties
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/Thing.png}}
@@ -306,6 +328,8 @@ Methoden:
 %UnitOfMeasurement
 \rule{\textwidth}{0.4pt}
 \class{UnitOfMeasurement}
+public class UnitOfMeasurement
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/modell/classes/UnitOfMeasurement.png}}

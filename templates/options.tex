@@ -7,7 +7,7 @@
 %Commands
 \newcommand{\softwarename}{VisAQ }
 \newcommand{\longSoftwarename}{Visualizing Air Quality}
-\newcommand{\class}[1]{\paragraph{#1}\mbox{}\\\index{#1}}
+\newcommand{\class}[1]{\index{#1}\paragraph{#1}\mbox{}\\}
 
 %Commands for descriptions of often used methods and parameters
 \newcommand{\equalsDescription}[1]{Vergleicht zwei Elemente hinsichtlich der Gleichheit.
@@ -23,3 +23,7 @@ Die Methode wird von der Java-Klasse java.lang.Object deklariert und hier übers
 \newcommand{\singleLinkDescription}[1]{Ein SingleNavigationLink der auf ein Object des Typs #1 zeigt.}
 \newcommand{\sensorthingsClassDescription}[2]{Die Klasse #1 stellt einen Datensatz aus der #2-Tabelle der \gls{SensorThings API}.}
 \newcommand{\relativeDescription}{Die boolean relative sagt aus, ob der Link ein absoluter Link zur Datenbank ist, oder nur relativ zum in RestConstants gegebene Entry-Point liegt.}
+\newcommand{\mappingDescription}{Das Atribut MAPPING speichert den Einstiegspunkt der Webschnittstelle des Backends für diese Klasse.}
+\newcommand{\controllerDescription}[2]{Die Klasse #1 implementiert einen Controller für Sensorthings des Typs #2.}
+\newcommand{\extendsDescription}[1]{Geerbt von #1.}
+\newcommand{\extendsSensorthingController}{\extendsDescription{SensorthingController}}
