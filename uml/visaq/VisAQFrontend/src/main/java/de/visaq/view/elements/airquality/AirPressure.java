@@ -6,6 +6,9 @@ import java.awt.Color;
  * AirPressure provides the settings for the air pressure measurement observed by Sensors.
  */
 public class AirPressure extends AirQualityData {
+	private Color primaryColor;
+	private Color secondaryColor;
+	
     @Override
     public Color getPrimaryColor() {
         // TODO Auto-generated method stub

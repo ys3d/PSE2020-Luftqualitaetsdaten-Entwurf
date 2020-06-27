@@ -8,29 +8,19 @@ import java.awt.Color;
  */
 public abstract class AirQualityData {
 	
-	/**
-	 * Name of the Airqualitydata
-	 */
-    private final String NAME = "";
+	private Color primaryColor;
+	private Color secondaryColor;
+    public final String name = "";
     
     /**
      * Getter for the primary color to draw the interpolation and legend
-     * @return primary Color of the Airqualitydata used in interpolation and legend
+     * @return primary Color of the AirQualityData used in interpolation and legend
      */
     public abstract Color getPrimaryColor();
 
     /**
      * Getter for the secondary color to draw the interpolation and legend
-     * @return secondary Color of the Airqualitydata used in interpolation and legend
+     * @return secondary Color of the AirQualityData used in interpolation and legend
      */
     public abstract Color getSecondaryColor();
-
-    /**
-     * Getter for the Name of the Airqualitydata
-     * @return
-     */
-    public String getName() {
-        return NAME;
-    }
-
 }

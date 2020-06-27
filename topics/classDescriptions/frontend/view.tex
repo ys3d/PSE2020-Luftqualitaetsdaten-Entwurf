@@ -2,9 +2,9 @@
 
 
 
-\subsubsection{de.visaq.view}
+\rule{\textwidth}{0.4pt} \class{de.visaq.view}
 
-\subsubsection {Language}
+\rule{\textwidth}{0.4pt} \class {Language}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -30,7 +30,7 @@ Methoden:
     \item \emph{public Properties getLanguage()} Wird benutzt um die Sprach Properties zu erreichen
 \end{itemize}
 
-\subsubsection{InformationView}
+\rule{\textwidth}{0.4pt} \class{InformationView}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -39,7 +39,7 @@ Methoden:
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
 InformationView erstellt die View mit welcher die Benutzer ein hilfestellendes Overlay aktivieren können um so leichter 
-die Website zu navigieren.
+die Webapplikation zu navigieren.
 \end{minipage}
 
 Methoden:
@@ -49,7 +49,7 @@ Methoden:
     \item \emph{public void setIcon(Icon icon)} Setzt das Icon für die InformationView, bei welchem es sich um ein Icon aus der Bibliothek \gls{Leaflet} handelt.
 \end{itemize}
 
-\subsubsection{MapView}
+\rule{\textwidth}{0.4pt} \class{MapView}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -57,19 +57,19 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-MapView erstellt die View für die Karte indem das MapOverlay angezeigt wird. Die Klasse erbt von View und implementiert NavbarObserver und ToolbarObserver.
+MapView erstellt die View für die Karte indem das MapOverlay angezeigt wird. Die Klasse erbt von View und implementiert NavbarObserver.
 \end{minipage}
 
 Attribute:
 \begin{itemize} 
-    \item \emph{public final Map map} Die auf der Website angezeigte Karte
+    \item \emph{public final Map map} Die auf der Webapplikation angezeigte Karte
     \item \emph{ArrayList<OverlayFactory> overlayFactories} Eine ArrayList welche alle OverlayFactories beinhaltet
     \item \emph{boolean expertView} Ein boolean welcher benutzt wird um zu entscheiden ob expertView von dem Benutzer aktiviert wurde oder nicht
 \end{itemize} 
 Methoden:
 \begin{itemize} 
     \item \emph{public MapView(Map map)} Ein Kosntruktor welcher die Karte setzt.
-    \item \emph{public void show()} Zeigt die Karte und Legende.
+    \item \emph{public void show()} Zeigt die Karte und Legende in der Webapplikation in dem Browser des Benutzers
     \item \emph{public void showTimeline()} Zeigt die Historischen Daten und den Regeler für die Timeline
     \item \emph{public void airqualityDataQuery(AirQualityData airQualityData)} Eine Abfrage die abfragt was die aktuelle Luftqualitätsdata ist und erstellt dazu die passende Legende. 
     \item \emph{public void mapDataQuery(JSONObject coordinates)} Aktiviert wenn der Benutzer einen Punkt auf der Karte oder einen Sensor auf der Karte auswählt. Hier wird die Sidebar mit den unterschiedlichen Informationen angezeigt.
@@ -78,7 +78,7 @@ Methoden:
     boolean expertView, ExpertViewFilter expertViewFilter)} Updaten der Navigationbar falls der Benutzer etwas an den Einstellungen ändert.
 \end{itemize} 
 
-\subsubsection{NavbarObserver}
+\rule{\textwidth}{0.4pt} \class{NavbarObserver}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -95,7 +95,7 @@ Methoden:
     boolean expertView, ExpertViewFilter expertViewFilter)} Updaten der Navigationbar falls der Benutzer etwas an den Einstellungen ändert.
 \end{itemize}
 
-\subsubsection{ObservedNavbarSubject}
+\rule{\textwidth}{0.4pt} \class{ObservedNavbarSubject}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -113,25 +113,7 @@ Methoden:
     \item \emph{public void notifyObserver()} Informiert den Observer über Änderungen
 \end{itemize}
 
-\subsubsection{ObservedToolbarSubject}
-\begin{minipage}{0.3\textwidth}
-    \begin{figure}[H]
-        \includegraphics[scale = 0.5
-        ]{media/frontend/view/ObserverdToolbarSubject_Class.png}
-    \end{figure}
-    \end{minipage} \hfill
-    \begin{minipage}{0.6\textwidth}
-Ein Interface für das von dem ToolbarObserver beobachtete Subjekt, welches den Observer über Änderungen informiert.
-\end{minipage}
-
-Methoden:
-\begin{itemize} 
-    \item \emph{public void attach(ToolbarObserver toolbarObserver)} Erstellt eine Verbindung zwischen dem Observer und Subjekt her
-    \item \emph{public void detach(ToolbarObserver toolbarObserver)} Entfernt die Verbindung zwischen dem Observer und Subjekt
-    \item \emph{public void notifyObserver()} Informiert den Observer über Änderungen
-\end{itemize}
-
-\subsubsection{View}
+\rule{\textwidth}{0.4pt} \class{View}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -139,15 +121,15 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Eine abstrakte Klasse welche regelt wie die Website für den Benutzer dargestellt wird. Das beinhaltet die unterschiedlichen Sprachen und die ColorTheme.
+Eine abstrakte Klasse welche regelt wie die Webapplikation für den Benutzer dargestellt wird. Das beinhaltet die unterschiedlichen Sprachen und die ColorTheme.
 \end{minipage}
 
 Methoden:
 \begin{itemize} 
-    \item \emph{public void show()} Zeigt die Website an
+    \item \emph{public void show()} Zeigt die unterschiedlichen Sektionen der Webapplikation
 \end{itemize}
 
-\subsubsection{VisAQ}
+\rule{\textwidth}{0.4pt} \class{VisAQ}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -155,17 +137,17 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Die Main Klasse der Anwendung. Hier ist der Einstieg in die Anwendung, welcher die Eingaben des Benutzers weitergibt und die View öffnet. Dies erfolgt über das Springframework.
+Die Main Klasse der Anwendung. Hier ist der Einstieg in die Anwendung, welcher die Eingaben des Benutzers weitergibt und die View öffnet. Dies erfolgt über das \gls{Angular-4-Candy} von jsweet.
 \end{minipage}
 
 Methoden:
 \begin{itemize} 
-    \item \emph{public static void main(String[] args)} Die main Methode der Anwendung.
+    \item \emph{public static void main(String[] args)} Die main Methode der Anwendung. Hier startet die Webapplikation.
 \end{itemize} 
 
 \subsection{de.view.elements}
 
-\subsubsection{CookieNotice}
+\rule{\textwidth}{0.4pt} \class{CookieNotice}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -178,20 +160,19 @@ Popup, welches den Benutzer darüber informiert, dass VisAQ Cookies nach dem EU 
 
 Attribute:
 \begin{itemize} 
-    \item \emph{CookieController cookieController} Ein neuer CookieController
-    \item \emph{public final boolean acceptance} Ein boolean Attribut, welches verwendet wird um zu entscheiden ob der Benutzer die Cookies akzeptiert oder nicht
+    \item \emph{public final boolean acceptance} Ein boolean Attribut, welches verwendet wird um zu entscheiden ob der Benutzer die Cookies akzeptiert oder nicht. Ist der boolean positiv, so werden die Einstellungen auf der Seite des Clients gespeichert.
 \end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public CookieNotice()} Konstruktor für die CookieNotice
-    \item \emph{public popup()} Das Pupup Fenster welches beim laden der Website die CookieNotice anzeigt und dem Benutzer erlaubt die Cookies zu akzeptieren
-    \item \emph{public void accept(boolean acceptance)} Gibt dem CookieController weiter, dass der Benutzer die Cookies akzeptiert oder nicht
+    \item \emph{public CookieNotice()} Konstruktor für die CookieNotice 
+    \item \emph{public popup()} Das Pupup Fenster welches beim laden der Webapplikation die CookieNotice anzeigt und dem Benutzer erlaubt die Cookies zu akzeptieren
+    \item \emph{public void accept(boolean acceptance)} Speichert die Benutzerdaten des Benutzers auf desen Endgerät
 \end{itemize}
 
 
 \subsection{de.view.elements.airquality}
 
-\subsubsection{AirQualityData}
+\rule{\textwidth}{0.4pt} \class{AirQualityData}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -204,15 +185,15 @@ Objekt welches dafür verwendet wird die unterschiedlichen Farbschemata für die
 
 Attribute:
 \begin{itemize} 
-    \item \emph{public static final String NAME} The name of the AirQualityData
+    \item \emph{public static final String name} Der Name der angezeigten Luftqualitätsdata in der Navigationsbar
 \end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public abstract Color getPrimaryColor()} The primary color that is used in order to create the gradient in the legend
-    \item \emph{public abstract Color getSecondaryColor()} The secondary color that is used in order to create the gradient in that legend
+    \item \emph{public abstract Color getPrimaryColor()} Die Primärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
+	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 \end{itemize}
 
-\subsubsection{ParticulateMatter}
+\rule{\textwidth}{0.4pt} \class{ParticulateMatter}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -229,7 +210,7 @@ Methoden:
 	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 \end{itemize}
 
-\subsubsection{Temperature}
+\rule{\textwidth}{0.4pt} \class{Temperature}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -246,7 +227,7 @@ Methoden:
 	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 \end{itemize}
 
-\subsubsection{Humidity}
+\rule{\textwidth}{0.4pt} \class{Humidity}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -263,7 +244,7 @@ Methoden:
 	\item \emph{public abstract Color getSecondaryColor()} Die Sekundärfarbe welche dafür verwendet wird um den Farbverlauf in der Legende zu erstellen.
 \end{itemize}
 
-\subsubsection{AirPressure}
+\rule{\textwidth}{0.4pt} \class{AirPressure}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -283,7 +264,7 @@ Methoden:
 
 \subsection{de.view.elements.diagram}
 
-\subsubsection{Diagram}
+\rule{\textwidth}{0.4pt} \class{Diagram}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -291,16 +272,16 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Das Diagram Interface erstellt das Diagramm für die SensorOverview. Es handelt sich hierbei um ein Interface
+Das Diagram Interface erstellt das Diagramm für die SensorOverview. Das Diagramm zeigt für einen von dem Benutzer ausgewählten Zeitraum die historischen Werte der ausgewählten Luftqualitätsdata.
 \end{minipage}
 
 Methoden:
 \begin{itemize} 
-    \item \emph{public void showDiagram()} Zeigt Diagram an
-    \item \emph{public void drawDiagram()} Zeichnet das Diagramm
+    \item \emph{public void showDiagram()} Zeigt das Diagram in der SensorOverview an
+    \item \emph{public void drawDiagram()} Zeichnet das Diagramm für die SensorOverview
 \end{itemize}
 
-\subsubsection{BarDiagram}
+\rule{\textwidth}{0.4pt} \class{BarDiagram}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -308,7 +289,7 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-BarDiagram erstellt ein Balkendiagramm für Diagram und implementiert dieses.
+BarDiagram implementiert die Methoden aus dem Interface Diagramm und erstellt ein Diagramm von dem Typ Balkendiagramm.
 \end{minipage}
 
 Attribute:
@@ -319,12 +300,12 @@ Attribute:
 \end{itemize}   
 Methoden:
 \begin{itemize}      
-    \item \emph{public BarDiagram(JSONObject data, String start, String end)} Der Konstruktor für das Balkendiagramm, welcher mit dem JSONObject und dem Start und dem Ende initialisiert wird
-    \item \emph{public void showDiagram()} Zeigt Diagram an
-    \item \emph{public void drawDiagram()} Zeichnet das Diagramm
+    \item \emph{public BarDiagram(JSONObject data, String start, String end)} Der Konstruktor für das Balkendiagramm
+    \item \emph{public void showDiagram()} Zeigt das Diagram in der SensorOverview an
+    \item \emph{public void drawDiagram()} Zeichnet das Diagramm für die SensorOverview
 \end{itemize}
 
-\subsubsection{LineDiagram}
+\rule{\textwidth}{0.4pt} \class{LineDiagram}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -332,7 +313,7 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-BarDiagram erstellt ein Liniendiagramm für Diagram und implementiert dieses.
+LineDiagram implementiert die Methoden aus dem Interface Diagramm und erstellt ein Diagramm von dem Typ Liniendiagramm.
 \end{minipage}
 
 Attribute:
@@ -343,14 +324,14 @@ Attribute:
 \end{itemize}   
 Methoden:
 \begin{itemize}      
-    \item \emph{public BarDiagram(JSONObject data, String start, String end)} Der Konstruktor für das Balkendiagramm, welcher mit dem JSONObject und dem Start und dem Ende initialisiert wird
-    \item \emph{public void showDiagram()} Zeigt Diagram an
-    \item \emph{public void drawDiagram()} Zeichnet das Diagramm
+    \item \emph{public BarDiagram(JSONObject data, String start, String end)} Der Konstruktor für das Balkendiagramm
+    \item \emph{public void showDiagram()} Zeigt das Diagram in der SensorOverview an
+    \item \emph{public void drawDiagram()} Zeichnet das Diagramm für die SensorOverview
 \end{itemize}
 
 \subsection{de.view.elements.map}
 
-\subsubsection{Legend}
+\rule{\textwidth}{0.4pt} \class{Legend}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -367,11 +348,11 @@ Attribute:
 \end{itemize} 
 Methoden:
 \begin{itemize}     
-    \item \emph{public Legend(AirQualityData airQualityData)} Konstruktor für die Legende für die ausgewählte Luftqualitätsdata
-    \item \emph{public void show()} Zeigt die aktuelle Legende an
+    \item \emph{public Legend(AirQualityData airQualityData)} Konstruktor für die Legende mit den ausgewählten Luftqualitätsdata
+    \item \emph{public void show()} Zeigt eine Legende für die Interpolationswerte auf der Karte an. Aktualisiert sich, wenn der Benutzer in der Navigationsbar eine andere Luftqualitätsdata aussucht.
 \end{itemize}
 
-\subsubsection{SensorOverview}
+\rule{\textwidth}{0.4pt} \class{SensorOverview}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -397,7 +378,7 @@ Methoden:
 
 \subsection{de.view.elements.navbar}
 
-\subsubsection{ExpertViewFilter}
+\rule{\textwidth}{0.4pt} \class{ExpertViewFilter}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -410,12 +391,12 @@ ExpertViewFilter ist eine Erweiterung für erfahrene Benutzer, welche bei Aktivi
 
 Methoden:
 \begin{itemize} 
-    \item \emph{public void show()} Zeigt die Möglichkeit an, an welcher man den Experten Modus an beziehungsweise ausmachen kann.
+    \item \emph{public void show()} Zeigt die Möglichkeit in der Toolbar an in welcher man den Experten Modus an beziehungsweise ausmachen kann. Bei Aktivierung des Moduses aktualisiert sich die Navigationsbar und fügt die Funktion hinzu mit welcher spezifische Sensortypen gewählt werden können.
     \item \emph{public void setSelectedSensors(ArrayList<?> selectedSensorTypes)} Setzt die von dem Benutzer ausgewählten Sensortypen
-    \item \emph{public ArrayList<?> getSelectedSensors()} Gibt die ausgewählten SensorTypen weiter.
+    \item \emph{public ArrayList<?> getSelectedSensors()} Gibt die ausgewählten SensorTypen als ArrayList weiter.
 \end{itemize}
 
-\subsubsection{Navbar}
+\rule{\textwidth}{0.4pt} \class{Navbar}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -428,7 +409,7 @@ Die Navbar zeigt die Navigationsbar und erlaubt es dem Benutzer auf die Hilfe, S
 
 Attribute:
 \begin{itemize} 
-    \item \emph{public final AirQualityData[] airQualityDatas} Die vier auf der Website angezeigten Luftqualitätsdaten werden hier gespeichert um leichter angezeigt werden zu können
+    \item \emph{public final AirQualityData[] airQualityDatas} Die vier auf der Webapplikation angezeigten Luftqualitätsdaten werden hier gespeichert um leichter angezeigt werden zu können
     \item \emph{public final InformationView informationView} Die InformationView wird angezeigt sobald der Benutzer das Hilfeoverlay in der Navbar aktiviert.
     \item \emph{public final Toolbar toolbar} Die Toolbar, welche durch den Benutzer geöffnet werden kann.
     \item \emph{public final SearchBar searchbar} Die Suchleiste in welche der Benutzer entweder Stadt, oder Postleitzahlen eingeben kann und somit die KArte an die richtige Stelle heranzoomt.
@@ -448,10 +429,10 @@ Methoden:
     \item \emph{public void setCurrentAirQualityData(AirQualityData currentAirQualityData)} Setzt die aktuelle Luftqualitätsdata
     \item \emph{public void attach(NavbarObserver navbarObserver)} Fügt einen Navigationsbar Observer hinzu
     \item \emph{public void detach(NavbarObserver navbarObserver)} Entfernt einen Navigationsbar Observer.
-    \item \emph{public void notifyObserver()} Gibt dem Observer weiter was in der Navigationbar passiert.
+    \item \emph{public void notifyObserver()} Gibt dem Observer weiter was in der Navigationbar passiert, wodurch die Suchleiste und die Karte aktualisiert wird.
 \end{itemize}
 
-\subsubsection{SearchBar}
+\rule{\textwidth}{0.4pt} \class{SearchBar}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -465,14 +446,14 @@ Suchleiste die der Benutzer benutzen kann um nach bestimmten Städten oder Postl
 Methoden:
 \begin{itemize} 
     \item \emph{public Seachbar()} Konstruktor für die Suchleiste.
-    \item \emph{public void show()} 
+    \item \emph{public void show()} Zeigt die Suchleiste in der Navigationsbar.
     \item \emph{public String getInput()} Gibt den Benutzer input weiter und erlaubt die weitere Benutzung dieser.
-    \item \emph{public void setInput(String input)} Setzt den Suchleisten input
+    \item \emph{public void setInput(String input)} Setzt den Suchleisten input.
 \end{itemize}
 
 \subsection{de.view.elements.toolbar}
 
-\subsubsection{Timeline}
+\rule{\textwidth}{0.4pt} \class{Timeline}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -485,11 +466,11 @@ Die Timeline ist ein Regulator welcher aufgerufen werden kann und die historisch
 
 Methoden:
 \begin{itemize} 
-    \item \emph{public void show()}
+    \item \emph{public void show()} Zeigt die historischen Daten mithilfe eines Regulators an 
     \item \emph{public void update()} Aktualisiert das Overlay je nach ausgewählten historischen Daten.
 \end{itemize}
 
-\subsubsection{Toolbar}
+\rule{\textwidth}{0.4pt} \class{Toolbar}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -504,12 +485,9 @@ Methoden:
 \begin{itemize} 
     \item \emph{public Toolbar()} Konstruktor für die Toolbar
     \item \emph{public void show()} Zeigt die Toolbar
-    \item \emph{public void attach(ToolbarObserver toolbarObserver)}
-    \item \emph{public void detach(ToolbarObserver toolbarObserver)}
-    \item \emph{public void notifyObserver()}
 \end{itemize}
 
-\subsubsection{NavbarElement}
+\rule{\textwidth}{0.4pt} \class{NavbarElement}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -527,7 +505,7 @@ Methoden:
 
 \subsection{de.view.overlay.factory}
 
-\subsubsection{OverlayFactory}
+\rule{\textwidth}{0.4pt} \class{OverlayFactory}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -543,7 +521,7 @@ Methoden:
     \item \emph{public Layer build(AirQualityData airquality,  Datastream datastream)}  Baut einen Overlay mithilfe von der aktuellen Luftqualitätsdata
 \end{itemize}
 
-\subsubsection{InterpolationOverlayFactory}
+\rule{\textwidth}{0.4pt} \class{InterpolationOverlayFactory}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -558,7 +536,7 @@ Methoden:
 \begin{itemize} 
     \item \emph{public Layer build(AirQualityData airquality,  Datastream datastream)} Baut einen Overlay mithilfe von der aktuellen Luftqualitätsdata
 
-\subsubsection{SensorOverlayFactory}
+\rule{\textwidth}{0.4pt} \class{SensorOverlayFactory}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -574,7 +552,7 @@ Methoden:
     \item \emph{public Layer build(AirQualityData airquality,  Datastream datastream)} Baut einen Overlay mithilfe von der aktuellen Luftqualitätsdata
 \end{itemize}
 
-\subsubsection{OverlayBuilder}
+\rule{\textwidth}{0.4pt} \class{OverlayBuilder}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -595,7 +573,7 @@ Methoden:
 
 \subsection{de.view.elements.theme}
 
-\subsubsection{ColorTheme}
+\rule{\textwidth}{0.4pt} \class{ColorTheme}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -603,21 +581,21 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-ColorTheme ist eine Funktion mit welcher der Benutzer die Farben wechseln kann in welchen die Schnittstelle dargestellt wird. Die Klasse wurde nach einem Singelton Entwurfsmuster designt
+ColorTheme ist eine Funktion mit welcher der Benutzer die Farben wechseln kann in welchen die Schnittstelle dargestellt wird. Die Klasse wurde nach einem Singelton Entwurfsmuster entworfen.
 \end{minipage}
 
 Methoden:
 \begin{itemize} 
     \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
-    \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
-    \item \emph{public static synchronized void setInstance(ColorTheme colorTheme)} Setzt die aktuelle ColorTheme Instanz
-    \item \emph{public abstract Color getPrimaryColor()} Gibt einen Wert von dem Typ Color zurück
-    \item \emph{public abstract Color getSecondaryColor()} Gibt einen Wert von dem Typ Color zurück
-    \item \emph{public abstract Gradient getPrimarySkala()} Gibt einen Wert von dem Typ Gradient zurück
-    \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
+    \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück, welcher synchronisiert wurde.
+    \item \emph{public static synchronized void setInstance(ColorTheme colorTheme)} Setzt die aktuelle ColorTheme Instanz für die ganze Webapplikation
+    \item \emph{public abstract Color getPrimaryColor()} Gibt einen Wert von dem Typ Color zurück welcher in der Legende und dem Interpolierten Overlay angezeigt wird
+    \item \emph{public abstract Color getSecondaryColor()} Gibt einen Wert von dem Typ Color zurück welcher in der Legende und dem Interpolierten Overlay angezeigt wird
+    \item \emph{public abstract Gradient getPrimarySkala()} Gibt einen Wert von dem Typ Gradient zurück welcher in der Legende und dem Interpolierten Overlay angezeigt wird
+    \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück welcher in der Legende und dem Interpolierten Overlay angezeigt wird
 \end{itemize}
 
-\subsubsection{DarkTheme}
+\rule{\textwidth}{0.4pt} \class{DarkTheme}
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5
@@ -625,7 +603,7 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-       Ein dunkleres Farbschema für die Visualisierung der Website.
+       Ein dunkleres Farbschema für die Visualisierung der Webapplikation.
     \end{minipage}
 
 Methoden:
@@ -639,7 +617,7 @@ Methoden:
     \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
 \end{itemize}
 
-\subsubsection{LightTheme}
+\rule{\textwidth}{0.4pt} \class{LightTheme}
 
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
@@ -648,7 +626,7 @@ Methoden:
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-        Ein helleres Farbschema für die Visualisierung der Website. Diese wird bei einem Erstbesuch als Standardschema geladen.
+        Ein helleres Farbschema für die Visualisierung der Webapplikation. Diese wird bei einem Erstbesuch als Standardschema geladen.
     \end{minipage}
 
 Methoden:
@@ -662,7 +640,7 @@ Methoden:
     \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
 \end{itemize}
 
-\subsubsection{ColorBlindTheme}
+\rule{\textwidth}{0.4pt} \class{ColorBlindTheme}
 \begin{minipage}{0.3\textwidth}
 \begin{figure}[H]
     \includegraphics[scale = 0.5
@@ -670,7 +648,7 @@ Methoden:
 \end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-    Ein Farbblindenschema für die Visualisierung der Website. In diesem Fall speziell für eine Rot-Grün Sehschwäche.
+    Ein Farbblindenschema für die Visualisierung der Webapplikation. In diesem Fall speziell für eine Rot-Grün Sehschwäche.
 \end{minipage}
 
 Methoden:
@@ -684,7 +662,7 @@ Methoden:
     \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
 \end{itemize}
 
-\subsubsection{Gradient} 
+\rule{\textwidth}{0.4pt} \class{Gradient} 
 \begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
     \includegraphics[scale = 0.5
@@ -702,6 +680,6 @@ Methoden:
 \end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public Gradient(Color first, Color second)} Konstruktor, welcher mithilfe der Primärfarbe und Sekundärfarbe den Farbverlauf erstellt.
+    \item \emph{public Gradient(Color first, Color second)} Konstruktor, welcher die Typen initialisiert
     \item \emph{public Color get(float at)} Gibt eine Farbe zurück, welche zwischen * 100 Prozent der Primärfarbe und Sekundärfarbe liegt und mithilfe von linearer Interpolation.
 \end{itemize}

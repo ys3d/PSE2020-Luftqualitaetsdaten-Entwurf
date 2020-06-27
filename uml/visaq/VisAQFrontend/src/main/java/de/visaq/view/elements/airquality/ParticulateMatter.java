@@ -8,6 +8,10 @@ import java.awt.Color;
  * Sensors.
  */
 public class ParticulateMatter extends AirQualityData {
+	
+	private Color primaryColor;
+	private Color secondaryColor;
+	
     @Override
     public Color getPrimaryColor() {
         // TODO Auto-generated method stub

@@ -7,6 +7,9 @@ import java.awt.Color;
  * Humidity provides the settings for the humidity measurement observed by Sensors.
  */
 public class Humidity extends AirQualityData {
+	private Color primaryColor;
+	private Color secondaryColor;
+	
     @Override
     public Color getPrimaryColor() {
         // TODO Auto-generated method stub
