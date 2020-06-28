@@ -1,4 +1,64 @@
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+
 %Entwurfdaten
 \section{Entwurfdaten}
+In diesem Kapitel werden die von \softwarename benötigten Daten aufgeführt.
+
 \subsection{Ressourcen-Verzeichnis}
+Da es sich bei \softwarename um eine Webanwendung handelt, werden im Folgenden die Ressourcen in Backend und Frontend aufgeschlüsselt.
+Ressourcen, die nur zu Testzwecken benötigt werden, sind dabei die Kinder einer rot hinterlegten Test-Directory. Wird die Ressource für erweiterte Funktionen benötigt, so ist sie grau hinterlegt.
+
+\subsubsection{Backend Ressourcen}
+\begin{tikzpicture}[%
+        grow via three points={one child at (0.5,-0.7) and
+                two children at (0.5,-0.7) and (0.5,-1.4)},
+        edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node [selected] {test}
+    child { node {resources}
+            child { node {alive\_datastream.json}}
+            child { node {alive\_featureofinterest.json}}
+            child { node {alive\_historicallocation.json}}
+            child { node {alive\_location.json}}
+            child { node {alive\_observation.json}}
+            child { node {alive\_observedproperty.json}}
+            child { node {alive\_sensor.json}}
+            child { node {alive\_thing.json}}
+        };
+\end{tikzpicture}
+
+\subsubsection{Frontend Ressourcen}
+\begin{tikzpicture}[%
+        grow via three points={one child at (0.5,-0.7) and
+                two children at (0.5,-0.7) and (0.5,-1.4)},
+        edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {main}
+    child { node {resources}
+            child { node {language}
+                    child { node {de\_DE.properties}}
+                    child { node [optional] {en\_EN.properties}}
+                }
+            child [missing] {}
+            child [missing] {}
+            child { node {icon}
+                    child { node {flag}
+                            child { node {de\_DE\_flag.svg}}
+                            child { node [optional] {en\_EN\_flag.svg}}
+                        }
+                    child [missing] {}
+                    child [missing] {}
+                    child { node {\softwarename\_logo.svg}}
+                }
+        };
+\end{tikzpicture}
+
 \subsection{Dateneinträge}
+Im Frontend werden clientseitig lediglich die \glspl{Cookie} in Form von Dateien auf dem Computer gespeichert.
+Die folgenden Cookies werden dabei benötigt:
+\begin{itemize}
+    \item \gls{CookieNotice}-\gls{Cookie}: Wurde die \gls{CookieNotice} akzeptiert?
+    \item \glspl{Cookie} zur Speicherung des Kartenausschnitts bei Verlassen
+    \item \glspl{Cookie} zur Speicherung des Betriebsmodus bei Verlassen
+\end{itemize}
+Das Backend legt hingegen keine Dateien an und verwendet ausschließlich die \gls{SensorThings API} zum Instanziieren der Models.

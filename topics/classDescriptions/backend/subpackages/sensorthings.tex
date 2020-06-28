@@ -1,5 +1,5 @@
 %abstract classes%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Sensorthing<SensorthingT> 
+% Sensorthing<SensorthingT>
 \rule{\textwidth}{0.4pt}
 \class{Sensorthing}
 public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>>
@@ -12,7 +12,7 @@ public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>
     \begin{minipage}{0.6\textwidth}
 Die abstrakte Klasse Sensorthing stellt ein Objekt aus der \gls{SensorThings API} da.
 Die Klasse vereint die gemeinsamen Eigenschaften der Klassen aus der Datenbank-\gls{API} in sich.
-Um die Datentypen der Parameter möglichst exakt zu bestimmen werden \glspl{bounded quantification} verwendet.
+Um die Datentypen der Parameter möglichst exakt zu bestimmen werden \glspl{Bounded Quantification} verwendet.
 \end{minipage}
 
 Attribute:
@@ -252,7 +252,7 @@ Attribute:
 \begin{itemize}
     \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank.
     \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank.
-    \item \emph{public final String definition} Eine formale definition des ObservedPropertys 
+    \item \emph{public final String definition} Eine formale definition des ObservedPropertys
     \item \emph{public final Map<String, Object> properties} Die Eigenschaften des ObservedPropertys werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map.
     \item \emph{public final MultiNavigationLink<Datastream> datastreamsLink} \multiLinkDescription{Datastream}
 \end{itemize}
