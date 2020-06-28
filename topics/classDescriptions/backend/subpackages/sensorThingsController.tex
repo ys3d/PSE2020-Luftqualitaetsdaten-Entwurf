@@ -18,19 +18,19 @@ Methoden:
     \item \emph{public SensorthingController()}
     \constructorDescription{SensorthingController}
     \item \emph{public abstract ArrayList<SensorthingT> getAll()}
-    Gibt alle Objekte entsprechenden Typs zurück, die in der Datenbank enthalten sind.
+    Gibt alle Objekte entsprechenden Typs zurück, die in der Datenbank enthalten sind
     \item \emph{public ArrayList<SensorthingT> get(MultiNavigationLink<SensorthingT> navigationLink)}
-    Gibt alle Sensorthings zurück, die durch den MultiNavigationLink gegeben sind.
+    Gibt alle Sensorthings zurück, die durch den MultiNavigationLink gegeben sind
     \item \emph{public Sensorthing<SensorthingT> get(SingleNavigationLink<SensorthingT> navigationLink)}
-    Gibt das Sensorthing zurück, das durch den SingleNavigationLink gegeben ist.
+    Gibt das Sensorthing zurück, das durch den SingleNavigationLink gegeben ist
     \item \emph{public abstract SensorthingT get(String id)}
-    Gibt das Sensorthing zurück, das durch unter der gegebenen id in der Datenbank abgelegt ist.
+    Gibt das Sensorthing zurück, das durch unter der gegebenen id in der Datenbank abgelegt ist
     \item \emph{public ArrayList<SensorthingT> multiBuild(JSONObject json)}
     Baut alle in dem gegebenen JSONObject enthaltenen Sensorthings und gibt diese zurück.
-    Falls das JSONObject nicht zu dem entsprechenden Sensorthing umgewandelt werden kann, wird null zurück gegeben.
+    Falls das JSONObject nicht zu dem entsprechenden Sensorthing umgewandelt werden kann, wird null zurückgegeben
     \item \emph{public abstract SensorthingT singleBuild(JSONObject json)}
-    Baut das als JSONObject übergebene Sensorthing
-    Falls das JSONObject nicht zu dem entsprechenden Sensorthing umgewandelt werden kann, wird null zurück gegeben.
+    Baut das als JSONObject übergebene Sensorthing.
+    Falls das JSONObject nicht zu dem entsprechenden Sensorthing umgewandelt werden kann, wird null zurückgegeben
 \end{itemize}
 
 %DatastreamController
@@ -58,13 +58,13 @@ Methoden:
     \item \emph{public ArrayList<Datastream> getAll()}
     \extendsSensorthingController
     \item \emph{public ArrayList<Datastream> getAll(Thing thing)}
-    Gibt alle Datastream Objekte zurück, die im gegebenen Thing enthalten sind.
+    Gibt alle Datastream Objekte zurück, die im gegebenen Thing enthalten sind
     \item \emph{public ArrayList<Datastream> getAll(Sensor sensor)}
-    Gibt alle Datastream Objekte zurück, die im gegebenen Sensor enthalten sind.
+    Gibt alle Datastream Objekte zurück, die im gegebenen Sensor enthalten sind
     \item \emph{public Datastream get(Thing thing, ObservedProperty observedProperty)}
-    Gibt alle Datastream Objekte zurück, die vom gegebenen Thing mit dem gegebenen ObservedProperty existieren.
+    Gibt alle Datastream Objekte zurück, die vom gegebenen Thing mit der gegebenen ObservedProperty existieren
     \item \emph{public Datastream get(Sensor sensor, ObservedProperty observedProperty)}
-    Gibt alle Datastream Objekte zurück, die vom gegebenen Sensor mit dem gegebenen ObservedProperty existieren.
+    Gibt alle Datastream Objekte zurück, die vom gegebenen Sensor mit der gegebenen ObservedProperty existieren
     \item \emph{public Datastream get(String id)}
     \extendsSensorthingController
     \item \emph{public Datastream singleBuild(JSONObject json)}
@@ -101,7 +101,7 @@ Methoden:
     \extendsSensorthingController
     \item \emph{public Point getLocationPoint(FeatureOfInterest foi)}
     Gibt einen Ort zurück, der als feature im gegebene FeatureOfInterest enthalten ist.
-    Falls keine Ortsangabe existiert wird null zurück gegeben.
+    Falls keine Ortsangabe existiert, wird null zurückgegeben
 \end{itemize}
 
 %HistoricalLocationController
@@ -228,7 +228,7 @@ Methoden:
     \item \emph{public ObservedProperty singleBuild(JSONObject json)}
     \extendsSensorthingController
     \item \emph{public ObservedProperty get(Datastream datastream)}
-    Gibt alle das ObservedProperty des gegebenen Datastreams zurück.
+    Gibt alle das ObservedProperty des gegebenen Datastreams zurück
 \end{itemize}
 
 %SensorController
@@ -260,9 +260,9 @@ Methoden:
     \item \emph{public Sensor singleBuild(JSONObject json)}
     \extendsSensorthingController
     \item \emph{public ArrayList<Sensor> getAll(Thing thing)}
-    Gibt alle das Sensoren zum gegebenen Thing zurück.
+    Gibt alle das Sensoren zum gegebenen Thing zurück
     \item \emph{public Sensor get(Datastream datastream)}
-    Gibt den Sensor zum gegebenen Datastream zurück.
+    Gibt den Sensor zum gegebenen Datastream zurück
 \end{itemize}
 
 %ThingController
@@ -294,7 +294,7 @@ Methoden:
     \item \emph{public Thing singleBuild(JSONObject json)}
     \extendsSensorthingController
     \item \emph{public ArrayList<Thing> getAll(Envelope envelope)}
-    Gibt alle Things in einem eingeschränkten geographischen Bereich da.
+    Gibt alle Things in einem eingeschränkten geographischen Bereich da
 \end{itemize}
 
 %UtilityController
@@ -315,16 +315,16 @@ Methoden:
 \begin{itemize}
     \item \emph{public UtilityController()}
     \constructorDescription{UtilityController}
-    Der private Konstruktor führt dazu das die Klasse nicht instanziiert werden kann.
+    Der private Konstruktor führt dazu das die Klasse nicht instanziiert werden kann
     \item \emph{public static UnitOfMeasurement buildUnitOfMeasurement(JSONObject json)}
-    Diese Methode baut eine Maßeinheit aus einem JSONObject. Falls das JSONObject nicht als UnitOfMeasurement interpretiert werden kann wird null zurück gegeben.
+    Diese Methode baut eine Maßeinheit aus einem JSONObject. Falls das JSONObject nicht als UnitOfMeasurement interpretiert werden kann wird null zurückgegeben
     \item \emph{public static Instant buildTime(JSONObject json, String key)}
     Diese Methode baut einen Zeitpunkt als Instant aus dem Inhalt des JSONObject. Der Zeitpunkt muss unter dem key im JSONObject gefunden werden können.
-    Wenn keine Instant erstellt werden kann wird null zurück gegeben.
+    Wenn keine Instant erstellt werden kann wird null zurückgegeben
     \item \emph{public static Point buildLocationPoint(JSONObject json)}
-    Die Methode baut einen Punkt aus dem gegebenen JSONObject.
+    Die Methode baut einen Punkt aus dem gegebenen JSONObject
     \item \emph{public static Map<String, Object> buildProperties(JSONObject json)}
-    Die Methode baut die im JSONObject gegebenen properties.
+    Die Methode baut die im JSONObject gegebenen properties
     \item \emph{public static JSONObject removeArrayWrapper(JSONObject json)}
-    Die Methode entfernt unnötige Verschachtelungen im JSONObject 
+    Die Methode entfernt unnötige Verschachtelungen im JSONObject
 \end{itemize}

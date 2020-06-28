@@ -11,7 +11,7 @@ public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>
     \begin{minipage}{0.6\textwidth}
 Die abstrakte Klasse Sensorthing stellt ein Objekt aus der \gls{SensorThings API} da.
 Die Klasse vereint die gemeinsamen Eigenschaften der Klassen aus der Datenbank-\gls{API} in sich.
-Um die Datentypen der Parameter möglichst exakt zu bestimmen werden \glspl{Bounded Quantification} verwendet.
+Um die Datentypen der Parameter möglichst exakt zu bestimmen, werden \glspl{Bounded Quantification} verwendet.
 \end{minipage}
 
 Attribute:
@@ -19,11 +19,11 @@ Attribute:
     \item \emph{public final String id} Jedes Objekt der Datenbank-\gls{API} ist mit einer eindeutigen ID versehen, die das Objekt identifiziert.
     Da sich die ID aus Buchstaben, Zeichen und Ziffern zusammensetzt wird sie hier durch einen String repräsentiert.
     \item \emph{public final SingleLocalLink<SensorthingT> selfLink} Jedes Objekt der \gls{SensorThings API} hält einen Verweis auf die Online-Instanz von sich selbst.
-    So kann die Herkunft und die übereinstimmung des Datensatzes mit der Online-Version jederzeit überprüft werden.
+    So kann die Herkunft und die übereinstimmung des Datensatzes mit der Online-Version jederzeit überprüft werden
 \end{itemize}
 Methoden: \begin{itemize}
     \item \emph{public Sensorthing(String id, String selfURL, boolean relative)} Diese Methode ist er einzige Konstruktor der Sensorthing-Klasse.
-    Als Parameter erhält der Konstruktor neben dem Klassen-Attribut id auch eine URL und eine boolean relative. Beide Parameter werden zum initialisieren des SingleLocalLink benötigt.
+    Als Parameter erhält der Konstruktor neben dem Klassen-Attribut id auch eine URL und eine boolean relative. Beide Parameter werden zum initialisieren des SingleLocalLink benötigt
 \end{itemize}
 
 %%Interfaces%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,14 +40,14 @@ public interface SensorthingsProperties
 \begin{minipage}{0.6\textwidth}
 Die Schnittstelle SensorthingsProperties zeigt an, dass ein Objekt der \gls{SensorThings API} Properties besitzt.
 Properties sind in diesem Fall Daten vom Typ Object die durch einen String als eindeutigen Identifier gesucht werden können.
-Es wird nicht näher spezifiziert welche Properties ein entsprechendes Object muss.
+Es wird nicht näher spezifiziert welche Properties ein entsprechendes Object muss
 \end{minipage}
 
 Methoden: \begin{itemize}
-    \item \emph{public Object getPropertyByKey(String key)} Die Methode sucht in den properties des Objektes eine Eigenschaft mit dem gegebenen Key und gibt den Wert dieser zurück.
-    Wenn keine passende Eigenschaft gefunden wurde wird null zurück gegeben.
+    \item \emph{public Object getPropertyByKey(String key)} Die Methode sucht in den Properties des Objektes eine Eigenschaft mit dem gegebenen Key und gibt den Wert dieser zurück.
+    Wenn keine passende Eigenschaft gefunden wurde, wird null zurückgegeben.
     \item \emph{public boolean hasProperties(String key)} Die Methode überprüft ob eine Eigenschaft mit dem gegebene Key existiert.
-    Falls eine solche Eigenschaft existiert wird true zurück gegeben, andernfalls false.
+    Falls eine solche Eigenschaft existiert wird true zurückgegeben, andernfalls false
 \end{itemize}
 
 % SensorthingsTimeStamp
@@ -62,17 +62,17 @@ public interface SensorthingsTimeStamp
     \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
 Die Schnittstelle SensorthingsTimeStamp zeigt an, dass ein Objekt der \gls{SensorThings API} einen Zeitstempel besitzt.
-Ein Zeitstempel impliziert in diesem Fall, dass zwei solche Objekte anhand ihres Zeitstempels verglichen werden können.
+Ein Zeitstempel impliziert in diesem Fall, dass zwei solche Objekte anhand ihres Zeitstempels verglichen werden können
 \end{minipage}
 
 Methoden: \begin{itemize}
     \item \emph{public boolean isOlder(SensorthingsTimeStamp other)} Die Methode prüft ob die Instanz älter als die mit other gegebene Instanz ist.
-    In diesem Fall wird true zurückgegeben, ansonsten false.
+    In diesem Fall wird true zurückgegeben, ansonsten false
     \item \emph{public boolean isNewer(SensorthingsTimeStamp other)} Die Methode prüft ob die Instanz jünger als die mit other gegebene Instanz ist.
-    In diesem Fall wird true zurückgegeben, ansonsten false.
+    In diesem Fall wird true zurückgegeben, ansonsten false
     \item \emph{public boolean isEqualOld(SensorthingsTimeStamp other)} Die Methode prüft ob die Instanz gleich alt wie die mit other gegebene Instanz ist.
-    In diesem Fall wird true zurückgegeben, ansonsten false.
-    \item \emph{public Instant getTimeStamp()} Die Methode gibt den Zeitstempel als java.time.Instant zurück.
+    In diesem Fall wird true zurückgegeben, ansonsten false
+    \item \emph{public Instant getTimeStamp()} Die Methode gibt den Zeitstempel als java.time.Instant zurück
 \end{itemize}
 
 %Classes%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,11 +94,11 @@ public class Datastream extends Sensorthing<Datastream> implements SensorthingsP
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String name} Dieser String repräsentiert den Namen des Datastreams in der Datenbank.
-    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des Datastreams in der Datenbank.
-    \item \emph{public final UnitOfMeasurement unitOfMeasurement} Jedem Datastream ist in der Datenbank eine Maßeinheit zugeordnet. Diese maßeinheit wird hier als UnitOfMeasurement gekapselt gespeichert.
-    \item \emph{public final String observationTypeLink} Der observationTypeLink gibt an um welchen Typ von Datastream es sich handelt.
-    In der Regel wird hier ein Link auf eine Online-Erklärung des Datastream-Typs abgebildet.
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des Datastreams in der Datenbank
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des Datastreams in der Datenbank
+    \item \emph{public final UnitOfMeasurement unitOfMeasurement} Jedem Datastream ist in der Datenbank eine Maßeinheit zugeordnet. Diese maßeinheit wird hier als UnitOfMeasurement gekapselt gespeichert
+    \item \emph{public final String observationTypeLink} Der observationTypeLink gibt an um welchen Typ von Datastream es sich handelt
+    In der Regel wird hier ein Link auf eine Online-Erklärung des Datastream-Typs abgebildet
     \item \emph{public final MultiNavigationLink<Observation> observationsLink} \multiLinkDescription{Observation}
     \item \emph{public final SingleNavigationLink<Sensor> sensorLink} \singleLinkDescription{Sensor}
     \item \emph{public final SingleNavigationLink<Thing> thingLink} \singleLinkDescription{Thing}
@@ -127,11 +127,11 @@ public class FeatureOfInterest extends Sensorthing<FeatureOfInterest>
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String name} Dieser String repräsentiert den Namen des FeatureOfInterest in der Datenbank.
-    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des FeatureOfInterest in der Datenbank.
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des FeatureOfInterest in der Datenbank
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des FeatureOfInterest in der Datenbank
     \item \emph{public final MultiNavigationLink<Observation> observationsLink} \multiLinkDescription{Observation}
     \item \emph{public final Map<String, Object> features} Die in einem FeatureOfInterest gekapselten Informationen werden als Map von String und Object abgelegt.
-    Jeder String identifiziert hierbei eindeutig ein Objekt.
+    Jeder String identifiziert hierbei eindeutig ein Objekt
 \end{itemize}
 Methoden:
 \begin{itemize}
@@ -158,7 +158,7 @@ public class HistoricalLocation extends Sensorthing<HistoricalLocation> implemen
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final Instant time} Der zeitpunkt zudem die Ortsangabe gehört.
+    \item \emph{public final Instant time} Der Zeitpunkt zudem die Ortsangabe gehört
     \item \emph{public final SingleNavigationLink<Thing> thingLink} \singleLinkDescription{Thing}
     \item \emph{public final MultiNavigationLink<Location> locationsLink} \multiLinkDescription{Location}
 \end{itemize}
@@ -187,9 +187,9 @@ public class Location extends Sensorthing<Location>
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String name} Dieser String repräsentiert den Namen der Location in der Datenbank.
-    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung der Location in der Datenbank.
-    \item \emph{public final Point location} Eine Ortsangabe in Form von Geo-Koordinaten.
+    \item \emph{public final String name} Dieser String repräsentiert den Namen der Location in der Datenbank
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung der Location in der Datenbank
+    \item \emph{public final Point location} Eine Ortsangabe in Form von Geo-Koordinaten
     \item \emph{public final MultiNavigationLink<HistoricalLocation> historicalLocationsLink} \multiLinkDescription{HistoricalLocation}
     \item \emph{public final MultiNavigationLink<Thing> thingsLink} \multiLinkDescription{Thing}
 \end{itemize}
@@ -218,9 +218,9 @@ public class Observation extends Sensorthing<Observation> implements Sensorthing
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final Instant phenomenonTime} TODO %TODO
+    \item \emph{public final Instant phenomenonTime} Der Messzeitpunkt
     \item \emph{public final Double result} Der Wert den die Beobachtung annimmt
-    \item \emph{public final Instant resultTime} TODO %TODO
+    \item \emph{public final Instant resultTime} Der Rückgabezeitpunkt
     \item \emph{public final SingleNavigationLink<Datastream> datastreamLink} \singleLinkDescription{Datastream}
     \item \emph{public final SingleNavigationLink<FeatureOfInterest> featureOfInterestLink} \singleLinkDescription{FeatureOfInterest}
 \end{itemize}
@@ -249,10 +249,10 @@ public class ObservedProperty extends Sensorthing<ObservedProperty> implements S
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank.
-    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank.
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank
     \item \emph{public final String definition} Eine formale definition des ObservedPropertys
-    \item \emph{public final Map<String, Object> properties} Die Eigenschaften des ObservedPropertys werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map.
+    \item \emph{public final Map<String, Object> properties} Die Eigenschaften des ObservedPropertys werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map
     \item \emph{public final MultiNavigationLink<Datastream> datastreamsLink} \multiLinkDescription{Datastream}
 \end{itemize}
 Methoden:
@@ -280,9 +280,9 @@ public class Sensor extends Sensorthing<Sensor> implements SensorthingsPropertie
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank.
-    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank.
-    \item \emph{public final Map<String, Object> properties} Die Eigenschaften des Sensors werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map.
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank
+    \item \emph{public final Map<String, Object> properties} Die Eigenschaften des Sensors werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map
     \item \emph{public final MultiNavigationLink<Datastream> datastreamsLink} \multiLinkDescription{Datastream}
 \end{itemize}
 Methoden:
@@ -310,9 +310,9 @@ public class Thing extends Sensorthing<Thing> implements SensorthingsProperties
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank.
-    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank.
-    \item \emph{public final Map<String, Object> properties} Die Eigenschaften des Things werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map.
+    \item \emph{public final String name} Dieser String repräsentiert den Namen des ObservedPropertys in der Datenbank
+    \item \emph{public final String description} Dieser String stellt repräsentiert die Beschreibung des ObservedPropertys in der Datenbank
+    \item \emph{public final Map<String, Object> properties} Die Eigenschaften des Things werden als Map von String und Object gespeichert. Die Strings sind hierbei eindeutig und identifizieren genau ein Objekt der Map
     \item \emph{public final MultiNavigationLink<Datastream> datastreamsLink} \multiLinkDescription{Datastream}
     \item \emph{public final MultiNavigationLink<HistoricalLocation> historicalLocationsLink} \multiLinkDescription{HistoricalLocation}
     \item \emph{public final MultiNavigationLink<Location> locationsLink} \multiLinkDescription{Location}
@@ -340,8 +340,8 @@ public class UnitOfMeasurement
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String symbol} Das Symbol der Maßeinheit, wie es zum Beispiel bei der Angabe von Werten mit dieser einheit Benutzt wird.
-    \item \emph{public final String name} Der Name der Maßeinheit.
+    \item \emph{public final String symbol} Das Symbol der Maßeinheit, wie es zum Beispiel bei der Angabe von Werten mit dieser Einheit benutzt wird
+    \item \emph{public final String name} Der Name der Maßeinheit
     \item \emph{public final String definition} Eine Definition der Maßeinheit
 \end{itemize}
 Methoden:

@@ -3,51 +3,49 @@
 \subsection{Architektur}
 Grundsätzlich teilt sich \softwarename in zwei Hauptbestandteile auf.
 Es wird ein Backend- und ein Frontend-Bestandteil implementiert.
-Das Frontend läuft als Java-Script im Browser des Nutzers.
-Das Frontend ist für die Anzeige und Visualisierung der Daten, sowie den Bau der Oberfläche verantwortlich
-Das Backend wird als Java-Anwendung auf einem Server ausgeführt.
-Für das Backend wird eine Spring-Boot-Application ausgeführt.
-Dieses Anwendungs-Framework ordnet Funktionen Funktionen der Java-Anwendung einer REST-\gls{API} zu.
+Das Frontend läuft als Java-Script im Browser des Nutzers und ist für die Anzeige und Visualisierung der Daten, sowie den Bau der Oberfläche verantwortlich.
+Das Backend wird als in Java implementierte Spring-Boot-Anwendung auf einem Server ausgeführt.
+Dieses Anwendungsframework ermöglicht es in Java die \gls{RESTAPI} einer Sensorthingsdatenbank abzufragen.
 \\
 Grundsätzlich lässt sich der Aufbau also wie folgt darstellen.
 \\
 \input{topics/diagrams/systemOverview.tex}
 \\
-Alle drei großen Komponenten könne hierbei auf verschiedenen Geräten liegen und kommunizieren über die REST-API miteinander.
-Durch die Software-Kombination \softwarename werden lediglich die beiden Komponenten \softwarename Backend und \softwarename Frontend bereitgestellt.
+Alle drei großen Komponenten können hierbei auf verschiedenen Geräten liegen und kommunizieren über die REST-API miteinander.
+Durch die Softwarekombination \softwarename werden lediglich die beiden Komponenten \softwarename Backend und \softwarename Frontend bereitgestellt.
 \\
-Beide Software-Komponenten sind nach dem \gls{MVC}-Entwurfsmuster aufgebaut. 
+Beide Softwarekomponenten sind nach dem \gls{MVC}-Entwurfsmuster aufgebaut.
 \subsubsection{Backend}
-Das Backend wird als Spring-Boot-Applictaion (\url{https://spring.io/projects/spring-boot}) ausgeführt.
-Diese Software-Komponente besitzt nicht den Teil View des MVC-Entwurfmusters, da im Backend keine Anzeige stattfindet.
+Das Backend wird als Spring-Boot-Anwendung (\url{https://spring.io/projects/spring-boot}) ausgeführt.
+Diese Softwarekomponente besitzt keinen dem MVC-Entwurfsmuster entsprechenden Viewanteil, da im Backend keine Anzeige stattfindet.
 \\
 Das System baut sich wie folgt auf:
 \\
 \input{topics/diagrams/backend.tex}
 \\
-Im folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
+Im Folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
 \begin{itemize}
-    \item \textbf{SensorThings Datenbank mit Schnittstelle} Diese Datenbank-Schnittstelle wird nicht von \softwarename implementiert, sondern wird von einem Projekt wie zum Beispiel SmartAQnet bereitgestellt.
-    Diese Schnittstelle ist zwingend nötig für den Betrieb der Software.
+    \item \textbf{SensorThings Datenbank mit Schnittstelle} Diese Datenbankschnittstelle wird nicht von \softwarename implementiert, sondern wird von einem Projekt wie zum Beispiel SmartAQnet bereitgestellt und ist zwingend nötig für den Betrieb der Software.
     \item \textbf{Model} Im Model werden alle Objekte der SensorThings-API nachimplementiert.
     \item \textbf{Controller} Im Controller werden alle in der Webschnittstelle verfügbaren Funktionen implementiert.
-    Durch das Mapping der verschiedenen Funktionen durch das Spring-Framework werden Funktionen der Controller von außen erreichbar.
-    \item \textbf{Webschnittstelle} Die Webschnittstelle des Backends wird von der Spring-Applikation bereitgestellt.
+    Durch das Mapping der verschiedenen Funktionen unter Verwendung des Spring-Framework werden Funktionen der Controller von außen erreichbar.
+    \item \textbf{Webschnittstelle} Die Webschnittstelle des Backends wird von der Spring-Boot-Anwendung bereitgestellt.
 \end{itemize}
 \clearpage
 \subsubsection{Frontend}
-Das Frontend beinhaltet alle drei Komponenten des \gls{MVC}-Entwurfsmusters. Die Angezeigten messdaten bezieht das \softwarename Frontend ausschließlich vom \softwarename Backend
+Das Frontend beinhaltet alle drei Komponenten des \gls{MVC}-Entwurfsmusters. Die angezeigten Messdaten bezieht das \softwarename Frontend ausschließlich vom \softwarename Backend
+Im Frontend wird der Java Transpiler \gls{Jsweet} verwendet. Zur Darstellung wird das \gls{Angular-4-Candy} für \gls{Jsweet} verwendet.
 Das System baut sich wie folgt auf:
 \\
 \input{topics/diagrams/frontend.tex}
 \\
-Im folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
+Im Folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
 \begin{itemize}
-    \item \textbf{VisAQ Backend} Das \softwarename Backend wird hier für die Besorgung der angezeigten Daten verwendet. Es läuft als Spring-Applikation auf einem Server.
-    \item \textbf{Model} Im Model werden alle Objekte der SensorThings-API nachimplementiert, die auch im Backend existieren.
-    Die Implementierung der Model-Klassen ist jedoch im gegensatz zum Backend stark vereinfacht, da große Teile der Logik hier nicht benötigt werden.
-    \item \textbf{Controller} Der Controller besteht hier aus einer Klasse, die die Logik des Angular-Paketes nutz um mit dem Backend zu kommunizieren.
-    \item \textbf{View} Die View baut mit Verschieden Factories und Elementen Oberflächen zusammen, die im Browser des nutzers angezeigt werden.
+    \item \textbf{VisAQ Backend} Das \softwarename Backend wird hier für die Besorgung der angezeigten Daten verwendet. Es läuft als Spring-Boot-Anwendung auf einem Server.
+    \item \textbf{Model} Im Model werden alle Objekte der \gls{SensorThings API} nachimplementiert, die auch im Backend existieren.
+    Die Implementierung der Model-Klassen ist jedoch im Gegensatz zum Backend stark vereinfacht, da große Teile der Logik hier nicht benötigt werden.
+    \item \textbf{Controller} Der Controller besteht hier aus einer Klasse, die die Logik des Angular-Paketes nutzt, um mit dem Backend zu kommunizieren.
+    \item \textbf{View} Die View baut mit verschiedenen Factories und Elementen Oberflächen zusammen, die im Browser des Nutzers angezeigt werden.
 \end{itemize}
 
 \subsection{Klassendiagramm}
@@ -55,7 +53,7 @@ Im folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
 \clearpage
 \begin{figure} [h]
     \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
-        Klassen-Diagram des Backends (\url{http://visaq.de/files/Backend_final.png})
+        Klassen-Diagramm des Backend (\url{http://visaq.de/files/Backend_final.png})
         }\end{minipage}},rotate=90,center}
         \includegraphics[height=0.75\textwidth]{media/backend/Backend.png}
     \end{adjustbox}
@@ -64,5 +62,5 @@ Im folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
 \subsection{Frontend}
 \begin{figure} [h]
     \includegraphics[width=0.9\textwidth]{media/frontend/frontend.png}
-    \caption{Klassen-Diagram des Frontend \url{http://visaq.de/files/Frontend_final.png}}
+    \caption{Klassen-Diagramm des Frontend \url{http://visaq.de/files/Frontend_final.png}}
 \end{figure}

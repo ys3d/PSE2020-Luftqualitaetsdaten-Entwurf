@@ -1,6 +1,6 @@
 
 
-\rule{\textwidth}{0.4pt} 
+\rule{\textwidth}{0.4pt}
 \class{Diagram}
 public interface Diagram
 
@@ -10,16 +10,16 @@ public interface Diagram
     \end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-Das Diagram Interface erstellt das Diagramm für die SensorOverview. Das Diagramm zeigt für einen von dem Benutzer ausgewählten Zeitraum die historischen Werte der ausgewählten Luftqualitätsdata.
+Das Diagram Interface erstellt das Diagramm für die SensorOverview. Das Diagramm zeigt für einen von dem Benutzer ausgewählten Zeitraum die historischen Werte der ausgewählten AirQualityData.
 \end{minipage}
 
 Methoden:
-\begin{itemize} 
+\begin{itemize}
     \item \emph{public void showDiagram()} Zeigt das Diagram in der SensorOverview an
     \item \emph{public void drawDiagram()} Zeichnet das Diagramm für die SensorOverview
 \end{itemize}
 
-\rule{\textwidth}{0.4pt} 
+\rule{\textwidth}{0.4pt}
 \class{BarDiagram}
 public class BarDiagram implements Diagram
 
@@ -33,20 +33,20 @@ BarDiagram implementiert die Methoden aus dem Interface Diagramm und erstellt ei
 \end{minipage}
 
 Attribute:
-\begin{itemize} 
+\begin{itemize}
     \item \emph{public final Observation[] observations} Ein Array für die Beobachtungen eines Sensors, welches die Daten an das Diagram weitergibt.
-    \item \emph{public final AirQualityData airQualityData} Die für das Diagramm ausgewählte Luftqualitätsdata.
+    \item \emph{public final AirQualityData airQualityData} Die für das Diagramm ausgewählte AirQualityData.
     \item \emph{public final Instant start} Der Start der angezeigten historischen Werte im Diagram
     \item \emph{public final Instant end} Das Ende der angezeigten historischen Werte im Diagram
-\end{itemize}   
+\end{itemize}
 Methoden:
-\begin{itemize}      
+\begin{itemize}
     \item \emph{public LineDiagram(Observation[] observations, AirQualityData airQualityData, Instant start, Instant end)} Der Konstruktor für das Balkendiagramm
     \item \emph{public void showDiagram()} Zeigt das Diagram in der SensorOverview an
     \item \emph{public void drawDiagram()} Zeichnet das Diagramm für die SensorOverview
 \end{itemize}
 
-\rule{\textwidth}{0.4pt} 
+\rule{\textwidth}{0.4pt}
 \class{LineDiagram}
 public class LineDiagram implements Diagram
 
@@ -60,14 +60,14 @@ LineDiagram implementiert die Methoden aus dem Interface Diagramm und erstellt e
 \end{minipage}
 
 Attribute:
-\begin{itemize} 
+\begin{itemize}
     \item \emph{public final Observation[] observations} Ein Array für die Beobachtungen eines Sensors, welches die Daten an das Diagram weitergibt.
-    \item \emph{public final AirQualityData airQualityData} Die für das Diagramm ausgewählte Luftqualitätsdata.
+    \item \emph{public final AirQualityData airQualityData} Die für das Diagramm ausgewählte AirQualityData.
     \item \emph{public final Instant start} Der Start der angezeigten historischen Werte im Diagram
     \item \emph{public final Instant end} Das Ende der angezeigten historischen Werte im Diagram
-\end{itemize}   
+\end{itemize}
 Methoden:
-\begin{itemize}      
+\begin{itemize}
     \item \emph{public LineDiagram(Observation[] observations, AirQualityData airQualityData, Instant start, Instant end)} Der Konstruktor für das Liniendiagramm
     \item \emph{public void showDiagram()} Zeigt das Diagram in der SensorOverview an
     \item \emph{public void drawDiagram()} Zeichnet das Diagramm für die SensorOverview

@@ -20,7 +20,7 @@ public class PointDatum
 Attribute:
 \begin{itemize}
     \item \emph{public final Point location} Ein Ort gegeben durch seine Geo-Koordinaten.
-    \item \emph{public final double datum} Der Datenpunkt als nummerischer Wert.
+    \item \emph{public final double datum} Der Datenpunkt als numerischer Wert.
 \end{itemize}
 Methoden:
 \begin{itemize}
@@ -39,7 +39,7 @@ public final class RestConstants
     \end{figure}
     \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-    Die Klasse RestConstants kapselt Konstanten die bei der Kommunikation mit der Rest-API benötigt werden.
+    Die Klasse RestConstants kapselt Konstanten, die bei der Kommunikation mit der Rest-API benötigt werden.
     Die Klasse ist final deklariert, damit von ihr nicht geerbt werden kann.
     In Kombination mit dem privaten Konstruktor sorgt dies dafür, dass die Klasse als reine Container-Klasse weder instanziiert noch geerbt werden kann.
 \end{minipage}
@@ -47,7 +47,7 @@ public final class RestConstants
 Attribute:
 \begin{itemize}
     \item \emph{public static final String ENTRY\_POINT} Eine URL, die einen Einstigespunkt in die \gls{SensorThings API} beschreibt.
-    In einem static Block wird diese Konstante aus der Datei rest\_constants.properties gelesen.
+    In einem static Block wird diese Konstante aus der Datei rest\_constants.properties gelesen
 \end{itemize}
 Methoden:
 \begin{itemize}
@@ -55,4 +55,3 @@ Methoden:
     \constructorDescription{RestConstants}
     Der private Konstruktor bewirkt das die Klasse von außen nicht instanziiert werden kann
 \end{itemize}
-

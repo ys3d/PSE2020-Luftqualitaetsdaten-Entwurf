@@ -1,6 +1,6 @@
 
 
-\rule{\textwidth}{0.4pt} 
+\rule{\textwidth}{0.4pt}
 \class{Legend}
 public class Legend
 
@@ -10,20 +10,20 @@ public class Legend
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Die Legende zeigt die Farbskala für die auf der Karte angezeigten Interpolationswerte. Die Legende ändert ihre Farbwerte je nach ausgewählter Luftqualitätsdata
+Die Legende zeigt die Farbskala für die auf der Karte angezeigten Interpolationswerte. Die Legende ändert ihre Farbwerte je nach ausgewählter AirQualityData
 \end{minipage}
 
 Attribute:
-\begin{itemize} 
-    \item \emph{public final AirQualityData airQualityData} Die von dem Benutzer ausgewählte Luftqualitätsdata
-\end{itemize} 
+\begin{itemize}
+    \item \emph{public final AirQualityData airQualityData} Die von dem Benutzer ausgewählte AirQualityData
+\end{itemize}
 Methoden:
-\begin{itemize}     
-    \item \emph{public Legend(AirQualityData airQualityData)} Konstruktor für die Legende mit den ausgewählten Luftqualitätsdata
-    \item \emph{public void show()} Zeigt eine Legende für die Interpolationswerte auf der Karte an. Aktualisiert sich, wenn der Benutzer in der Navigationsbar eine andere Luftqualitätsdata aussucht.
+\begin{itemize}
+    \item \emph{public Legend(AirQualityData airQualityData)} Konstruktor für die Legende mit den ausgewählten AirQualityData
+    \item \emph{public void show()} Zeigt eine Legende für die Interpolationswerte auf der Karte an. Aktualisiert sich, wenn der Benutzer in der Navigationsbar eine andere AirQualityData aussucht.
 \end{itemize}
 
-\rule{\textwidth}{0.4pt} 
+\rule{\textwidth}{0.4pt}
 \class{SensorOverview}
 public class SensorOverview
 
@@ -37,12 +37,12 @@ SensorOverview (auch Sidebar genannt) wird benutzt um die Interpolierten Point D
 \end{minipage}
 
 Attribute:
-\begin{itemize} 
-    \item \emph{public final AirQualityData[] airQualityData} Ein Array mit den vier AirQualityDaten
+\begin{itemize}
+    \item \emph{public final AirQualityData[] airQualityData} Ein Array mit den vier AirQualityData
 \end{itemize}
 Methoden:
-\begin{itemize} 
-    \item \emph{public SensorOverview(AirQualityData[] airQualityData, JSONObject coordinates, AirQualityData currentAirQualityData, Instant time)} Konstruktor für die Sidebar mit den Koordinaten und der zurzeit ausgewählten Luftqualitätsdata
+\begin{itemize}
+    \item \emph{public SensorOverview(AirQualityData[] airQualityData, JSONObject coordinates, AirQualityData currentAirQualityData, Instant time)} Konstruktor für die Sidebar mit den Koordinaten und der zurzeit ausgewählten AirQualityData
     \item \emph{public SensorOverview(AirQualityData[] airQualityData, Sensor sensor, AirQualityData currentAirQualityData, Instant time)}
     \item \emph{public void show()} Zeigt die Sidebar
     \item \emph{public void selectTimeframe(String start, String end)} Die von dem Benutzer ausgewählte Zeit
