@@ -1,8 +1,6 @@
-\subsection{Frontend Sequence Diagrams}
-
 \subsubsection{Erstes Laden}
 \label{Erstes Laden}
-Das Sequenzdiagramm zeigt den Ablauf des ersten Ladens beim Aufruf der Webapplikation. Vordergründig soll dabei dargestellt wie die einzelnen Klasseninstanzen erstellt werden. Da es sich um einen Erstbesuch handelt wird eine Instanz der Klasse CookieNotice erstellt und geöffnet. Das Erstellen der Map Overlays, das in der Methode addOverlay() des Sequenzdiagramms aufgerufen wird, ist im folgenden Sequenzdiagramm dargestellt. 
+Das Sequenzdiagramm zeigt den Ablauf des ersten Ladens beim Aufruf der Webanwendung. Vordergründig soll dabei dargestellt werden, wie die einzelnen Klasseninstanzen erstellt werden. Da es sich um einen Erstbesuch handelt, wird eine Instanz der Klasse CookieNotice erstellt und geöffnet. Das Erstellen der Map Overlays, das in der Methode addOverlay() des Sequenzdiagramms aufgerufen wird, ist im folgenden Sequenzdiagramm dargestellt. 
 \begin{center}
 	\includegraphics[width=1.2\textwidth]{media/frontend/sequence-diagram/sequenceFirstLoad.png}\captionof{figure}{Erstes Laden} 
 \end{center}
@@ -23,7 +21,7 @@ Das Sequenzdiagramm zeigt den Ablauf zum Erstellen neuer Map Overlays. Ausgelös
 
 \subsubsection{SearchBar}
 \label{Screenshots}
-Das Sequenzdiagramm zeigt den Ablauf beim Suchen eines Ortes über die SearchBar. Der Nutzer gibt hierzu einen existierenden Ort in die SerachBar ein. Die SearchBar informiert die Klasse VisAQ das es eine Nutzereingabe stattgefunden hat. VisAQ löst dann aus, dass die Navbar sich aktualisiert, alle Daten an die Views weiterleitet und MapView neu lädt. Der weitere Vorgang findet dann in der Klasse MapView statt.
+Das Sequenzdiagramm zeigt den Ablauf beim Suchen eines Ortes über die SearchBar. Der Nutzer gibt hierzu einen existierenden Ort in die SerachBar ein. Die SearchBar informiert die Klasse VisAQ, dass es eine Nutzereingabe stattgefunden hat. VisAQ löst dann aus, dass die Navbar sich aktualisiert, alle Daten an die Views weiterleitet und MapView neu lädt. Der weitere Vorgang findet dann in der Klasse MapView statt.
 \begin{center}
 	\includegraphics[width=1\textwidth]{media/frontend/sequence-diagram/sequenceSearchbar.png}\captionof{figure}{SearchBar} 
 \end{center}
@@ -45,7 +43,7 @@ Das Sequenzdiagramm zeigt den Ablauf, der auf eine Nutzereingabe zur Spracheinst
 
 \subsubsection{Expert View}
 \label{Screenshots}
-Das Sequenzdiagramm zeigt den Ablauf beim Aktivieren des Expert Views. Zunächst wird ein ExpertViewFilter angezeigt, aus welchem der Nutzer die Sensoren auswählen kann, die er sich auf der Karte anzeigen lassen möchte. Mit den ausgewählten Sensoren wird daraufhin ein neuer MapView geladen. Hierbei werden dem OverlayBuilder ebenfalls die ausgewählten Sensoren übergeben.
+Das Sequenzdiagramm zeigt den Ablauf beim Aktivieren des Expert Views. Zunächst wird ein ExpertViewFilter angezeigt, aus welchem der Nutzer die Sensoren auswählen kann, die er sich auf der Karte anzeigen lassen möchte. Mit den ausgewählten Sensoren wird daraufhin eine neue MapView geladen. Hierbei werden dem OverlayBuilder ebenfalls die ausgewählten Sensoren übergeben.
 \begin{center}
 	\includegraphics[width=1\textwidth]{media/frontend/sequence-diagram/sequenceExpertViewFilter.png}\captionof{figure}{ExpertView} 
 \end{center}
