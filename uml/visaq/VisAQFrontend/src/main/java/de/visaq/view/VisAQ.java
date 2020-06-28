@@ -22,16 +22,16 @@ public class VisAQ {
     }
 
     /**
-     * Sets the current Language instance.
+     * Sets the current VisAQ instance.
      * 
-     * @param visAQ The Language instance.
+     * @param visAQ     The VisAQ instance.
      */
     public static synchronized void setInstance(VisAQ visAQ) {
         VisAQ.instance = visAQ;
     }
     
-    ArrayList<View> view = null;
-    Navbar navbar;
+    private ArrayList<View> view = null;
+    private Navbar navbar;
 
     /**
      * Main method of the Frontend.

@@ -1,7 +1,5 @@
 package de.visaq.view.theme;
 
-import java.awt.Color;
-
 /**
  * Abstranct class that encapsulates the methods for Color Themes.
  */
@@ -33,32 +31,4 @@ public abstract class ColorTheme {
     public static synchronized void setInstance(ColorTheme colorTheme) {
         ColorTheme.instance = colorTheme;
     }
-
-    /**
-     * Returns the primary Color of the Color Theme.
-     * 
-     * @return The instance of Color
-     */
-    public abstract Color getPrimaryColor();
-
-    /**
-     * Returns the secondary Color of the Color Theme.
-     * 
-     * @return The instance of Color
-     */
-    public abstract Color getSecondaryColor();
-
-    /**
-     * Returns the primary Gradient of the Color Theme.
-     * 
-     * @return The instance of the Gradient
-     */
-    public abstract Gradient getPrimarySkala();
-
-    /**
-     * Returns the primary Gradient of the Color Theme.
-     * 
-     * @return The instance of the Gradient
-     */
-    public abstract Gradient getSecondarySkala();
 }

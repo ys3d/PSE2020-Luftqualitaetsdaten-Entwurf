@@ -6,29 +6,8 @@ import java.awt.Color;
  * Contains the Color and its Gradient that are used in the Dark Mode.
  */
 public class DarkTheme extends ColorTheme {
-
-    @Override
-    public Color getPrimaryColor() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Color getSecondaryColor() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Gradient getPrimarySkala() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Gradient getSecondarySkala() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
+   
+    private final Color primaryColor = null;
+    private final Color secondaryColor = null;
+    public final Gradient gradient = new Gradient(primaryColor, secondaryColor);
 }

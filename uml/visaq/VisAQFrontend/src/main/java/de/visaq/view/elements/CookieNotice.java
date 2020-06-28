@@ -26,7 +26,13 @@ public class CookieNotice {
      * @param acceptance The instance of acceptance
      */
     public void acceptance(boolean acceptance) {
-        // cookieController.set(acceptance)
+        storeUserData();
     }
-
+    
+    /**
+     * Stores the user data on the client side
+     */
+    private void storeUserData() {
+        
+    }
 }
