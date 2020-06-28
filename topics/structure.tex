@@ -24,10 +24,45 @@ Diese Software-Komponente besitzt nicht den Teil View des MVC-Entwurfmusters, da
 Das System baut sich wie folgt auf:
 \\
 \input{topics/diagrams/backend.tex}
+\\
+Im folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
+\begin{itemize}
+    \item \textbf{SensorThings Datenbank mit Schnittstelle} Diese Datenbank-Schnittstelle wird nicht von \softwarename implementiert, sondern wird von einem Projekt wie zum Beispiel SmartAQnet bereitgestellt.
+    Diese Schnittstelle ist zwingend nötig für den Betrieb der Software.
+    \item \textbf{Model} Im Model werden alle Objekte der SensorThings-API nachimplementiert.
+    \item \textbf{Controller} Im Controller werden alle in der Webschnittstelle verfügbaren Funktionen implementiert.
+    Durch das Mapping der verschiedenen Funktionen durch das Spring-Framework werden Funktionen der Controller von außen erreichbar.
+    \item \textbf{Webschnittstelle} Die Webschnittstelle des Backends wird von der Spring-Applikation bereitgestellt.
+\end{itemize}
+\clearpage
 \subsubsection{Frontend}
 Das Frontend beinhaltet alle drei Komponenten des \gls{MVC}-Entwurfsmusters. Die Angezeigten messdaten bezieht das \softwarename Frontend ausschließlich vom \softwarename Backend
 Das System baut sich wie folgt auf:
 \\
 \input{topics/diagrams/frontend.tex}
+\\
+Im folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
+\begin{itemize}
+    \item \textbf{VisAQ Backend} Das \softwarename Backend wird hier für die Besorgung der angezeigten Daten verwendet. Es läuft als Spring-Applikation auf einem Server.
+    \item \textbf{Model} Im Model werden alle Objekte der SensorThings-API nachimplementiert, die auch im Backend existieren.
+    Die Implementierung der Model-Klassen ist jedoch im gegensatz zum Backend stark vereinfacht, da große Teile der Logik hier nicht benötigt werden.
+    \item \textbf{Controller} Der Controller besteht hier aus einer Klasse, die die Logik des Angular-Paketes nutz um mit dem Backend zu kommunizieren.
+    \item \textbf{View} Die View baut mit Verschieden Factories und Elementen Oberflächen zusammen, die im Browser des nutzers angezeigt werden.
+\end{itemize}
 
 \subsection{Klassendiagramm}
+\subsection{Backend}
+\clearpage
+\begin{figure} [h]
+    \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
+        Klassen-Diagram des Backends
+        }\end{minipage}},rotate=90,center}
+        \includegraphics[height=0.75\textwidth]{media/backend/Backend.png}
+    \end{adjustbox}
+\end{figure}
+\clearpage
+\subsection{Frontend}
+\begin{figure} [h]
+    \includegraphics[width=0.9\textwidth]{media/frontend/frontend.png}
+    \caption{Klassen-Diagram des Frontend}
+\end{figure}

@@ -4,12 +4,12 @@
 \class{Interpolation}
 public abstract class Interpolation
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/Interpolation.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.5\textwidth}
     Die abstrakte Klasse Interpolation stellt Interpolationsalgorithmen da, mit welchen die Sensordaten aus der Datenbank der \gls{SensorThings API} interpoliert werden können.
     Die Algorithmen interpolieren die Messpunkte nicht durchgehend sondern nur an gleichmäßig verteilten Punkten.
 \end{minipage}
@@ -37,20 +37,20 @@ Methoden:
 \class{DefaultInterpolation}
 public class DefaultInterpolation extends Interpolation
 \\\\
-\begin{minipage}{0.4\textwidth}
+%\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
-        {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/DefaultInterpolation.png}}
+        {\centering\includegraphics[width=0.7\textwidth]{media/backend/controller/classes/DefaultInterpolation.png}}
     \end{figure}
-    \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+%\end{minipage} \hfill
+%\begin{minipage}{0.5\textwidth}
     Die Klasse DefaultInterpolation implementiert den standart Interpolationsalgorithmus.
     Dieser Algorithmus verwendet hierfür Barnes Interpolation (siehe \url{https://en.wikipedia.org/wiki/Barnes_interpolation}).
     Diese Art der Interpolation kann besonders gut mit unregelmäßig verteilten Messpunkten umgehen.
     Barnes Interpolation wird speziell für die Interpolation von Wetterdaten verwendet, weswegen es für die hier interpolierten Werte sehr gut geignet ist.
     Für die Interpolation wird auf die Bibliothek org.geotools \url{https://geotools.org/} zurück gegriffen.
-    Die Barnes Interpolation ist hier bereits als Klasse implementiert (\url{http://docs.geotools.org/latest/javadocs/org/geotools/process/vector/BarnesSurfaceInterpolator.html}).
-\end{minipage}
-
+    Die Barnes Interpolation ist hier bereits als Klasse implementiert (\href{http://docs.geotools.org/latest/javadocs/org/geotools/process/vector/BarnesSurfaceInterpolator.html}{siehe}).
+%\end{minipage}
+\\
 Attribute:
 \begin{itemize}
     \item \emph{public static final String MAPPING} \mappingDescription

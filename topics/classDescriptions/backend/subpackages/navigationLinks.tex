@@ -1,14 +1,13 @@
 %NavigationLink
-\rule{\textwidth}{0.4pt}
 \class{NavigationLink}
 public abstract class NavigationLink<SensorthingT extends Sensorthing<SensorthingT>>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.3\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/NavigationLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.7\textwidth}
     Die abstrakte Klasse NavigationLink beschreibt einen Verweis auf ein Objekt aus dem Model der \gls{SensorThings API}.
     Die Klasse nimmt als Generic den Typ des Objektes auf welchen der Verweis zeigt.
 \end{minipage}
@@ -31,12 +30,12 @@ Methoden:
 \class{SingleNavigationLink}
 public abstract class SingleNavigationLink<SensorthingT extends Sensorthing<SensorthingT>> extends NavigationLink<SensorthingT>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.55\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/SingleNavigationLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.45\textwidth}
     Die abstrakte Klasse SingleNavigationLink stellt einen Verweis auf ein einzelnes Object in der \gls{SensorThings API} da.
 \end{minipage}
 
@@ -55,12 +54,12 @@ Methoden:
 \class{SingleLocalLink}
 public class SingleLocalLink<SensorthingT extends Sensorthing<SensorthingT>> extends SingleNavigationLink<SensorthingT>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/SingleLocalLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.5\textwidth}
     Die Klasse SingleLocalLink stellt einen Verweis auf ein Object aus einer Datenbank der \gls{SensorThings API} da.
     In diesem Fall ist das Object auf welches Verweisen wird zwar unter einem angegebenen Link in der Datenbank verfügbar, jedoch für die primäre Nutzung bereits Local als Objekt gecached.
 \end{minipage}
@@ -83,12 +82,12 @@ Methoden:
 \class{SingleOnlineLink}
 public class SingleOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> extends SingleNavigationLink<SensorthingT>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/SingleOnlineLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.5\textwidth}
     Die Klasse SingleLocalLink stellt einen Verweis auf ein Object aus einer Datenbank der \gls{SensorThings API} da.
     In diesem Fall ist das Object bei der Initialisierung lediglich in der Datenbank der \gls{SensorThings API} gegeben.
     Beim ersten Aufruf des Objektes in dieser Klasse wird das Objekt aus der Datenbank geladen und ein lokaler Link auf das Objekt erstellt.
@@ -114,12 +113,12 @@ Methoden:
 \class{MultiNavigationLink}
 public abstract class MultiNavigationLink<SensorthingT extends Sensorthing<SensorthingT>> extends NavigationLink<SensorthingT>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/MultiNavigationLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.5\textwidth}
     Die abstrakte Klasse MultiNavigationLink stellt einen Verweis auf eine Gruppe von Objekten in der \gls{SensorThings API} da.
 \end{minipage}
 
@@ -137,12 +136,12 @@ Methoden:
 \class{MultiLocalLink}
 public class MultiLocalLink<SensorthingT extends Sensorthing<SensorthingT>> extends MultiNavigationLink<SensorthingT>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/MultiLocalLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.5\textwidth}
     Die Klasse MultiLocalLink stellt einen Verweis auf mehrere Objekte aus einer Datenbank der \gls{SensorThings API} da.
     In diesem Fall sind die Objekt auf welche Verweisen wird zwar unter einem angegebenen Link in der Datenbank verfügbar, jedoch für die primäre Nutzung bereits Local als Objekt gecached.
 \end{minipage}
@@ -162,12 +161,12 @@ Methoden:
 \class{MultiOnlineLink}
 public class MultiOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> extends MultiNavigationLink<SensorthingT>
 \\\\
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         {\centering\includegraphics[width=0.95\textwidth]{media/backend/controller/classes/MultiOnlineLink.png}}
     \end{figure}
     \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.5\textwidth}
     Die Klasse MultiOnlineLink stellt einen Verweis auf mehrere Objekte aus einer Datenbank der \gls{SensorThings API} da.
     In diesem Fall sind die Objekte bei der Initialisierung lediglich in der Datenbank der \gls{SensorThings API} gegeben.
     Beim ersten Aufruf der Objekte in dieser Klasse werden die Objekte aus der Datenbank geladen und ein lokaler Link auf die gruppe von Objekten erstellt.

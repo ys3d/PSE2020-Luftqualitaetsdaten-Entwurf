@@ -13,21 +13,27 @@
 
         %Model
         \begin{scope}[shift={(0,4.25)},local bounding box=SensorThings]
-            \draw (0,0) [dashed] rectangle (5,6);
+            \draw (0,3) [dashed] rectangle (5,6);
             \node[scale=1] at (2.5,5.5) {Model};
             \begin{scope}[local bounding box=SensorthingsM]
                 \draw (0.25,3.5) rectangle (4.75,4.5);
                 \node[scale=0.8] at (2.5,4) {Sensorthings Modelle};
             \end{scope}
             \begin{scope}[local bounding box=Link]
-                \draw (0.25,0.5) rectangle (4.75,1.5);
-                \node[scale=0.8] at (2.5,1) {NavigationsLinks};
+                \draw (0.25,0.25) rectangle (4.75,1.5);
+                \node[scale=0.8] at (2.5,.875) {NavigationsLinks};
             \end{scope}
         \end{scope}
         
         %Controller
         \begin{scope}[shift={(7,4.25)},local bounding box=Backend]
-            \draw (0,0) [dashed] rectangle (8,6);
+            %\draw (0,0) [dashed] rectangle (8,6);
+            \draw [dashed] (-7,0) -- (8,0);
+            \draw [dashed] (8,0) -- (8,6);
+            \draw [dashed] (8,6) -- (0,6);
+            \draw [dashed] (0,6) -- (0,1.75);
+            \draw [dashed] (0,1.75) -- (-7,1.75);
+            \draw [dashed] (-7,1.75) -- (-7,0);
             \node[scale=1] at (3,5.5) {Controller};
             \begin{scope}[local bounding box=STController]
                 \draw (0.25,2.5) rectangle (3.5,4.5);
