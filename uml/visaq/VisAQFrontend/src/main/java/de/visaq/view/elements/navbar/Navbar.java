@@ -2,7 +2,6 @@ package de.visaq.view.elements.navbar;
 
 import java.util.ArrayList;
 
-import de.visaq.view.Language;
 import de.visaq.view.NavbarObserver;
 import de.visaq.view.View;
 import de.visaq.view.elements.airquality.AirQualityData;
@@ -17,19 +16,22 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
     public final Toolbar toolbar;
     public final SearchBar searchbar;
     public final ExpertViewFilter expertViewFilter;
-    private boolean expertView = false;
+    private boolean expertMapView = false;
     private AirQualityData currentAirQualityData;
+    private View currentView;
     private ArrayList<NavbarObserver> observer;
 
     /**
      * Constructor for a new Navbar instance.
      * 
      * @param airQualityDatas  The selectable Air Quality Data overlays.
-     * @param views            The Views
+     * @param currentView      The current View
+     * @param views             The Views
      */
-    public Navbar(AirQualityData[] airQualityDatas, ArrayList<View> views) {
+    public Navbar(AirQualityData[] airQualityDatas, View currentView, ArrayList<View> views) {
         this.airQualityDatas = airQualityDatas;
         this.currentAirQualityData = new ParticulateMatter("TODO");
+        this.currentView = currentView;
         this.observer = new ArrayList<NavbarObserver>();
         for (NavbarObserver view : views) {
             this.observer.add(view);
@@ -42,21 +44,12 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
 
     @Override
     public void show() {
-        if (expertView) {
+        if (expertMapView) {
             expertViewFilter.show();
         }
+        showAirQualityDatas();
         searchbar.show();
         // TODO Auto-generated method stub
-
-    }
-
-    /**
-     * Shows the available Air Quality Data Overlays.
-     */
-    public void showAirQualityDatas() {
-        for (AirQualityData airQualityData : airQualityDatas) {
-            String name = airQualityData.name;
-        }
     }
 
     /**
@@ -65,32 +58,12 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
     public void openToolbar() {
         toolbar.show();
     }
-
+    
     /**
-     * Informs whether the Expert Mode is set.
-     * 
-     * @return The instance Expert View
+     * Activates the current View.
      */
-    public boolean isExpertview() {
-        return expertView;
-    }
-
-    /**
-     * Activates or Deactivates the Expert Mode.
-     * 
-     * @param expertview The instance Expert View
-     */
-    public void setExpertview(boolean expertview) {
-        this.expertView = expertview;
-    }
-
-    /**
-     * Returns the current Air Quality Data.
-     * 
-     * @return The instance of the current Air Quality Data.
-     */
-    public AirQualityData getCurrentAirQualityData() {
-        return currentAirQualityData;
+    public void showView() {
+        currentView.show();
     }
 
     /**
@@ -117,9 +90,27 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
     @Override
     public void notifyObserver() {
         for (NavbarObserver nb : observer) {
-            nb.update(searchbar, currentAirQualityData, expertView, expertViewFilter,
-                    toolbar.isHistoricalView());
+            nb.update(searchbar, currentAirQualityData, expertMapView, expertViewFilter,
+                    toolbar.isHistoricalMapView());
         }
 
     }
+    
+    /**
+     * Shows the available Air Quality Data Overlays.
+     */
+    private void showAirQualityDatas() {
+        for (AirQualityData airQualityData : airQualityDatas) {
+            String name = airQualityData.name;
+        }
+    }
+   
+    /**
+     * Sets the current View.
+     * 
+     * @param view  The current View
+     */
+    private void setCurrentView(View view)   {
+        currentView.show();
+    }   
 }

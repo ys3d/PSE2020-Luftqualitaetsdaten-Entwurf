@@ -19,7 +19,7 @@ import de.visaq.view.elements.diagram.LineDiagram;
 
 public class SensorOverview {
 
-    public final AirQualityData[] airQualityDatas = null;
+    public final AirQualityData[] airQualityData;
     private AirQualityData currentAirQualityData;
     private Diagram diagram;
     private Instant start = null;
@@ -31,12 +31,14 @@ public class SensorOverview {
      * Constructor for Sensor Overview. It is used when a point on the map is marked. The Sensor
      * Overview is than initialized with the coordinates and the interpolated data of that point.
      * 
+     * @param airQualityData        The Air Quality Data
      * @param coordinates           The coordinates of the point
      * @param currentAirQualityData The currentAirQualityData
      * @param time                  The Instance of the time
      */
-    public SensorOverview(JSONObject coordinates, AirQualityData currentAirQualityData,
-            Instant time) {
+    public SensorOverview(AirQualityData[] airQualityData, JSONObject coordinates, 
+            AirQualityData currentAirQualityData, Instant time) {
+        this.airQualityData = airQualityData;
         this.currentAirQualityData = currentAirQualityData;
         this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
@@ -45,11 +47,14 @@ public class SensorOverview {
      * Constructor for Sensor Overview. It is used when a sensor on the map is marked. The Sensor
      * Overview is than initialized with the sensor and its data.
      * 
+     * @param airQualityData        The Air Quality Data
      * @param sensor                The sensor
      * @param currentAirQualityData The currentAirQualityData
      * @param time                  The instance of the time
      */
-    public SensorOverview(Sensor sensor, AirQualityData currentAirQualityData, Instant time) {
+    public SensorOverview(AirQualityData[] airQualityData, Sensor sensor, 
+            AirQualityData currentAirQualityData, Instant time) {
+        this.airQualityData = airQualityData;
         this.currentAirQualityData = currentAirQualityData;
         this.diagram = new LineDiagram(observations, currentAirQualityData, start, end);
     }
