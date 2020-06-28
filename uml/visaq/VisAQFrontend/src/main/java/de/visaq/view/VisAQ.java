@@ -24,7 +24,7 @@ public class VisAQ {
     /**
      * Sets the current Language instance.
      * 
-     * @param language The Language instance.
+     * @param visAQ The Language instance.
      */
     public static synchronized void setInstance(VisAQ visAQ) {
         VisAQ.instance = visAQ;
@@ -41,7 +41,10 @@ public class VisAQ {
     public static void main(String[] args) {
         setInstance(new VisAQ());
     }
-    
+   
+    /**
+     * Notifies the Navbar about a user input.
+     */
     public void userInput() {
         navbar.notifyObserver();
         navbar.show();
