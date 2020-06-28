@@ -57,9 +57,9 @@ Methoden:
     \constructorDescription{DatastreamController}
     \item \emph{public ArrayList<Datastream> getAll()}
     \extendsSensorthingController
-    \item \emph{public ArrayList<Datastream> get(Thing thing)}
+    \item \emph{public ArrayList<Datastream> getAll(Thing thing)}
     Gibt alle Datastream Objekte zurück, die im gegebenen Thing enthalten sind.
-    \item \emph{public ArrayList<Datastream> get(Sensor sensor)}
+    \item \emph{public ArrayList<Datastream> getAll(Sensor sensor)}
     Gibt alle Datastream Objekte zurück, die im gegebenen Sensor enthalten sind.
     \item \emph{public Datastream get(Thing thing, ObservedProperty observedProperty)}
     Gibt alle Datastream Objekte zurück, die vom gegebenen Thing mit dem gegebenen ObservedProperty existieren.
@@ -259,7 +259,7 @@ Methoden:
     \extendsSensorthingController
     \item \emph{public Sensor singleBuild(JSONObject json)}
     \extendsSensorthingController
-    \item \emph{public ArrayList<Sensor> get(Thing thing)}
+    \item \emph{public ArrayList<Sensor> getAll(Thing thing)}
     Gibt alle das Sensoren zum gegebenen Thing zurück.
     \item \emph{public Sensor get(Datastream datastream)}
     Gibt den Sensor zum gegebenen Datastream zurück.
@@ -293,7 +293,7 @@ Methoden:
     \extendsSensorthingController
     \item \emph{public Thing singleBuild(JSONObject json)}
     \extendsSensorthingController
-    \item \emph{public ArrayList<Thing> get(Envelope envelope)}
+    \item \emph{public ArrayList<Thing> getAll(Envelope envelope)}
     Gibt alle Things in einem eingeschränkten geographischen Bereich da.
 \end{itemize}
 
