@@ -5,7 +5,7 @@ package de.visaq.view.elements.navbar;
  */
 public class Toolbar implements NavbarElement {
 
-    private boolean historicalView = false;
+    private boolean historicalMapView = false;
 
     /**
      * Constructor for the Navbar.
@@ -47,7 +47,7 @@ public class Toolbar implements NavbarElement {
      */
     private void historicalData() {
 
-        this.setHistoricalView(true);
+        this.setHistoricalMapView(true);
         // TODO Auto-generated method stub
     }
 
@@ -61,8 +61,8 @@ public class Toolbar implements NavbarElement {
      * 
      * @return The instance of Historical View
      */
-    public boolean isHistoricalView() {
-        return historicalView;
+    public boolean isHistoricalMapView() {
+        return historicalMapView;
     }
 
     /**
@@ -70,7 +70,7 @@ public class Toolbar implements NavbarElement {
      * 
      * @param historicalView The instance of Historical View
      */
-    private void setHistoricalView(boolean historicalView) {
-        this.historicalView = historicalView;
+    private void setHistoricalMapView(boolean historicalMapView) {
+        this.historicalMapView = historicalMapView;
     }
 }

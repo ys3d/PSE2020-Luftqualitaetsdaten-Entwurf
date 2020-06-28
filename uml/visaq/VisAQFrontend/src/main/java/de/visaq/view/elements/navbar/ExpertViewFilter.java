@@ -27,7 +27,7 @@ public class ExpertViewFilter implements NavbarElement {
      * 
      * @param selectedSensorTypes The Sensortypes that the User selects
      */
-    public void setSelectedSensors(ArrayList<Sensor> selectedSensorTypes) {
+    private void setSelectedSensors(ArrayList<Sensor> selectedSensorTypes) {
 
         // TODO change the sensor types to the correct version
         this.selectedSensorTypes = selectedSensorTypes;
