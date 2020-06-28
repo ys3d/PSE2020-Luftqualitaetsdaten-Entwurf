@@ -2,11 +2,13 @@
 
 \subsubsection{de.visaq.model}
 
-\subsubsection {Sensorthing<SensorthingT extends Sensorthing<SensorthingT>>}
+\class{Sensorthing}
+public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/Sensorthing_Class.png}
+		]{media/frontend/model/SensorthingClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -23,11 +25,13 @@ Methoden:
 	\item \emph{public Sensorthing(String id)} Konstruktor der Klasse Sensorthing, speichert die übergebene ID.
 \end{itemize}
 
-\subsubsection {SensorthingTimeStamp}
+\class{SensorthingTimeStamp}
+public interface SensorthingsTimeStamp
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/SensorthingTimeStamp_Class.png}
+		]{media/frontend/model/SensorthingTimeStampClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -43,11 +47,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {Datastream}
+\class{Datastream}
+public class Datastream extends Sensorthing<Datastream>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/Datastream_Class.png}
+		]{media/frontend/model/DatastreamClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -67,11 +73,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {FeatureOfInterest}
+\class{FeatureOfInterest}
+public class FeatureOfInterest extends Sensorthing<FeatureOfInterest>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/FeatureOfInterest_Class.png}
+		]{media/frontend/model/FeatureOfInterestClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -91,11 +99,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {HistoricalLocation}
+\class{HistoricalLocation}
+public class HistoricalLocation extends Sensorthing<Datastream> implements SensorthingsTimeStamp
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/HistoricalLocation_Class.png}
+		]{media/frontend/model/HistoricalLocationClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -117,11 +127,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {Location}
+\class{Location}
+public class Location extends Sensorthing<Location>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/Location_Class.png}
+		]{media/frontend/model/LocationClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -141,11 +153,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {Observation}
+\class{Observation}
+public class Observation extends Sensorthing<FeatureOfInterest> implements SensorthingsTimeStamp
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/Observation_Class.png}
+		]{media/frontend/model/ObservationClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -169,11 +183,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {ObservedProperty}
+\class{ObservedProperty}
+public class ObservedProperty extends Sensorthing<ObservedProperty>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/ObservedProperty_Class.png}
+		]{media/frontend/model/ObservedPropertyClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -194,11 +210,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {Sensor}
+\class{Sensor}
+public class Sensor extends Sensorthing<Sensor>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/Sensor_Class.png}
+		]{media/frontend/model/SensorClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -217,11 +235,13 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{Sensor}
 \end{itemize}
 
-\subsubsection {Thing}
+\class{Thing}
+public class Thing extends Sensorthing<Thing>
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/Thing_Class.png}
+		]{media/frontend/model/ThingClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -240,11 +260,13 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{Thing}
 \end{itemize}
 
-\subsubsection {UnitOfMeasurement}
+\class{UnitOfMeasurement}
+public class UnitOfMeasurement 
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/UnitOfMeasurement_Class.png} 
+		]{media/frontend/model/UnitOfMeasurementClass.png} 
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
@@ -264,11 +286,13 @@ Methoden:
 \end{itemize}
 
 
-\subsubsection {SensorDatum}
+\class{SensorDatum}
+public class SensorDatum
+\\\\
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale = 0.5
-		]{media/frontend/model/SensorDatum_Class.png}
+		]{media/frontend/model/SensorDatumClass.png}
 	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
