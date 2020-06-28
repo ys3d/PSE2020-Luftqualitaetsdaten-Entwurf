@@ -30,7 +30,7 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Die Navbar zeigt die Navigationsbar und erlaubt es dem Benutzer auf die Hilfe, Suchleiste, Sprache, Toolbar und die Luftqualitätsfilter zuzugreifen.  Die Klasse implementiert das Interface NavbarElement, mit welchem die Funktion in der Navigationbar angezeigt wird.
+Die Navbar zeigt die Navigationsbar und erlaubt es dem Benutzer auf die Hilfe, Suchleiste, Sprache, Toolbar und die Luftqualitätsfilter zuzugreifen.  Die Klasse implementiert das Interface NavbarElement, mit welchem die Funktion in der Navigationbar angezeigt wird.  Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster.
 \end{minipage}
 
 Attribute:
@@ -86,7 +86,7 @@ public interface ObservedNavbarSubject
     \end{figure}
     \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-Ein Interface für das von dem NavbarObserver beobachtete Subjekt, welches den Observer über Änderungen informiert.
+Ein Interface für das von dem NavbarObserver beobachtete Subjekt, welches den Observer über Änderungen informiert.  Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster.
 \end{minipage}
 
 Methoden:
@@ -113,7 +113,7 @@ Die Timeline ist ein Regulator welcher aufgerufen werden kann und die historisch
 Methoden:
 \begin{itemize} 
     \item \emph{public void show()} Zeigt die historischen Daten mithilfe eines Regulators an 
-    \item \emph{public void getTime()} Gibt das aktuelle Zeitfenster zurück
+    \item \emph{public void getTime()} Gibt das aktuelle Zeitfenster, welches von dem Regulator ausgewählt wurde zurück
 \end{itemize}
 
 \rule{\textwidth}{0.4pt} 
@@ -147,7 +147,7 @@ public interface NavbarElement
     \end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-Interface für alle Elemente welche in der Toolbar gezeigt werden können.
+Interface für alle Elemente welche in der Navbar gezeigt werden können. 
 \end{minipage}
 
 Methoden:
