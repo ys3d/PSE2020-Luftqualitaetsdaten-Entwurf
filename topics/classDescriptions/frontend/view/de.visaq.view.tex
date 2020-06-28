@@ -30,12 +30,13 @@ Methoden:
 \rule{\textwidth}{0.4pt}
 \class{InformationView}
 public class InformationView extends View
+\\\\
 \begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
         \includegraphics[scale = 0.5]{media/frontend/view/de.view/InformationView_Class.png}
     \end{figure}
 \end{minipage} \hfill
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     InformationView erstellt die View mit welcher die Benutzer ein hilfestellendes Overlay aktivieren können, um so leichter
     die Webanwendung zu navigieren.
 \end{minipage}
@@ -57,7 +58,7 @@ public class MapView extends View
         \includegraphics[scale = 0.5]{media/frontend/view/de.view/MapView_Class.png}
     \end{figure}
 \end{minipage} \hfill
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     MapView erstellt die View für die Karte indem das MapOverlay angezeigt wird. Die Klasse erbt von View.
 \end{minipage}
 
@@ -85,7 +86,7 @@ public interface NavbarObserver
         \includegraphics[scale = 0.5]{media/frontend/view/de.view/NavbarObserver_Class.png}
     \end{figure}
 \end{minipage} \hfill
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.5\textwidth}
     Ein Observer für die Navigationsbar welcher die Instanzen in dieser aktualisiert. Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster. Der Observer ist ein Interface.
 \end{minipage}
 
@@ -104,7 +105,7 @@ public abstract class View implements NavbarObserver
         \includegraphics[scale = 0.7]{media/frontend/view/de.view/View_Class.png}
     \end{figure}
 \end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.7\textwidth}
     Eine abstrakte Klasse, welche regelt wie die Webanwendung für den Benutzer dargestellt wird. Das beinhaltet unter anderem die unterschiedlichen Sprachen und die ColorTheme. Die Klasse implementiert den NavbarObserver.
 \end{minipage}
 
