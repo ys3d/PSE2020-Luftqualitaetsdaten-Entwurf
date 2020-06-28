@@ -68,7 +68,7 @@
         \draw[->] (Themes) -- (Views);
         \draw[->] (OverlayBuilder) -- (Views);
         \draw[->] (OverlayBuilder) -- (Leaflet) node[midway,right,scale=0.7,align=center] {Baut Karten Overlays};
-        \draw[->] (Views) -- (NavBar) node[midway,right,scale=0.7,align=center] {Zeigt an};
+        \draw[<-] (Views) -- (NavBar) node[midway,right,scale=0.7,align=center] {Zeigt an};
         \draw[<->] (aqd) -- (OverlayBuilder);
     \end{tikzpicture}
     \caption{Aufbau des \softwarename Frontends}
