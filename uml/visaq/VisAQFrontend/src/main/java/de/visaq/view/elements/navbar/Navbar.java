@@ -5,14 +5,13 @@ import java.util.ArrayList;
 import de.visaq.view.NavbarObserver;
 import de.visaq.view.View;
 import de.visaq.view.elements.airquality.AirQualityData;
-import de.visaq.view.elements.airquality.ParticulateMatter;
 
 /**
  * The Navbar shows the Navigation Bar and gives access to the Air Quality Data, Toolbar, Expert
  * View Filter, Help-View, Information-View, Searchbar and Language settings.
  */
 public class Navbar implements ObservedNavbarSubject, NavbarElement {
-    public final AirQualityData[] airQualityDatas;
+    public final AirQualityData[] airQualityData;
     public final Toolbar toolbar;
     public final SearchBar searchbar;
     public final ExpertViewFilter expertViewFilter;
@@ -24,13 +23,15 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
     /**
      * Constructor for a new Navbar instance.
      * 
-     * @param airQualityDatas  The selectable Air Quality Data overlays.
-     * @param currentView      The current View
-     * @param views             The Views
+     * @param currentAirQualityData The currentAirQualityData
+     * @param airQualityData       The selectable Air Quality Data overlays.
+     * @param currentView           The current View
+     * @param views                 The Views
      */
-    public Navbar(AirQualityData[] airQualityDatas, View currentView, ArrayList<View> views) {
-        this.airQualityDatas = airQualityDatas;
-        this.currentAirQualityData = new ParticulateMatter("TODO");
+    public Navbar(AirQualityData currentAirQualityData, AirQualityData[] airQualityData,
+            View currentView, ArrayList<View> views) {
+        this.airQualityData = airQualityData;
+        this.currentAirQualityData = currentAirQualityData;
         this.currentView = currentView;
         this.observer = new ArrayList<NavbarObserver>();
         for (NavbarObserver view : views) {
@@ -100,7 +101,7 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement {
      * Shows the available Air Quality Data Overlays.
      */
     private void showAirQualityDatas() {
-        for (AirQualityData airQualityData : airQualityDatas) {
+        for (AirQualityData airQualityData : airQualityData) {
             String name = airQualityData.name;
         }
     }

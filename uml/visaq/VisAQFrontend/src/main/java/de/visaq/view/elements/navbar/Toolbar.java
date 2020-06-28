@@ -1,5 +1,8 @@
 package de.visaq.view.elements.navbar;
 
+import de.visaq.view.theme.ColorTheme;
+import de.visaq.view.theme.DarkTheme;
+
 /**
  * Shows the User links and definitions to the different functions and informations.
  */
@@ -53,7 +56,7 @@ public class Toolbar implements NavbarElement {
 
     @Override
     public void show() {
-
+          
     }
 
     /**

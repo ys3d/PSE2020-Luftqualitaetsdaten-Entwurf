@@ -15,7 +15,7 @@ public class Timeline implements NavbarElement {
     @Override
     public void show() {
         // TODO Auto-generated method stub
-        VisAQ.getInstance().user_input();
+        VisAQ.getInstance().userInput();
     }
     
     /**

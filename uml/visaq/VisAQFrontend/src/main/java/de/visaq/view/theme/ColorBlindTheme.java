@@ -7,28 +7,7 @@ import java.awt.Color;
  */
 public class ColorBlindTheme extends ColorTheme {
 
-    @Override
-    public Color getPrimaryColor() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Color getSecondaryColor() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Gradient getPrimarySkala() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Gradient getSecondarySkala() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
+    public final Color primaryColor = null;
+    public final Color secondaryColor = null;
+    public final Gradient gradient = new Gradient(primaryColor, secondaryColor);
 }
