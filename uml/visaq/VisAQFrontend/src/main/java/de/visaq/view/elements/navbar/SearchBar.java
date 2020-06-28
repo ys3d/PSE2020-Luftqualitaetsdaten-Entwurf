@@ -34,7 +34,7 @@ public class SearchBar implements NavbarElement {
      * 
      * @param input Input of the user
      */
-    public void setInput(String input) {
+    private void setInput(String input) {
         this.input = input;
     }
 

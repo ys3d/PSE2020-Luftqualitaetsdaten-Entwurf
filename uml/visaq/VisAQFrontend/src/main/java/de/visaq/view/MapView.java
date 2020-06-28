@@ -25,6 +25,7 @@ import def.leaflet.l.Map;
  */
 public class MapView extends View {
     public final Map map;
+    public final AirQualityData[] airqualityData;
     private OverlayBuilder overlayBuilder;
     private ArrayList<OverlayFactory> overlayFactories;
     private ArrayList<Layer> layers;
@@ -41,11 +42,12 @@ public class MapView extends View {
     /**
      * Construct a MapView using the provided Map.
      * 
-     * @param map    The Map instance
+     * @param airQualityData    The Air Quality Data
+     * @param map               The Map instance
      */
-    public MapView(Map map) {
+    public MapView(Map map, AirQualityData[] airQualityData) {
         this.map = map;
-        this.legend = new Legend(currentAirQualityData);
+        this.airqualityData = airQualityData;
         this.layers = new ArrayList<Layer>();
         this.overlayFactories = new ArrayList<OverlayFactory>();
         OverlayFactory sensorOverlayFactory = new SensorOverlayFactory();
@@ -53,30 +55,21 @@ public class MapView extends View {
         this.overlayFactories.add(sensorOverlayFactory);
         this.overlayFactories.add(interpolationOverlayFactory);
         this.overlayBuilder = new OverlayBuilder(overlayFactories);
-        addOverlays();
         this.timeline = new Timeline();
     }
 
     @Override
     public void show() {
-        legend.show();
         if (historicalView) {
-            showTimeline();
+            timeline.show();
         }
+        this.legend = new Legend(currentAirQualityData);
+        legend.show();
+        removeOverlays();
+        addOverlays();
         // TODO Auto-generated method stub
 
-    }
-
-    /**
-     * A Time Data Query occurs when the controller on the timeline is moved. The method set the
-     * time of the data query.
-     * 
-     * @param time      The time
-     */
-    public void timeDataQuery(Instant time) {
-        assert (historicalView);
-        this.time = time;
-    }
+    }   
 
     /**
      * Is activated when to user marks a point on the map. Shows the Sidebar containing the
@@ -85,7 +78,8 @@ public class MapView extends View {
      * @param coordinates       The coordinates
      */
     public void mapDataQueryCoordinates(JSONObject coordinates) {
-        sensorOverview = new SensorOverview(coordinates, currentAirQualityData, this.time);
+        sensorOverview = new SensorOverview(airqualityData, coordinates, currentAirQualityData, 
+                this.time);
         sensorOverview.show();
     }
 
@@ -96,7 +90,8 @@ public class MapView extends View {
      * @param sensor            The sensor
      */
     public void mapDataQuerySensor(Sensor sensor) {
-        sensorOverview = new SensorOverview(sensor, currentAirQualityData, this.time);
+        sensorOverview = new SensorOverview(airqualityData, sensor, currentAirQualityData, 
+                this.time);
         sensorOverview.show();
     }
 
@@ -108,27 +103,7 @@ public class MapView extends View {
         this.expertView = expertView;
         this.expertViewFilter = expertViewFilter;
         this.historicalView = historicalView;
-        airQualityDataQuery(currentAirQualityData);
-    }
-
-    /**
-     * Shows the Timeline for the historical data.
-     */
-    private void showTimeline() {
-        timeline.show();
-    }
-
-    /**
-     * Change the current Air Quality Data Overlay and the matching Legend if the Air Quality Data
-     * is changed in the Navbar instance.
-     * 
-     * @param airQualityData        The new Air Quality Data
-     */
-    private void airQualityDataQuery(AirQualityData airQualityData) {
-        currentAirQualityData = airQualityData;
-        legend = new Legend(currentAirQualityData);
-        removeOverlays();
-        addOverlays();
+        show();
     }
 
     /**
@@ -137,6 +112,8 @@ public class MapView extends View {
     private void addOverlays() {
         if (!historicalView) {
             time = Instant.now();
+        } else {
+            time = timeline.getTime();
         }
         if (expertView) {
             layers.addAll(overlayBuilder.buildExpertOverlays(currentAirQualityData, map.getBounds(),

@@ -1,6 +1,5 @@
 \subsubsection{Modell}
 
-\subsubsection{de.visaq.model}
 
 \class{Sensorthing}
 public abstract class Sensorthing<SensorthingT extends Sensorthing<SensorthingT>>
@@ -25,6 +24,7 @@ Methoden:
 	\item \emph{public Sensorthing(String id)} Konstruktor der Klasse Sensorthing, speichert die übergebene ID.
 \end{itemize}
 
+\rule{\textwidth}{0.4pt}
 \class{SensorthingTimeStamp}
 public interface SensorthingsTimeStamp
 \\\\
@@ -46,7 +46,7 @@ Methoden:
 	\item \emph{public Instant getTimeStamp()} Gibt den Zeitstempel des Objekts zurück.
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{Datastream}
 public class Datastream extends Sensorthing<Datastream>
 \\\\
@@ -72,7 +72,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{Datastream}
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{FeatureOfInterest}
 public class FeatureOfInterest extends Sensorthing<FeatureOfInterest>
 \\\\
@@ -98,7 +98,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{FeatureOfInterest}
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{HistoricalLocation}
 public class HistoricalLocation extends Sensorthing<Datastream> implements SensorthingsTimeStamp
 \\\\
@@ -126,7 +126,7 @@ Methoden:
 	\item \emph{public Instant getTimeStamp()} Gibt den Zeitstempel des HistoricalLocation Objekts zurück.
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{Location}
 public class Location extends Sensorthing<Location>
 \\\\
@@ -152,7 +152,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{Location}
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{Observation}
 public class Observation extends Sensorthing<FeatureOfInterest> implements SensorthingsTimeStamp
 \\\\
@@ -182,7 +182,7 @@ Methoden:
 	\item \emph{public Instant getTimeStamp()} Gibt den Zeitstempel des Observation Objekts zurück.
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{ObservedProperty}
 public class ObservedProperty extends Sensorthing<ObservedProperty>
 \\\\
@@ -209,7 +209,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{ObservedProperty}
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{Sensor}
 public class Sensor extends Sensorthing<Sensor>
 \\\\
@@ -235,6 +235,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{Sensor}
 \end{itemize}
 
+\rule{\textwidth}{0.4pt}
 \class{Thing}
 public class Thing extends Sensorthing<Thing>
 \\\\
@@ -260,6 +261,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{Thing}
 \end{itemize}
 
+\rule{\textwidth}{0.4pt}
 \class{UnitOfMeasurement}
 public class UnitOfMeasurement 
 \\\\
@@ -285,7 +287,7 @@ Methoden:
 	\item \emph{public boolean equals(Object obj)} \equalsDescription{UnitOfMeasurement}
 \end{itemize}
 
-
+\rule{\textwidth}{0.4pt}
 \class{SensorDatum}
 public class SensorDatum
 \\\\

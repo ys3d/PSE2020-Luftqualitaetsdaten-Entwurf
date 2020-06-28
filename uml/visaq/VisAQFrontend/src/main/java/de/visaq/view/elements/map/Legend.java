@@ -9,7 +9,7 @@ import de.visaq.view.theme.Gradient;
  */
 public class Legend {
     public final AirQualityData airQualityData;
-    Gradient gradient;
+    private Gradient gradient;
 
     /**
      * Sole constructor of the class.
@@ -18,8 +18,7 @@ public class Legend {
      */
     public Legend(AirQualityData airQualityData) {
         this.airQualityData = airQualityData;
-        this.gradient = new Gradient(this.airQualityData.getPrimaryColor(),
-                this.airQualityData.getSecondaryColor());
+        this.gradient = airQualityData.gradient;
     }
     
     /**
