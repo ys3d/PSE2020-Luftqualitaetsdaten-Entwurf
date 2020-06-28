@@ -1,4 +1,33 @@
 %Aufbau
 \section{Aufbau}
 \subsection{Architektur}
+Grundsätzlich teilt sich \softwarename in zwei Hauptbestandteile auf.
+Es wird ein Backend- und ein Frontend-Bestandteil implementiert.
+Das Frontend läuft als Java-Script im Browser des Nutzers.
+Das Frontend ist für die Anzeige und Visualisierung der Daten, sowie den Bau der Oberfläche verantwortlich
+Das Backend wird als Java-Anwendung auf einem Server ausgeführt.
+Für das Backend wird eine Spring-Boot-Application ausgeführt.
+Dieses Anwendungs-Framework ordnet Funktionen Funktionen der Java-Anwendung einer REST-\gls{API} zu.
+\\
+Grundsätzlich lässt sich der Aufbau also wie folgt darstellen.
+\\
+\input{topics/diagrams/systemOverview.tex}
+\\
+Alle drei großen Komponenten könne hierbei auf verschiedenen Geräten liegen und kommunizieren über die REST-API miteinander.
+Durch die Software-Kombination \softwarename werden lediglich die beiden Komponenten \softwarename Backend und \softwarename Frontend bereitgestellt.
+\\
+Beide Software-Komponenten sind nach dem \gls{MVC}-Entwurfsmuster aufgebaut. 
+\subsubsection{Backend}
+Das Backend wird als Spring-Boot-Applictaion (\url{https://spring.io/projects/spring-boot}) ausgeführt.
+Diese Software-Komponente besitzt nicht den Teil View des MVC-Entwurfmusters, da im Backend keine Anzeige stattfindet.
+\\
+Das System baut sich wie folgt auf:
+\\
+\input{topics/diagrams/backend.tex}
+\subsubsection{Frontend}
+Das Frontend beinhaltet alle drei Komponenten des \gls{MVC}-Entwurfsmusters. Die Angezeigten messdaten bezieht das \softwarename Frontend ausschließlich vom \softwarename Backend
+Das System baut sich wie folgt auf:
+\\
+\input{topics/diagrams/frontend.tex}
+
 \subsection{Klassendiagramm}
