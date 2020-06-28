@@ -27,7 +27,7 @@ public class SensorController extends SensorthingController<Sensor> {
      * @param thing Thing the Sensor objects are associated with.
      * @return An array of Sensor objects that were retrieved.
      */
-    public ArrayList<Sensor> get(Thing thing) {
+    public ArrayList<Sensor> getAll(Thing thing) {
         // TODO Auto-generated method stub
         return null;
     }

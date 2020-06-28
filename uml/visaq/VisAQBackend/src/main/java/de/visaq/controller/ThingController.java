@@ -35,7 +35,7 @@ public class ThingController extends SensorthingController<Thing> {
      * @param envelope Covers the area of all allowed locations
      * @return An array of Thing objects that were retrieved.
      */
-    public ArrayList<Thing> get(Envelope envelope) {
+    public ArrayList<Thing> getAll(Envelope envelope) {
         // TODO Auto-generated method stub
         return null;
     }
