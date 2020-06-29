@@ -7,7 +7,7 @@ import java.awt.Color;
  */
 public class DarkTheme extends ColorTheme {
    
-    private final Color primaryColor = null;
-    private final Color secondaryColor = null;
+    public final Color primaryColor = null;
+    public final Color secondaryColor = null;
     public final Gradient gradient = new Gradient(primaryColor, secondaryColor);
 }
