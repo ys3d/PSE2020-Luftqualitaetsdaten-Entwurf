@@ -10,7 +10,7 @@ public abstract class ColorTheme
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-ColorTheme ist eine Funktion mit welcher der Benutzer die Farben wechseln kann in welchen die Schnittstelle dargestellt wird. Die Klasse wurde nach einem Singelton Entwurfsmuster designt
+ColorTheme ist eine Funktion mit welcher der Benutzer die Farben wechseln kann in welchen die Schnittstelle dargestellt wird. Die Klasse wurde nach einem Singleton Entwurfsmuster designt
 \end{minipage} 
 
 Methoden:
@@ -37,9 +37,9 @@ public class DarkTheme extends ColorTheme
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
-    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
-    \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+    \item \emph{public final Color primaryColor} Die Primärfarbe für das Erstellen des Farbverlaufs
+    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das Erstellen des Farbverlaufs
+    \item \emph{public final Gradient gradient} Wird benutzt, um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
 \end{itemize}
 Methoden:
 \begin{itemize} 
@@ -61,9 +61,9 @@ public class LightTheme extends ColorTheme
 
     Attribute:
     \begin{itemize}
-        \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
-        \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
-        \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+        \item \emph{public final Color primaryColor} Die Primärfarbe für das Erstellen des Farbverlaufs
+        \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das Erstellen des Farbverlaufs
+        \item \emph{public final Gradient gradient} Wird benutzt, um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
     \end{itemize}
 Methoden:
 \begin{itemize} 
@@ -85,9 +85,9 @@ public class ColorBlindTheme extends ColorTheme
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
-    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
-    \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+    \item \emph{public final Color primaryColor} Die Primärfarbe für das Erstellen des Farbverlaufs
+    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das Erstellen des Farbverlaufs
+    \item \emph{public final Gradient gradient} Wird benutzt, um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
 \end{itemize}
 Methoden:
 \begin{itemize} 
@@ -104,16 +104,16 @@ public class Gradient
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-    Beschreibt einen Farbverlauf zwischen zwei Punkten. Und kann auf die spezifischen Farbwerte im Farbverlauf zugreifen.
+    Beschreibt einen Farbverlauf zwischen zwei Punkten und kann auf die spezifischen Farbwerte im Farbverlauf zugreifen.
     \end{minipage}
 
     Attribute:
 \begin{itemize}
-    \item \emph{public final Color first} Die Primärfarbe für das erstellen des Farbverlaufs
-    \item \emph{public final Color second} Die Sekundärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Color first} Die Primärfarbe für das Erstellen des Farbverlaufs
+    \item \emph{public final Color second} Die Sekundärfarbe für das Erstellen des Farbverlaufs
 \end{itemize}
 Methoden:
 \begin{itemize}
     \item \emph{public Gradient(Color first, Color second)} Konstruktor, welcher mithilfe der Primärfarbe und Sekundärfarbe den Farbverlauf erstellt
-    \item \emph{public Color get(float at)} Gibt eine Farbe zurück, welche zwischen * 100 Prozent der Primärfarbe und Sekundärfarbe liegt und mithilfe von linearer Interpolation erstellt wird
+    \item \emph{public Color get(float at)} Gibt eine Farbe zurück, welche zu at * 100 Prozent zwischen Primärfarbe und Sekundärfarbe liegt und mithilfe von linearer Interpolation erstellt wird
 \end{itemize}
