@@ -11,11 +11,17 @@ public abstract class ColorTheme
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
 ColorTheme ist eine Funktion mit welcher der Benutzer die Farben wechseln kann in welchen die Schnittstelle dargestellt wird. Die Klasse wurde nach einem Singelton Entwurfsmuster designt
-\end{minipage}
+\end{minipage} 
 
+Attribute:
+\begin{itemize}
+    \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+\end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
+    \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese
     \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
     \item \emph{public static synchronized void setInstance(ColorTheme colorTheme)} Setzt die aktuelle ColorTheme Instanz   
     \item \emph{public abstract Gradient getPrimarySkala()} Gibt einen Wert von dem Typ Gradient zurück
@@ -35,12 +41,15 @@ public class DarkTheme extends ColorTheme
        Ein dunkleres Farbschema für die Visualisierung der Website.
     \end{minipage}
 
+Attribute:
+\begin{itemize}
+    \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+\end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
-    \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
-    \item \emph{public static synchronized void setInstance(ColorTheme colorTheme)} Setzt die aktuelle ColorTheme Instanz    \item \emph{public abstract Gradient getPrimarySkala()} Gibt einen Wert von dem Typ Gradient zurück
-    \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
+    \item \emph{public DarkTheme()} Erstellt eine DarkTheme Instanz und aktualisiert diese.
 \end{itemize}
 
 \rule{\textwidth}{0.4pt} 
@@ -56,12 +65,15 @@ public class LightTheme extends ColorTheme
         Ein helleres Farbschema für die Visualisierung der Website. Diese wird bei einem Erstbesuch als Standardschema geladen.
     \end{minipage}
 
+    Attribute:
+    \begin{itemize}
+        \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
+        \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
+        \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+    \end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
-    \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
-    \item \emph{public static synchronized void setInstance(ColorTheme colorTheme)} Setzt die aktuelle ColorTheme Instanz    \item \emph{public abstract Gradient getPrimarySkala()} Gibt einen Wert von dem Typ Gradient zurück
-    \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
+    \item \emph{public LightTheme()} Erstellt eine LightTheme Instanz und aktualisiert diese.
 \end{itemize}
 
 \rule{\textwidth}{0.4pt} 
@@ -77,13 +89,15 @@ public class ColorBlindTheme extends ColorTheme
     Ein Farbblindenschema für die Visualisierung der Website. In diesem Fall speziell für eine Rot-Grün Sehschwäche.
 \end{minipage}
 
+Attribute:
+\begin{itemize}
+    \item \emph{public final Color primaryColor} Die Primärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Color secondaryColor} Die Sekundärfarbe für das erstellen des Farbverlaufs
+    \item \emph{public final Gradient gradient} Wird benutzt um einen Farbverlauf aus der Primärfarbe und Sekundärfarbe zu erstellen
+\end{itemize}
 Methoden:
 \begin{itemize} 
-    \item \emph{public ColorTheme()} Erstellt eine ColorTheme Instanz und aktualisiert diese.
-    \item \emph{public static synchronized ColorTheme getInstance()} Gibt einen Wert von dem Typ ColorTheme zurück
-    \item \emph{public static synchronized void setInstance(ColorTheme colorTheme)} Setzt die aktuelle ColorTheme Instanz
-    \item \emph{public abstract Gradient getPrimarySkala()} Gibt einen Wert von dem Typ Gradient zurück
-    \item \emph{public abstract Gradient getSecondarySkala()}  Gibt einen Wert von dem Typ Gradient zurück
+    \item \emph{public ColorBlindTheme()} Erstellt eine ColorBlindTheme Instanz und aktualisiert diese.
 \end{itemize}
 
 \rule{\textwidth}{0.4pt} 
