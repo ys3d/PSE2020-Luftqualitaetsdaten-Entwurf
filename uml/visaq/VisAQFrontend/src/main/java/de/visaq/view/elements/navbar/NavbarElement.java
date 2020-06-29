@@ -1,7 +1,7 @@
 package de.visaq.view.elements.navbar;
 
 /**
- * Interface for all Elements that can be shown in the Toolbar.
+ * Interface for all Elements that can be shown in the Navbar.
  */
 
 public interface NavbarElement {
