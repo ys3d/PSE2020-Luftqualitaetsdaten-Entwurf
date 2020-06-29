@@ -9,7 +9,7 @@ public abstract class AirQualityData
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Objekt, welches dafür verwendet wird, die unterschiedlichen Farbschemata für die Legenden darzustellen.
+Objekt, welches dafür verwendet wird die unterschiedlichen Farbschemata, die für die Legenden genutzt werden, zu speichern.
 \end{minipage}
 
 Attribute:
@@ -17,8 +17,9 @@ Attribute:
     \item \emph{public static final String name} Der Name der angezeigten AirQualityData in der Navigationsbar
     \item \emph{public final Color primaryColor} Die Primärfarbe des Typen
 	\item \emph{public final Color secondaryColor} Die Sekundärfarbe des Typen
+	\item \emph{public final Gradient gradient}	Der Farbverlauf zwischen der Primärfarbe und der Sekundärfarbe
 \end{itemize}
 Methoden:
 \begin{itemize}
-    \item \emph{public AirQualityData(String name)} Konstruktor für die AirQualityData
+    \item \emph{public AirQualityData(String name, Color primaryColor, Color secondaryColor)} Konstruktor für die AirQualityData
 \end{itemize}
