@@ -6,9 +6,6 @@ import java.awt.Color;
  * Abstranct class that encapsulates the methods for Color Themes.
  */
 public abstract class ColorTheme {
-	public final Color primaryColor = null;
-    public final Color secondaryColor = null;
-    public final Gradient gradient = new Gradient(primaryColor, secondaryColor);
     private static ColorTheme instance = new LightTheme();
 
     /**
