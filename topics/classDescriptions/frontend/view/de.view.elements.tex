@@ -1,6 +1,5 @@
-\subsection{de.view.elements}
-
-\rule{\textwidth}{0.4pt} 
+\clearpage %opt
+\rule{\textwidth}{0.4pt}
 \class{CookieNotice}
 public class CookieNotice
 
@@ -14,12 +13,12 @@ Popup, welches den Benutzer darüber informiert, dass VisAQ Cookies nach dem EU 
 \end{minipage}
 
 Attribute:
-\begin{itemize} 
-    \item \emph{public final boolean acceptance} Ein boolean Attribut, welches verwendet wird um zu entscheiden ob der Benutzer die Cookies akzeptiert oder nicht. Ist der boolean positiv, so werden die Einstellungen auf der Seite des Clients gespeichert. Standardmäßig ist dieser Wert beim ersten Laden der Webapplikation negativ gesetzt.
+\begin{itemize}
+    \item \emph{public final boolean acceptance} Ein boolean Attribut, welches verwendet wird um zu entscheiden, ob der Benutzer die Cookies akzeptiert oder nicht. Ist der boolean positiv, so werden die Einstellungen auf der Seite des Clients gespeichert. Standardmäßig ist dieser Wert beim ersten Laden der Webanwendung negativ gesetzt.
 \end{itemize}
 Methoden:
-\begin{itemize} 
-    \item \emph{public CookieNotice()} Konstruktor für die CookieNotice 
-    \item \emph{public popup()} Das Pupup Fenster welches beim laden der Webapplikation die CookieNotice anzeigt und dem Benutzer erlaubt die Cookies zu akzeptieren
+\begin{itemize}
+    \item \emph{public CookieNotice()} Konstruktor für die CookieNotice
+    \item \emph{public popup()} Das Pupup Fenster welches beim laden der Webanwendung die CookieNotice anzeigt und dem Benutzer erlaubt die Cookies zu akzeptieren
     \item \emph{public void acceptance(boolean acceptance)} Speichert die Benutzerdaten des Benutzers auf desen Endgerät
 \end{itemize}

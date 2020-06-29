@@ -9,20 +9,20 @@ public abstract class NavigationLink<SensorthingT extends Sensorthing<Sensorthin
     \end{minipage} \hfill
 \begin{minipage}{0.7\textwidth}
     Die abstrakte Klasse NavigationLink beschreibt einen Verweis auf ein Objekt aus dem Model der \gls{SensorThings API}.
-    Die Klasse nimmt als Generic den Typ des Objektes auf welchen der Verweis zeigt.
+    Die Klasse nimmt als Generic den Typ des Objektes, auf welchen der Verweis zeigt
 \end{minipage}
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final String url} Die URL, welche auf das verwiesene Element in der Datenbank zeigt.
+    \item \emph{public final String url} Die URL, welche auf das verwiesene Element in der Datenbank zeigt
 \end{itemize}
 Methoden:
 \begin{itemize}
     \item \emph{public NavigationLink(String url, boolean relative)}
     \constructorDescription{NavigationLink}
     \relativeDescription
-    \item \emph{protected JSONObject getJson()} Die Methode Holt das unter dem URL abgelegte JSONObject aus der Datenbank.
-    Wird kein solches Objekt unter dem angegebene Link in der Datenbank gefunden wird null zurück gegeben.
+    \item \emph{protected JSONObject getJson()} Die Methode holt das unter dem URL abgelegte JSONObject aus der Datenbank.
+    Wird kein solches Objekt unter dem angegebene Link in der Datenbank gefunden, wird null zurückgegeben
 \end{itemize}
 
 %SingleNavigationLink
@@ -46,7 +46,7 @@ Methoden:
     \relativeDescription
     \item \emph{public abstract Sensorthing<SensorthingT> get(SensorthingController<SensorthingT> controller)}
     Die Funktion gibt das durch die URL repräsentierte Objekt aus der \gls{SensorThings API} zurück.
-    Der Methode muss eine passender Controller für das gewollte Element mit übergeben werden.
+    Der Methode muss eine passender Controller für das gewollte Element mit übergeben werden
 \end{itemize}
 
 %SingleLocalLink
@@ -60,13 +60,13 @@ public class SingleLocalLink<SensorthingT extends Sensorthing<SensorthingT>> ext
     \end{figure}
     \end{minipage} \hfill
 \begin{minipage}{0.5\textwidth}
-    Die Klasse SingleLocalLink stellt einen Verweis auf ein Object aus einer Datenbank der \gls{SensorThings API} da.
-    In diesem Fall ist das Object auf welches Verweisen wird zwar unter einem angegebenen Link in der Datenbank verfügbar, jedoch für die primäre Nutzung bereits Local als Objekt gecached.
+    Die Klasse SingleLocalLink stellt einen Verweis auf ein Objekt aus einer Datenbank der \gls{SensorThings API} da.
+    In diesem Fall ist das Objekt auf welches verwiesen wird zwar unter einem angegebenen Link in der Datenbank verfügbar, jedoch für die primäre Nutzung bereits lokal als Objekt gecached.
 \end{minipage}
 
 Attribute:
 \begin{itemize}
-    \item \emph{public final Sensorthing<SensorthingT> cachedSensorthing} Das bereits local gespeicherte Object aus der \gls{SensorThings API}.
+    \item \emph{public final Sensorthing<SensorthingT> cachedSensorthing} Das bereits lokal gespeicherte Objekt aus der \gls{SensorThings API}.
 \end{itemize}
 Methoden:
 \begin{itemize}
@@ -74,7 +74,7 @@ Methoden:
     \constructorDescription{SingleLocalLink}
     \relativeDescription
     \item \emph{public Sensorthing<SensorthingT> get(SensorthingController<SensorthingT> controller)}
-    Die Methode implementiert die abstrakte Methode aus der abstrakten Klasse SingleNavigationLink. In dieser Implementierung wird das bereits local gespeicherte Objekt zurück gegeben.
+    Die Methode implementiert die abstrakte Methode aus der abstrakten Klasse SingleNavigationLink. In dieser Implementierung wird das bereits lokal gespeicherte Objekt zurückgegeben.
 \end{itemize}
 
 %SingleOnlineLink
@@ -88,14 +88,14 @@ public class SingleOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> ex
     \end{figure}
     \end{minipage} \hfill
 \begin{minipage}{0.5\textwidth}
-    Die Klasse SingleLocalLink stellt einen Verweis auf ein Object aus einer Datenbank der \gls{SensorThings API} da.
-    In diesem Fall ist das Object bei der Initialisierung lediglich in der Datenbank der \gls{SensorThings API} gegeben.
+    Die Klasse SingleLocalLink stellt einen Verweis auf ein Objekt aus einer Datenbank der \gls{SensorThings API} da.
+    In diesem Fall ist das Objekt bei der Initialisierung lediglich in der Datenbank der \gls{SensorThings API} gegeben.
     Beim ersten Aufruf des Objektes in dieser Klasse wird das Objekt aus der Datenbank geladen und ein lokaler Link auf das Objekt erstellt.
 \end{minipage}
 
 Attribute:
 \begin{itemize}
-    \item \emph{private SingleLocalLink<SensorthingT> cache} Sobald das Objekt das erste Mal aus der Datenbank gelesen wurde wird es in diesem Attribut als SingleLocalLink gecached.
+    \item \emph{private SingleLocalLink<SensorthingT> cache} Sobald das Objekt das erste Mal aus der Datenbank gelesen wurde, wird es in diesem Attribut als SingleLocalLink gecached.
 \end{itemize}
 Methoden:
 \begin{itemize}
@@ -103,9 +103,9 @@ Methoden:
     \constructorDescription{SingleOnlineLink}
     \relativeDescription
     \item \emph{public Sensorthing<SensorthingT> get(SensorthingController<SensorthingT> controller)}
-    Beim ersten Aufruf wird das Objekt aus der Datenbank geladen und zurück gegeben.
+    Beim ersten Aufruf wird das Objekt aus der Datenbank geladen und zurückgegeben.
     Dabei wird zusätzlich die Rückgabe der Datenbank gecached.
-    Bei allen weiteren Aufrufen wird dann das lokal gespeicherte Element zurück gegeben.
+    Bei allen weiteren Aufrufen wird dann das lokal gespeicherte Element zurückgegeben
 \end{itemize}
 
 %MultiNavigationLink
@@ -143,7 +143,7 @@ public class MultiLocalLink<SensorthingT extends Sensorthing<SensorthingT>> exte
     \end{minipage} \hfill
 \begin{minipage}{0.5\textwidth}
     Die Klasse MultiLocalLink stellt einen Verweis auf mehrere Objekte aus einer Datenbank der \gls{SensorThings API} da.
-    In diesem Fall sind die Objekt auf welche Verweisen wird zwar unter einem angegebenen Link in der Datenbank verfügbar, jedoch für die primäre Nutzung bereits Local als Objekt gecached.
+    In diesem Fall sind die Objekt, auf welche verwiesen wird zwar unter einem angegebenen Link in der Datenbank verfügbar, jedoch für die primäre Nutzung bereits Lokal als Objekt gecached.
 \end{minipage}
 
 Methoden:
@@ -152,8 +152,8 @@ Methoden:
     \constructorDescription{MultiLocalLink}
     \relativeDescription
     \item \emph{public ArrayList<SensorthingT> get(SensorthingController<SensorthingT> controller)}
-    Gibt alle Objekte zurück, die unter der gegebenen URL in der Datenbank der \gls{SensorThings API} zur verfügung stehen.
-    In diesem Fall werden die in der Instanz gespeicherten Objekte als ArrayList zurück gegeben.
+    Gibt alle Objekte zurück, die unter der gegebenen URL in der Datenbank der \gls{SensorThings API} zur Verfügung stehen.
+    In diesem Fall werden die in der Instanz gespeicherten Objekte als ArrayList zurückgegeben.
 \end{itemize}
 
 %MultiOnlineLink
@@ -174,7 +174,7 @@ public class MultiOnlineLink<SensorthingT extends Sensorthing<SensorthingT>> ext
 
 Attribute:
 \begin{itemize}
-    \item \emph{private MultiLocalLink<SensorthingT> cache} Sobald die Objekte das erste Mal aus der Datenbank gelesen wurden werden diese in diesem Attribut als MultiLocalLink gecached.
+    \item \emph{private MultiLocalLink<SensorthingT> cache} Sobald die Objekte das erste Mal aus der Datenbank gelesen wurden, werden diese in diesem Attribut als MultiLocalLink gecached
 \end{itemize}
 Methoden:
 \begin{itemize}
@@ -182,8 +182,8 @@ Methoden:
     \constructorDescription{MultiOnlineLink}
     \relativeDescription
     \item \emph{public ArrayList<SensorthingT> get(SensorthingController<SensorthingT> controller)}
-    Gibt alle Objekte zurück, die unter der gegebenen URL in der Datenbank der \gls{SensorThings API} zur verfügung stehen.
-    Beim ersten Aufruf werden die Objekte aus der Datenbank geladen und zurück gegeben.
+    Gibt alle Objekte zurück, die unter der gegebenen URL in der Datenbank der \gls{SensorThings API} zur Verfügung stehen.
+    Beim ersten Aufruf werden die Objekte aus der Datenbank geladen und zurückgegeben.
     Dabei wird zusätzlich die Rückgabe der Datenbank gecached.
-    Bei allen weiteren Aufrufen werden dann die lokal gespeicherte Element zurück gegeben.
+    Bei allen weiteren Aufrufen werden dann die lokal gespeicherte Element zurückgegeben
 \end{itemize}
