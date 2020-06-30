@@ -18,6 +18,7 @@ Methoden:
     \item \emph{public Layer build(AirQualityData airquality, SensorDatum[] data)}  Baut ein Map Overlay mithilfe der Farbwerte der AirQualityData und der SensorDaten. Die Klasse ist ein Teil des Entwurfsmusters Abstract-Factory. Jede konkrete Overlay Fabrik implementiert das interface
 \end{itemize}
 
+\clearpage %opt
 \rule{\textwidth}{0.4pt}
 \class{InterpolationOverlayFactory}
 public class InterpolationOverlayFactory implements OverlayFactory
@@ -53,6 +54,8 @@ Methoden:
 \begin{itemize}
     \item \emph{public Layer build(AirQualityData airquality, SensorDatum[] data)}  Baut einen Overlay mithilfe von der Farbwerte der AirQualityData und der SensorDaten
 \end{itemize}
+
+\clearpage %opt
 
 \rule{\textwidth}{0.4pt}
 \class{OverlayBuilder}

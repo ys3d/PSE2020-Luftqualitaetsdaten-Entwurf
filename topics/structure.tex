@@ -15,6 +15,22 @@ Alle drei großen Komponenten können hierbei auf verschiedenen Geräten liegen 
 Durch die Softwarekombination \softwarename werden lediglich die beiden Komponenten \softwarename Backend und \softwarename Frontend bereitgestellt.
 \\
 Beide Softwarekomponenten sind nach dem \gls{MVC}-Entwurfsmuster aufgebaut.
+\subsubsection{Frontend}
+Das Frontend beinhaltet alle drei Komponenten des \gls{MVC}-Entwurfsmusters. Die angezeigten Messdaten bezieht das \softwarename Frontend ausschließlich vom \softwarename Backend
+Im Frontend wird der Java Transpiler \gls{Jsweet} verwendet. Zur Darstellung wird das \gls{Angular-4-Candy} für \gls{Jsweet} verwendet.
+Das System baut sich wie folgt auf:
+\\
+\input{topics/diagrams/frontend.tex}
+\\
+Im Folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
+\begin{itemize}
+    \item \textbf{VisAQ Backend} Das \softwarename Backend wird hier für die Besorgung der angezeigten Daten verwendet. Es läuft als Spring-Boot-Anwendung auf einem Server.
+    \item \textbf{Model} Im Model werden alle Objekte der \gls{SensorThings API} nachimplementiert, die auch im Backend existieren.
+    Die Implementierung der Model-Klassen ist jedoch im Gegensatz zum Backend stark vereinfacht, da große Teile der Logik hier nicht benötigt werden.
+    \item \textbf{Controller} Der Controller besteht hier aus einer Klasse, die die Logik des Angular-Paketes nutzt, um mit dem Backend zu kommunizieren.
+    \item \textbf{View} Die View baut mit verschiedenen Factories und Elementen Oberflächen zusammen, die im Browser des Nutzers angezeigt werden.
+\end{itemize}
+\clearpage
 \subsubsection{Backend}
 Das Backend wird als Spring-Boot-Anwendung (\url{https://spring.io/projects/spring-boot}) ausgeführt.
 Diese Softwarekomponente besitzt keinen dem MVC-Entwurfsmuster entsprechenden Viewanteil, da im Backend keine Anzeige stattfindet.
@@ -31,33 +47,9 @@ Im Folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
     Durch das Mapping der verschiedenen Funktionen unter Verwendung des Spring-Framework werden Funktionen der Controller von außen erreichbar.
     \item \textbf{Webschnittstelle} Die Webschnittstelle des Backends wird von der Spring-Boot-Anwendung bereitgestellt.
 \end{itemize}
-\clearpage
-\subsubsection{Frontend}
-Das Frontend beinhaltet alle drei Komponenten des \gls{MVC}-Entwurfsmusters. Die angezeigten Messdaten bezieht das \softwarename Frontend ausschließlich vom \softwarename Backend
-Im Frontend wird der Java Transpiler \gls{Jsweet} verwendet. Zur Darstellung wird das \gls{Angular-4-Candy} für \gls{Jsweet} verwendet.
-Das System baut sich wie folgt auf:
-\\
-\input{topics/diagrams/frontend.tex}
-\\
-Im Folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
-\begin{itemize}
-    \item \textbf{VisAQ Backend} Das \softwarename Backend wird hier für die Besorgung der angezeigten Daten verwendet. Es läuft als Spring-Boot-Anwendung auf einem Server.
-    \item \textbf{Model} Im Model werden alle Objekte der \gls{SensorThings API} nachimplementiert, die auch im Backend existieren.
-    Die Implementierung der Model-Klassen ist jedoch im Gegensatz zum Backend stark vereinfacht, da große Teile der Logik hier nicht benötigt werden.
-    \item \textbf{Controller} Der Controller besteht hier aus einer Klasse, die die Logik des Angular-Paketes nutzt, um mit dem Backend zu kommunizieren.
-    \item \textbf{View} Die View baut mit verschiedenen Factories und Elementen Oberflächen zusammen, die im Browser des Nutzers angezeigt werden.
-\end{itemize}
 
 \subsection{Klassendiagramm}
-\subsection{Backend}
-\clearpage
-\begin{figure} [h]
-    \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
-        Klassen-Diagramm des Backend (\url{http://visaq.de/files/Backend_final.png})
-        }\end{minipage}},rotate=90,center}
-        \includegraphics[height=0.75\textwidth]{media/backend/Backend.png}
-    \end{adjustbox}
-\end{figure}
+
 \clearpage
 \begin{figure} [h]
 	\subsection{Frontend}
@@ -66,5 +58,14 @@ Im Folgenden sollen kurz die einzelnen Bestandteile erläutert werden.
    		}\end{minipage}},rotate=90,center}
    		\includegraphics[height=0.7\textwidth]{media/frontend/frontend.png}
    	\end{adjustbox}
+\end{figure}
+\clearpage
+\begin{figure} [h]
+    \subsection{Backend}
+    \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
+        Klassen-Diagramm des Backend (\url{http://visaq.de/files/Backend_final.png})
+        }\end{minipage}},rotate=90,center}
+        \includegraphics[height=0.75\textwidth]{media/backend/Backend.png}
+    \end{adjustbox}
 \end{figure}
 \clearpage

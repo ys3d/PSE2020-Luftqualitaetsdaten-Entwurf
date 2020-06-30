@@ -18,7 +18,6 @@ Methoden:
     \item \emph{public void show()} Zeigt die Möglichkeit in der Toolbar an in welcher man den Experten Modus an- beziehungsweise ausmachen kann. Bei Aktivierung des Moduses aktualisiert sich die Navigationsbar und fügt die Funktion hinzu mit welcher spezifische Sensortypen gewählt werden können
     \item \emph{public ArrayList<Sensor> getSelectedSensors()} Gibt die ausgewählten Sensoren als ArrayList weiter
 \end{itemize}
-\clearpage %opt
 \rule{\textwidth}{0.4pt}
 \class{Navbar}
 public class Navbar implements ObservedNavbarSubject, NavbarElement
@@ -51,6 +50,7 @@ Methoden:
     \item \emph{public void notifyObserver()} Aktualisiert die NavbarObserver in der Liste indem es die Methode update() aufruft, die alle NavbarObserver implementieren
 \end{itemize}
 
+\clearpage %opt
 \rule{\textwidth}{0.4pt}
 \class{SearchBar}
 public class SearchBar implements NavbarElement
@@ -91,7 +91,6 @@ Methoden:
     \item \emph{public void notifyObserver()} Informiert den Observer über Änderungen
 \end{itemize}
 
-\clearpage %opt
 \rule{\textwidth}{0.4pt}
 \class{Timeline}
 public class Timeline implements NavbarElement
