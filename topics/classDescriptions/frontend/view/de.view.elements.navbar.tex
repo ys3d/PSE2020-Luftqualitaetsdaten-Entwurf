@@ -15,8 +15,7 @@ ExpertViewFilter ist eine Erweiterung für erfahrene Benutzer, welche bei Aktivi
 
 Methoden:
 \begin{itemize}
-    \item \emph{public void show()} Zeigt die Möglichkeit in der Toolbar an in welcher man den Experten Modus an- beziehungsweise ausmachen kann. Bei Aktivierung des Moduses aktualisiert sich die Navigationsbar und fügt die Funktion hinzu mit welcher spezifische Sensortypen gewählt werden können.
-    \item \emph{public void setSelectedSensors(ArrayList<Sensor> selectedSensorTypes)} Setzt die von dem Benutzer ausgewählten Sensoren
+    \item \emph{public void show()} Zeigt die Möglichkeit in der Toolbar an in welcher man den Experten Modus an- beziehungsweise ausmachen kann. Bei Aktivierung des Moduses aktualisiert sich die Navigationsbar und fügt die Funktion hinzu mit welcher spezifische Sensortypen gewählt werden können
     \item \emph{public ArrayList<Sensor> getSelectedSensors()} Gibt die ausgewählten Sensoren als ArrayList weiter
 \end{itemize}
 \clearpage %opt
@@ -30,7 +29,7 @@ public class Navbar implements ObservedNavbarSubject, NavbarElement
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-Die Navbar zeigt die Navigationsbar und erlaubt es dem Benutzer auf die Hilfe, Suchleiste, Sprache, Toolbar und die Luftqualitätsfilter zuzugreifen.  Die Klasse implementiert das Interface NavbarElement, mit welchem die Funktion in der Navigationbar angezeigt wird.  Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster.
+Die Navbar zeigt die Navigationsbar und erlaubt es dem Benutzer auf die Hilfe, Suchleiste, Sprache, Toolbar und die Luftqualitätsfilter zuzugreifen.  Die Klasse implementiert das Interface NavbarElement, mit die Navigationbar angezeigt wird. Außerdem implementiert die Klasse ObservedNavbarSubject. Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster.
 \end{minipage}
 
 Attribute:
@@ -43,16 +42,13 @@ Attribute:
 \end{itemize}
 Methoden:
 \begin{itemize}
-    \item \emph{public Navbar(AirQualityData[] airQualityDatas, InformationView informationView, Toolbar toolbar, SearchBar searchbar, ArrayList<View> views)} Konstruktor für eine neue Navigationsbar
-    \item \emph{public void show()} Zeigt die Suchleiste
+    \item \emph{public Navbar(AirQualityData currentAirQualityData, AirQualityData[] airQualityData, View currentView , ArrayList<View> views)} Konstruktor für der Navigationsbar
+    \item \emph{public void show()} Zeigt die Navbar an
     \item \emph{public void showView()} Aktiviert die aktuelle View
     \item \emph{public void openToolbar()} Zeigt die Toolbar sobald der Benutzer über die Navbar fährt und schließt sich wenn der Benutzer die Navbar oder Toolbar mit seiner Maus verlässt
-    \item \emph{public boolean showAirQualityDatas} Zeigt die verfügbaren AirQualityData als Knöpfe in der Navbar über welche die AirQualityData Overlays gewechselt werden können
-    \item \emph{public void setCurrentView(View view)} Setzt die aktuelle View
-    \item \emph{public void setCurrentAirQualityData(AirQualityData currentAirQualityData)} Setzt die aktuelle AirQualityData
-    \item \emph{public void attach(NavbarObserver navbarObserver)} Erstellt eine Verbindung aus der Liste der Observer, zwischen dem Observer und Subjekt her
-    \item \emph{public void detach(NavbarObserver navbarObserver)} Entfernt die Verbindung aus der Liste der Observer, zwischen dem Observer und Subjekt
-    \item \emph{public void notifyObserver()} Gibt dem Observer weiter was in der Navigationbar passiert, wodurch die Suchleiste und die Karte aktualisiert wird
+    \item \emph{public void attach(NavbarObserver navbarObserver)} Fügt einen NavbarObserver zu einer Liste von Observer hinzu und stellt so eine Verbindung zwischen dem Observer und Subjekt her
+    \item \emph{public void detach(NavbarObserver navbarObserver)} Entfernt den NabarObserver aus der Liste der Observer
+    \item \emph{public void notifyObserver()} Aktualisiert die NavbarObserver in der Liste indem es die Methode update() aufruft, die alle NavbarObserver implementieren
 \end{itemize}
 
 \rule{\textwidth}{0.4pt}
@@ -72,8 +68,7 @@ Methoden:
 \begin{itemize}
     \item \emph{public Seachbar()} Konstruktor für die Suchleiste
     \item \emph{public void show()} Zeigt die Suchleiste in der Navigationsbar
-    \item \emph{public String getInput()} Gibt den Benutzer input weiter und erlaubt die weitere Benutzung dieser
-    \item \emph{public void setInput(String input)} Setzt den Suchleisten input
+    \item \emph{public String getInput()} Gibt das Benutzerinput weiter und erlaubt die weitere Benutzung dessen
 \end{itemize}
 
 \rule{\textwidth}{0.4pt}
@@ -86,13 +81,13 @@ public interface ObservedNavbarSubject
     \end{figure}
     \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-Ein Interface für das von dem NavbarObserver beobachtete Subjekt, welches den Observer über Änderungen informiert.  Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster.
+Ein Interface für das von dem NavbarObserver beobachtete Subjekt, welches die Observer über Änderungen informiert.  Es handelt sich hierbei um ein Element aus dem Beobachter Entwurfsmuster.
 \end{minipage}
 
 Methoden:
 \begin{itemize}
-    \item \emph{public void attach(NavbarObserver navbarObserver)} Erstellt eine Verbindung aus der Liste der Observer zwischen dem Observer und Subjekt her
-    \item \emph{public void detach(NavbarObserver navbarObserver)} Entfernt die Verbindung aus der Liste der Observer zwischen dem Observer und Subjekt
+    \item \emph{public void attach(NavbarObserver navbarObserver)} Erstellt eine Verbindung zwischen dem Observer und dem Subjekt 
+    \item \emph{public void detach(NavbarObserver navbarObserver)} Entfernt die Verbindung zwischen dem Observer und dem Subjekt
     \item \emph{public void notifyObserver()} Informiert den Observer über Änderungen
 \end{itemize}
 
@@ -107,13 +102,13 @@ public class Timeline implements NavbarElement
     \end{figure}
     \end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
-Die Timeline hat einen Regulator, welcher aufgerufen werden kann und die historischen Daten direkt auf der Karte darstellt. Es implementiert außerdem NavbarElement, um die dazugehörige \emph{show} Methode zu verwenden.
+Die Timeline hat einen Regulator, welcher aufgerufen werden kann um historische Daten direkt auf der Karte darzustellen. Es implementiert außerdem NavbarElement, um die dazugehörige \emph{show} Methode zu verwenden.
 \end{minipage}
 
 Methoden:
 \begin{itemize}
     \item \emph{public void show()} Zeigt die historischen Daten mithilfe eines Regulators an
-    \item \emph{public void getTime()} Gibt das aktuelle Zeitfenster, welches von dem Regulator ausgewählt wurde zurück
+    \item \emph{public Instant getTime()} Gibt das aktuelle Zeitfenster, welches von dem Regulator ausgewählt wurde zurück
 \end{itemize}
 
 \rule{\textwidth}{0.4pt}
@@ -151,5 +146,5 @@ Interface für alle Elemente welche in der Navbar gezeigt werden können.
 
 Methoden:
 \begin{itemize}
-    \item \emph{public void show()} Zeigt die einzelnen Elemente auf der Schnittstelle
+    \item \emph{public void show()} Zeigt die einzelnen Elemente auf der Webanwendung
 \end{itemize}

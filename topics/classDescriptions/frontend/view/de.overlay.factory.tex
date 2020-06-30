@@ -15,7 +15,7 @@ Kapselt die Kontrolle über die Overlay factories
 
 Methoden:
 \begin{itemize}
-    \item \emph{public Layer build(AirQualityData airquality, SensorDatum[] data)}  Baut einen Overlay mithilfe von der Farbwerte der AirQualityData und der SensorDaten
+    \item \emph{public Layer build(AirQualityData airquality, SensorDatum[] data)}  Baut ein Map Overlay mithilfe der Farbwerte der AirQualityData und der SensorDaten. Die Klasse ist ein Teil des Entwurfsmusters Abstract-Factory. Jede konkrete Overlay Fabrik implementiert das interface
 \end{itemize}
 
 \rule{\textwidth}{0.4pt}
@@ -46,7 +46,7 @@ public class SensorOverlayFactory implements OverlayFactory
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.6\textwidth}
-        Erstellt ein Map Overlay welches die unterschiedlichen Sensordata anzeigt die von unterschiedlichen Sensoren gemessen werden.
+        Erstellt ein Map Overlay welches die Sensordata anzeigt, die von unterschiedlichen Sensoren gemessen werden.
 \end{minipage}
 
 Methoden:
@@ -64,13 +64,13 @@ public class OverlayBuilder
     \end{figure}
     \end{minipage} \hfill
     \begin{minipage}{0.4\textwidth}
-Schnittstelle für die OverlayFactory. Hier werden die Overlays mithilfe von speziellen factories für die Karten gebaut
+Schnittstelle für die OverlayFactory. Hier werden die Overlays für die Map mithilfe von speziellen Factories gebaut. Die Klasse ist Teil des Entwurfsmusters Abstract-Factory. Der OverlayBuilder erhält die benötigten Sensor Daten über eine Verbindung zum AngularController
 \end{minipage}
 
 Methoden:
 \begin{itemize}
     \item \emph{public OverlayBuilder()} Standard Builder, welcher Overlay Factory und Interpolation Overlay Factory verwendet
     \item \emph{public OverlayBuilder(ArrayList<OverlayFactory> factories)} Builder für das bauen von Overlays mithilfe von OverlayFactories
-    \item \emph{public ArrayList<Layer> buildOverlays(AirQualityData airquality, LatLngBounds latLngBounds, Instant time)} Erstellt eine ArrayList mit den unterschiedlichen Layern anhand der ausgewählten AirQualityData, der gewählten Zeit und den Bounds
-    \item \emph{public ArrayList<Layer> buildExpertOverlays(AirQualityData airQuality, LatLngBounds latLngBounds, ArrayList<Sensor> selectedSensortypes, Instant time)}  Erstellt eine ArrayList mit den unterschiedlichen Layern anhand der ausgewählten AirQualityData, der gewählten Zeit, der gewählten Sensortypen und den Bounds
+    \item \emph{public ArrayList<Layer> buildOverlays(AirQualityData airquality, LatLngBounds latLngBounds, Instant time)} Erstellt eine ArrayList mit den unterschiedlichen Layern, die von den speziellen Factories gebaut wurden, anhand der ausgewählten AirQualityData, der gewählten Zeit, den Bounds und den dementsprechenden Daten aus dem SmartAQnet
+    \item \emph{public ArrayList<Layer> buildExpertOverlays(AirQualityData airQuality, LatLngBounds latLngBounds, ArrayList<Sensor> selectedSensortypes, Instant time)} Erstellt eine ArrayList mit den unterschiedlichen Layern, die von den speziellen Factories gebaut wurden, anhand der ausgewählten AirQualityData, der gewählten Zeit, den Sensortypen, den Bounds und den dementsprechenden Daten aus dem SmartAQnet
 \end{itemize}
